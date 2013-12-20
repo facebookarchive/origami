@@ -423,3 +423,18 @@ ul li strong {
 	
 }
 
+.qtz {
+	width: 200px;
+	height: 40px;
+	background: url('../images/example.png') no-repeat;
+	padding-left: 40px;
+	line-height: 35px;
+	margin-left: 40px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .qtz {
+    background-image: url('../images/example@2x.png');
+    background-size: 32px 32px;
+  }
+}
