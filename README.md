@@ -16,8 +16,9 @@ If you'd prefer to stay up-to-date with the bleeding edge, you can clone this re
 mkdir ~/Workspace
 cd ~/Workspace
 git clone https://github.com/facebook/origami.git
-sudo ln -s origami/Origami.plugin "/Library/Graphics/Quartz Composer Patches"
-sudo ln -s origami/Origami "/Library/Graphics/Quartz Composer Patches"
+mkdir -p "~/Library/Graphics/Quartz Composer Patches"
+ln -s origami/Origami.plugin "~/Library/Graphics/Quartz Composer Patches"
+ln -s origami/Origami "~/Library/Graphics/Quartz Composer Patches"
 ```
 
 Feedback
