@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>nodeAttributes</key>
+        <dict>
+            <key>category</key>
+            <string>Hello World</string>
+            <key>categories</key>
+            <array>
+                <string>Hello World</string>
+            </array>
+            <key>copyright</key>
+            <string>2013 Your Name</string>
+            <key>description</key>
+            <string>Decribe the patch here.</string>
+            <key>name</key>
+            <string>Hello World</string>
+        </dict>
+        <key>inputAttributes</key>
+        <dict>
+            <key>inputName</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Your Name</string>
+            </dict>
+        </dict>
+        <key>outputAttributes</key>
+        <dict>
+            <key>outputResult</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Result</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>
