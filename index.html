@@ -2,17 +2,151 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Origami</title>
- 	<meta name="author" content="Facebook" />
+	<title>Origami - Design prototyping with Quartz Composer</title>
+ 	<meta name="author" content="Facebook, Inc." />
+	<link rel="image_src" href="images/origami.png" />
 	<link rel="stylesheet" type="text/css" href="css/origami.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/callout.js"></script>
+	<script type="text/javascript" src="js/spring.js"></script>
+	<script type="text/javascript" src="js/spring-utils.js"></script>
+	<script type="text/javascript" src="js/example.js"></script>
+	<script type="text/javascript" src="js/origami.js"></script>
 </head>
 <body>
+<div id="page">
 
-<div id="coming-soon">
-	<div id="logo-container">
-		<div id="logo"></div>
+<div id="logo"></div>
+
+<div class="unit">
+	<div id="intro">
+		<div id="header-type">
+			<div id="title">Origami</div>
+			<div class="heading">A free design prototyping toolkit for Quartz Composer.</div>
+		</div>
+			
+		<p>Most designers today create static mockups to communicate app ideas. But increasingly apps are anything but static, which means as designers we need a better tool for interaction design.</p>
+		<p>Origami is a free toolkit for Quartz Composer&mdash;created by the <a href="http://www.facebook.com/design" target="_blank">Facebook Design</a> team&mdash;that makes interactive design prototyping easy and doesn’t require programming.</p>
+	</div>	
+</div>
+
+<div class="unit" style="padding-top: 0px; padding-bottom: 0px;">
+	<div class="heading">How does it work?</div>
+</div>
+
+<div class="unit editor">
+	<div class="phone">
+		<div class="photo-container">
+		
+			<div id="example-photo" class="photo" onmousedown="this.className='photo down'">
+				<div class="pill">Click to Switch</div>
+			</div>
+		
+		</div>
+		
 	</div>
-	<div class="label">Coming Soon</div>	
+</div>
+
+<div class="unit quartz-composer">
+	
+	<div class="quartz-composer-feature">
+		<p><strong>Quartz Composer</strong> is a freely-available Mac OS X application by Apple that's been around for nearly a decade. It was never designed for the purpose of interaction prototyping though: it's primarily a motion graphics tool.</p>
+		<p>Out of the box without Origami, interaction prototyping with Quartz Composer is complicated. Origami provides a set of tools for Quartz Composer that make interaction prototyping a lot easier.</p>
+	</div>
+
+</div>
+
+<div class="unit radial">
+	<div class="heading">What's included?</div>
+	<ul class="patches-list" style="margin-right: 40px;">
+		<li><strong>Switch</strong> Toggles between on and off and remembers its current state.</li>
+		<li><strong>Scroll</strong> Lets you allow the user to scroll an image.</li>
+		<li><strong>Bouncy Animation</strong> Animate a changing value with a bouncy spring.</li>
+		<li><strong>Classic Animation</strong> Animate a changing number with a specified duration and easing curve.</li>
+		<li><strong>Transition</strong> Takes a number in the range of 0 to 1 and converts it to a range starting with Start Value and ending in End Value.</li>
+		<li><strong>Color Transition</strong> Fades between two colors.</li>
+		<li><strong>Image Transition</strong> Fades between two images.</li>
+		<li><strong>Interaction 2</strong> Lets you get clicks on Layer patches. It works with Render in Image patches, iterators, and the Phone patch.</li>
+	</ul>
+	<ul class="patches-list">
+		<li><strong>Layer</strong> Lets you put an image on screen and adjust how it shows up.</li>
+		<li><strong>Text Layer</strong> Lets you put text on screen.</li>
+		<li><strong>Button</strong> Shows a button with a customizable label and background. Connect it to the Interaction 2 patch to make it interactive.</li>
+		<li><strong>Hit Area</strong> Lets you specify an area on screen to get clicks on. Connect it to an Interaction 2 patch to make it interactive.</li>
+		<li><strong>Phone</strong> Draws a phone (iPhone, Android or Windows Phone) with a specified screen image.</li>
+		<li><strong>Timer</strong> Runs a timer for a specified duration starting with a specified signal. It outputs the state of the timer as well as the time elapsed.</li>
+		<li><strong>Counter 2</strong> Represents a number that can be incremented, decremented or set to a specific value.</li>
+	</ul>
+	<div style="clear: both;"></div>
+
+	<div class="divider"></div>
+
+	<div class="heading">Improvements to Quartz Composer</div>
+	<ul class="patches-list" style="margin-right: 40px;">
+		<li>Retina support for the viewer</li>
+		<li>Automatically add a Layer patch when you drag in an image</li>
+		<li>The up and down arrow keys can be used in text fields in the Inspector window</li>
+		<li>Disabled patches show up as dimmed</li>
+	</ul>
+	<ul class="patches-list">
+		<li>Native full screen support in the viewer window</li>
+		<li>Connections are maintained when a splitter is deleted</li>
+		<li>Fix an issue introduced in 10.8 that replaced spaces with underscores in port names</li>
+		<li>Fix a crash introduced in 10.9 when you close a document</li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+<div class="unit get-started">
+	<div class="steps-container">
+		<div class="heading">Get started now <span style="font: 30px 'Lucida Grande';">&#8594;</span></div>
+		<a class="action-step" href="http://developer.apple.com/register/" target="_blank">
+			<div class="step-header">
+				<div class="step-number">1</div>
+				<div class="step-divider"></div>
+				<div class="step-title">Register as an Apple Developer</div>
+			</div>
+			<img src="images/xcode.png" style="padding-top: 28px;" />
+		</a>
+		<a class="action-step" href="http://origami.facebook.com/quartzcomposer/" target="_blank">
+			<div class="step-header">
+				<div class="step-number">2</div>
+				<div class="step-divider"></div>
+				<div class="step-title">Download and Install Quartz Composer</div>
+			</div>
+			<img src="images/quartz-composer.png" />
+		</a>
+		<a class="action-step" href="download/Origami-1.0.zip">
+			<div class="step-header">
+				<div class="step-number">3</div>
+				<div class="step-divider"></div>
+				<div class="step-title">Download and Install Origami 1.0</div>
+			</div>
+			<img src="images/installer.png" />
+		</a>
+	</div>
+	<div class="requirements">Requires Mac OS X 10.8 or higher.</div>
+</div>
+
+<div class="unit radial">
+	<div class="heading">Next steps</div>
+	<ul class="patches-list" style="margin-right: 40px;">
+		<li>Join the <a href="https://www.facebook.com/groups/origami.community/" target="_blank">Origami Community</a> Facebook group.</li>
+		<li>Like the <a href="https://www.facebook.com/origami.qc" target="_blank">Origami page</a> on Facebook.</li>
+		<li>Learn about the <a href="http://www.facebook.com/design" target="_blank">Facebook Design</a> team</li>
+	</ul>
+	<ul class="patches-list">
+		<li>Follow <a href="https://twitter.com/facebookorigami" target="_blank">@facebookorigami</a> on Twtiter</li>
+		<li>Download Origami <a href="examples/">example files</a></li>
+	</ul>
+	<div style="clear: both;"></div>
+</div>
+
+
+</div>
+
+<div id="footer">
+	Copyright &copy; 2013 Facebook, Inc. All rights reserved. &middot; <a href="license/">License</a>
 </div>
 
 <script>
@@ -23,6 +157,8 @@
   ga('create', 'UA-46607923-1', 'facebook.github.io');
   ga('send', 'pageview');
 </script>
+
+<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
 
 </body>
 </html>
