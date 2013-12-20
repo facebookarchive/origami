@@ -10,7 +10,7 @@ Getting Origami
 
 You can download the Origami installer from http://facebook.github.io/origami. You'll need a free Apple Developer account to download Quartz Composer first. Links to create an account and get QC are also available on the Origami page.
 
-If you'd prefer to stay up-to-date with the bleeding edge, you can clone this repository to your computer, and link the `Origami` directory and `Origami.plugin` files to `/Library/Graphics/Quartz Composer Patches`.
+If you'd prefer to stay up-to-date with the bleeding edge, you can clone this repository to your computer, and link the `Origami` directory and `Origami.plugin` files to `~/Library/Graphics/Quartz Composer Patches`.
 
 ```sh
 mkdir ~/Workspace
