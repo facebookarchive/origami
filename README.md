@@ -12,6 +12,14 @@ You can download the Origami installer from http://facebook.github.io/origami. Y
 
 If you'd prefer to stay up-to-date with the bleeding edge, you can clone this repository to your computer, and link the `Origami` directory and `Origami.plugin` files to `/Library/Graphics/Quartz Composer Patches`.
 
+```sh
+mkdir ~/Workspace
+cd ~/Workspace
+git clone https://github.com/facebook/origami.git
+sudo ln -s origami/Origami.plugin "/Library/Graphics/Quartz Composer Patches"
+sudo ln -s origami/Origami "/Library/Graphics/Quartz Composer Patches"
+```
+
 Feedback
 --------
 Your feedback is important in making Origami better – feel free to open an Issue here on GitHub or send us a tweet @facebookorigami.
