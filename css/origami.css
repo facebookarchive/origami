@@ -1,0 +1,40 @@
+body {
+	background: url('../images/grid.png');
+	color: #999;
+	font: bold 30px Helvetica;
+	height: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+#coming-soon {
+	bottom: 0;
+	left: 0; 
+	height: 575px;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 70%;
+}
+
+#logo-container {
+	background: url('../images/folding-paper.png');
+	height: 452px;
+	margin: auto;
+	position: relative;
+	width: 458px;
+}
+
+#logo {
+	background: url('../images/crane.png');
+	height: 274px;
+	left: 55px;
+	position: absolute;
+	top: 150px;
+	width: 302px;
+}
+
+.label {
+	margin-top: 40px;
+}
