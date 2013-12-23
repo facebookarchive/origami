@@ -1,5 +1,6 @@
 body {
-	background: url('../images/grid.png');
+	background-color: #e8e8e9;
+	background-image: url('../images/grid.png');
 	color: #333;
 	font: 13px/18px Helvetica, Arial, sans-serif;
 }
