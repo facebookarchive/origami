@@ -17,8 +17,8 @@ mkdir ~/Workspace
 cd ~/Workspace
 git clone https://github.com/facebook/origami.git
 mkdir -p ~/Library/Graphics/Quartz\ Composer\ Patches
-ln -s origami/Origami.plugin ~/Library/Graphics/Quartz\ Composer\ Patches
-ln -s origami/Origami ~/Library/Graphics/Quartz\ Composer\ Patches
+ln -s `pwd`/origami/Origami.plugin ~/Library/Graphics/Quartz\ Composer\ Patches
+ln -s `pwd`/origami/Origami ~/Library/Graphics/Quartz\ Composer\ Patches
 ```
 
 Feedback
