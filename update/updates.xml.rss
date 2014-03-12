@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Updates - Origami - Design prototyping with Quartz Composer</title>
+    <link>http://origami.facebook.com/update/updates.xml.rss</link>
+    <description>Origami is a free toolkit for Quartz Composer that makes interactive design prototyping easy.</description>
+    <language>en</language>      
+    <item>
+      <title>
+        1.1
+      </title>
+      <description>
+        1.1
+      </description>
+      <pubDate>
+        Tue, 11 Mar 2014 00:00:00 +0800
+      </pubDate>
+      <sparkle:releaseNotesLink>
+        http://origami.facebook.com/update/release-notes.html
+      </sparkle:releaseNotesLink>
+      <enclosure
+        sparkle:shortVersionString="1.1"
+        sparkle:version="3"
+        sparkle:dsaSignature="MC0CFDk5kHaZ/UJwfpbCLoxFT5jjsGrrAhUAkmAOYaufjKkL9vZKSUwxYLZ5F8Y="
+        url="http://origami.facebook.com/update/installers/Origami-1.1.zip"
+        length="3097074"
+        type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

@@ -234,11 +234,11 @@ a:hover {
 	float: left;
 }
 
-ul li {
+ul.patches-list  li {
 	margin-bottom: 20px;	
 }
 
-ul li strong {
+ul.patches-list  li strong {
 	display: block;
 }
 

@@ -1,3 +1,57 @@
-<script>
-	window.location = 'http://origami.facebook.com/';
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Update Available - Origami - Design prototyping with Quartz Composer</title>
+ 	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:title" content="Origami" />
+	<meta property="og:description" content="Origami is a free toolkit for Quartz Composer that makes interactive design prototyping easy." />
+	<meta property="og:url" content="http://origami.facebook.com/" />
+	<meta property="og:image" content="http://facebook.github.io/origami/images/origami.png" />
+	<link rel="image_src" href="images/origami.png" />
+	<link rel="stylesheet" type="text/css" href="../css/origami.css" />
+	<link rel="stylesheet" type="text/css" href="../css/release-notes.css" />
+	<link rel="stylesheet" type="text/css" href="../css/update.css" />
+</head>
+<body>
+<div id="page">
+
+<div class="unit" style="padding: 50px">
+  <h3>An important update to Origami&mdash;version 1.1 is now available.</h3>
+    
+  <a class="download-update" href="../download/">Download Origami 1.1</a>
+  
+  <div class="release-notes" style="margin-top: 20px;">
+    <h2>What&rsquo;s new in 1.1:</h2>
+    <ul>
+      <li>Added a new <strong>Layer Group</strong> patch, which behaves like the <strong>Render in Image</strong> patch but does not require a <strong>Clear</strong> patch to work properly<br />
+        (control-click any <strong>Render in Image</strong> to convert it to a <strong>Layer Group</strong>)</li>
+      <li>Added a new <strong>Fill Layer</strong> patch, which lets you quickly fill the screen with a color at an opacity</li>
+      <li>Added a new <strong>Progress</strong> patch, which takes a value in a given range and outputs the progress of where the value is in the range</li>
+      <li>Added a <strong>Linear Port Connections</strong> feature to the Origami menu (turned on by default) which makes connections easier to read</li>
+      <li>Added automatic in-app update checking</li>
+      <li>Fixed an issue where the <strong>Interaction 2</strong> patch would not work properly with non-center anchor points</li>
+      <li>The <strong>Interaction 2</strong> patch now works properly with the <strong>Image with Shadow</strong> patch (and patches built with it including the <strong>Text Layer</strong> patch)</li>
+      <li>Fixed an issue with the <strong>Interaction 2</strong> patch where hit regions would be off when in Full Screen mode on a retina display</li>
+      <li>Fixed an issue with the <strong>Image Transition</strong> patch that caused the Start and End images to be shown in reverse order</li>
+      <li>Fixed an issue that caused the output image of the <strong>Image Transition</strong> patch to be translucent when fading between two fully opaque images</li>
+      <li>Added iterator support to the <strong>Switch</strong> patch</li>
+      <li>Background colors are no longer applied on text in the <strong>Button</strong> patch</li>
+      <li>The <strong>Text Layer</strong> patch now bases its alignment off of its Anchor Position</li>
+      <li>Added a <strong>Show/Hide Path Bar</strong> setting to the Editor menu and <strong>Show/Hide Status Bar</strong> setting in the Viewer menu</li>
+      <li>Fixed an issue that could cause Quartz Composer to hang momentarily on launch in unfavorable network conditions</li>
+      <li>Small improvements to <strong>Value or Default</strong> and <strong>Value to Boolean</strong></li>
+      <li><strong>Layer</strong> patches no longer intersect each other when you rotate them</li>
+      <li>Fix a crash when adjusting a splitter's type</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div id="footer">
+	Copyright &copy; 2013-2014 Facebook, Inc. All rights reserved. &middot; <a href="license/">License</a>
+</div>
+
+</body>
+</html>

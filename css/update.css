@@ -1,0 +1,16 @@
+.download-update {
+  color: #3b5998;
+  font-size: 22px;
+  font-weight: bold;
+  display: block;
+  padding: 90px 200px;
+  margin: 20px 0;
+  background: url(../images/installer.png) no-repeat 20px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+  .download-update {
+    background-image: url('../images/installer@2x.png');
+    background-size: 155px 152px;
+  }
+}
