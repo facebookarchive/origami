@@ -8,6 +8,8 @@
 	<string>English</string>
 	<key>CFBundleExecutable</key>
 	<string>Origami</string>
+	<key>CFBundleIconFile</key>
+	<string>Origami</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.facebook.Origami</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -17,9 +19,9 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>3</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -40,5 +42,13 @@
 	<string>Copyright © 2013-2014 Facebook, Inc. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>FBOrigamiPrincipal</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
+	<key>SUEnableSystemProfiling</key>
+	<true/>
+	<key>SUFeedURL</key>
+	<string>http://origami.facebook.com/update/updates.xml.rss</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 </dict>
 </plist>

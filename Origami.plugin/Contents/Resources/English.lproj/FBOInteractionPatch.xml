@@ -20,12 +20,12 @@ Drag: Outputs a 1 if the user started dragging the layer and stays 1 until the m
 Enable: Lets you decide whether the layer should respond to interaction. One example of when you'd want to use this is if you had a shading layer in front of an interactive element. You'd need to disable interaction on the shading layer so you could get clicks on the layer behind it.
 
 
-Origami 1.0
+Origami 1.1
 http://origami.facebook.com/
         
 Use of this patch is subject to the license found at http://origami.facebook.com/license/
         
-Copyright: (c) 2013, Facebook, Inc. All rights reserved.
+Copyright: (c) 2013-2014, Facebook, Inc. All rights reserved.
         
 Created by: Brandon Walkin</string>
       <key>name</key>
