@@ -44,6 +44,24 @@ a:hover {
   }
 }
 
+#header-type .version {
+  margin: 5px 0 0 280px;
+  position: absolute;
+}
+
+.version {
+  margin-left: 5px;
+  display: inline-block;
+  color: white;
+  background-color: #f0b82d;
+  background-image: -webkit-linear-gradient(#f0ba31, #f0b72d);
+  text-indent: 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
 #page {
 	background: white;
 	border: 1px solid #dbdbdb;
