@@ -21,9 +21,9 @@
       <enclosure
         sparkle:shortVersionString="1.2"
         sparkle:version="4"
-        sparkle:dsaSignature="MC0CFQCGRFtTHmns1uqw4m3fiyu1n2XtMwIUNWkgHeBo5mZKePd9pBO+GSPoW0o="
+        sparkle:dsaSignature="MCwCFGi1sLUBCX7hcet+Ut7C2c0uKNw4AhRxqTQ4tWXzevGcOJlbV9kAZmcMuA=="
         url="http://origami.facebook.com/update/installers/Origami.zip"
-        length="3572406"
+        length="3573325"
         type="application/octet-stream" />
     </item>
   </channel>
