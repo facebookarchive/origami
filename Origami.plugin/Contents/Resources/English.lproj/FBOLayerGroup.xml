@@ -11,12 +11,12 @@
         <string>Origami</string>
       </array>
       <key>description</key>
-      <string>This lets you group layers together. Connect it to a Layer patch to display it and adjust how it shows up.
+      <string>Lets you group layers together. Connect it to a Layer patch to display it and adjust how it shows up.
         
 This patch is a renamed version of the Render in Image patch that comes with Quartz Composer to be consistent with the Origami naming scheme. It also does not require a Clear patch, unlike Render in Image.
 
 
-Origami 1.1
+Origami
 http://origami.facebook.com/
         
 Created by: Brandon Walkin</string>
