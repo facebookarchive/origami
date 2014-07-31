@@ -8,6 +8,29 @@
 </head>
 <body class="release-notes">
 
+<h2>Version 1.3</h2>
+<ul>
+  <li>Added a new <strong>Inline Values</strong> feature which lets you see and modify live-updating values for every input port in the Quartz Composer editor</li>
+  <li>Added a new <strong>Pop Animation</strong> patch, which animates a changing value with a spring. You can use the same Bounciness and Speed values on iOS and OS X using the <a href="http://github.com/facebook/pop">Pop animation library</a></li>
+  <li>Added a new <strong>Live Image</strong> patch, which imports an image from a location on your local machine and automatically updates its image when the file changes (and optionally saving a copy of the image if the file moves)</li>
+  <li>Added a new <strong>Delay</strong> patch, which lets you delay any value for a specified duration in seconds</li>
+  <li>Added a new <strong>Drag and Drop</strong> patch, which lets you get drag and drop events on the viewer window and is useful for prototyping desktop UIs with file dragging from your Mac on to your interface</li>
+  <li>Added a new <strong>Repeating Pulse</strong> patch, which outputs a repeated pulse separated by a duration in seconds&mdash;useful for getting a transition to repeat without needing to interact with the composition</li>
+  <li>The <strong>Scroll</strong> patch now supports the Magic Mouse and trackpad</li>
+  <li>Added a new <strong>Mouse Scroll</strong> patch, which gives you scroll data from the Magic Mouse and trackpad</li>
+  <li>Added a new <strong>Multi-stop Progress</strong> patch, which gives you the progress of a value inside of a structure of stops</li>
+  <li>Added new window management options (Resize to Thirds, Picture in Picture and Multi-monitor Layout) to the Window menu</li>
+  <li>Now when you delete any patch, Quartz Composer will attempt to retain connections between the top ports</li>
+  <li>Holding command and option while dragging in an image into the editor will add a <strong>Live Image</strong> patch</li>
+  <li>The <strong>Browser Chrome</strong> patch will now restore the status bar visibility to its previous state after the composition is stopped</li>
+  <li>The <strong>Counter 2</strong> patch now supports iterators and will now also automatically set its value to the &ldquo;Jump to Number&rdquo; value when the composition starts</li>
+  <li>The <strong>Cursor Control</strong> patch will now allow for changing the cursor while the mouse is down</li>
+  <li>Fixed a bug in Quartz Composer where interaction ports could sometimes have their last port name clipped</li>
+  <li>The <strong>Value to Boolean</strong> patch now evaluates Cocoa <null> objects as false</li>
+  <li>Fixed a divide by zero issue with the <strong>Progress</strong> patch</li>
+  <li>Fixed a NaN output case in the <strong>Counter 2</strong> patch</li>
+</ul>
+
 <h2>Version 1.2</h2>
 <ul>
   <li><strong>By popular request!</strong> &mdash; Added an <strong>iPad</strong> device to the <strong>Phone</strong> patch, specified from the <strong>Phone Dimensions</strong> patch</li>
