@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Lets you get drag and drop events on the viewer window. For prototyping desktop UIs with file dragging from your Mac on to your interface. Supports dragging multiple files at a time.
+        
+        
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Drag and Drop</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputCursor</key>
+      <dict>
+        <key>description</key>
+        <string>The style of the cursor when dragging</string>
+        <key>name</key>
+        <string>Cursor</string>
+        <key>menu</key>
+        <array>
+          <string>None</string>
+          <string>Copy</string>
+          <string>Link</string>
+        </array>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputX</key>
+      <dict>
+        <key>description</key>
+        <string>X Position</string>
+        <key>name</key>
+        <string>X Position</string>
+      </dict>
+      <key>outputY</key>
+      <dict>
+        <key>description</key>
+        <string>Y Position</string>
+        <key>name</key>
+        <string>Y Position</string>
+      </dict>
+      <key>outputPath</key>
+      <dict>
+        <key>description</key>
+        <string>The path of the file or files being dragged.</string>
+        <key>name</key>
+        <string>File Path</string>
+      </dict>
+      <key>outputDragging</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs true if the user is dragging a file over the viewer.</string>
+        <key>name</key>
+        <string>Dragging</string>
+      </dict>
+      <key>outputDropSignal</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a pulse once the file is released over the viewer.</string>
+        <key>name</key>
+        <string>Drop Signal</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

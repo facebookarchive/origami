@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>applePrivate</key>
+      <true/>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Decay physics driven by the Pop framework.
+
+
+Pop
+http://github.com/facebook/pop
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014, Facebook, Inc. All rights reserved.
+
+Created by: Kimon Tsinteris</string>
+      <key>name</key>
+      <string>Pop Decay Engine</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputStartValue</key>
+      <dict>
+        <key>description</key>
+        <string>Start Value</string>
+        <key>name</key>
+        <string>Start Value</string>
+      </dict>
+      <key>inputDeceleration</key>
+      <dict>
+        <key>description</key>
+        <string>Deceleration</string>
+        <key>name</key>
+        <string>Deceleration</string>
+      </dict>
+      <key>inputVelocity</key>
+      <dict>
+        <key>description</key>
+        <string>Velocity</string>
+        <key>name</key>
+        <string>Velocity</string>
+      </dict>
+      <key>inputStartAnimatingSignal</key>
+      <dict>
+        <key>description</key>
+        <string>Start Animating Signal</string>
+        <key>name</key>
+        <string>Start Animating Signal</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputValue</key>
+      <dict>
+        <key>description</key>
+        <string>Value</string>
+        <key>name</key>
+        <string>Value</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

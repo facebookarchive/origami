@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>applePrivate</key>
+      <true/>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Converts Bounciness and Speed into values used by the Pop Spring Engine.
+
+
+Pop
+http://github.com/facebook/pop
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin and Kimon Tsinteris</string>
+      <key>name</key>
+      <string>Pop Converter</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputBounciness</key>
+      <dict>
+        <key>description</key>
+        <string>Bounciness</string>
+        <key>name</key>
+        <string>Bounciness</string>
+      </dict>
+      <key>inputSpeed</key>
+      <dict>
+        <key>description</key>
+        <string>Speed</string>
+        <key>name</key>
+        <string>Speed</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputFriction</key>
+      <dict>
+        <key>description</key>
+        <string>Friction</string>
+        <key>name</key>
+        <string>Friction</string>
+      </dict>
+      <key>outputTension</key>
+      <dict>
+        <key>description</key>
+        <string>Tension</string>
+        <key>name</key>
+        <string>Tension</string>
+      </dict>
+      <key>outputMass</key>
+      <dict>
+        <key>description</key>
+        <string>Mass</string>
+        <key>name</key>
+        <string>Mass</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

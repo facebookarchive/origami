@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Imports an image from a location on your local machine. By default, this patch will keep a copy of that image in the composition in case the original is moved or deleted.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014, Facebook, Inc. All rights reserved.
+
+Created by: Austin Bales</string>
+      <key>name</key>
+      <string>Live Image</string>
+      <key>identifier</key>
+      <string>fbolivefile</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputPath</key>
+      <dict>
+        <key>description</key>
+        <string>A relative or absolute path to the image you're importing.</string>
+        <key>name</key>
+        <string>Location</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputImage</key>
+      <dict>
+        <key>description</key>
+        <string>The image referenced by the patch.</string>
+        <key>name</key>
+        <string>Image</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

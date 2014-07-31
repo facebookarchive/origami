@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Gives you scroll information from the mouse. Supports modern inertial scrolling unlike the built-in Mouse patch.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2013-2014, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Mouse Scroll</string>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputXVelocity</key>
+      <dict>
+        <key>description</key>
+        <string>The horizontal amount scrolled per frame in pixels.</string>
+        <key>name</key>
+        <string>X Velocity</string>
+      </dict>
+      <key>outputYVelocity</key>
+      <dict>
+        <key>description</key>
+        <string>The vertical amount scrolled per frame in pixels.</string>
+        <key>name</key>
+        <string>Y Velocity</string>
+      </dict>
+      <key>outputDown</key>
+      <dict>
+        <key>description</key>
+        <string>True if the user's finger is down on the magic mouse or trackpad.</string>
+        <key>name</key>
+        <string>Down</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

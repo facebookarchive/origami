@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>applePrivate</key>
+      <true/>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Spring physics driven by the Pop framework.
+      
+      
+Pop
+http://github.com/facebook/pop
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014, Facebook, Inc. All rights reserved.
+
+Created by: Kimon Tsinteris</string>
+      <key>name</key>
+      <string>Pop Spring Engine</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputValue</key>
+      <dict>
+        <key>description</key>
+        <string>Value</string>
+        <key>name</key>
+        <string>Value</string>
+      </dict>
+      <key>inputFriction</key>
+      <dict>
+        <key>description</key>
+        <string>Friction</string>
+        <key>name</key>
+        <string>Friction</string>
+      </dict>
+      <key>inputTension</key>
+      <dict>
+        <key>description</key>
+        <string>Tension</string>
+        <key>name</key>
+        <string>Tension</string>
+      </dict>
+      <key>inputMass</key>
+      <dict>
+        <key>description</key>
+        <string>Mass</string>
+        <key>name</key>
+        <string>Mass</string>
+      </dict>
+      <key>inputVelocity</key>
+      <dict>
+        <key>description</key>
+        <string>Velocity</string>
+        <key>name</key>
+        <string>Velocity</string>
+      </dict>
+      <key>inputVelocitySignal</key>
+      <dict>
+        <key>description</key>
+        <string>Velocity Signal</string>
+        <key>name</key>
+        <string>Velocity Signal</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputValue</key>
+      <dict>
+        <key>description</key>
+        <string>Value</string>
+        <key>name</key>
+        <string>Value</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

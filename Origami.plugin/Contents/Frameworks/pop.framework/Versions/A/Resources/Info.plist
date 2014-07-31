@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>13E28</string>
+	<string>13C1021</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Origami</string>
-	<key>CFBundleIconFile</key>
-	<string>Origami</string>
+	<string>pop</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.facebook.Origami</string>
+	<string>com.facebook.pop</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Origami</string>
+	<string>pop</string>
 	<key>CFBundlePackageType</key>
-	<string>BNDL</string>
+	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3</string>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>1</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -36,19 +36,12 @@
 	<string>0511</string>
 	<key>DTXcodeBuild</key>
 	<string>5B1008</string>
-	<key>GFPlugIn</key>
-	<true/>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2013-2014 Facebook, Inc. All rights reserved.</string>
-	<key>NSPrincipalClass</key>
-	<string>FBOrigamiPrincipal</string>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
-	<key>SUEnableSystemProfiling</key>
-	<true/>
-	<key>SUFeedURL</key>
-	<string>http://origami.facebook.com/update/updates.xml.rss</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
+	<string>Copyright © 2014 Facebook. All rights reserved.</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
 </dict>
 </plist>
