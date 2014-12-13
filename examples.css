@@ -1,0 +1,16 @@
+@import url('global.css');
+
+/* Nav Bar Color Invert */
+
+#nav {
+	border-bottom:  1px solid rgba(0, 0, 0, .1);
+	position: relative;
+}
+
+#nav li.logo {
+	background-image: url(images/logo-small-black-2x.png);
+}
+
+.header {
+	text-align: center;
+}

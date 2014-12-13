@@ -1,75 +1,4 @@
-@import url('flex.css');
-
-/* All Sections */
-
-* {
-	margin: 0;
-	padding: 0;
-    box-sizing: border-box;
-    cursor: default;
-    -webkit-user-select:none;
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-    -webkit-text-size-adjust:none;
-    -webkit-font-smoothing: antialiased;
-}
- 
-a {
-	color:inherit;
-	text-decoration: none;
-} 
- 
-body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 17px;
-	line-height: 1.28;
-}
-
-p {
-	-webkit-user-select:text;
-	cursor: auto;
-}
-
-h2 {
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 39px;
-	font-weight: normal;
-}
-
-/* Nav Bar */
-
-#nav {
-	border-bottom:  1px solid rgba(255, 255, 255, .3);
-	padding: 15px 33px;
-	list-style: none;
-	position: absolute;
-	width: 100%;
-}
-
-#nav li {
-	font-size: 15px;
-	line-height: 20px;
-	color: white;
-	float: left;
-}
-
-#nav li.logo {
-	background-image: url(images/logo-small-2x.png);
-	background-size: 59px 17px;
-	background-repeat: no-repeat;
-	background-position: center 2.5px;
-	width: 59px;
-	height: 20px;
-	margin-right: 36px;
-}
-
-#nav li.item {
-	margin: 0 17px;
-}
-
-#nav li.download {
-	float: right;
-}
-
+@import url('global.css');
 
 /* Hero Section */
 
@@ -114,24 +43,6 @@ h2 {
 
 #section-presentation {
 	text-align: center;
-}
-
-#section-presentation h2 {
-	margin-top: 50px;
-	margin-bottom: 20px;
-}
-
-#section-presentation p::selection {
-	background: rgba(0, 0, 0, .1);	
-}
-
-#section-presentation p {
-	color: rgb(128, 128, 128);
-}
-
-#section-presentation .header-container {
-	max-width: 540px;
-	margin: 0 auto;
 }
 
 #tv {
@@ -201,6 +112,7 @@ h2 {
 
 #controller {
 	margin-top: -58px;
+	color: rgb(128, 128, 128);
 }
 
 #keys {
@@ -228,23 +140,4 @@ h2 {
 #keys li:active,
 #keys li.active {
 	background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Clear Fix */
-
-.cf:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-html[xmlns] .cf {
-	display: block;
-}
-
-* html .cf {
-	height: 1%;
 }
