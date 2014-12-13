@@ -53,7 +53,7 @@ h2 {
 }
 
 #nav li.logo {
-	background-image: url(logo-small-2x.png);
+	background-image: url(images/logo-small-2x.png);
 	background-size: 59px 17px;
 	background-repeat: no-repeat;
 	background-position: center 2.5px;
@@ -74,7 +74,7 @@ h2 {
 /* Hero Section */
 
 #section-hero {
-	background-image: url(hero.jpg);
+	background-image: url(images/hero.jpg);
 	background-size: cover;
 	background-position: center;
 	width: 100vw;
@@ -103,7 +103,7 @@ h2 {
 }
 
 #hero-content .logo {
-	background-image: url(logo-big-2x.png);
+	background-image: url(images/logo-big-2x.png);
 	background-size: contain;
 	width: 257px;
 	height: 92px;
@@ -135,7 +135,7 @@ h2 {
 }
 
 #tv {
-	background-image: url(tv.jpg);
+	background-image: url(images/tv.jpg);
 	background-size: cover;
 	background-position: center;
 	width: 100vw;
@@ -155,7 +155,7 @@ h2 {
 }
 
 #screen .hand {
-	background-image: url(hand.png);
+	background-image: url(images/hand.png);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -166,7 +166,7 @@ h2 {
 }
 
 #screen .mockup {
-	background-image: url(messenger.png);
+	background-image: url(images/messenger.png);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -177,7 +177,7 @@ h2 {
 }
 
 #screen .darkening {
-	background-image: url(darkening.png);
+	background-image: url(images/darkening.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -189,7 +189,7 @@ h2 {
 }
 
 #screen .phone {
-	background-image: url(iphone.png);
+	background-image: url(images/iphone.png);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
