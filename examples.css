@@ -19,6 +19,8 @@
 
 #examples {
 	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-direction: row;
@@ -29,6 +31,7 @@
 	justify-content: center;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	max-width: 1200px;
 }
 
 .example {
@@ -40,12 +43,17 @@
 	overflow: hidden;
 }
 
-#example1 {
-	background-color: rgb(65, 105, 142);
+.aVideo {
+	width: 190px;
+	height: 338px;
+}
+
+/*#example1 {
+	background-color: rgb(89, 130, 144);
 }
 
 #example1 .pane {
-	background-color: white;
+	background-color: rgb(233, 247, 247);;
 	width: 100%;
 	height: 100%;
 	margin-left: 80px;
@@ -62,12 +70,12 @@
 	height: 50px;
 	background-image: url(images/touch-point.png);
 	background-size: contain;
-	/*background-color: rgb(181, 225, 226);*/
+	/*background-color: rgb(181, 225, 226);*!/
 	margin: auto;
-	position: absolute;
+	/*position: absolute;*!/
 	top: 0; left: 0; bottom: 0; right: 0;
 	-webkit-animation:touchpoint 2.4s infinite;
-}
+}*/
 
 @-webkit-keyframes movingbox{
 	0% { -webkit-transform: scale3d(1.1577, 1.1577, 1.0); }
