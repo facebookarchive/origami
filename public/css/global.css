@@ -52,7 +52,7 @@ h2 {
 }
 
 #nav li.logo {
-	background-image: url(images/logo-small-white-2x.png);
+	background-image: url('../images/logo-small-white-2x.png');
 	background-size: 59px 17px;
 	background-repeat: no-repeat;
 	background-position: center 2.5px;
@@ -68,6 +68,18 @@ h2 {
 
 #nav li.download {
 	float: right;
+}
+
+/* Nav Bar Color Invert */
+
+body.light #nav {
+	background-color: rgb(250, 250, 250);
+	border-bottom:  1px solid rgba(0, 0, 0, .08);
+	position: relative;
+}
+
+body.light #nav li.logo {
+	background-image: url('../images/logo-small-black-2x.png');
 }
 
 /* Headers */

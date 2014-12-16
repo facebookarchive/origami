@@ -1,0 +1,141 @@
+/* Hero Section */
+
+#section-hero {
+	background-image: url('../images/hero.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	color: white;
+}
+
+#section-hero p::selection {
+	background: rgba(255, 255, 255, .3);	
+}
+
+#hero-content-wrapper {
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+
+#hero-content {
+	max-width: 400px;
+	margin-left: 7%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-bottom: 20px;
+}
+
+#hero-content .logo {
+	background-image: url('../images/logo-big-2x.png');
+	background-size: contain;
+	width: 257px;
+	height: 92px;
+	margin-bottom: 36px;
+}
+
+/* Presentation Section */
+
+#section-presentation {
+	text-align: center;
+}
+
+#tv {
+	background-image: url('../images/tv.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100vw;
+	max-width: 975px;
+	height: 597px;
+	margin: 28px auto 0 auto;
+}
+
+#screen {
+	background-color: white;
+	width: 779px;
+	height: 438px;
+	margin: 0 auto;
+	top: 22px;
+	position: relative;
+	overflow: hidden;
+}
+
+#screen .hand {
+	background-image: url('../images/hand.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+#screen .mockup {
+	background-image: url('../images/messenger.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+#screen .darkening {
+	background-image: url('../images/darkening.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	opacity: 0;
+}
+
+#screen .phone {
+	background-image: url('../images/iphone.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+#controller {
+	margin-top: -58px;
+	color: rgb(128, 128, 128);
+}
+
+#keys {
+	list-style: none;
+	display: inline-block;
+	margin-top: 20px;
+	padding-bottom: 100px;
+}
+
+#keys li {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 0 5px;
+	border-radius: 4px;
+	border-color: rgba(0, 0, 0, .3);
+	border-width: 2px;
+	border-style: solid;
+	color: rgba(0, 0, 0, .4);
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 23px;
+	line-height: 46px;
+}
+
+#keys li:active,
+#keys li.active {
+	background-color: rgba(0, 0, 0, 0.1);
+}

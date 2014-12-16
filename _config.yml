@@ -1,0 +1,13 @@
+name: "Origami &mdash; Design Prototyping"
+description: "Design prototyping with Quartz Composer"
+
+url: "http://localhost:4000"
+
+paginate: 10
+
+markdown: rdiscount
+permalink: pretty
+highlighter: pygments
+collections:
+  docs:
+    output: true

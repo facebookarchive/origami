@@ -1,9 +1,7 @@
-@import url('global.css');
-
-/* Hero Section! */
+/* Hero Section */
 
 #section-hero {
-	background-image: url(images/hero.jpg);
+	background-image: url('../images/hero.jpg');
 	background-size: cover;
 	background-position: center;
 	width: 100%;
@@ -32,7 +30,7 @@
 }
 
 #hero-content .logo {
-	background-image: url(images/logo-big-2x.png);
+	background-image: url('../images/logo-big-2x.png');
 	background-size: contain;
 	width: 257px;
 	height: 92px;
@@ -46,7 +44,7 @@
 }
 
 #tv {
-	background-image: url(images/tv.jpg);
+	background-image: url('../images/tv.jpg');
 	background-size: cover;
 	background-position: center;
 	width: 100vw;
@@ -66,7 +64,7 @@
 }
 
 #screen .hand {
-	background-image: url(images/hand.png);
+	background-image: url('../images/hand.png');
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -77,7 +75,7 @@
 }
 
 #screen .mockup {
-	background-image: url(images/messenger.png);
+	background-image: url('../images/messenger.png');
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -88,7 +86,7 @@
 }
 
 #screen .darkening {
-	background-image: url(images/darkening.png);
+	background-image: url('../images/darkening.png');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -100,7 +98,7 @@
 }
 
 #screen .phone {
-	background-image: url(images/iphone.png);
+	background-image: url('../images/iphone.png');
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;

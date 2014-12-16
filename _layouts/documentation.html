@@ -1,0 +1,15 @@
+{% include header.html %}
+<body class="light">
+
+<div id="wrapper">
+	{% include navigation.html %}
+	<ul class="docs">
+		{% for doc in site.docs %}
+		<li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+		{% endfor %}
+	</ul>
+	<div class="doc-content">
+		{{ content }}
+	</div>
+	
+{% include footer.html %}

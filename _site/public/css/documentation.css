@@ -1,0 +1,14 @@
+.docs {
+	list-style-type: none;
+	width: 300px;
+	padding: 36px;
+	height: calc(100vh - 51px);
+	float: left;
+}
+
+.doc-content {
+	width: calc(100vw - 300px);
+	height: calc(100vh - 51px);
+	padding: 36px;
+	float: left;
+}
