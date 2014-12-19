@@ -4,7 +4,7 @@
 }
 
 #examples {
-	margin-top: 50px;
+	margin-top: 70px;
 	margin-left: auto;
 	margin-right: auto;
 	display: -webkit-flex;
@@ -17,29 +17,35 @@
 	justify-content: center;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	max-width: 1200px;
+	max-width: 1100px;
 }
 
-.example {
+.grid-item {
+	padding: 0 25px 50px 25px;
+}
+
+.grid-item p {
+	text-align: center;
+	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 12px;
+}
+
+.screen {
 	width: 190px;
 	height: 338px;
 	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
 	background-color: rgb(250,250,250);
-	margin: 30px 20px;
 	overflow: hidden;
 }
 
-.aVideo {
-	width: 190px;
-	height: 338px;
-}
-
-#example1 {
+#screen1 {
 	background-color: black;
 	position: relative;
 }
 
-#example1 .backpane {
+#screen1 .backpane {
 	background-color: rgb(89, 130, 144);
 	width: 100%;
 	height: 100%;
@@ -48,7 +54,7 @@
 	position: absolute;
 }
 
-#example1 .frontpane {
+#screen1 .frontpane {
 	background-color: rgb(233, 247, 247);
 	width: 100%;
 	height: 100%;
@@ -57,13 +63,13 @@
 	position: absolute;
 }
 
-#example1 .nav-bar {
+#screen1 .nav-bar {
 	background-color: rgb(181, 225, 226);
 	width: 100%;
 	height: 12%;
 }
 
-#example1 .touchpoint {
+#screen1 .touchpoint {
 	width: 50px;
 	height: 50px;
 	background-image: url('../images/touch-point.png');
