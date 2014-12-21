@@ -1,5 +1,3 @@
-var springSystem = new rebound.SpringSystem();
-
 $(document).ready(function($) {
 	console.log("homepage loaded");
 
@@ -95,11 +93,4 @@ toggleHand = function() {
 toggleFullscreen = function () {
 	isFullscreen = !isFullscreen;
 	fullscreenSpring.setEndValue(isFullscreen);
-}
-
-
-// Utilities
-
-transition = function(progress, startValue, endValue) {
-	return startValue + (progress * (endValue - startValue));
 }
