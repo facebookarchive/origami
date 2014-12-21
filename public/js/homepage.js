@@ -1,6 +1,8 @@
 var springSystem = new rebound.SpringSystem();
 
 $(document).ready(function($) {
+	console.log("homepage loaded");
+
 	setupPresentationKeys();
 	setupPresentationSprings();
 });
