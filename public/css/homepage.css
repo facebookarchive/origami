@@ -18,6 +18,7 @@
 	display: -webkit-flex;
 	display: flex;
 	align-items: center;
+	height: 100vh;
 }
 
 #hero-content {
