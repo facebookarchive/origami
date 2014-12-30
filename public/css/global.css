@@ -16,7 +16,14 @@
 a {
 	color:inherit;
 	text-decoration: none;
-} 
+	font-weight: bold;
+	cursor: auto;
+	-webkit-user-select:text;
+}
+
+a:hover {
+	text-decoration: underline;
+}
  
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -38,7 +45,7 @@ h2 {
 /* Nav Bar */
 
 #nav {
-	border-bottom: 1px solid rgba(255, 255, 255, .3);
+	border-bottom:  1px solid rgba(255, 255, 255, .3);
 	padding: 15px 33px;
 	list-style: none;
 	position: absolute;
@@ -70,6 +77,11 @@ h2 {
 	float: right;
 }
 
+#nav a {
+	font-weight: normal;
+	-webkit-user-select: none;
+}
+
 /* Nav Bar Color Invert */
 
 body.light #nav {
@@ -85,8 +97,8 @@ body.light #nav li.logo {
 /* Headers */
 
 h2 {
-	margin-top: 50px;
-	margin-bottom: 20px;
+	padding-top: 80px;
+	padding-bottom: 16px;
 }
 
 .header p {

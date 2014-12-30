@@ -19,6 +19,7 @@
 	display: flex;
 	align-items: center;
 	height: 100vh;
+	/*max-height: 760px;*/
 }
 
 #hero-content {
@@ -50,7 +51,7 @@
 	width: 100vw;
 	max-width: 975px;
 	height: 597px;
-	margin: 28px auto 0 auto;
+	margin: 40px auto 0 auto;
 }
 
 #screen {
@@ -109,7 +110,7 @@
 }
 
 #controller {
-	margin-top: -58px;
+	margin-top: -50px;
 	color: rgb(128, 128, 128);
 }
 
@@ -138,4 +139,75 @@
 #keys li:active,
 #keys li.active {
 	background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Code Section */
+
+#section-code {
+	background: radial-gradient(ellipse farthest-side at 100% 100%, #99d4d7 30%, #145882 125%);
+	height: 700px; /* Try to get rid of this */
+	color: white;
+	/*overflow: hidden;*/
+	position: relative;
+	/*text-align: center;*/
+}
+
+#code-image {
+	background-image: url('../images/code.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+}
+
+#section-code .header {
+	color: white;
+}
+
+#section-code .header p {
+	color: white;
+}
+
+#section-code ::selection {
+	background: rgba(255, 255, 255, .3);	
+}
+
+#section-code .main-content {
+	width: 850px;
+	margin: 100px auto 0 auto;
+}
+
+#section-code .description {
+	width: 390px;
+	float: left;
+}
+
+#code-menu {
+	background-image: url('../images/code-menu.png');
+	background-size: cover;
+	width: 378px;
+	height: 146px;
+	float: right;
+	margin-top: 50px;
+}
+
+#code-buttons {
+	list-style: none;
+	display: inline-block;
+	margin-top: 15px;
+}
+
+#code-buttons li {
+	float: left;
+	border-radius: 4px;
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+	margin-right: 10px;
+	padding: 3px 10px;
+}
+
+#code-buttons li:active,
+#code-buttons li.active {
+	background-color: rgba(255, 255, 255, .3);
 }
