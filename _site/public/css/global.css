@@ -42,6 +42,12 @@ h2 {
 	font-weight: normal;
 }
 
+h3 {
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+}
+
 /* Nav Bar */
 
 #nav {

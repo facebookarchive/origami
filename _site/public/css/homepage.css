@@ -1,3 +1,21 @@
+.buttons {
+	list-style: none;
+	display: inline-block;
+}
+
+.buttons li {
+	float: left;
+	border-radius: 4px;
+	border-width: 1px;
+	border-color: white;
+	border-style: solid;
+}
+
+.buttons li:active,
+.buttons li.active {
+	background-color: rgba(255, 255, 255, .3);
+}
+
 /* Hero Section */
 
 #section-hero {
@@ -145,11 +163,9 @@
 
 #section-code {
 	background: radial-gradient(ellipse farthest-side at 100% 100%, #99d4d7 30%, #145882 125%);
-	height: 700px; /* Try to get rid of this */
+	height: 700px;
 	color: white;
-	/*overflow: hidden;*/
 	position: relative;
-	/*text-align: center;*/
 }
 
 #code-image {
@@ -192,22 +208,105 @@
 }
 
 #code-buttons {
-	list-style: none;
-	display: inline-block;
 	margin-top: 15px;
 }
 
 #code-buttons li {
-	float: left;
-	border-radius: 4px;
-	border-width: 1px;
-	border-color: white;
-	border-style: solid;
 	margin-right: 10px;
 	padding: 3px 10px;
 }
 
-#code-buttons li:active,
-#code-buttons li.active {
+/* Getting Started Section */
+
+#section-get-started {
+	background-image: url('../images/birds.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 700px;
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+#section-get-started ::selection {
+	background: rgba(255, 255, 255, .3);	
+}
+
+#section-get-started .header p {
+	color: white;
+}
+
+#download-buttons {
+	margin-top: 35px;
+	text-align: left;
+}
+
+#download-buttons li {
+	padding: 9px 10px;
+	margin: 0 8px;
+	width: 240px;
+	line-height: 18px;
+}
+
+.download-arrow {
+	background-image: url('../images/download-arrow.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 23px;
+	height: 24px;
+	float: left;
+	margin: 6px 10px 0 3px;
+}
+
+.secondary-button-text {
+	color: rgba(255, 255, 255, .7);
+	font-size: 12px;
+}
+
+#section-get-started h3 {
+	margin-top: 100px;
+}
+
+#help-buttons {
+	margin-top: 35px;
+	text-align: left;
+	list-style: none;
+	display: inline-block;
+}
+
+#help-buttons li {
+	padding: 10px 20px;
+	width: 240px;
+	height: 140px;
+	float: left;
+	border-radius: 0px;
+	border-color: rgba(0, 0, 0, 0);
+	border-width: 1px;
+	border-right-color: rgba(255, 255, 255, .3);
+	border-right-width: 1px;
+	border-style: solid;
+}
+
+#help-buttons li:hover {
+	background-color: rgba(255, 255, 255, .1);
+}
+
+#help-buttons li:active {
 	background-color: rgba(255, 255, 255, .3);
+}
+
+#help-buttons .last-button {
+	border-right-color: rgba(255, 255, 255, .0);
+}
+
+#help-buttons .secondary-button-text {
+	color: white;
+	margin-top: 6px;
+}
+
+#help-buttons a {
+	text-decoration: none;
+	font-weight: normal;
 }
