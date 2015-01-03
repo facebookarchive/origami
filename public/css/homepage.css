@@ -223,14 +223,21 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 700px;
-	width: 100%;
+	height: 100vh;
 	color: white;
 	text-align: center;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 
 #section-get-started ::selection {
 	background: rgba(255, 255, 255, .3);	
+}
+
+#section-get-started h2 {
+	padding-top: 22vh;
 }
 
 #section-get-started .header p {
@@ -240,6 +247,8 @@
 #download-buttons {
 	margin-top: 35px;
 	text-align: left;
+	list-style: none;
+	display: inline-block;
 }
 
 #download-buttons li {
@@ -263,10 +272,6 @@
 .secondary-button-text {
 	color: rgba(255, 255, 255, .7);
 	font-size: 12px;
-}
-
-#section-get-started h3 {
-	margin-top: 100px;
 }
 
 #help-buttons {
@@ -309,4 +314,9 @@
 #help-buttons a {
 	text-decoration: none;
 	font-weight: normal;
+}
+
+#learn-origami {
+	margin-top: auto;
+	padding-bottom: 4vh;
 }
