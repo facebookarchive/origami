@@ -216,6 +216,36 @@
 	padding: 3px 10px;
 }
 
+/* Photoshop Section */
+
+#section-photoshop {
+	background-image: url('../images/photoshop.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 700px;
+	text-align: left;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+#section-photoshop .body-text {
+	width: 400px;
+	margin-left: 56%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#section-photoshop h2 {
+	padding-top: 0;
+}
+
+#section-photoshop .body-text p {
+	color: rgba(0, 0, 0, 0.5);
+}
+
 /* Getting Started Section */
 
 #section-get-started {
