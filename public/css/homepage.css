@@ -102,6 +102,7 @@
 
 #screen .darkening {
 	background-image: url('../images/darkening.png');
+	background-size: cover;
 	opacity: 0;
 }
 
