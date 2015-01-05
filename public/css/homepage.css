@@ -277,7 +277,6 @@
 }
 
 #section-get-started .centered-content {
-	background-color: rgba(255,255,255,0.2);
 	margin: auto;
 }
 
@@ -312,6 +311,7 @@
 }
 
 #help-buttons {
+	margin-top: 72px;
 	margin-left: auto;
 	margin-right: auto;
 	display: -webkit-flex;
@@ -327,39 +327,23 @@
 }
 
 .help-button {
-	width: 180px;
+	width: 200px;
 	height: 200px;
-	background-color: rgba(255,0,0,0.3);
+	background-size: 70px 56px;
+	background-position-x: 50%;
+	background-position-y: 8%;
+	background-repeat: no-repeat;
+	padding-top: 71px;
+	margin: auto 10px;	
 }
 
-#help-buttons li {
-	padding: 10px 20px;
-	width: 240px;
-	height: 140px;
-	float: left;
-	border-radius: 0px;
-	border-color: rgba(0, 0, 0, 0);
-	border-width: 1px;
-	border-right-color: rgba(255, 255, 255, .3);
-	border-right-width: 1px;
-	border-style: solid;
-}
-
-#help-buttons li:hover {
-	background-color: rgba(255, 255, 255, .1);
-}
-
-#help-buttons li:active {
-	background-color: rgba(255, 255, 255, .3);
-}
-
-#help-buttons .last-button {
-	border-right-color: rgba(255, 255, 255, .0);
-}
-
-#help-buttons .secondary-button-text {
-	color: white;
+#help-buttons p {
+	font-size: 12px;
 	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	-webkit-user-select:none;
+	cursor: default;
 }
 
 #help-buttons a {
@@ -367,11 +351,30 @@
 	font-weight: normal;
 }
 
-/*#learn-origami {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}*/
+#examples-button {
+	background-image: url('../images/learn-examples.png');
+}
+
+#tutorials-button {
+	background-image: url('../images/learn-tutorials.png');
+}
+
+#documentation-button {
+	background-image: url('../images/learn-documentation.png');
+}
+
+#community-button {
+	background-image: url('../images/learn-community.png');
+}
+
+#help-buttons div {
+	border-radius: 6px;
+}
+
+#help-buttons div:hover {
+	background-color: rgba(255, 255, 255, .15);
+}
+
+#help-buttons div:active {
+	background-color: rgba(255, 255, 255, .3);
+}
