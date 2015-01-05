@@ -260,6 +260,8 @@
 	display: flex;
 	-webkit-flex-direction: column;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 #section-get-started ::selection {
@@ -267,11 +269,16 @@
 }
 
 #section-get-started h2 {
-	padding-top: 22vh;
+	padding-top: 0;
 }
 
 #section-get-started .header p {
 	color: white;
+}
+
+#section-get-started .centered-content {
+	background-color: rgba(255,255,255,0.2);
+	margin: auto;
 }
 
 #download-buttons {
@@ -305,10 +312,24 @@
 }
 
 #help-buttons {
-	margin-top: 35px;
-	text-align: left;
-	list-style: none;
-	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.help-button {
+	width: 180px;
+	height: 200px;
+	background-color: rgba(255,0,0,0.3);
 }
 
 #help-buttons li {
@@ -346,7 +367,11 @@
 	font-weight: normal;
 }
 
-#learn-origami {
-	margin-top: auto;
-	padding-bottom: 4vh;
-}
+/*#learn-origami {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}*/
