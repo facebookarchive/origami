@@ -207,8 +207,9 @@
 
 #section-photoshop {
 	background-image: url('../images/photoshop.jpg');
-	background-size: cover;
-	background-position: center;
+	background-size: contain;
+	background-position-x: calc(50% - 450px);
+	background-position-y: 50%;
 	background-repeat: no-repeat;
 	height: 757px;
 	text-align: left;
@@ -219,10 +220,9 @@
 }
 
 #section-photoshop .body-text {
-	width: 400px;
-	margin-left: 56%;
-	margin-top: auto;
-	margin-bottom: auto;
+	width: 900px;
+	padding-left: 500px;
+	margin: auto;
 }
 
 #section-photoshop h2 {
