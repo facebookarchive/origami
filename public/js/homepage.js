@@ -81,7 +81,7 @@ setupPresentationSprings = function () {
 	fullscreenSpring.addListener({
 	    onSpringUpdate: function (spring) {
 	    	var progress = spring.getCurrentValue();
-	    	var scale = transition(progress, 1, 1.63);
+	    	var scale = transition(progress, 0.628, 1);
 			phone.style['webkitTransform'] = 'scale3d('+scale+', '+scale+', 1.0)';
 			phone.style['MozTransform'] = 'scale3d('+scale+', '+scale+', 1.0)'; 
 			hand.style['webkitTransform'] = 'scale3d('+scale+', '+scale+', 1.0)';
@@ -93,6 +93,7 @@ setupPresentationSprings = function () {
 			darkening.style['opacity'] = progress;
 		}
 	});
+	fullscreenSpring.setCurrentValue(isFullscreen);
 }
 
 toggleHand = function() {
