@@ -74,6 +74,8 @@
 
 #screen {
 	background-color: white;
+	background-size: cover;
+	background-position: center;
 	width: 779px;
 	height: 438px;
 	margin: 0 auto;
@@ -139,6 +141,20 @@
 	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 23px;
 	line-height: 46px;
+}
+
+#minus-key {
+	background-image: url('../images/key-minus.png');
+	background-size: 14px 14px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#plus-key {
+	background-image: url('../images/key-plus.png');
+	background-size: 14px 14px;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #keys li:active,

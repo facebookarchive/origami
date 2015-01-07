@@ -1,6 +1,10 @@
+var totalBackgrounds = 13;
+var backgroundIndex = 8;
+
 $(document).ready(function($) {
 	console.log("homepage loaded");
 
+	changeBackgroundToIndex(backgroundIndex);
 	setupPresentationKeys();
 	setupPresentationSprings();
 });
@@ -10,6 +14,10 @@ setupPresentationKeys = function() {
 		$(val).click(function() {
 			if (i === 0)
 				toggleFullscreen();
+			else if (i === 1)
+				prevBackground();
+			else if (i === 2)
+				nextBackground();
 			else if (i === 3)
 				toggleHand();
 		});
@@ -37,9 +45,11 @@ setupPresentationKeys = function() {
 		}
 		else if (e.keyCode === 187) { // '='
 			$("#plus-key").removeClass("active");
+			nextBackground();
 		}
 		else if (e.keyCode === 189) { // '-'
 			$("#minus-key").removeClass("active");
+			prevBackground();
 		}
 		else if (e.keyCode === 72) { // 'H'
 			$("#hand-key").removeClass("active");
@@ -90,7 +100,29 @@ toggleHand = function() {
 	handSpring.setEndValue(handVisible);
 }
 
-toggleFullscreen = function () {
+toggleFullscreen = function() {
 	isFullscreen = !isFullscreen;
 	fullscreenSpring.setEndValue(isFullscreen);
+}
+
+nextBackground = function() {
+	if (backgroundIndex === totalBackgrounds)
+		backgroundIndex = 0;
+	else
+		backgroundIndex++;
+	
+	changeBackgroundToIndex(backgroundIndex);
+}
+
+prevBackground = function() {
+	if (backgroundIndex > 0)
+		backgroundIndex--;
+	else
+		backgroundIndex = totalBackgrounds;
+		
+	changeBackgroundToIndex(backgroundIndex);
+}
+
+changeBackgroundToIndex = function(index) {
+	$('#screen').css('background-image', 'url(../public/images/backgrounds/' + index + '.jpg)');
 }
