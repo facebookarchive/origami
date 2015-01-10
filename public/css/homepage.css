@@ -287,19 +287,53 @@
 #rooms-clipview {
 	width: 434px;
 	height: 279px;
-	margin-top: 173px;
+	margin-top: 180px;
 	margin-left: calc(50% + 1px);
 	margin-right: auto;
 	overflow: hidden;
+	position: relative;
 }
 
-#rooms-street {
+.rooms-street {
 	background-image: url('../images/rooms-street.jpg');
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;	
 	width: 820px;
 	height: 279px;
+	position: absolute;
+	-webkit-animation-name: pan;
+	-webkit-animation-duration: 20s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: pan;
+	-moz-animation-duration: 20s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+}
+
+#street2 {
+	left: 828px;
+}
+
+@-webkit-keyframes pan {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		-webkit-transform: translate3d(-828px, 0, 0);
+	}
+}
+
+@-moz-keyframes pan {
+	0% {
+		-moz-transform: translate3d(0, 0, 0);
+	}
+	
+	100% {
+		-moz-transform: translate3d(-828px, 0, 0);
+	}
 }
 
 /* Getting Started Section */
