@@ -1,0 +1,58 @@
+{% assign patch = include.patch %}
+
+<h1>{{ patch.name }}</h1>
+
+{{ patch.desc | markdownify }}
+
+
+<div class="patch-block">
+	<div class="patch {{ patch.type }}">
+		<h3>{{ patch.name }}</h3>
+		<ul class="inputs">
+			{% for port in patch.inputs %}
+			<li>{{ port.name }}</li>
+			{% endfor %}
+		</ul>
+		<ul class="outputs">
+			{% for port in patch.outputs %}
+			<li>{{ port.name }}</li>
+			{% endfor %}
+		</ul>
+		<hr>
+	</div>
+</div>
+
+
+<h2>Usage</h2>
+
+{% if patch.usage %}
+{{ patch.usage | markdownify }}
+{% endif %}
+
+<div class="port-descriptions">
+	<div class="inputs">
+		<h2>Inputs</h2>
+		<dl>
+		{% for port in patch.inputs %}
+			<dt>{{ port.name }}</dt>
+			{% if port.desc %}
+			<dd>{{ port.desc | markdownify }}</dd>
+			{% endif %}
+		{% endfor %}
+		</dl>
+	</div>
+
+	<div class="outputs ports-block">
+		<h2>Outputs</h2>
+		<dl>
+		{% for port in patch.outputs %}
+			<dt>{{ port.name }}</dt>
+			{% if port.desc %}
+			<dd>{{ port.desc | markdownify }}</dd>
+			{% endif %}
+		{% endfor %}
+		</dl>
+	</div>
+	<hr>
+</div>
+

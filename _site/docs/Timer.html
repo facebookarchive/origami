@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Documentation</title>
+	<title>Origami &mdash; Timer</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Design Prototyping">
 	<meta property="og:url" content="http://facebook.origami.com"/>
@@ -25,27 +25,111 @@
 	<li class="item"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a></li>
 	<li class="download">Download</li>
 </ul>
-		<ul class="docs">
-	
+	<ul class="docs">
+		
 		<li><a href="/docs/BrowserChrome.html">Browser Chrome</a></li>
-	
+		
 		<li><a href="/docs/Layer.html">Layer</a></li>
-	
+		
 		<li><a href="/docs/PopAnimation.html">Pop Animation</a></li>
-	
+		
 		<li><a href="/docs/Progress.html">Progress</a></li>
-	
+		
 		<li><a href="/docs/Switch.html">Switch</a></li>
-	
+		
 		<li><a href="/docs/TextLayer.html">Text Layer</a></li>
-	
+		
 		<li><a href="/docs/Timer.html">Timer</a></li>
-	
+		
 		<li><a href="/docs/Transition.html">Transition</a></li>
-	
+		
 		<li><a href="/docs/Velocity.html">Velocity</a></li>
-	
+		
 	</ul>
+	<div class="doc-content">
+		
+
+<h1>Timer</h1>
+
+
+
+
+<p>Runs a timer for a specified duration starting with a specified signal. It outputs the state of the timer as well as the time elapsed.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Timer</h3>
+        <ul class="inputs">
+            
+            <li>Turn On</li>
+            
+            <li>Duration</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Time</li>
+            
+            <li>Done</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<h2>Usage</h2>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <h2>Inputs</h2>
+        <dl>
+        
+            <dt>Turn On</dt>
+            
+            <dd><p>A pulse on this port will begin timing</p>
+</dd>
+            
+        
+            <dt>Duration</dt>
+            
+            <dd><p>How long to run the timer for</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <h2>Outputs</h2>
+        <dl>
+        
+            <dt>Time</dt>
+            
+        
+            <dt>Done</dt>
+            
+            <dd><p>Sends a pulse when the timer is done</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
+
+	</div>
 	
 </div> <!-- end wrapper -->
 

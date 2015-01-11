@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Origami &mdash; Text Layer</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://facebook.origami.com"/>
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/documentation.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src=''></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body class="light">
+
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+	<li class="item"><a href="/examples">Examples</a></li>
+	<li class="item">Tutorials</li>
+	<li class="item"><a href="/documentation">Documentation</a></li>
+	<li class="item"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a></li>
+	<li class="download">Download</li>
+</ul>
+	<ul class="docs">
+		
+		<li><a href="/docs/BrowserChrome.html">Browser Chrome</a></li>
+		
+		<li><a href="/docs/Layer.html">Layer</a></li>
+		
+		<li><a href="/docs/PopAnimation.html">Pop Animation</a></li>
+		
+		<li><a href="/docs/Progress.html">Progress</a></li>
+		
+		<li><a href="/docs/Switch.html">Switch</a></li>
+		
+		<li><a href="/docs/TextLayer.html">Text Layer</a></li>
+		
+		<li><a href="/docs/Timer.html">Timer</a></li>
+		
+		<li><a href="/docs/Transition.html">Transition</a></li>
+		
+		<li><a href="/docs/Velocity.html">Velocity</a></li>
+		
+	</ul>
+	<div class="doc-content">
+		
+
+<h1>Text Layer</h1>
+
+
+
+
+<p>Text Layers allow you show text on screen. Anchor Point determines the point from which the text will be layed out as well as the text alignment of the whole block.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch consumer">
+        <h3>Text Layer</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Anchor Point</li>
+            
+            <li>Text</li>
+            
+            <li>Font Name</li>
+            
+            <li>X Position</li>
+            
+            <li>Y Position</li>
+            
+            <li>Width</li>
+            
+            <li>Height</li>
+            
+            <li>Shadow Info</li>
+            
+            <li>Color</li>
+            
+            <li>Alpha</li>
+            
+            <li>Scale</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<h2>Usage</h2>
+
+
+
+
+<p>Build your interface out of Layer patches. They can recieve taps in combination with the Interaction patch.</p>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <h2>Inputs</h2>
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>When false, the Layer is invisible</p>
+</dd>
+            
+        
+            <dt>Anchor Point</dt>
+            
+            <dd><p>A point within the Layer's container (current Layer Group or Device patch) that you would like to position the layer relative to.</p>
+
+<p>Options for positioning are:</p>
+
+<ol>
+<li>Top Left</li>
+<li>Top Center</li>
+<li>Top Right</li>
+<li>Center Left</li>
+<li>Center</li>
+<li>Center Right</li>
+<li>Bottom Left</li>
+<li>Bottom Center</li>
+<li>Bottom Right</li>
+</ol>
+
+</dd>
+            
+        
+            <dt>Text</dt>
+            
+            <dd><p>A string that you would like to display. You can either set this value directly by double-clicking on the patch input, or connect it to a dynamic input that builds the string from other values.</p>
+</dd>
+            
+        
+            <dt>Font Name</dt>
+            
+            <dd><p>The font family with which to render the text. For example HelveticaNeue-Bold</p>
+</dd>
+            
+        
+            <dt>X Position</dt>
+            
+            <dd><p>Number of pixels to the right of the position specified in Anchor Point</p>
+</dd>
+            
+        
+            <dt>Y Position</dt>
+            
+            <dd><p>Number of pixels up from the position specified in Anchor Point</p>
+</dd>
+            
+        
+            <dt>Width</dt>
+            
+            <dd><p>The width in pixels of the box on screen that will contain the text. If a value of 0.0 is passed in, the text will be a single line, as wide as necessary.</p>
+</dd>
+            
+        
+            <dt>Height</dt>
+            
+            <dd><p>The height in pixels of the box on screen that will contain the text. If a value of 0.0 is passed in, the text not be vertically constrained.</p>
+</dd>
+            
+        
+            <dt>Shadow Info</dt>
+            
+            <dd><p>Draw a shadow on the text by configuring a Shadow Info patch connected to this input</p>
+</dd>
+            
+        
+            <dt>Color</dt>
+            
+            <dd><p>A color with which the Image will be tinted before display. You can use this with a pure white image to display the same shape in different colors.</p>
+</dd>
+            
+        
+            <dt>Alpha</dt>
+            
+            <dd><p>A 0-1 value will fade in the layer</p>
+</dd>
+            
+        
+            <dt>Scale</dt>
+            
+            <dd><p>How much to increase or decrease the size of the Text Layer. A value of 0.0 will make it invisible, whereas 2.0 will make it twice the normal size.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <h2>Outputs</h2>
+        <dl>
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
+
+	</div>
+	
+</div> <!-- end wrapper -->
+
+</body>
+</html>

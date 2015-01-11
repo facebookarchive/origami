@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Origami &mdash; Pop Animation</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://facebook.origami.com"/>
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/documentation.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src=''></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</head>
+<body class="light">
+
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+	<li class="item"><a href="/examples">Examples</a></li>
+	<li class="item">Tutorials</li>
+	<li class="item"><a href="/documentation">Documentation</a></li>
+	<li class="item"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a></li>
+	<li class="download">Download</li>
+</ul>
+	<ul class="docs">
+		
+		<li><a href="/docs/BrowserChrome.html">Browser Chrome</a></li>
+		
+		<li><a href="/docs/Layer.html">Layer</a></li>
+		
+		<li><a href="/docs/PopAnimation.html">Pop Animation</a></li>
+		
+		<li><a href="/docs/Progress.html">Progress</a></li>
+		
+		<li><a href="/docs/Switch.html">Switch</a></li>
+		
+		<li><a href="/docs/TextLayer.html">Text Layer</a></li>
+		
+		<li><a href="/docs/Timer.html">Timer</a></li>
+		
+		<li><a href="/docs/Transition.html">Transition</a></li>
+		
+		<li><a href="/docs/Velocity.html">Velocity</a></li>
+		
+	</ul>
+	<div class="doc-content">
+		
+
+<h1>Pop Animation</h1>
+
+
+
+
+<p>Pop Animation is the most common way to animate a value in a physical way.  It uses a configurable bouncy curve (or spring-mass system) to move Progress towards Number. You can interrupt this animation at any time by changing the Number input, and Pop Animation will preserve the current velocity of the animation, giving a physically realistic feeling to your interface.</p>
+
+
+
+
+<p>When converting your design to code, you can use the open-source <a href="https://github.com/facebook/pop" title="Facebook POP animation library">POP animation library</a> to build animations for iOS.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Pop Animation</h3>
+        <ul class="inputs">
+            
+            <li>Number</li>
+            
+            <li>Bounciness</li>
+            
+            <li>Speed</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Progress</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<h2>Usage</h2>
+
+
+
+
+<p>Typically you connect the input of Pop Animation to a Switch representing some state change, and the output to any number of Transitions, controlling different properties in the interface that should change based on the state change in the Switch. These Transitions will move together since their values are derived from the same Pop Animation patch.</p>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <h2>Inputs</h2>
+        <dl>
+        
+            <dt>Number</dt>
+            
+            <dd><p>The changing value you wish to animate. This is the target value to which Pop Animation will animate.</p>
+</dd>
+            
+        
+            <dt>Bounciness</dt>
+            
+            <dd><p>A qualitative feeling of how springy the animation will feel. This can be changed as the animation is running for advanced effects.</p>
+</dd>
+            
+        
+            <dt>Speed</dt>
+            
+            <dd><p>A qualitative feeling of how fast the animation progresses towards the target value. This can be changed as the animation is running for advanced effects.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <h2>Outputs</h2>
+        <dl>
+        
+            <dt>Progress</dt>
+            
+            <dd><p>Animated value</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
+
+	</div>
+	
+</div> <!-- end wrapper -->
+
+</body>
+</html>

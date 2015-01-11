@@ -7,8 +7,150 @@
 }
 
 .doc-content {
-	width: calc(100vw - 300px);
-	height: calc(100vh - 51px);
+	margin-left: 300px;
+	width: 800px;
 	padding: 36px;
+}
+
+div.patch-block {
+	text-align: center;
+	padding: 10px;
+}
+
+div.patch {
+	display: inline-block;
+	border: 0.5px solid rgba(100,100,100,0.2);
+	border-radius: 8px;
+	position: relative;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: black;
+	box-shadow: 0px 1.5px 1.5px rgba(0,0,0, 1);
+}
+
+div.patch.processor {
+	background: #333333;
+}
+
+div.patch.consumer {
+	background: #80ccff;
+}
+
+div.patch.producer {
+	background: #ff0099;
+}
+
+
+div.patch * {
+	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	line-height: 14px;
+}
+
+div.patch hr {
+	clear: both;
+	visibility: hidden;
+}
+
+div.patch ul {
+	padding: 10px;
+}
+
+/* Style ports */
+div.patch ul li {
+	font-size: 12px;
+    list-style-position: inside;
+}
+
+div.patch h3 {
+	font-size: 12px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	margin-top: 5px;
+}
+
+div.patch ul.inputs {
+	text-align: left;
 	float: left;
+	position: relative;
+}
+
+div.patch ul.outputs {
+	direction: rtl;
+	text-align: right;
+	position: relative;
+	float: right;
+}
+
+div.patch ul.outputs li {
+
+}
+
+div.patch ul.inputs li {
+	
+}
+
+h1 {
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 39px;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+p {
+	margin-bottom: 1em;
+	color: rgb(128, 128, 128);
+}
+
+h2 {
+	font-size: 18px;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+dl {
+	font-size: 0.8em;
+}
+
+div.inputs {
+	float: left;
+	width: 50%;
+}
+
+div.outputs {
+	float: right;
+	width: 50%;
+}
+
+.port-descriptions {
+	position: relative;
+}
+
+.port-descriptions .inputs {
+	padding-right: 5px;
+}
+
+.port-descriptions .outputs {
+	padding-left: 5px;
+}
+
+.port-descriptions ol {
+	color: rgb(128, 128, 128);
+	margin-left: 2em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	display: inline;
+}
+
+hr {
+	clear: both;
+	visibility: hidden;
 }
