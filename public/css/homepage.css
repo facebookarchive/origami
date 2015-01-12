@@ -22,9 +22,9 @@
 	position: absolute;
 	bottom: 0px;
 	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.05));
-	border-bottom-color: rgba(0,0,0,0.08);
+/*	border-bottom-color: rgba(0,0,0,0.08);
 	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	border-bottom-width: 1px;*/
 }
 
 /* Hero Section */
@@ -65,6 +65,103 @@
 	width: 257px;
 	height: 92px;
 	margin-bottom: 36px;
+}
+
+/* Gestures Section */
+
+#section-gestures {
+	position: relative;
+	height: 1150px;
+}
+
+#gesture-types {
+	margin-left: auto;
+	margin-right: auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.gesture-type {
+	width: 290px;
+	margin: 0 25px;
+}
+
+.gesture-type p {
+	height: 110px;
+}
+
+.gesture-animation {
+	background-size: cover;
+	background-position: center;
+	width: 169px;
+	height: 300px;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+}
+
+#scroll-gesture .gesture-animation {
+	background-image: url('../images/gestures-scroll.jpg');
+}
+
+#swipe-gesture .gesture-animation {
+	background-image: url('../images/gestures-swipe.jpg');
+}
+
+#tap-gesture .gesture-animation {
+	background-image: url('../images/gestures-tap.jpg');
+}
+
+#gesture-patches {
+	width: 440px;
+	height: 255px;
+	background-color: rgb(245,245,245);
+	margin: 50px auto;
+	border-radius: 20px;
+	position: relative;
+}
+
+#nub {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(245,245,245);
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	z-index: -1;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+#gesture-patches .patches {
+	background-image: url('../images/gestures-swipe-patches.png');
+	background-size: cover;
+	background-position: center;
+	width: 372px;
+	height: 185px;
+	position: absolute;
+	margin: 0 auto;
+	top: 37px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+#gesture-patches .patches p {
+	text-align: center;
+	font-size: 13px;
+	width: 200px;
+	margin-top: 120px;
+	margin-left: 5px;
+	color: rgba(0,0,0,0.6);
 }
 
 /* Presentation Section */
