@@ -55,8 +55,14 @@ switch:
   type: processor
   inputs:
     - name: Flip
+      desc: A pulse recieved on this port will switch the switch
     - name: Turn Off
+      desc: A pulse recieved on this port will turn the switch's output value to Off
     - name: Turn On
+      desc: A pulse recieved on this port will turn the switch's output value to On
+  outputs:
+    - name: On / Off
+      desc: The current state of the switch (True or False)
   desc: |
     There are three inputs, "Flip", "Turn On", and "Turn Off". When you hook a Mouse Patch to "Flip", each pulse will alternate between turning the Switch patch on or off. When you hook up an interaction to "Turn On", each pulse will only turn it on. Like wise, hooking an interaction up to "Turn Off" will only turn off. 
     
