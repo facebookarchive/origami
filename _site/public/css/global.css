@@ -77,16 +77,23 @@ h3 {
 
 #nav li.item {
 	margin: 0 17px;
+	font-weight: normal;
+	-webkit-user-select: none;
 }
 
 #nav li.download {
 	float: right;
 }
 
-#nav a {
-	font-weight: normal;
-	-webkit-user-select: none;
+#nav li.item a {
+	font-weight: inherit;
 }
+
+#nav li.item.current {
+	font-weight: normal;
+	color: rgb(0, 114, 255);
+}
+
 
 /* Nav Bar Color Invert */
 

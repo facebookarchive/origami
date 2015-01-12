@@ -9,5 +9,5 @@ markdown: rdiscount
 permalink: pretty
 highlighter: pygments
 collections:
-  docs:
+  documentation:
     output: true

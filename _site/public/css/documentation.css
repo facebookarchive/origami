@@ -1,9 +1,32 @@
-.docs {
+ul.docs {
 	list-style-type: none;
 	width: 300px;
 	padding: 36px;
 	height: calc(100vh - 51px);
 	float: left;
+	line-height: 1.5em;
+}
+
+ul.docs ul {
+	margin-bottom: 1.5em;
+}
+
+/* Active page */
+ul.docs span {
+	color: rgb(0, 114, 255);
+}
+ul.docs li a {
+	font-weight: inherit;
+}
+
+ul.docs li {
+	font-weight: bold;
+	list-style: none;
+}
+
+ul.docs ul li {
+	font-weight: normal;
+	list-style: none;
 }
 
 .doc-content {

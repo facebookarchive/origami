@@ -1,0 +1,35 @@
+
+
+	<ul class="docs">
+		<li>Concepts
+			<ul>
+			{% for doc in site.documentation %}
+				{% if doc.relative_path contains "concepts" %}
+
+				  {% if doc.url == page.url %}
+				<li><span>{{ doc.title }}</span></li>
+				  {% else %}
+				<li><a href="{{ doc.url }}">{{ doc.title }} </a></li>
+				  {% endif %}
+
+			  {% endif %}
+			{% endfor %}
+			</ul>
+		</li>
+
+		<li>Patches
+			<ul>
+			{% for doc in site.documentation %}
+				{% if doc.relative_path contains "patches" %}
+
+				  {% if doc.url == page.url %}
+				<li><span>{{ doc.title }}</span></li>
+				  {% else %}
+				<li><a href="{{ doc.url }}">{{ doc.title }} </a></li>
+				  {% endif %}
+
+			  {% endif %}
+			{% endfor %}
+			</ul>
+		</li>
+	</ul>

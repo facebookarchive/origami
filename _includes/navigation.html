@@ -2,7 +2,11 @@
 	<li class="logo"><a href="/">Origami</a></li>
 	<li class="item"><a href="/examples">Examples</a></li>
 	<li class="item">Tutorials</li>
+{% if page.url contains "documentation" %}
+	<li class="item current"><a href="/documentation">Documentation</a></li>
+{% else %}
 	<li class="item"><a href="/documentation">Documentation</a></li>
+{% endif %}
 	<li class="item"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a></li>
 	<li class="download">Download</li>
 </ul>
