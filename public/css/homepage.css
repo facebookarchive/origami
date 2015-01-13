@@ -159,30 +159,15 @@
 	right: 0;
 }
 
-.popover {
-	background-color: rgb(243,243,243);
-}
-
 #gesture-patches {
+	background-image: url('../images/gestures-popover.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 	width: 440px;
-	height: 225px;
-	margin: 50px auto;
-	border-radius: 20px;
+	height: 240px;
+	margin: 30px auto;
 	position: relative;
-}
-
-#nub {
-	width: 100px;
-	height: 100px;
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	position: absolute;
-	z-index: -1;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
 }
 
 #gesture-patches .patches {
@@ -193,7 +178,7 @@
 	height: 138px;
 	position: absolute;
 	margin: 0 auto;
-	top: 37px;
+	top: 48px;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
@@ -219,31 +204,31 @@
 
 #swipe-y-value {
 	left: 354px;
-	top: 73px;
+	top: 84px;
 }
 
 #swipe-opacity-value {
 	left: 341px;
-	top: 146px;
+	top: 157px;
 }
 
 #progress-port {
 	position: absolute;
-	left: 222px;
-	top: 87px;
+	left: 217px;
+	top: 93px;
 }
 
 #opacity-port {
 	position: absolute;
-	left: 272px;
-	top: 144px;
+	left: 267px;
+	top: 150px;
 }
 
 .pulsing-port {
 	border-radius: 50%;
 	background-color: white;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	-webkit-animation-name: pulsate;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: ease-out;
@@ -257,7 +242,7 @@
 #progress-cable {
 	width: 1px;
 	left: 231px;
-	top: 96px;
+	top: 106px;
 }
 
 .cable {
@@ -277,12 +262,12 @@
 }
 
 #progress-hit-area {
-	top: 82px;
+	top: 92px;
 	left: 216px;
 }
 
 #opacity-hit-area {
-	top: 140px;
+	top: 150px;
 	left: 267px;
 }
 

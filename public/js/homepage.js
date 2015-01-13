@@ -218,6 +218,8 @@ setupCableDragging = function() {
 	$("#progress-hit-area").mousedown(function(e) {
 		lastX = e.pageX;
 		lastY = e.pageY;
+		deltaX = 0;
+		deltaY = 0;
 		isDraggingCable = true;
 		cable.style['opacity'] = 1.0;
 	});
