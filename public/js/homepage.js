@@ -134,12 +134,16 @@ changeBackgroundToIndex = function(index) {
 
 var swipeDemoSpring = springSystem.createSpring();
 var swipeDemoState = false;
+var isDraggingCable = false;
+var progressCableConnected = false;
 
 setupSwipeDemo = function () {
+	var background = $("#swipe-background").get(0);
 	var feed = $("#swipe-feed").get(0);
 	var list = $("#swipe-list").get(0);
 	var touchpoint = $("#swipe-gesture .touchpoint").get(0);
 	var yInlineValue = $("#swipe-y-value").get(0);
+	var opacityInlineValue = $("#swipe-opacity-value").get(0);
 	
 	swipeDemoSpring.setSpringConfig(rebound.SpringConfig.fromQcTensionAndFriction(10, 6));
 	swipeDemoSpring.addListener({
@@ -164,6 +168,22 @@ setupSwipeDemo = function () {
 			
 			var touchPointOpacity = swipeDemoState ? progressInRange(progress,0.5,0) : progressInRange(progress,0,0.5);
 			touchpoint.style['opacity'] = touchPointOpacity;
+			
+			if (progressCableConnected) {
+				var opacityValue = clampedProgress(progress);
+				var opacityString;
+				if (opacityValue < 0.01)
+					opacityString = 0;
+				else if (opacityValue > 0.99)
+					opacityString = 1;
+				else {
+					opacityString = opacityValue.toFixed(2);
+				}
+				opacityInlineValue.innerHTML = opacityString;
+			
+				background.style['opacity'] = progress;
+				list.style['opacity'] = progress;
+			}
 		}
 	});
 	
@@ -171,8 +191,22 @@ setupSwipeDemo = function () {
 	setupCableDragging();
 }
 
+cableDragCompleteWithSuccess = function(success) {
+	var cable = $("#progress-cable").get(0);
+	
+	if (success) {
+		cable.style['webkitTransform'] = 'rotate(48.1221deg) scale3d(77.897, 1.0, 1.0)';
+		cable.style['opacity'] = 1.0;
+	} else {
+		cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
+		cable.style['opacity'] = 0.0;
+	}
+	
+	isDraggingCable = false;
+	progressCableConnected = success;
+}
+
 setupCableDragging = function() {
-	var isDraggingCable = false;
 	var downX;
 	var downY;
 	var cable = $("#progress-cable").get(0);
@@ -180,8 +214,20 @@ setupCableDragging = function() {
 	$("#progress-hit-area").mousedown(function(e) {
 		downX = e.pageX;
 		downY = e.pageY;
-		console.log("mouse down. x: "+e.pageX+" y: "+e.pageY);
 		isDraggingCable = true;
+		cable.style['opacity'] = 1.0;
+	});
+	
+	$("#opacity-hit-area").mousedown(function(e) {
+		downX = e.pageX;
+		downY = e.pageY;
+		isDraggingCable = true;
+	});
+	
+	$("#opacity-hit-area").mouseup(function(e) {
+		if (isDraggingCable) {
+			cableDragCompleteWithSuccess(true);
+		}
 	});
 	
 	$("#section-gestures").mousemove(function(e) {
@@ -197,15 +243,13 @@ setupCableDragging = function() {
 	
 	$("#section-gestures").mouseup(function(e) {
 		if (isDraggingCable) {
-			cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
-			isDraggingCable = false;
+			cableDragCompleteWithSuccess(false);
 		}
 	});
 	
 	$("#section-gestures").mouseleave(function(e) {
 		if (isDraggingCable) {
-			isDraggingCable = false;
-			cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
+			cableDragCompleteWithSuccess(false);
 		}
 	});
 }

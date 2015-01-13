@@ -10,6 +10,15 @@ progressInRange = function(value, startValue, endValue) {
 	return (value - startValue) / (endValue - startValue);
 }
 
+clampedProgress = function(progress) {
+	if (progress < 0)
+		progress = 0;
+	else if (progress > 1)
+		progress = 1;
+		
+	return progress;
+}
+
 radiansToDegrees = function(radians) {
 	return radians * (180/Math.PI);
 }
