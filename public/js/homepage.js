@@ -137,6 +137,7 @@ var swipeDemoState = false;
 
 setupSwipeDemo = function () {
 	var feed = $("#swipe-feed").get(0);
+	var list = $("#swipe-list").get(0);
 	var touchpoint = $("#swipe-gesture .touchpoint").get(0);
 	var yInlineValue = $("#swipe-y-value").get(0);
 	
@@ -157,12 +158,56 @@ setupSwipeDemo = function () {
 			touchpoint.style['webkitTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
 			touchpoint.style['MozTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
 			
+			var listScale = transition(progress,0.98,1);
+			list.style['webkitTransform'] = 'scale3d('+listScale+', '+listScale+', 1.0)';
+			list.style['MozTransform'] = 'scale3d('+listScale+', '+listScale+', 1.0)';
+			
 			var touchPointOpacity = swipeDemoState ? progressInRange(progress,0.5,0) : progressInRange(progress,0,0.5);
 			touchpoint.style['opacity'] = touchPointOpacity;
 		}
 	});
 	
 	flipSwipeDemoState();
+	setupCableDragging();
+}
+
+setupCableDragging = function() {
+	var isDraggingCable = false;
+	var downX;
+	var downY;
+	var cable = $("#progress-cable").get(0);
+
+	$("#progress-hit-area").mousedown(function(e) {
+		downX = e.pageX;
+		downY = e.pageY;
+		console.log("mouse down. x: "+e.pageX+" y: "+e.pageY);
+		isDraggingCable = true;
+	});
+	
+	$("#section-gestures").mousemove(function(e) {
+		if (isDraggingCable) {
+			var deltaX = e.pageX - downX;
+			var deltaY = e.pageY - downY;
+			var angle = angleForLine(deltaX, deltaY);
+			angle = radiansToDegrees(angle);
+			length = lengthForLine(deltaX, deltaY);
+			cable.style['webkitTransform'] = 'rotate('+angle+'deg) scale3d('+length+', 1.0, 1.0)';
+		}
+	});
+	
+	$("#section-gestures").mouseup(function(e) {
+		if (isDraggingCable) {
+			cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
+			isDraggingCable = false;
+		}
+	});
+	
+	$("#section-gestures").mouseleave(function(e) {
+		if (isDraggingCable) {
+			isDraggingCable = false;
+			cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
+		}
+	});
 }
 
 flipSwipeDemoState = function() {

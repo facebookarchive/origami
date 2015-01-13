@@ -71,10 +71,11 @@
 
 #section-gestures {
 	position: relative;
-	height: 1100px;
+	height: 1060px;
 }
 
 #gesture-types {
+	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	display: -webkit-flex;
@@ -85,6 +86,12 @@
 	justify-content: center;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+#gesture-types h2 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 27px;
+	padding-bottom: 14px;
 }
 
 .gesture-type {
@@ -104,6 +111,7 @@
 	height: 299px;
 	margin: 0 auto;
 	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px rgba(0,0,0,0.2);
 	position: relative;
 	overflow: hidden;
 }
@@ -168,6 +176,7 @@
 	height: 100px;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
 	position: absolute;
 	z-index: -1;
 	margin-left: auto;
@@ -198,6 +207,7 @@
 	margin-top: 110px;
 	margin-left: 5px;
 	color: rgba(0,0,0,0.6);
+	-webkit-user-select:none;
 }
 
 .patch-values {
@@ -210,6 +220,81 @@
 	position: absolute;
 	left: 354px;
 	top: 73px;
+}
+
+#progress-port {
+	position: absolute;
+	left: 222px;
+	top: 87px;
+}
+
+#opacity-port {
+	position: absolute;
+	left: 272px;
+	top: 144px;
+}
+
+.pulsing-port {
+	border-radius: 50%;
+	background-color: white;
+	width: 20px;
+	height: 20px;
+	-webkit-animation-name: pulsate;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-name: pulsate;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-iteration-count: infinite;
+}
+
+#progress-cable {
+	width: 1px;
+	left: 231px;
+	top: 96px;
+}
+
+.cable {
+	background-color: rgb(254, 186, 1);
+	/*border-radius: 1.5px;*/
+	height: 3px;
+	position: absolute;
+	-webkit-transform-origin: left center;
+}
+
+#progress-hit-area {
+	width: 30px;
+	height: 30px;
+	background-color: rgba(255,0,0,0);
+	position: absolute;
+	top: 82px;
+	left: 216px;
+	z-index: 1;
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-transform: scale3d(0,0,1);
+		opacity: 1;
+	}
+	
+	100% {
+		-webkit-transform: scale3d(1,1,1);
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes pulsate {
+	0% {
+		-moz-transform: scale3d(0,0,1);
+		opacity: 1;
+	}
+	
+	100% {
+		-moz-transform: scale3d(1,1,1);
+		opacity: 0;
+	}
 }
 
 /* Presentation Section */
