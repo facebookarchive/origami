@@ -127,8 +127,8 @@ layer:
       desc: An image that will be used when compositing the Layer on screen to mask off certain areas so that they do not display. This is similar to layer masks in Photoshop.
     - name: Color
       desc: A color with which the Image will be tinted before display. You can use this with a pure white image to display the same shape in different colors.
-    - name: Alpha
-      desc: A 0-1 value will fade in the layer
+    - name: Opacity
+      desc: How visible the layer is from 0 (invisible) to 1 (visible).
     - name: Scale
       desc: How much to increase or decrease the size of the Layer. A value of 0.0 will make it invisible, whereas 2.0 will make it twice the normal size.
   desc: |
@@ -178,8 +178,8 @@ textlayer:
       desc: Draw a shadow on the text by configuring a Shadow Info patch connected to this input
     - name: Color
       desc: A color with which the Image will be tinted before display. You can use this with a pure white image to display the same shape in different colors.
-    - name: Alpha
-      desc: A 0-1 value will fade in the layer
+    - name: Opacity
+      desc: How visible the layer is from 0 (invisible) to 1 (visible).
     - name: Scale
       desc: How much to increase or decrease the size of the Text Layer. A value of 0.0 will make it invisible, whereas 2.0 will make it twice the normal size.
   desc: |
