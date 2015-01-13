@@ -65,7 +65,6 @@ div.patch.producer {
 	background: rgb(174, 93, 218);
 }
 
-
 div.patch * {
 	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 	font-size: 12px;
@@ -133,7 +132,6 @@ h1 {
 	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 39px;
 	font-weight: normal;
-	text-align: center;
 	margin-bottom: 12px;
 }
 

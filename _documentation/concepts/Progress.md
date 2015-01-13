@@ -1,5 +1,5 @@
 ---
-title: 0-1 Values
+title: Progress
 layout: documentation
 css: /public/css/documentation.css
 ---
