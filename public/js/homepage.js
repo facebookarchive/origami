@@ -136,6 +136,8 @@ var swipeDemoSpring = springSystem.createSpring();
 var swipeDemoState = false;
 var isDraggingCable = false;
 var progressCableConnected = false;
+var deltaX = 0;
+var deltaY = 0;
 
 setupSwipeDemo = function () {
 	var background = $("#swipe-background").get(0);
@@ -200,6 +202,8 @@ cableDragCompleteWithSuccess = function(success) {
 	} else {
 		cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
 		cable.style['opacity'] = 0.0;
+		deltaX = 0;
+		deltaY = 0;
 	}
 	
 	isDraggingCable = false;
@@ -207,13 +211,13 @@ cableDragCompleteWithSuccess = function(success) {
 }
 
 setupCableDragging = function() {
-	var downX;
-	var downY;
+	var lastX = 0;
+	var lastY = 0;
 	var cable = $("#progress-cable").get(0);
 
 	$("#progress-hit-area").mousedown(function(e) {
-		downX = e.pageX;
-		downY = e.pageY;
+		lastX = e.pageX;
+		lastY = e.pageY;
 		isDraggingCable = true;
 		cable.style['opacity'] = 1.0;
 	});
@@ -232,8 +236,12 @@ setupCableDragging = function() {
 	
 	$("#section-gestures").mousemove(function(e) {
 		if (isDraggingCable) {
-			var deltaX = e.pageX - downX;
-			var deltaY = e.pageY - downY;
+			deltaX += e.pageX - lastX;
+			deltaY += e.pageY - lastY;
+			
+			lastX = e.pageX;
+			lastY = e.pageY;
+			
 			var angle = angleForLine(deltaX, deltaY);
 			angle = radiansToDegrees(angle);
 			length = lengthForLine(deltaX, deltaY);
