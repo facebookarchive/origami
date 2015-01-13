@@ -7,6 +7,8 @@ $(document).ready(function($) {
 	changeBackgroundToIndex(backgroundIndex);
 	setupPresentationKeys();
 	setupPresentationSprings();
+	
+	setupSwipeDemo();
 });
 
 setupPresentationKeys = function() {
@@ -126,4 +128,43 @@ prevBackground = function() {
 
 changeBackgroundToIndex = function(index) {
 	$('#screen').css('background-image', 'url(../public/images/backgrounds/' + index + '.jpg)');
+}
+
+// Animation for Swipe Demo
+
+var swipeDemoSpring = springSystem.createSpring();
+var swipeDemoState = false;
+
+setupSwipeDemo = function () {
+	var feed = $("#swipe-feed").get(0);
+	var touchpoint = $("#swipe-gesture .touchpoint").get(0);
+	
+	swipeDemoSpring.setSpringConfig(rebound.SpringConfig.fromQcTensionAndFriction(10, 6));
+	swipeDemoSpring.addListener({
+	    onSpringUpdate: function(spring) {
+	    	var progress = spring.getCurrentValue();
+	    	var yDelta = transition(progress,0,275);
+			feed.style['webkitTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
+			feed.style['MozTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
+			
+			var touchPointYOffset = swipeDemoState ? 80 : 0;
+			yDelta += touchPointYOffset;
+			touchpoint.style['webkitTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
+			touchpoint.style['MozTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
+			
+			var touchPointOpacity = swipeDemoState ? progressInRange(progress,0.5,0) : progressInRange(progress,0,0.5);
+			touchpoint.style['opacity'] = touchPointOpacity;
+		}
+	});
+	
+	flipSwipeDemoState();
+}
+
+flipSwipeDemoState = function() {
+	swipeDemoState = !swipeDemoState;
+	var endValue = swipeDemoState ? 1.0 : 0.0;
+	swipeDemoSpring.setEndValue(endValue);
+	
+	var delay = swipeDemoState ? 1100 : 1700;
+	setTimeout(flipSwipeDemoState,delay);
 }
