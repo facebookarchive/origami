@@ -190,3 +190,77 @@ hr {
 	clear: both;
 	visibility: hidden;
 }
+
+.coord-example {
+	width: 300px;
+	height: 400px;
+	background: #eeeeee;
+	position: relative;
+	margin-bottom: 2em;
+}
+
+.coord-example .dot {
+	width: 10px;
+	height: 10px;
+	background: rgb(0, 114, 255);
+	border-radius: 10px;
+	position: absolute;
+}
+
+.coord-example .label {
+	color: #333;
+	position: absolute;
+	width: 10em;
+	padding: 1em;
+	font-size: 0.8em;
+}
+
+.coord-example .dot-left {
+	left: -5px;
+	text-align: left;
+}
+
+.coord-example .dot-right {
+	right: -5px;
+	text-align: right;
+}
+
+.coord-example .dot-top {
+	top: -5px;
+}
+
+.coord-example .dot-bottom {
+	bottom: -5px;
+}
+
+.coord-example .label.dot-right {
+}
+
+.coord-example .dot.dot-center-x {
+	left: calc(50% - 5px);
+}
+
+.coord-example .label.dot-center-x {
+	left: calc(50% - 5em);
+	text-align: center;
+}
+
+.coord-example .dot-center-y {
+	top: calc(50% - 5px);
+}
+
+.coord-example .box {
+	position: absolute;
+	margin: 5px;
+	background: gray;
+	padding: 2px;
+	color: white;
+}
+
+.coord-example .box.inset-40 {
+	margin: 45px;
+}
+
+
+
+
