@@ -138,6 +138,7 @@ var swipeDemoState = false;
 setupSwipeDemo = function () {
 	var feed = $("#swipe-feed").get(0);
 	var touchpoint = $("#swipe-gesture .touchpoint").get(0);
+	var yInlineValue = $("#swipe-y-value").get(0);
 	
 	swipeDemoSpring.setSpringConfig(rebound.SpringConfig.fromQcTensionAndFriction(10, 6));
 	swipeDemoSpring.addListener({
@@ -146,6 +147,10 @@ setupSwipeDemo = function () {
 	    	var yDelta = transition(progress,0,275);
 			feed.style['webkitTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
 			feed.style['MozTransform'] = 'translate3d(0,' + yDelta + 'px, 0)';
+			
+			var yValue = transition(progress,0,-1238);
+			yValue = yValue|0;
+			yInlineValue.innerHTML = yValue;
 			
 			var touchPointYOffset = swipeDemoState ? 80 : 0;
 			yDelta += touchPointYOffset;
