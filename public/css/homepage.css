@@ -135,9 +135,57 @@
 	margin-left: 60px;
 	margin-top: 100px;
 	-webkit-animation-name: double-tap;
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 3s;
 	-webkit-animation-timing-function: linear;
 	-webkit-animation-iteration-count: infinite;
+}
+
+#heart {
+	background-image: url('../images/instagram-heart.png');
+	width: 78px;
+	height: 69px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 30px;
+	-webkit-animation-name: heart;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes heart {
+	0% {
+		-webkit-transform: scale3d(0,0,1);
+		opacity: 0;
+	}
+	
+	20% {
+		-webkit-transform: scale3d(0,0,1);
+		opacity: 0;
+	}
+	
+	26.666% {
+		-webkit-transform: scale3d(1,1,1);
+		opacity: 1;
+	}
+	
+	50% {
+		-webkit-transform: scale3d(1,1,1);
+		opacity: 1;
+	}
+	
+	65% {
+		-webkit-transform: scale3d(1,1,1);
+		opacity: 0;
+	}
+	
+	100% {
+		-webkit-transform: scale3d(1,1,1);
+		opacity: 0;
+	}
 }
 
 @-webkit-keyframes double-tap {
@@ -145,19 +193,19 @@
 		opacity: 1;
 	}
 	
-	10% {
+	6.666% {
 		opacity: 0;
 	}
 	
-	10.999% {
+	7.332% {
 		opacity: 0;
 	}
 	
-	11% {
+	7.333% {
 		opacity: 1;	
 	}
 	
-	21% {
+	14% {
 		opacity: 0;
 	}
 	
