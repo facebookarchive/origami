@@ -216,6 +216,7 @@ setupCableDragging = function() {
 	var cable = $("#progress-cable").get(0);
 
 	$("#progress-hit-area").mousedown(function(e) {
+		e.originalEvent.preventDefault();
 		lastX = e.pageX;
 		lastY = e.pageY;
 		deltaX = 0;
@@ -225,6 +226,7 @@ setupCableDragging = function() {
 	});
 	
 	$("#opacity-hit-area").mousedown(function(e) {
+		e.originalEvent.preventDefault();
 		downX = e.pageX;
 		downY = e.pageY;
 		isDraggingCable = true;
