@@ -1,0 +1,43 @@
+app:
+  - letter: f
+    modifiers:
+      - cmd
+    desc: Open Viewer in Full Screen Mode
+  - letter: m
+    modifiers:
+      - shift
+      - cmd
+    desc: Create Macro
+  - letter: n
+    modifiers:
+      - option
+      - cmd
+    desc: New Origami Document (includes Device patch and Layer Group)
+
+viewer:
+- letter: f
+  desc: Toggle fullscreen within the viewer window &mdash; hides the device and hand
+- letter: h
+  desc: Toggle showing the hand
+- letter: /
+  modifiers:
+  - cmd
+  desc: Toggle Status Bar
+- letter: =
+  desc: Next background
+- letter: --
+  desc: Previous background
+
+patches:
+- letter: a
+  desc: Pop Animation
+- letter: d
+  desc: Delay
+- letter: m
+  desc: Multiplexer
+- letter: p
+  desc: Pulse
+- letter: s
+  desc: Switch
+- letter: t
+  desc: Transition

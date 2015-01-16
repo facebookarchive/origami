@@ -1,0 +1,23 @@
+{% assign items = include.items %}
+<dl class="shortcuts">
+{% for definition in items %}
+	<div class="shortcut hbox">
+		<dt>
+			{% comment %}http://tech.karbassi.com/2009/05/27/command-option-shift-symbols-in-unicode/{% endcomment %}
+			{% for modifier in definition.modifiers %}
+			<span class="key modifier">
+			  	{% if modifier == 'cmd' %}
+			  	&#x2318;
+			  	{% elsif modifier == 'shift' %}
+			  	&#x21E7;
+			  	{% elsif modifier == 'option' %}
+			  	&#x2325;
+		  		{% endif %}
+		  	</span>
+			{% endfor %}
+			<span class="key letter">{{ definition.letter }}</span>
+		</dt>
+		<dd class="">{{ definition.desc | markdownify }}</dd>
+	</div>
+{% endfor %}
+</dl>
