@@ -199,9 +199,11 @@ cableDragCompleteWithSuccess = function(success) {
 	if (success) {
 		cable.style['webkitTransform'] = 'rotate(48.1221deg) scale3d(77.897, 1.0, 1.0)';
 		cable.style['opacity'] = 1.0;
+		$(".pulsing-port").css("visibility", "hidden");
 	} else {
 		cable.style['webkitTransform'] = 'scale3d(1.0, 1.0, 1.0)';
 		cable.style['opacity'] = 0.0;
+		$(".pulsing-port").css("visibility", "inherit");
 		deltaX = 0;
 		deltaY = 0;
 	}
