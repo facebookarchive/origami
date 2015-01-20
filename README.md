@@ -12,4 +12,7 @@ To install Jekyll follow these instructions: https://www.andrewmunsell.com/tutor
 
 Then start jekyll in Terminal by cd'ing into the repo and running jekyll serve --watch
 
+To generate the internal documentation, mount your devserver with ExpanDrive, then
+jekyll serve --baseurl /~yourusername/origami -d /Volumes/dev/public_html/origami
+
 Go to http://localhost:4000 in your browser and you should see the site.

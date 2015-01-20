@@ -10,7 +10,7 @@
 				  {% if doc.url == page.url %}
 				<li><span>{{ doc.title }}</span></li>
 				  {% else %}
-				<li><a href="{{ doc.url }}">{{ doc.title }} </a></li>
+				<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
 				  {% endif %}
 
 			  {% endif %}
@@ -26,7 +26,7 @@
 				  {% if doc.url == page.url %}
 				<li><span>{{ doc.title }}</span></li>
 				  {% else %}
-				<li><a href="{{ doc.url }}">{{ doc.title }} </a></li>
+				<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
 				  {% endif %}
 
 			  {% endif %}
