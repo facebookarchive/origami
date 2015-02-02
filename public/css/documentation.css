@@ -4,10 +4,11 @@
 ul.docs {
 	list-style-type: none;
 	width: 300px;
-	padding: 36px;
+	padding: 32.5px;
 	height: calc(100vh - 51px);
 	float: left;
 	line-height: 1.5em;
+	font-size: 13px;
 }
 
 ul.docs ul {
