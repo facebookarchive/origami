@@ -27,8 +27,8 @@
 
 .grid-item {
 	width: 275px;
-	height: 290px;
 	margin: 15px;
+	margin-bottom: 25px;
 }
 
 h4 {
@@ -46,7 +46,7 @@ h4 {
 
 .thumbnail {
 	width: 275px;
-	height: 205px;
+	height: 225px;
 	background-color: #ddd;
 	position: relative;
 	overflow: hidden;
@@ -62,19 +62,21 @@ h4 {
 .iphone {
 	width: 375px;
 	height: 667px;
-	-webkit-transform: scale3d(0.2666, 0.2666, 1);
+	/* Scale to 226 x 402px (113 x 201pt) */
+	-webkit-transform: scale3d(0.30135, 0.30135, 1);
 	-webkit-transform-origin: top left;
-	left: calc(50% - (375px * 0.5 * 0.2666));
-	top: calc(50% - (667px * 0.5 * 0.2666)); 
+	left: calc(50% - (375px * 0.5 * 0.30135));
+	top: calc(50% - (667px * 0.5 * 0.30135)); 
 }
 
 .ipad {
 	width: 1024px;
 	height: 768px;
-	-webkit-transform: scale3d(0.2044, 0.2044, 1);
+	/* Scale to 480 x 360px (240 x 180pt) */
+	-webkit-transform: scale3d(0.234375, 0.234375, 1);
 	-webkit-transform-origin: top left;
-	left: calc(50% - (1024px * 0.5 * 0.2044));
-	top: calc(50% - (768px * 0.5 * 0.2044)); 
+	left: calc(50% - (1024px * 0.5 * 0.234375));
+	top: calc(50% - (768px * 0.5 * 0.234375)); 
 }
 
 .screen {
@@ -111,7 +113,7 @@ h4 {
 }
 
 #pull-to-search .screen {
-	background-image: url('../images/examples/pull-to-search.png');	
+	background-image: url('../images/examples/pull-to-search.jpg');	
 }
 
 /* @end */
