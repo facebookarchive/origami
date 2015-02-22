@@ -3,26 +3,37 @@
 .header {
 	text-align: center;
 	max-width: 470px;
+	padding-bottom: 20px;
 }
 
-#examples {
-	margin-top: 62px;
+.examples {
 	margin-bottom: 62px;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1300px;
+	width: calc((275px * 4) + (15px * 4 * 2)); /*Fixed width 4 col*/
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-direction: row;
 	flex-direction: row;
 	-webkit-align-items: flex-start;
 	align-items: flex-start;
-	-webkit-justify-content: center;
-	justify-content: center;
+	-webkit-justify-content: left;
+	justify-content: left;
 	-webkit-align-content: flex-start;
 	align-content: flex-start;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+h5 {
+	opacity: 0.5;
+	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	width: 100%;
+	padding-top: 62px;
+	padding-bottom: 16px;
+	padding-left: 15px;
+	font-weight: normal;
 }
 
 .grid-item {
@@ -90,22 +101,6 @@ h4 {
 	background-image: url('../images/touch-point.png');
 	top: 50%; left: 50%;
 	margin-top: -35px; margin-left: -35px;
-}
-
-#collapsible-nav-bar .thumbnail {
-	background-color: #9898ff;
-}
-
-#collapsible-nav-bar .screen {
-	background-image: url('../images/examples/collapsible-navigation-bar.png');
-}
-
-#pull-to-search .thumbnail {
-	background-color: #a3e6e9;
-}
-
-#pull-to-search .screen {
-	background-image: url('../images/examples/pull-to-search.jpg');	
 }
 
 /* @end */
