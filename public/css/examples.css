@@ -46,7 +46,7 @@ h4 {
 	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 13px;
-	padding-top: 10px;
+	padding-top: 11px;
 	padding-bottom: 5px;
 }
 
@@ -61,6 +61,7 @@ h4 {
 	background-color: #ddd;
 	position: relative;
 	overflow: hidden;
+	-webkit-border-radius: 2px;
 }
 
 .thumbnail div {
@@ -108,6 +109,10 @@ h4 {
 /* @group Examples */
 
 /* @group Paged Scrolling */
+
+#paged-scrolling .thumbnail {
+	background: linear-gradient(#8fbae9, #9bdbce);
+}
 
 #paged-scrolling .screen {
 	background-image: url('../images/messenger-sticker-composer.jpg');	
@@ -692,6 +697,10 @@ h4 {
 /* @end */
 
 /* @group Master Detail */
+
+#master-detail .thumbnail {
+	background: linear-gradient(#d8d7d9, #e8e7ea);
+}
 
 #master-detail .tab1 {
 	background-image: url('../images/examples/master-detail/tab1.jpg');
@@ -1601,7 +1610,7 @@ h4 {
 /* @group Swipe Navigation */
 
 #swipe-navigation .thumbnail {
-	background-color: #9898ff;
+	background: linear-gradient(#8e90d0, #a0c6c7);
 }
 
 #swipe-navigation .feed {
@@ -2320,7 +2329,7 @@ h4 {
 /* @group Compose Modal */
 
 #compose-modal .thumbnail {
-	background-color: #b7e3db;
+	background: linear-gradient(#c1dcd7, #a4dbd2);
 }
 
 #compose-modal .feed {
@@ -4793,7 +4802,7 @@ h4 {
 /* @group Filter Reveal */
 
 #filter-reveal .thumbnail {
-	background-color: #333;
+	background: linear-gradient(#3e3e3e, #4e4e4e);
 }
 
 #filter-reveal .screen {
@@ -6568,6 +6577,10 @@ h4 {
 /* @end */
 
 /* @group Long Press Preview */
+
+#long-press-preview .thumbnail {
+	background: linear-gradient(#e3ada6, #a8d5da);
+}
 
 #long-press-preview .screen {
 	background-image: url('../images/examples/long-press-preview/thread.jpg');
