@@ -14,6 +14,20 @@
   desc: |
     This is a convenience patch that breaks out the 3D Orientation from the Device Info patch into pitch, roll, and yaw values you can use in your prototypes. These values reflect the physical orientation of your connected device running Origami Live. Try plugging these values into text layers and watch how the values change as you rotate your device.
 
+border:
+  name: Border
+  type: consumer
+  inputs:
+    - name: Enable
+      desc: Turns the border on and off.
+    - name: Thickness
+      desc: How thick the border is in pixels on each edge.
+    - name: Color
+      desc: The color of the border.
+    - name: Alpha
+      desc: Adjusts the opacity of the border.
+  desc: |
+    Draws a border of a given thickness and color around the edges of the layer group it&rsquo;s inside of. The border is similar to an inner stroke and has rectangular corners.
 
 switch:
   name: Switch
