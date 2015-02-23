@@ -1,9 +1,9 @@
 #tutorials {
 	list-style-type: none;
-	max-width: 1220px;
+	max-width: 1000px;
 	min-width: 610px;
 	padding: 15px;
-	margin: 100px auto 0;
+	margin: 72px auto 0;
 }
 
 .tutorial {
@@ -15,7 +15,7 @@
 }
 
 .tutorial-info {
-	margin-top: 32px;	
+	margin-top: 24px;	
 }
 
 a.download-button {
@@ -40,6 +40,8 @@ a.download-button:active {
 
 .tutorial-info h3 {
 	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 8px;
 }
 
 .tutorial-info p {
