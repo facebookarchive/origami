@@ -6,9 +6,6 @@ progress:
     
     Progress is the opposite of Transition, since Transition converts a 0-1 value to a Range, whereas Progress converts a range to a 0-1 value.
 
-  usage: |
-    Progress is frequently used to map something that varies in pixels, like the output of a Scroll patch, to a 0-1 value for use with Transition and other patches that expect a value in that range.
-
   inputs:
     - name: Minimum
       desc: The lower end of the range. 
@@ -247,7 +244,7 @@ timer:
 
 bouncy:
   name: Pop Animation
-  type: processor
+  type: producer
   inputs:
     - name: Number
       desc: The changing value you wish to animate. This is the target value to which Pop Animation will animate.

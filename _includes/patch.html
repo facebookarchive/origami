@@ -21,15 +21,8 @@
 </div>
 
 
-<h2>Usage</h2>
-
-{% if patch.usage %}
-{{ patch.usage | markdownify }}
-{% endif %}
-
 <div class="port-descriptions">
 	<div class="inputs">
-		<h2>Inputs</h2>
 		<dl>
 		{% for port in patch.inputs %}
 			<dt>{{ port.name }}</dt>
@@ -41,7 +34,6 @@
 	</div>
 
 	<div class="outputs ports-block">
-		<h2>Outputs</h2>
 		<dl>
 		{% for port in patch.outputs %}
 			<dt>{{ port.name }}</dt>

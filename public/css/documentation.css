@@ -2,7 +2,7 @@
 	http://localhost:4000/public/css/documentation.css */
 
 #docs-wrapper {
-	max-width: 1000px;
+	max-width: 940px;
 	min-width: 768px;
 	margin: 0 auto;
 }
@@ -32,11 +32,14 @@ ul.docs li a {
 ul.docs li {
 	font-weight: bold;
 	list-style: none;
+	line-height: 30px;
 }
 
 ul.docs ul li {
+	line-height: 19px;
 	font-weight: normal;
 	list-style: none;
+	color: rgba(0,0,0,0.7);
 }
 
 .doc-content {
@@ -50,25 +53,30 @@ ul.docs ul li {
 	list-style-type: none;
 }
 
+.doc-content p {
+	font-size: 14px;
+	line-height: 18px;
+	color: #585858;
+	max-width: 530px;
+}
+
 div.patch-block {
-	text-align: center;
-	padding: 10px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 
 div.patch {
 	display: inline-block;
-	border: 2px solid rgba(0, 0, 0, 0.1);
-	border-radius: 6px;
+	border-radius: 5px;
 	position: relative;
 	color: white;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background: black;
-	box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.5);
 }
 
 div.patch.processor {
-	background: #333333;
+	background: #555;
 }
 
 div.patch.consumer {
@@ -81,8 +89,8 @@ div.patch.producer {
 
 div.patch * {
 	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-	font-size: 12px;
-	line-height: 1.4em;
+	font-size: 11px;
+	line-height: 1.5em;
 }
 
 div.patch hr {
@@ -96,11 +104,6 @@ div.patch ul {
 }
 
 /* Style ports */
-div.patch ul li {
-	list-style-type: none;
-    background: url(/public/images/port-2x.png) left center no-repeat;
-}
-
 div.patch ul li span {
     list-style-position: inside;
     font-size: 12px;
@@ -123,6 +126,7 @@ div.patch ul.inputs {
 	text-align: left;
 	float: left;
 	position: relative;
+	padding-right: 14px;
 }
 
 div.patch ul.outputs {
@@ -130,28 +134,30 @@ div.patch ul.outputs {
 	text-align: right;
 	position: relative;
 	float: right;
+	padding-left: 14px;
 }
 
 div.patch ul.inputs li {
-	padding-left: 16px;
+	padding-left: 13px;
     background: url(/public/images/port-2x.png) left center no-repeat;
+    background-size: 10px 16px;
 }
 
 div.patch ul.outputs li {
-	padding-right: 14px;
+	padding-right: 13px;
     background: url(/public/images/port-2x.png) right center no-repeat;
+    background-size: 10px 16px;
 }
 
 h1 {
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 32px;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 30px;
 	font-weight: normal;
-	margin-bottom: .5em;
+	margin-bottom: .8em;
 }
 
 p {
 	margin-bottom: 1em;
-	color: rgb(128, 128, 128);
 }
 
 h2 {
@@ -179,12 +185,17 @@ div.outputs {
 	position: relative;
 }
 
+.port-descriptions p {
+	font-size: 13px;
+	line-height: 17px;
+}
+
 .port-descriptions .inputs {
-	padding-right: 5px;
+	padding-right: 20px;
 }
 
 .port-descriptions .outputs {
-	padding-left: 5px;
+	padding-left: 20px;
 }
 
 .port-descriptions ol {
@@ -196,6 +207,8 @@ div.outputs {
 
 .port-descriptions dt {
 	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 4px;
 }
 
 .port-descriptions dd {
