@@ -29,6 +29,24 @@ border:
   desc: |
     Draws a border of a given thickness and color around the edges of the layer group it&rsquo;s inside of. The border is similar to an inner stroke and has rectangular corners.
 
+
+bouncy-animation:
+  name: Bouncy Animation
+  type: producer
+  inputs:
+    - name: Number
+      desc: The number to animate. Usually a 0 or 1 value from a Switch or an Interaction patch.
+    - name: Friction
+      desc: The friction of the spring animation.
+    - name: Tension
+      desc: The tension of the spring animation.
+  outputs:
+    - name: Progress
+      desc: The current value of the animation. Usually between or around 0 and 1.
+  desc: |
+    This patch lets you animate a value using a spring animation. The Pop Animation patch is the more modern version of this patch with easier to use controls and Code Export support, so it&rsquo;s recommended that you use it instead. However, if you&rsquo;re trying to animate something in an Iterator, you'll usually want to use this patch instead of Pop Animation since this will be able to animate each iteration independently. 
+
+
 switch:
   name: Switch
   type: processor
