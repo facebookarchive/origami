@@ -1,11 +1,16 @@
 /* @override 
 	http://localhost:4000/public/css/documentation.css */
 
+#docs-wrapper {
+	max-width: 1000px;
+	min-width: 768px;
+	margin: 0 auto;
+}
+
 ul.docs {
 	list-style-type: none;
-	width: 300px;
-	padding: 32.5px;
-	height: calc(100vh - 51px);
+	width: 200px;
+	padding: 0 32.5px;
 	float: left;
 	line-height: 1.5em;
 	font-size: 13px;
@@ -35,9 +40,14 @@ ul.docs ul li {
 }
 
 .doc-content {
-	margin-left: 300px;
-	width: 800px;
-	padding: 36px;
+	padding: 0 48px;
+	margin: 36px 0 36px 200px;
+	border-left: 1px solid #e5e5e5;
+	min-height: calc(100vh - 126px);
+}
+
+.doc-content ul {
+	list-style-type: none;
 }
 
 div.patch-block {
@@ -134,9 +144,9 @@ div.patch ul.outputs li {
 
 h1 {
 	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 39px;
+	font-size: 32px;
 	font-weight: normal;
-	margin-bottom: 12px;
+	margin-bottom: .5em;
 }
 
 p {
@@ -179,7 +189,9 @@ div.outputs {
 
 .port-descriptions ol {
 	color: rgb(128, 128, 128);
-	margin-left: 2em;
+	list-style-position: inside;
+	margin-bottom: 1em;
+	-webkit-user-select: text;
 }
 
 .port-descriptions dt {

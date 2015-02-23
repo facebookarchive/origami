@@ -4,11 +4,13 @@
 <div id="wrapper">
 	{% include navigation.html %}
 
-	{% include docs-navigation.html %}
-
-	<div class="doc-content">
-		<h1> {{ page.title }} </h1>
-	{{ content }}
+	<div id="docs-wrapper">
+		{% include docs-navigation.html %}
+	
+		<div class="doc-content">
+			<h1> {{ page.title }} </h1>
+		{{ content }}
+		</div>
 	</div>
 	
 {% include footer.html %}
