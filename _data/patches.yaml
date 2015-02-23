@@ -1,3 +1,24 @@
+switch:
+  name: Switch
+  type: processor
+  inputs:
+    - name: Flip
+      desc: Takes a pulse to flip the state of the switch. If the switch is off this will turn it on, and if it&rsquo;s on, this will turn it off.
+    - name: Turn Off
+      desc: Takes a pulse to turn the switch off. If it&rsquo;s already off, sending a pulse to this port will have no effect.
+    - name: Turn On
+      desc: Takes a pulse to turn the switch on. If it&rsquo;s already on, sending a pulse to this port will have no effect.
+  outputs:
+    - name: On / Off
+      desc: Outputs a 0 if the switch is off and a 1 if it&rsquo;s on.
+  desc: |
+    A Switch remembers a state. It works just like a light switch &mdash; it starts out as off, when you flip it it&rsquo;ll turn on, and then if you flip it again it&rsquo;ll turn off. For example, if you wanted to tap a photo and have it zoom in and stay that way when you release your finger, you could hook up the button tap to a Switch which would remember whether the photo should be zoomed in or not.
+    
+    The Flip port is useful for a symmetrical interaction &mdash; e.x. tapping a photo repeatedly to zoom it to large and small sizes. The Turn On and Turn Off port are useful for other interactions where you have different actions to control the switch. For example, for a compose window, you might have the compose button turn on the switch (animating in the window) and the Cancel and Done buttons in the window turning off the switch.
+    
+
+#--- NOT REVIEWED
+
 progress:
   name: Progress
   type: processor
@@ -44,32 +65,6 @@ transition:
   outputs:
     - name: Value
       desc: The interpolated value
-
-
-
-switch:
-  name: Switch
-  type: processor
-  inputs:
-    - name: Flip
-      desc: A pulse recieved on this port will switch the switch
-    - name: Turn Off
-      desc: A pulse recieved on this port will turn the switch's output value to Off
-    - name: Turn On
-      desc: A pulse recieved on this port will turn the switch's output value to On
-  outputs:
-    - name: On / Off
-      desc: The current state of the switch (True or False)
-  desc: |
-    There are three inputs, "Flip", "Turn On", and "Turn Off". When you hook a Mouse Patch to "Flip", each pulse will alternate between turning the Switch patch on or off. When you hook up an interaction to "Turn On", each pulse will only turn it on. Like wise, hooking an interaction up to "Turn Off" will only turn off. 
-    
-    The check boxes next to each input port will pulse and lock its state until unchecked. 
-
-  usage: |
-    Use the Flip port for interactions you want to switches between the state of (like tapping the thumbnail of an image to enlarge, and tapping again to minimize), and use the Turn On or Turn Off ports for interactions that should only go one way (like tapping to bring up a modal view, and tapping a done button to exit the modal view). 
-    
-
-
 
 
 layer:
