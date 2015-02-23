@@ -5,16 +5,21 @@ css: /public/css/documentation.css
 weight: 1000
 ---
 
-Origami Studio provides a variety of keyboard shortcuts for common functions.
+Origami Provides a variety of keyboard shortcuts for common functions.
 
-<h2 class="studio-soon">Insert Patch</h2>
+{% comment %} Once we ship keyboard shortcuts:
+	## Insert Patch
+	{% include shortcut-list.html items=site.data.shortcuts.patches %}
+{% endcomment %}
 
-{% include shortcut-list.html items=site.data.shortcuts.patches %}
 
-
-## App
+## Viewer
 
 {% include shortcut-list.html items=site.data.shortcuts.viewer %}
+
+## Quartz Composer
+
+Keyboard shortcuts in Quartz Composer frequently used when building Origami compositions
 
 {% include shortcut-list.html items=site.data.shortcuts.app %}
 

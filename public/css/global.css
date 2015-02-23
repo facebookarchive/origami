@@ -68,10 +68,10 @@ h3 {
 
 #nav li.logo {
 	background-image: url('../images/logo-small-white-2x.png');
-	background-size: 106px 17px;
+	background-size: 59px 17px;
 	background-repeat: no-repeat;
 	background-position: center 2.5px;
-	width: 106px;
+	width: 59px;
 	height: 20px;
 	margin-right: 36px;
 	color: rgba(0, 0, 0, 0);
@@ -144,36 +144,6 @@ p::selection {
 	background-size: 22px 18px;
 	margin: 0 auto;
 }
-
-/* Introduced in Studio */
-
-.studio-updated:before {
-	content: 'Updated in Studio';
-	border: 1px solid #13d64c;
-	color: #13d64c;
-	padding: .1em .2em;
-	border-radius: 3px;
-	margin-right: .2em;
-}
-
-.studio:before {
-	content: 'New in Studio';
-	border: 1px solid #13d64c;
-	color: #13d64c;
-	padding: .1em .2em;
-	border-radius: 3px;
-	margin-right: .2em;
-}
-
-.studio-soon:before {
-	content: 'Coming Soon';
-	border: 1px solid #dbdbdb;
-	color: #b5b5b5;
-	padding: .1em .2em;
-	border-radius: 3px;
-	margin-right: .2em;
-}
-
 
 /* Clear Fix */
 

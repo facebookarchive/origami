@@ -118,28 +118,56 @@ transition:
 
 layer:
   name: Layer
-  type: layer
+  type: consumer
   inputs:
     - name: Enable
       desc: When false, the Layer is invisible
-    - name: Anchor
+    - name: Anchor Point
       desc: |
         A point within the Layer's container (current Layer Group or Device patch) that you would like to position the layer relative to.
         
-        See [Coordinates](../concepts/Coordinates.html) for more info on Anchor.
+        Options for positioning are:
 
-    - name: Position
-      desc: Number of points down and to the right of the position specified in Anchor Point. You can also set the Z component of position with a Point 3D patch
-    - name: Rotation
-      desc: Rotate a layer in 3D. The Z component rotates the layer in the 2D plane.
-    - name: Size
+        1. Top Left
+        1. Top Center
+        1. Top Right
+        1. Center Left
+        1. Center
+        1. Center Right
+        1. Bottom Left
+        1. Bottom Center
+        1. Bottom Right
+
+    - name: X Position
+      desc: Number of pixels to the right of the position specified in Anchor Point
+    - name: Y Position
+      desc: Number of pixels up from the position specified in Anchor Point
+    - name: Z Position
+      desc: Depth component of a layer's position in 3D space. Units are in pixels as with Width / Height
+    - name: X Rotation
+      desc: Rotate a layer in 3D along a horizontal line
+    - name: Y Rotation
+      desc: Rotate a layer in 3D along a vertical line
+    - name: Z Rotation
+      desc: Rotate a layer in 2D, or the Z component of a 3D rotation
+    - name: Width
       desc: |
-        The width and height on screen in points that the layer's Image will be shown. The eventual size is also affected by Scale and the transform of the current Layer Group.
+        The width on screen in pixels the layer's Image will be shown. The eventual width is also affected by Scale and the transform of the current Layer Group.
           
           If a value of 0.0 is passed in, the layer will take on the size of the current value of its Image input.
 
+    - name: Height
+      desc: |
+        The height on screen in pixels the layer's Image will be shown. The eventual height is also affected by Scale and the transform of the current Layer Group.
+        
+        If a value of 0.0 is passed in, the layer will take on the size of the current value of its Image input.
+
     - name: Image
       desc: An image to show on screen
+    - name: Mask Image
+      desc: An image that will be used when compositing the Layer on screen to mask off certain areas so that they do not display. This is similar to layer masks in Photoshop.
+    - name: Color
+      desc: A color with which the Image will be tinted before display. You can use this with a pure white image to display the same shape in different colors.
     - name: Opacity
       desc: How visible the layer is from 0 (invisible) to 1 (visible).
     - name: Scale
