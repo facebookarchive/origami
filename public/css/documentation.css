@@ -2,7 +2,7 @@
 	http://localhost:4000/public/css/documentation.css */
 
 #docs-wrapper {
-	max-width: 940px;
+	max-width: 900px;
 	min-width: 768px;
 	margin: 0 auto;
 }
@@ -29,6 +29,10 @@ ul.docs li a {
 	font-weight: inherit;
 }
 
+ul.docs li a:hover {
+	color: black;
+}
+
 ul.docs li {
 	font-weight: bold;
 	list-style: none;
@@ -36,10 +40,10 @@ ul.docs li {
 }
 
 ul.docs ul li {
-	line-height: 19px;
+	line-height: 20px;
 	font-weight: normal;
 	list-style: none;
-	color: rgba(0,0,0,0.7);
+	color: rgba(0,0,0,0.65);
 }
 
 .doc-content {
@@ -57,7 +61,7 @@ ul.docs ul li {
 	font-size: 14px;
 	line-height: 18px;
 	color: #585858;
-	max-width: 530px;
+	/*max-width: 530px;*/
 }
 
 div.patch-block {

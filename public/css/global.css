@@ -23,10 +23,6 @@ a {
 	cursor: auto;
 	-webkit-user-select:text;
 }
-
-a:hover {
-	text-decoration: underline;
-}
  
 body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
