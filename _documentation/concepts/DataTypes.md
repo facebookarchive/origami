@@ -2,6 +2,7 @@
 title: Data Types
 layout: documentation
 css: /public/css/documentation.css
+weight: 400
 ---
 
 * String

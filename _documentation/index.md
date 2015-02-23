@@ -2,6 +2,7 @@
 title: Introduction
 layout: documentation
 css: /public/css/documentation.css
+weight: -1
 ---
 
 * What is Quartz Composer?

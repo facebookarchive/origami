@@ -2,6 +2,7 @@
 title: Getting Around
 layout: documentation
 css: /public/css/documentation.css
+weight: 200
 ---
 
 There are the four main windows in Quartz Composer:

@@ -2,6 +2,7 @@
 title: Patches
 layout: documentation
 css: /public/css/documentation.css
+weight: 300
 ---
 
 * Patches

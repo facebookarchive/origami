@@ -2,6 +2,7 @@
 title: Coordinates
 layout: documentation
 css: /public/css/documentation.css
+weight: 1000
 ---
 
 In constrast to built-in Quartz Composer patches, the Origami patches (eg. Layer / Text Layer / Layer Group) use pixel coordinates.

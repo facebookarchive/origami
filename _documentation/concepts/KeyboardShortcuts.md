@@ -2,6 +2,7 @@
 title: Keyboard Shortcuts
 layout: documentation
 css: /public/css/documentation.css
+weight: 1000
 ---
 
 Origami Provides a variety of keyboard shortcuts for common functions.
