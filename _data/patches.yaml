@@ -1,3 +1,20 @@
+3d-orientation:
+  name: 3D Orientation
+  type: processor
+  inputs:
+    - name: 3D Orientation
+      desc: Takes a structure containing 'pitch', 'roll', and 'yaw' keys, usually provided by the Device Info patch.
+  outputs:
+    - name: Pitch
+      desc: Outputs the pitch of the 3D orientation.
+    - name: Roll
+      desc: Outputs the roll of the 3D orientation.
+    - name: Yaw
+      desc: Outputs the yaw of the 3D orientation.
+  desc: |
+    This is a convenience patch that breaks out the 3D Orientation from the Device Info patch into pitch, roll, and yaw values you can use in your prototypes. These values reflect the physical orientation of your connected device running Origami Live. Try plugging these values into text layers and watch how the values change as you rotate your device.
+
+
 switch:
   name: Switch
   type: processor
