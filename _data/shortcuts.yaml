@@ -8,11 +8,6 @@ app:
       - shift
       - cmd
     desc: Create Macro
-  - letter: n
-    modifiers:
-      - option
-      - cmd
-    desc: New Origami Document (includes Device patch and Layer Group)
 
 viewer:
 - letter: f

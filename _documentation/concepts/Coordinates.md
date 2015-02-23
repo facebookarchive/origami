@@ -5,9 +5,13 @@ css: /public/css/documentation.css
 weight: 1000
 ---
 
-In constrast to built-in Quartz Composer patches, the Origami patches (eg. Layer / Text Layer / Layer Group) use pixel coordinates.
+In Origami Studio, patches (eg. Layer / Text Layer / Layer Group) use point coordinates.
 
-The origin, or location of the (x = 0, y = 0) coordinate, is in the center of the device screen. Coordinates increase upwards and to the right. Points downward and leftward of the center have negative coordinates.
+<p class="studio-updated">The mapping of point coordinates to screen pixels is now controlled by a scale factor, similar to iOS. For instance an iPhone 4 is 320x480 in points but 640x960 in pixels. Origami Studio will detect the scale factor of your document when you copy-paste in images or insert a png into the layer list with the Layer + button.</p>
+
+The origin, or location of the (x = 0, y = 0) coordinate, is in the center of the device screen.
+
+<p class="studio-updated">Coordinates increase upwards and to the right. Points upward and leftward of the center have negative coordinates.</p>
 
 For illustration, below is a Layer Group of height 400 pixels and width 300 pixels:
 
@@ -16,10 +20,10 @@ For illustration, below is a Layer Group of height 400 pixels and width 300 pixe
 	<div class="label dot-center dot-center-y dot-center-x">0, 0</div>
 
 	<div class="dot dot-top-right dot-top dot-right"></div>
-	<div class="label dot-top-right dot-top dot-right">150, 200</div>
+	<div class="label dot-top-right dot-top dot-right">150, -200</div>
 
 	<div class="dot dot-bottom-left dot-bottom dot-left"></div>
-	<div class="label dot-bottom-left dot-bottom dot-left">-150, -200</div>
+	<div class="label dot-bottom-left dot-bottom dot-left">-150, 200</div>
 
 </div>
 
@@ -72,7 +76,7 @@ From the bottom right:
 
 Notice that if you position a Layer by its Bottom Right, it positions its right edge to the right of the screen and bottom edge to the bottom of the screen, not its center. This makes it convenient to quickly move a layer to a corner of the screen, or position it within its parent.
 
-If you want to inset it left by 40 pixels and up by 40 pixels, give it an X Position of -40 and a Y Position of 40.
+If you want to inset it left by 40 pixels and up by 40 pixels, give it an X Position of -40 and a Y Position of -40.
 
 <div class="coord-example">
 	<div class="dot dot-bottom-right dot-bottom dot-right"></div>
@@ -80,5 +84,21 @@ If you want to inset it left by 40 pixels and up by 40 pixels, give it an X Posi
 	<div class="label dot-bottom-right dot-bottom dot-right">-40, 40</div>
 </div>
 
+<h2 class="studio">Pivot</h2>
 
+The pivot port on Layers allows you to change the point about which the layer scales and rotates.
 
+<div class="pivot-example-box hbox">
+	<div class="pivot-example pivot-center boxFlex">
+		<div class='item'>A</div>
+		<div class='label'>Center</div>
+	</div>
+	<div class="pivot-example pivot-top-left boxFlex">
+		<div class='item'>B</div>
+		<div class='label'>Top Left</div>
+	</div>
+	<div class="pivot-example pivot-center-right boxFlex">
+		<div class='item'>C</div>
+		<div class='label'>Center Right</div>
+	</div>
+</div>
