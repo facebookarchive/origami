@@ -47,6 +47,9 @@ h3 {
 	font-weight: normal;
 }
 
+#wrapper {
+}
+
 /* Nav Bar */
 
 #nav {
@@ -118,13 +121,28 @@ h2 {
 }
 
 .header {
-	max-width: 540px;
+	max-width: 580px;
+	padding: 0 20px;
 	margin: 0 auto;
 	text-align: center;
 }
 
 p::selection {
 	background: rgba(0, 0, 0, .1);	
+}
+
+#end-mark {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.end-mark-icon {
+	width: 22px;
+	height: 18px;
+	background-image: url('../images/end-mark.png');
+	background-size: 22px 18px;
+	margin: 0 auto;
 }
 
 /* Clear Fix */

@@ -1,7 +1,6 @@
 #tutorials {
 	list-style-type: none;
 	max-width: 850px;
-	min-width: 610px;
 	padding: 15px;
 	margin: 72px auto 0;
 }
@@ -16,10 +15,13 @@
 
 .tutorial-info {
 	margin-top: 24px;	
+	position: relative;
 }
 
 a.download-button {
-	float: right;
+	top: 0;
+	right: 0;
+	position: absolute;
 	line-height: 32px;
 	font-weight: normal;
 	color: rgb(0, 114, 255);
@@ -52,4 +54,17 @@ a.download-button:active {
 	margin-right: 150px;
 	font-size: 14px;
 	line-height: 18px;
+}
+
+@media only screen and (max-width: 610px) {
+	a.download-button {
+		position: relative;
+		top: auto;
+		right: auto;
+		display: inline-block;
+	}
+	
+	.tutorial-info p {
+		margin-right: 0;	
+	}
 }

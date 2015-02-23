@@ -71,7 +71,7 @@
 
 #section-gestures {
 	position: relative;
-	height: 1060px;
+	padding-bottom: 70px;
 }
 
 #gesture-types {
@@ -914,7 +914,7 @@
 
 #section-code {
 	background: radial-gradient(ellipse farthest-side at 100% 100%, #8a94d9 30%, #2a3e9e 125%);
-	height: 650px;
+	padding-bottom: 70px;
 	color: white;
 	position: relative;
 }
@@ -973,7 +973,7 @@
 	background-image: url('../images/photoshop.jpg');
 	background-size: calc(904px * 0.9) calc(757px * 0.9);
 	background-position-x: calc(50% - 360px);
-	background-position-y: 50%;
+	background-position-y: bottom;
 	background-repeat: no-repeat;
 	height: 650px;
 	text-align: left;
@@ -1200,4 +1200,45 @@
 
 #help-buttons div:active {
 	background-color: rgba(255, 255, 255, .3);
+}
+
+@media only screen and (max-width: 1024px) {
+	
+	#section-code .main-content {
+		width: 100vw;
+	}
+	
+	#section-code #code-menu {
+		float: none;
+		margin: 0 auto 24px;
+	}
+	
+	#section-code .description {
+		margin: 0 auto;
+		float: none;
+	}
+	
+	#section-photoshop {
+		background-position: center bottom;
+		height: 860px;
+	}
+	
+	#section-photoshop .body-text {
+		padding: 70px 36px;
+		max-width: 540px;
+		width: auto;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+}
+
+@media only screen and (max-width: 860px) {
+	#section-photoshop {
+		background-position: right 36px bottom 0;
+	}
+}
+
+@media only screen and (max-width: 610px) {
+
 }
