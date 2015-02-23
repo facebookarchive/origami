@@ -15,13 +15,13 @@ setupPresentationKeys = function() {
 	$("#keys li").each(function(i, val) {
 		$(val).click(function() {
 			if (i === 0)
-				toggleFullscreen();
+				toggleHand();
 			else if (i === 1)
 				prevBackground();
 			else if (i === 2)
 				nextBackground();
 			else if (i === 3)
-				toggleHand();
+				toggleFullscreen();
 		});
 	});
 	
