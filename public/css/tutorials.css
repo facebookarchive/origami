@@ -1,6 +1,6 @@
 #tutorials {
 	list-style-type: none;
-	max-width: 1000px;
+	max-width: 850px;
 	min-width: 610px;
 	padding: 15px;
 	margin: 72px auto 0;
@@ -40,13 +40,16 @@ a.download-button:active {
 
 .tutorial-info h3 {
 	font-size: 16px;
-	font-weight: 500;
 	margin-bottom: 8px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
 }
 
 .tutorial-info p {
 	margin-bottom: 1em;
 	color: rgb(128, 128, 128);
-	max-width: 610px;
+	max-width: 550px;
 	margin-right: 150px;
+	font-size: 14px;
+	line-height: 18px;
 }
