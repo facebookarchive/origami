@@ -10,7 +10,7 @@
 	margin-bottom: 62px;
 	margin-left: auto;
 	margin-right: auto;
-	width: calc((275px * 4) + (15px * 4 * 2)); /*Fixed width 4 col*/
+	width: 1220px; /*Fixed width 4 col*/
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-direction: row;
@@ -23,6 +23,24 @@
 	align-content: flex-start;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1220px) {
+	.examples {
+		width: 915px;
+	}
+}
+
+@media only screen and (max-width: 915px) {
+	.examples {
+		width: 610px;
+	}
+}
+
+@media only screen and (max-width: 610px) {
+	.examples {
+		width: 305px;
+	}
 }
 
 h5 {
@@ -55,6 +73,54 @@ h4 {
 	color: rgb(128, 128, 128);
 }
 
+a.download-link {
+	display: block;
+	position: relative;
+}
+
+a.download-link * {
+	cursor: pointer !important;
+}
+
+a.download-link .screen {
+	opacity: 1;
+	-webkit-transition: opacity .2s ease;
+}
+
+a.download-link:hover .screen {
+	opacity: 0;
+}
+
+.download-icon {
+	line-height: 14px;
+	background-repeat: no-repeat;
+	background-size: 12px 14px;
+	background-image: url('../images/download-white.png');
+	padding-left: 16px;
+	display: inline-block;
+	position: relative;
+	font-weight: normal;
+}
+
+.download-label {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	line-height: 225px;
+	-webkit-transition: opacity .2s ease;
+}
+
+a.download-link:hover .download-label {
+	opacity: 1;
+}
+
 .thumbnail {
 	width: 275px;
 	height: 225px;
@@ -63,6 +129,31 @@ h4 {
 	overflow: hidden;
 	-webkit-border-radius: 2px;
 }
+
+
+
+/*
+.thumbnail::after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .75);
+	content: 'Get Prototype';
+	text-align: center;
+	line-height: 225px;
+	color: #fff;
+	border-radius: inherit;
+	pointer-events: none;
+	opacity: 0;
+	-webkit-transition: opacity .2s ease;
+}
+
+.thumbnail:hover::after {
+	opacity: 1;
+}
+*/
 
 .thumbnail div {
 	position: absolute;
