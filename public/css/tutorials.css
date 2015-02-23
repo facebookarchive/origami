@@ -48,4 +48,5 @@ a.download-button:active {
 	margin-bottom: 1em;
 	color: rgb(128, 128, 128);
 	max-width: 610px;
+	margin-right: 150px;
 }
