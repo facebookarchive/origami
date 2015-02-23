@@ -7,7 +7,7 @@ weight: 300
 
 * Patches
 
-Patches are the building blocks that you’ll use to define how your prototype looks and behaves. Place and manipulate patches in the Editor Window. You can add patches to your prototype using the Patch Library window.
+Patches are the building blocks that you'll use to define how your prototype looks and behaves. Place and manipulate patches in the Editor Window. You can add patches to your prototype using the Patch Library window.
 
 Patches come in three types. (Explain more.)
 
