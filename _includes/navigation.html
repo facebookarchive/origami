@@ -3,10 +3,17 @@
 {% for link in site.navigation %}
 
 	{% if page.url contains link.url %}
-	<li class="item current"><a href="{{ link.url }}">{{ link.text }}</a></li>
+	<li class="item current">
 	{% else %}
-	<li class="item"><a href="{{ link.url }}">{{ link.text }}</a></li>
+	<li class="item">
 	{% endif %}
+
+	{% if link.target %}
+		<a href="{{ link.url }}" target="{{ link.target }}">{{ link.text }}</a>
+	{% else %}
+		<a href="{{ link.url }}">{{ link.text }}</a>
+	{% endif %}
+	</li>
 
 {% endfor %}
 
