@@ -140,13 +140,13 @@ div.patch ul.outputs {
 
 div.patch ul.inputs li {
 	padding-left: 13px;
-    background: url(/public/images/port-2x.png) left center no-repeat;
+    background: url('../images/port-2x.png') left center no-repeat;
     background-size: 10px 16px;
 }
 
 div.patch ul.outputs li {
 	padding-right: 13px;
-    background: url(/public/images/port-2x.png) right center no-repeat;
+    background: url('../images/port-2x.png') right center no-repeat;
     background-size: 10px 16px;
 }
 
