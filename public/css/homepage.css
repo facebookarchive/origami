@@ -922,7 +922,7 @@
 
 #section-code {
 	background: radial-gradient(ellipse farthest-side at 100% 100%, #8a94d9 30%, #2a3e9e 125%);
-	padding-bottom: 70px;
+	padding-bottom: 90px;
 	color: white;
 	position: relative;
 }
@@ -967,7 +967,7 @@
 }
 
 #code-buttons {
-	margin-top: 15px;
+	margin-top: 25px;
 }
 
 #code-buttons li {
@@ -1113,7 +1113,7 @@
 
 #download-buttons {
 	margin-top: 35px;
-	text-align: left;
+	text-align: center;
 	list-style: none;
 	display: inline-block;
 }
@@ -1121,8 +1121,11 @@
 #download-buttons li {
 	padding: 9px 10px;
 	margin: 0 8px;
-	width: 240px;
-	line-height: 18px;
+	width: 210px;
+	line-height: 26px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	/*font-size: 23px;*/
 }
 
 .download-arrow {
@@ -1133,7 +1136,6 @@
 	width: 23px;
 	height: 24px;
 	float: left;
-	margin: 6px 10px 0 3px;
 }
 
 .secondary-button-text {
@@ -1142,7 +1144,7 @@
 }
 
 #help-buttons {
-	margin-top: 72px;
+	margin-top: 90px;
 	margin-left: auto;
 	margin-right: auto;
 	display: -webkit-flex;
@@ -1232,7 +1234,7 @@
 	
 	#section-photoshop {
 		background-position: center bottom;
-		height: 860px;
+		height: 940px;
 	}
 	
 	#section-photoshop .body-text {

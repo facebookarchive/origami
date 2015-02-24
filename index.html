@@ -10,7 +10,10 @@ js: /public/js/homepage.js
 					<div class="logo"></div>
 					<p class="description">Origami is a free tool for designing modern user interfaces. Quickly put together a prototype, run it on your iPhone or iPad, iterate on it, and export code snippets your engineers can use.
 		<br/><br/>We created Origami to help us design and build many of our products at Facebook, including Instagram, Paper, Messenger, Slingshot, Rooms, and Groups. We&rsquo;re excited to see what people make with it.</p>
-		<p><a href="/download">Download</a></p>
+		
+					<ul id="download-buttons" class="buttons" class="cf">
+						<a href="{{ site.baseurl }}/download"><li>Download Origami</li></a>
+					</ul>
 				</div>
 		</div>
 	
@@ -105,8 +108,7 @@ js: /public/js/homepage.js
 				<div id="code-menu"></div>
 				<div class="description">
 					<p>Origami can now export code for the parts of your prototypes you used to have to tediously spec to engineers. Now with the click of a button, you can deliver your animation specs as code to your engineers that they can copy-and-paste into the project.<br/><br/>
-					This uses our free, open source animation frameworks to deliver the exact same feel across all platforms: <a href="https://github.com/facebook/pop" target="_blank">Pop</a> for iOS, <a href="http://facebook.github.io/rebound/" target="_blank">Rebound</a> for Android, and <a href="https://github.com/facebook/rebound-js" target="_blank">Rebound JS</a> for the web.<br/><br/>
-					Take a look at some sample code this generated.</p>
+					This uses our free, open source animation frameworks to deliver the exact same feel across all platforms. Take a look at some sample code this can generate.</p>
 					<ul id="code-buttons" class="buttons" class="cf">
 						<li>iOS .m</li>
 						<li>Android .java</li>
@@ -119,8 +121,9 @@ js: /public/js/homepage.js
 	
 	<div id="section-photoshop">
 		<div class="body-text">
-			<h2>Photoshop Integration</h2>
-			<p>Origami lets you create links between layers in your prototype and Photoshop files. Changes to your PSDs will show up in Origami the moment you save without resetting your prototype. You can even update assets with one hand while interacting with them in Origami Live with the other.</p>
+			<h2>Sketch + Origami</h2>
+			<p>Origami lets you create links between layers in your prototype and layers in you're sketch file. Once they're linked up, hitting a keyboard shortcut will instantly update your prototype with all of the latest assets without interrupting your prototype. You can even update assets with one hand while interacting with them in Origami Live with the other.</p>
+			<p><br/>If you're a Photoshop user, we've got you covered too. Origami layers can also be linked to PSD files.</p>
 		</div>
 		<div class="gradient-divider"></div>
 	</div>
@@ -145,14 +148,13 @@ js: /public/js/homepage.js
 				<p>Download Origami and quickly get up and running with examples, tutorials, documentation, and a helpful community.</p>
 			</div>
 			<ul id="download-buttons" class="buttons" class="cf">
-				<li><div class="download-arrow"></div>Origami for Mac<div class="secondary-button-text">v2.0  1/30/15</div></li>
-				<li><div class="download-arrow"></div>Origami Live for iOS<div class="secondary-button-text">v1.0  1/30/15</div></li>
+				<a href="{{ site.baseurl }}/download"><li>Download Origami</li></a>
 			</ul>
 			<div id="help-buttons">
-				<div class="help-button" id="examples-button"><a href="{{ site.baseurl }}/examples">Examples<p>We&rsquo;ve got dozens of examples showing how to build common interactions and UIs you&rsquo;ve seen before. There&rsquo;s a good chance we&rsquo;ve got an example file for what you&rsquo;re building.</p></a></div>
+				<div class="help-button" id="examples-button"><a href="{{ site.baseurl }}/examples">Examples<p>Get Origami sample files showing how to build common UI patterns and interactions.</p></a></div>
 				<div class="help-button" id="tutorials-button"><a href="{{ site.baseurl }}/tutorials">Tutorials<p>New to Origami? Not a problem. Become an expert by following our step-by-step tutorials.</p></a></div>
 				<div class="help-button" id="documentation-button"><a href="{{ site.baseurl }}/documentation">Documentation<p>Get detailed descriptions of all of the components of Origami.</p></a></div>
-				<div class="help-button" id="community-button"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community<p>If you&rsquo;ve got questions about how to build something particular or how Origami works, or want to share what you&rsquo;re working on, there&rsquo;s a community of friendly folks ready to help.</p></a></div>
+				<div class="help-button" id="community-button"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community<p>A community of friendly folks ready to help you with Origami.</p></a></div>
 			</div>
 		</div>
 	</div>
