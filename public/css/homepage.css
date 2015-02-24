@@ -1267,6 +1267,10 @@
 	font-weight: normal;
 }
 
+#download-buttons li:first-child {
+  margin: 0;
+}
+
 #section-get-started #download-buttons li {
 	font-size: 17px;
 }
