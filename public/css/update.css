@@ -15,13 +15,6 @@
   }
 }
 
-.download-update-alt {
-  background: url(../images/updater.png) no-repeat 20px;
-}
-
-@media all and (-webkit-min-device-pixel-ratio: 1.5) {
-  .download-update-alt {
-    background-image: url('../images/updater@2x.png');
-    background-size: 155px 152px;
-  }
+.release-notes li {
+  line-height: 30px;
 }
