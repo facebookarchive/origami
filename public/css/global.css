@@ -48,6 +48,7 @@ h3 {
 }
 
 #wrapper {
+	overflow-x: hidden;
 }
 
 /* Nav Bar */

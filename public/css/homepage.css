@@ -801,16 +801,21 @@
 
 #section-presentation {
 	text-align: center;
+	height: 1000px;
+	position: relative;
 }
 
 #tv {
 	background-image: url('../images/tv.jpg');
 	background-size: cover;
 	background-position: center;
-	width: 100vw;
-	max-width: 975px;
+	width: 975px;
 	height: 597px;
-	margin: 35px auto 0 auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -487.5px;
+	margin-top: 35px;
+	-webkit-transform-origin: center top;
 }
 
 #screen {
@@ -865,8 +870,11 @@
 }
 
 #controller {
-	margin-top: -55px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -120px;
 	color: rgb(128, 128, 128);
+	position: absolute;
 }
 
 #keys {
@@ -1231,11 +1239,27 @@
 		text-align: center;
 	}
 	
+	#section-presentation {
+		height: 850px;	
+	}
+	
+	#tv {
+		-webkit-transform: scale3d(.8, .8, 1);
+	}
+	
 }
 
 @media only screen and (max-width: 860px) {
 	#section-photoshop {
 		background-position: right 36px bottom 0;
+	}
+	
+		#section-presentation {
+		height: 700px;	
+	}
+	
+	#tv {
+		-webkit-transform: scale3d(.5, .5, 1);
 	}
 }
 
