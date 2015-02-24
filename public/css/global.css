@@ -55,7 +55,7 @@ h3 {
 
 #nav {
 	border-bottom:  1px solid rgba(255, 255, 255, .3);
-	padding: 8px 33px 15px;
+	padding: 3px 33px 15px;
 	list-style: none;
 	position: absolute;
 	top: 0;
@@ -76,12 +76,12 @@ h3 {
 	width: 59px;
 	height: 20px;
 	margin-right: 36px;
-	margin-top: 7px;
+	margin-top: 12px;
 	color: rgba(0, 0, 0, 0);
 }
 
 #nav li.item {
-	margin: 7px 34px 0 0;
+	margin: 12px 34px 0 0;
 	font-weight: normal;
 	-webkit-user-select: none;
 }

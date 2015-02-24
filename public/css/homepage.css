@@ -35,8 +35,8 @@
 	background-position: center;*/
 	width: 100%;
 	min-height: 100%;
-	padding: 72px 0;
 	position: relative;
+	padding: 72px 0;
 	/* min-height: 500px; */
 	/*color: black;*/
 }
@@ -54,8 +54,8 @@
 	display: -webkit-flex;
 	display: flex;
 	align-items: center;
-	height: 100vh;
-
+	height: calc(100vh - 144px);
+	height: -webkit-calc(100vh - 144px);
 	/*max-height: 760px;*/
 	
 	display: -webkit-flex;
@@ -176,6 +176,8 @@
 	/* Scale to 480 x 360px (240 x 180pt) */
 	-webkit-transform: scale3d(0.234375, 0.234375, 1);
 	-webkit-transform-origin: top left;
+	left: -webkit-calc(50% - (1024px * 0.5 * 0.234375));
+	top: -webkit-calc(50% - (768px * 0.5 * 0.234375)); 
 	left: calc(50% - (1024px * 0.5 * 0.234375));
 	top: calc(50% - (768px * 0.5 * 0.234375)); 
 }
@@ -1115,6 +1117,8 @@
 	background-image: url('../images/sketch.jpg');
 	background-size: calc(904px * 0.9) calc(757px * 0.9);
 	background-position-x: calc(50% - 360px);
+	background-size: -webkit-calc(904px * 0.9) calc(757px * 0.9);
+	background-position-x: -webkit-calc(50% - 360px);
 	background-position-y: bottom;
 	background-repeat: no-repeat;
 	height: 650px;
@@ -1164,6 +1168,7 @@
 	height: 279px;
 	margin-top: 180px;
 	margin-left: calc(50% + 1px);
+	margin-left: -webkit-calc(50% + 1px);
 	margin-right: auto;
 	overflow: hidden;
 	position: relative;
@@ -1402,6 +1407,7 @@
 	#block2 {
 		display: none;
 	}
+	
 	#section-photoshop {
 		background-position: right 36px bottom 0;
 	}
@@ -1430,7 +1436,7 @@
 	}
 	
 	#section-photoshop {
-		height: 960px;	
+		height: 1000px;	
 	}
 }
 
