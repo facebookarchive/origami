@@ -197,9 +197,11 @@
 	position: relative;
 	padding-bottom: 70px;
 	
-	border-top-color: rgba(0,0,0,0.08);
+/*	border-top-color: rgba(0,0,0,0.08);
 	border-top-style: solid;
-	border-top-width: 1px;
+	border-top-width: 1px;*/
+	
+	background-color: rgb(249,249,249);
 }
 
 #gesture-types {
