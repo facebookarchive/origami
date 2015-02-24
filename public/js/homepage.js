@@ -127,7 +127,7 @@ prevBackground = function() {
 }
 
 changeBackgroundToIndex = function(index) {
-	$('#screen').css('background-image', 'url(../public/images/backgrounds/' + index + '.jpg)');
+	$('#screen').css('background-image', 'url(public/images/backgrounds/' + index + '.jpg)');
 }
 
 // Animation for Swipe Demo
