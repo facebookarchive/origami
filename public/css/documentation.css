@@ -316,17 +316,18 @@ hr {
 	background: #ffffff;
 	color: #8b8b8b;
 	margin: 0;
-	color: rgba(0, 0, 0, .4);
+	color: black;
 	font: 1.5em "HelveticaNeue-Light", 'Helvetica Neue', Helvetica, sans-serif;
-	border: 2px solid rgba(0, 0, 0, .3);
-	border-radius: 4px;
+	border: 1px solid grey;
+	border-radius: 2px;
 	text-align: center;
 	padding: .25em;
 	height: 2em;
+	margin-right: 6px;
 }
 
 .key.letter {
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	width: 2em;
 }
 

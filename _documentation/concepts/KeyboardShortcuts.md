@@ -5,13 +5,18 @@ css: /public/css/documentation.css
 weight: 1000
 ---
 
-Origami Provides a variety of keyboard shortcuts for common functions.
+Origami provides a variety of keyboard shortcuts for common functions.
 
 {% comment %} Once we ship keyboard shortcuts:
 	## Insert Patch
 	{% include shortcut-list.html items=site.data.shortcuts.patches %}
 {% endcomment %}
 
+## Patches
+
+These keyboard shortcuts can be used when hovering over the canvas or a port.
+
+{% include shortcut-list.html items=site.data.shortcuts.patches %}
 
 ## Viewer
 

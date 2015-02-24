@@ -1,23 +1,23 @@
 app:
-  - letter: f
+  - letter: F
     modifiers:
       - cmd
     desc: Open Viewer in Full Screen Mode
-  - letter: m
+  - letter: M
     modifiers:
       - shift
       - cmd
     desc: Create Macro
-  - letter: n
+  - letter: N
     modifiers:
       - option
       - cmd
-    desc: New Origami Document (includes Device patch and Layer Group)
+    desc: New Origami Template
 
 viewer:
-- letter: f
+- letter: F
   desc: Toggle fullscreen within the viewer window &mdash; hides the device and hand
-- letter: h
+- letter: H
   desc: Toggle showing the hand
 - letter: /
   modifiers:
@@ -41,3 +41,27 @@ patches:
   desc: Switch
 - letter: t
   desc: Transition
+- letter: k
+  desc: Keyboard
+- letter: s
+  desc: Switch
+- letter: u
+  desc: Pulse
+- letter: d
+  desc: Delay
+- letter: g
+  desc: Layer Group
+- letter: w
+  desc: Wireless Broadcaster
+- letter: W
+  desc: Wireless Receiver
+- letter: i
+  desc: Interaction 2
+- letter: c
+  desc: Conditional
+- letter: r
+  desc: Reverse Progress
+- letter: L
+  desc: Live Image
+- letter: S
+  desc: Splitter
