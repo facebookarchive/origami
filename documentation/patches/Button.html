@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Origami &mdash; Button</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://origami.facebook.com"/>
+	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:image" content="https://facebook.github.io/origami/images/blog-hero.jpg" />
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/documentation.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src=''></script>
+	<script type="text/javascript" src='/public/js/ga.js'></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body class="light">
+
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/examples">Examples</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/tutorials">Tutorials</a>
+	
+	</li>
+
+
+
+	
+	<li class="item current">
+	
+
+	
+		<a href="/documentation">Documentation</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a>
+	
+	</li>
+
+
+
+</ul>
+
+
+	<div id="docs-wrapper">
+		
+
+	<ul class="docs">
+		<li>Concepts
+			<ul>
+			
+			
+				
+
+				  
+				<li><a href="/documentation/index.html">Introduction </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/KeyboardShortcuts.html">Keyboard Shortcuts </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Coordinates.html">Coordinates </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Progress.html">Progress Values </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+		</li>
+
+		<li>Patches
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Color-Transition.html">Color Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/3D-Orientation.html">3D Orientation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Border.html">Border </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Bouncy-Animation.html">Bouncy Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Browser-Buttons.html">Browser Buttons </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/BrowserChrome.html">Browser Chrome </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><span>Button</span></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Classic-Animation.html">Classic Animation </a></li>
+				  
+
+			  
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Counter-2.html">Counter 2 </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Cursor-Control.html">Cursor Control </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Delay.html">Delay </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Layer.html">Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/PopAnimation.html">Pop Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Progress.html">Progress </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Switch.html">Switch </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/TextLayer.html">Text Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Timer.html">Timer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Transition.html">Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Velocity.html">Velocity </a></li>
+				  
+
+			  
+			
+			</ul>
+		</li>
+	</ul>
+
+	
+		<div class="doc-content">
+			<h1> Button </h1>
+		
+
+<p>Shows a button with a customizable label and background. Connect it to the Interaction 2 patch to make it interactive.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch consumer">
+        <h3>Button</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Anchor Point</li>
+            
+            <li>X Position</li>
+            
+            <li>Y Position</li>
+            
+            <li>Width</li>
+            
+            <li>Height</li>
+            
+            <li>Background Image</li>
+            
+            <li>Background Color</li>
+            
+            <li>Title</li>
+            
+            <li>Title Color</li>
+            
+            <li>Title Font Name</li>
+            
+            <li>Title Font Size</li>
+            
+            <li>Title Offset</li>
+            
+            <li>Corner Radius</li>
+            
+            <li>Opacity</li>
+            
+            <li>Scale</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>Enable or disable the button.</p>
+</dd>
+            
+        
+            <dt>Anchor Point</dt>
+            
+            <dd><p>A point in the containing Layer Group this layer is positioned relative to.</p>
+</dd>
+            
+        
+            <dt>X Position</dt>
+            
+            <dd><p>The horizontal position in pixels.</p>
+</dd>
+            
+        
+            <dt>Y Position</dt>
+            
+            <dd><p>The vertical position in pixels.</p>
+</dd>
+            
+        
+            <dt>Width</dt>
+            
+            <dd><p>The width in pixels.</p>
+</dd>
+            
+        
+            <dt>Height</dt>
+            
+            <dd><p>The height in pixels.</p>
+</dd>
+            
+        
+            <dt>Background Image</dt>
+            
+            <dd><p>The image to show behind the button title.</p>
+</dd>
+            
+        
+            <dt>Background Color</dt>
+            
+            <dd><p>The fill color of the button background.</p>
+</dd>
+            
+        
+            <dt>Title</dt>
+            
+            <dd><p>The button label.</p>
+</dd>
+            
+        
+            <dt>Title Color</dt>
+            
+            <dd><p>The color of the label.</p>
+</dd>
+            
+        
+            <dt>Title Font Name</dt>
+            
+            <dd><p>The font to use for the label.</p>
+</dd>
+            
+        
+            <dt>Title Font Size</dt>
+            
+            <dd><p>The size of the font in pixels.</p>
+</dd>
+            
+        
+            <dt>Title Offset</dt>
+            
+            <dd><p>The vertical position of the label relative to the background.</p>
+</dd>
+            
+        
+            <dt>Corner Radius</dt>
+            
+            <dd><p>The radius of the corners in pixels.</p>
+</dd>
+            
+        
+            <dt>Opacity</dt>
+            
+            <dd><p>The opacity of the layer. From 0% (0) to 100% (1).</p>
+</dd>
+            
+        
+            <dt>Scale</dt>
+            
+            <dd><p>The scale of the layer. 100% (1) is the default scale and 0% (0) is completely hidden.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
+
+		</div>
+	</div>
+</div> <!-- end wrapper -->
+
+</body>
+</html>

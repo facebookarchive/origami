@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Origami &mdash; Layer</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://origami.facebook.com"/>
+	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:image" content="https://facebook.github.io/origami/images/blog-hero.jpg" />
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/documentation.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src=''></script>
+	<script type="text/javascript" src='/public/js/ga.js'></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body class="light">
+
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/examples">Examples</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/tutorials">Tutorials</a>
+	
+	</li>
+
+
+
+	
+	<li class="item current">
+	
+
+	
+		<a href="/documentation">Documentation</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a>
+	
+	</li>
+
+
+
+</ul>
+
+
+	<div id="docs-wrapper">
+		
+
+	<ul class="docs">
+		<li>Concepts
+			<ul>
+			
+			
+				
+
+				  
+				<li><a href="/documentation/index.html">Introduction </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/KeyboardShortcuts.html">Keyboard Shortcuts </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Coordinates.html">Coordinates </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Progress.html">Progress Values </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+		</li>
+
+		<li>Patches
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Color-Transition.html">Color Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/3D-Orientation.html">3D Orientation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Border.html">Border </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Bouncy-Animation.html">Bouncy Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Browser-Buttons.html">Browser Buttons </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/BrowserChrome.html">Browser Chrome </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Button.html">Button </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Classic-Animation.html">Classic Animation </a></li>
+				  
+
+			  
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Counter-2.html">Counter 2 </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Cursor-Control.html">Cursor Control </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Delay.html">Delay </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><span>Layer</span></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/PopAnimation.html">Pop Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Progress.html">Progress </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Switch.html">Switch </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/TextLayer.html">Text Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Timer.html">Timer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Transition.html">Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Velocity.html">Velocity </a></li>
+				  
+
+			  
+			
+			</ul>
+		</li>
+	</ul>
+
+	
+		<div class="doc-content">
+			<h1> Layer </h1>
+		
+
+<p>Display image on screen and adjust how it shows up.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch consumer">
+        <h3>Layer</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Anchor Point</li>
+            
+            <li>X Position</li>
+            
+            <li>Y Position</li>
+            
+            <li>Z Position</li>
+            
+            <li>X Rotation</li>
+            
+            <li>Y Rotation</li>
+            
+            <li>Z Rotation</li>
+            
+            <li>Width</li>
+            
+            <li>Height</li>
+            
+            <li>Image</li>
+            
+            <li>Mask Image</li>
+            
+            <li>Color</li>
+            
+            <li>Opacity</li>
+            
+            <li>Scale</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>When false, the Layer is invisible</p>
+</dd>
+            
+        
+            <dt>Anchor Point</dt>
+            
+            <dd><p>A point within the Layer's container (current Layer Group or Device patch) that you would like to position the layer relative to.</p>
+
+<p>Options for positioning are:</p>
+
+<ol>
+<li>Top Left</li>
+<li>Top Center</li>
+<li>Top Right</li>
+<li>Center Left</li>
+<li>Center</li>
+<li>Center Right</li>
+<li>Bottom Left</li>
+<li>Bottom Center</li>
+<li>Bottom Right</li>
+</ol>
+
+</dd>
+            
+        
+            <dt>X Position</dt>
+            
+            <dd><p>Number of pixels to the right of the position specified in the Anchor Point.</p>
+</dd>
+            
+        
+            <dt>Y Position</dt>
+            
+            <dd><p>Number of pixels up from the position specified in the Anchor Point.</p>
+</dd>
+            
+        
+            <dt>Z Position</dt>
+            
+            <dd><p>Depth component of a layer's position in 3D space. Units are in pixels as with Width / Height</p>
+</dd>
+            
+        
+            <dt>X Rotation</dt>
+            
+            <dd><p>Rotate a layer in 3D space along a horizontal line centered on the Anchor Point.</p>
+</dd>
+            
+        
+            <dt>Y Rotation</dt>
+            
+            <dd><p>Rotate a layer in 3D space along a vertical line centered on the Anchor Point.</p>
+</dd>
+            
+        
+            <dt>Z Rotation</dt>
+            
+            <dd><p>Rotate a layer in two dimensions, or the Z component of a 3D rotation</p>
+</dd>
+            
+        
+            <dt>Width</dt>
+            
+            <dd><p>The width on screen in pixels the Layer's Image will be shown. The eventual width is also affected by Scale and the transform of the current Layer Group.</p>
+
+<p>  If a value of 0.0 is passed in, the layer will take on the size of the current value of its Image input.</p>
+</dd>
+            
+        
+            <dt>Height</dt>
+            
+            <dd><p>The height on screen in pixels the Layer's Image will be shown. The eventual height is also affected by Scale and the transform of the current Layer Group.</p>
+
+<p>If a value of 0.0 is passed in, the Layer will take on the size of the current value of its Image input.</p>
+</dd>
+            
+        
+            <dt>Image</dt>
+            
+            <dd><p>An Image to show on screen</p>
+</dd>
+            
+        
+            <dt>Mask Image</dt>
+            
+            <dd><p>An Image that will be used when compositing the Layer on screen to mask off certain areas so that they do not display. This is similar to a layer mask in Photoshop.</p>
+</dd>
+            
+        
+            <dt>Color</dt>
+            
+            <dd><p>A color with which the Image will be tinted before display. You can use this with a pure white image to display the same shape in different colors.</p>
+</dd>
+            
+        
+            <dt>Opacity</dt>
+            
+            <dd><p>Controls the visibility of a Layer.</p>
+</dd>
+            
+        
+            <dt>Scale</dt>
+            
+            <dd><p>How much to increase or decrease the size of the Layer. A value of 0.0 will make it invisible, whereas 2.0 will make it twice the normal size.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
+
+		</div>
+	</div>
+</div> <!-- end wrapper -->
+
+</body>
+</html>

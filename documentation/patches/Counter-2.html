@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Origami &mdash; Counter 2</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://origami.facebook.com"/>
+	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:image" content="https://facebook.github.io/origami/images/blog-hero.jpg" />
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/documentation.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src=''></script>
+	<script type="text/javascript" src='/public/js/ga.js'></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body class="light">
+
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/examples">Examples</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/tutorials">Tutorials</a>
+	
+	</li>
+
+
+
+	
+	<li class="item current">
+	
+
+	
+		<a href="/documentation">Documentation</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a>
+	
+	</li>
+
+
+
+</ul>
+
+
+	<div id="docs-wrapper">
+		
+
+	<ul class="docs">
+		<li>Concepts
+			<ul>
+			
+			
+				
+
+				  
+				<li><a href="/documentation/index.html">Introduction </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/KeyboardShortcuts.html">Keyboard Shortcuts </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Coordinates.html">Coordinates </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Progress.html">Progress Values </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+		</li>
+
+		<li>Patches
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Color-Transition.html">Color Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/3D-Orientation.html">3D Orientation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Border.html">Border </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Bouncy-Animation.html">Bouncy Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Browser-Buttons.html">Browser Buttons </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/BrowserChrome.html">Browser Chrome </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Button.html">Button </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Classic-Animation.html">Classic Animation </a></li>
+				  
+
+			  
+			
+				
+			
+				
+
+				  
+				<li><span>Counter 2</span></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Cursor-Control.html">Cursor Control </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Delay.html">Delay </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Layer.html">Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/PopAnimation.html">Pop Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Progress.html">Progress </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Switch.html">Switch </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/TextLayer.html">Text Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Timer.html">Timer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Transition.html">Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Velocity.html">Velocity </a></li>
+				  
+
+			  
+			
+			</ul>
+		</li>
+	</ul>
+
+	
+		<div class="doc-content">
+			<h1> Counter 2 </h1>
+		
+
+<p>Represents a number that can be incremented, decremented or set to a specific value. To increment, pulse the "Increase" port and to decrement, pulse the "Decrease" port. To jump to a specific number, specify the number in the "Jump to Number" port and pulse the "Jump" port.</p>
+
+
+
+
+<p>The number can be optionally constrained within a boundary that starts at 0 and wraps around after a maximum number of values has been reached. Incrementing at the end value will wrap back around to the start value and decrementing at the start value will wrap back around to the end value. To set a constraint, set the "Maximum Count" port to a value greater than 0. If the counter is constrained, the "Jump to Number" value must fall within bounds, otherwise it will be wrapped according to the boundary.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Counter 2</h3>
+        <ul class="inputs">
+            
+            <li>Increase</li>
+            
+            <li>Decrease</li>
+            
+            <li>Jump</li>
+            
+            <li>Jump to Number</li>
+            
+            <li>Maximum Count</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Number</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Increase</dt>
+            
+            <dd><p>The Counter's output value will increase when this port is pulsed.</p>
+</dd>
+            
+        
+            <dt>Decrease</dt>
+            
+            <dd><p>The Counter's output value will decrease when this port is pulsed.</p>
+</dd>
+            
+        
+            <dt>Jump</dt>
+            
+            <dd><p>Pulse this port to jump to the Number specified by the Jump To Number port.</p>
+</dd>
+            
+        
+            <dt>Jump to Number</dt>
+            
+            <dd><p>The Number to jump to when the Jump port is pulsed.</p>
+</dd>
+            
+        
+            <dt>Maximum Count</dt>
+            
+            <dd><p>The maximum value this counter can reach before resetting to zero. Note that the counter will always remain <em>less</em> than this value.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Number</dt>
+            
+            <dd><p>The current Number value of the Counter</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
+
+		</div>
+	</div>
+</div> <!-- end wrapper -->
+
+</body>
+</html>

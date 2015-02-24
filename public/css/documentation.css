@@ -1,0 +1,337 @@
+/* @override 
+	http://localhost:4000/public/css/documentation.css */
+
+#docs-wrapper {
+	max-width: 900px;
+	min-width: 768px;
+	margin: 0 auto;
+}
+
+ul.docs {
+	list-style-type: none;
+	width: 200px;
+	padding: 0 32.5px;
+	float: left;
+	line-height: 1.5em;
+	font-size: 13px;
+}
+
+ul.docs ul {
+	margin-bottom: 1.5em;
+}
+
+/* Active page */
+ul.docs span {
+	color: rgb(0, 114, 255);
+}
+
+ul.docs li a {
+	font-weight: inherit;
+}
+
+ul.docs li a:hover {
+	color: black;
+}
+
+ul.docs li {
+	font-weight: bold;
+	list-style: none;
+	line-height: 30px;
+}
+
+ul.docs ul li {
+	line-height: 20px;
+	font-weight: normal;
+	list-style: none;
+	color: rgba(0,0,0,0.65);
+}
+
+.doc-content {
+	padding: 0 48px;
+	margin: 36px 0 36px 200px;
+	border-left: 1px solid #e5e5e5;
+	min-height: calc(100vh - 126px);
+}
+
+.doc-content ul {
+	list-style-type: none;
+}
+
+.doc-content p {
+	font-size: 14px;
+	line-height: 18px;
+	color: #585858;
+	/*max-width: 530px;*/
+}
+
+div.patch-block {
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+div.patch {
+	display: inline-block;
+	border-radius: 5px;
+	position: relative;
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: black;
+}
+
+div.patch.processor {
+	background: #555;
+}
+
+div.patch.consumer {
+	background: rgb(74, 130, 229);
+}
+
+div.patch.producer {
+	background: rgb(174, 93, 218);
+}
+
+div.patch * {
+	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	font-size: 11px;
+	line-height: 1.5em;
+}
+
+div.patch hr {
+	clear: both;
+	visibility: hidden;
+}
+
+div.patch ul {
+	padding: 5px;
+	padding-bottom: 2px;
+}
+
+/* Style ports */
+div.patch ul li span {
+    list-style-position: inside;
+    font-size: 12px;
+}
+
+div.patch h3 {
+	font-size: 12px;
+	text-align: left;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 5px 8px;
+	margin: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+div.patch ul.inputs {
+	text-align: left;
+	float: left;
+	position: relative;
+	padding-right: 14px;
+}
+
+div.patch ul.outputs {
+	direction: rtl;
+	text-align: right;
+	position: relative;
+	float: right;
+	padding-left: 14px;
+}
+
+div.patch ul.inputs li {
+	padding-left: 13px;
+    background: url(/public/images/port-2x.png) left center no-repeat;
+    background-size: 10px 16px;
+}
+
+div.patch ul.outputs li {
+	padding-right: 13px;
+    background: url(/public/images/port-2x.png) right center no-repeat;
+    background-size: 10px 16px;
+}
+
+h1 {
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: normal;
+	margin-bottom: .8em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-size: 18px;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+dl {
+	font-size: 0.8em;
+}
+
+div.inputs {
+	float: left;
+	width: 50%;
+}
+
+div.outputs {
+	float: right;
+	width: 50%;
+}
+
+.port-descriptions {
+	position: relative;
+}
+
+.port-descriptions p {
+	font-size: 13px;
+	line-height: 17px;
+}
+
+.port-descriptions .inputs {
+	padding-right: 20px;
+}
+
+.port-descriptions .outputs {
+	padding-left: 20px;
+}
+
+.port-descriptions ol {
+	color: rgb(128, 128, 128);
+	list-style-position: inside;
+	margin-bottom: 1em;
+	-webkit-user-select: text;
+}
+
+.port-descriptions dt {
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 4px;
+}
+
+.port-descriptions dd {
+	display: inline;
+}
+
+hr {
+	clear: both;
+	visibility: hidden;
+}
+
+.coord-example {
+	width: 300px;
+	height: 400px;
+	background: #eeeeee;
+	position: relative;
+	margin-bottom: 2em;
+}
+
+.coord-example .dot {
+	width: 10px;
+	height: 10px;
+	background: rgb(0, 114, 255);
+	border-radius: 10px;
+	position: absolute;
+}
+
+.coord-example .label {
+	color: #333;
+	position: absolute;
+	width: 10em;
+	padding: 1em;
+	font-size: 0.8em;
+}
+
+.coord-example .dot-left {
+	left: -5px;
+	text-align: left;
+}
+
+.coord-example .dot-right {
+	right: -5px;
+	text-align: right;
+}
+
+.coord-example .dot-top {
+	top: -5px;
+}
+
+.coord-example .dot-bottom {
+	bottom: -5px;
+}
+
+.coord-example .label.dot-right {
+}
+
+.coord-example .dot.dot-center-x {
+	left: calc(50% - 5px);
+}
+
+.coord-example .label.dot-center-x {
+	left: calc(50% - 5em);
+	text-align: center;
+}
+
+.coord-example .dot-center-y {
+	top: calc(50% - 5px);
+}
+
+.coord-example .box {
+	position: absolute;
+	margin: 5px;
+	background: gray;
+	padding: 2px;
+	color: white;
+}
+
+.coord-example .box.inset-40 {
+	margin: 45px;
+}
+
+.shortcuts {
+	position: relative;
+}
+
+.shortcuts div.shortcut {
+	height: 3em;
+	margin: 0.5em 0;
+}
+
+.shortcuts dt {
+	box-align: stretch;
+}
+
+.shortcuts div.shortcut dd {
+	padding-left: .5em;
+	padding-top: 1em;
+	box-align: center;
+	color: black;
+}
+
+.key.modifier, .key.letter {
+	display: inline-block;
+	background: #ffffff;
+	color: #8b8b8b;
+	margin: 0;
+	color: black;
+	font: 1.5em "HelveticaNeue-Light", 'Helvetica Neue', Helvetica, sans-serif;
+	border: 1px solid grey;
+	border-radius: 2px;
+	text-align: center;
+	padding: .25em;
+	height: 2em;
+	margin-right: 6px;
+}
+
+.key.letter {
+	/*text-transform: uppercase;*/
+	width: 2em;
+}
+
+.key.modifier {
+	width: 3em;
+}
+

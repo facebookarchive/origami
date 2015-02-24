@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Update Available - Origami - Design prototyping with Quartz Composer</title>
+ 	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:title" content="Origami" />
+	<meta property="og:description" content="Origami is a free toolkit for Quartz Composer that makes interactive design prototyping easy." />
+	<meta property="og:url" content="http://origami.facebook.com/" />
+	<meta property="og:image" content="http://facebook.github.io/origami/images/origami.png" />
+	<link rel="image_src" href="images/origami.png" />
+	<link rel="stylesheet" type="text/css" href="../css/origami.css" />
+	<link rel="stylesheet" type="text/css" href="../css/release-notes.css" />
+	<link rel="stylesheet" type="text/css" href="../css/update.css" />
+</head>
+<body>
+<div id="page">
+
+<div class="unit" style="padding: 50px">
+  <h3>An important update to Origami&mdash;version 1.4 is now available.</h3>
+    
+  <a class="download-update" href="../download/">Download Origami 1.4</a>
+  <div class="release-notes" style="margin-top: 20px;">
+    <h2>What&rsquo;s new in 1.4:</h2>
+    <ul>
+      <li>Added <strong>iPhone 6</strong>, <strong>iPhone 6 Plus</strong> and <strong>Apple Watch</strong> support to the <strong>Phone</strong> patch, specified from the <strong>Phone Dimensions</strong> patch</li>
+      <li>Added <strong>&ldquo;New Origami File&rdquo;</strong> to the File menu of Quartz Composer, making it easy to get started</li>
+      <li>Added a new <strong>Long Press</strong> patch, which allows you to detect a press that's held for a given duration without being moved</li>
+      <li>Added a new <strong>Layer Group Size</strong> patch, which outputs the size of the Layer Group that contains it</li>
+      <li>Fixed full-screen Retina support for Mac OS X 10.10 Yosemite</li>
+      <li>Fixed a crash in order to restore compatibility with Mac OS X 10.8</li>
+      <li>Fixed a crash for users that were running the KinemeCore plugin and had Linear Port Connections disabled</li>
+      <li>Fixed a crash that could occur connecting ports on the <strong>Delay</strong> patch</li>
+    </ul>
+  </div>
+    
+  <div class="release-notes" style="margin-top: 20px;">
+    <h2>Updates in 1.3:</h2>
+    <ul>
+      <li>Added a new <strong>Inline Values</strong> feature which lets you see and modify live-updating values for every input port in the Quartz Composer editor</li>
+      <li>Added a new <strong>Pop Animation</strong> patch, which animates a changing value with a spring. You can use the same Bounciness and Speed values on iOS and OS X using the <a href="http://github.com/facebook/pop">Pop animation library</a></li>
+      <li>Added a new <strong>Live Image</strong> patch, which imports an image from a location on your local machine and automatically updates its image when the file changes (and optionally saving a copy of the image if the file moves)</li>
+      <li>Added a new <strong>Delay</strong> patch, which lets you delay any value for a specified duration in seconds</li>
+      <li>Added a new <strong>Drag and Drop</strong> patch, which lets you get drag and drop events on the viewer window and is useful for prototyping desktop UIs with file dragging from your Mac on to your interface</li>
+      <li>Added a new <strong>Repeating Pulse</strong> patch, which outputs a repeated pulse separated by a duration in seconds&mdash;useful for getting a transition to repeat without needing to interact with the composition</li>
+      <li>The <strong>Scroll</strong> patch now supports the Magic Mouse and trackpad</li>
+      <li>Added a new <strong>Mouse Scroll</strong> patch, which gives you scroll data from the Magic Mouse and trackpad</li>
+      <li>Added a new <strong>Multi-stop Progress</strong> patch, which gives you the progress of a value inside of a structure of stops</li>
+      <li>Added new window management options (Resize to Thirds, Picture in Picture and Multi-monitor Layout) to the Window menu</li>
+      <li>Now when you delete any patch, Quartz Composer will attempt to retain connections between the top ports</li>
+      <li>Holding command and option while dragging in an image into the editor will add a <strong>Live Image</strong> patch</li>
+      <li>The <strong>Browser Chrome</strong> patch will now restore the status bar visibility to its previous state after the composition is stopped</li>
+      <li>The <strong>Counter 2</strong> patch now supports iterators and will now also automatically set its value to the &ldquo;Jump to Number&rdquo; value when the composition starts</li>
+      <li>The <strong>Cursor Control</strong> patch will now allow for changing the cursor while the mouse is down</li>
+      <li>Fixed a bug in Quartz Composer where interaction ports could sometimes have their last port name clipped</li>
+      <li>The <strong>Value to Boolean</strong> patch now evaluates Cocoa <null> objects as false</li>
+      <li>Fixed a divide by zero issue with the <strong>Progress</strong> patch</li>
+      <li>Fixed a NaN output case in the <strong>Counter 2</strong> patch</li>
+    </ul>
+  </div>
+
+  <div class="release-notes" style="margin-top: 20px;">
+    <h2>Updates in 1.2:</h2>
+    <ul>
+      <li><strong>By popular request!</strong> &mdash; Added an <strong>iPad</strong> device to the <strong>Phone</strong> patch, specified from the <strong>Phone Dimensions</strong> patch</li>
+      <li>Added functionality for designing in <strong>Landscape</strong> mode in addition to <strong>Portrait</strong> mode, specified from the <strong>Phone Dimensions</strong> patch</li>
+      <li>The <strong>Phone</strong> patch now shows a touch point instead of the mouse cursor</li>
+      <li>Added a new <strong>Browser Chrome</strong> patch, which styles the viewer window to look like a web browser when the composition is running</li>
+      <li>Added a new <strong>Browser Buttons</strong> patch, which gives you the state of the back and forward buttons from the <strong>Browser Chrome</strong> patch</li>
+      <li>Added new <strong>Hex to RGB</strong> and <strong>RGB to Hex</strong> patches, which convert hex strings to RGB values and vice versa</li>
+      <li>Added a new <strong>Index Switch</strong> patch, which switches between multiple index values and remembers its current index</li>
+      <li>Added a new <strong>Velocity</strong> patch, which outputs the difference in value between the previous frame and current frame</li>
+      <li>Added new <strong>Cursor Control</strong> patch, which allows you to hide or change the appearance of the cursor</li>
+      <li>Redesigned Quartz Composer's <strong>toolbar icons</strong></li>
+      <li>Images now keep their names when dragged onto the canvas</strong>
+      <li>Improved plugin loading in some cases</li>
+    </ul>
+  </div>
+
+  <div class="release-notes" style="margin-top: 20px;">
+    <h2>Updates in 1.1:</h2>
+    <ul>
+      <li>Added a new <strong>Layer Group</strong> patch, which behaves like the <strong>Render in Image</strong> patch but does not require a <strong>Clear</strong> patch to work properly<br />
+        (control-click any <strong>Render in Image</strong> to convert it to a <strong>Layer Group</strong>)</li>
+      <li>Added a new <strong>Fill Layer</strong> patch, which lets you quickly fill the screen with a color at an opacity</li>
+      <li>Added a new <strong>Progress</strong> patch, which takes a value in a given range and outputs the progress of where the value is in the range</li>
+      <li>Added a <strong>Linear Port Connections</strong> feature to the Origami menu (turned on by default) which makes connections easier to read</li>
+      <li>Added automatic in-app update checking</li>
+      <li>Fixed an issue where the <strong>Interaction 2</strong> patch would not work properly with non-center anchor points</li>
+      <li>The <strong>Interaction 2</strong> patch now works properly with the <strong>Image with Shadow</strong> patch (and patches built with it including the <strong>Text Layer</strong> patch)</li>
+      <li>Fixed an issue with the <strong>Interaction 2</strong> patch where hit regions would be off when in Full Screen mode on a retina display</li>
+      <li>Fixed an issue with the <strong>Image Transition</strong> patch that caused the Start and End images to be shown in reverse order</li>
+      <li>Fixed an issue that caused the output image of the <strong>Image Transition</strong> patch to be translucent when fading between two fully opaque images</li>
+      <li>Added iterator support to the <strong>Switch</strong> patch</li>
+      <li>Background colors are no longer applied on text in the <strong>Button</strong> patch</li>
+      <li>The <strong>Text Layer</strong> patch now bases its alignment off of its Anchor Position</li>
+      <li>Added a <strong>Show/Hide Path Bar</strong> setting to the Editor menu and <strong>Show/Hide Status Bar</strong> setting in the Viewer menu</li>
+      <li>Fixed an issue that could cause Quartz Composer to hang momentarily on launch in unfavorable network conditions</li>
+      <li>Small improvements to <strong>Value or Default</strong> and <strong>Value to Boolean</strong></li>
+      <li><strong>Layer</strong> patches no longer intersect each other when you rotate them</li>
+      <li>Fix a crash when adjusting a splitter's type</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<div id="footer">
+	Copyright &copy; 2013-2014 Facebook, Inc. All rights reserved. &middot; <a href="../license/">License</a>
+</div>
+
+</body>
+</html>

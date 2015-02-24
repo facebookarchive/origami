@@ -1,51 +1,274 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Examples - Origami - Design prototyping with Quartz Composer</title>
- 	<meta name="author" content="Facebook" />
-	<link rel="stylesheet" type="text/css" href="../css/origami.css" />
-	<script type="text/javascript" src="../js/ga.js"></script>
+	<title>Origami &mdash; Examples</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://origami.facebook.com"/>
+	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:image" content="https://facebook.github.io/origami/images/blog-hero.jpg" />
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/examples.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src='/public/js/examples.js'></script>
+	<script type="text/javascript" src='/public/js/ga.js'></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
-<body>
-<div id="page">
+<body class="light">
 
-<div class="unit welcome">
-	<p><h2>Origami Examples</h2></p>
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+
+
 	
-	<p>Here are some examples to get you started:</p>
-	<br />
-	<a href="download/Alpha and Scale.qtz"><div class="qtz">Alpha and Scale</div></a>
-	<a href="download/Chat List.qtz"><div class="qtz">Chat List</div></a>
-	<a href="download/Photo Grid.qtz"><div class="qtz">Photo Grid</div></a>
-	<a href="download/Tabs.qtz"><div class="qtz">Tabs</div></a>
+	<li class="item current">
 	
-	<br />
-	<p>This page will be updated with more examples as they are developed.<br />
-		Contribute your own and share or learn from the community with the resources below:</p>
+
 	
+		<a href="/examples">Examples</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/tutorials">Tutorials</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/documentation">Documentation</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a>
+	
+	</li>
+
+
+
+</ul>
+
+		<div class="header">
+		<h2>Learn by example.</h2>
+		<p>Get Origami sample files showing how to build common UI patterns and interactions.</p>
+	</div>
+	
+	<div class="examples">
+		<h5>Interactions</h5>
+		<div class="grid-item" id="ropey-rows">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen ipad">
+						<div class="row row1"></div>
+						<div class="row row2"></div>
+						<div class="row row3"></div>
+						<div class="row row4"></div>
+						<div class="row row5"></div>
+						<div class="row row6"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Slinkin' Park</h4>
+			<p>Shows how to chain Pop Animation patches together to get a rope effect.</p>
+		</div>
+		<div class="grid-item" id="card-swiper">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen ipad">
+						<div class="check"></div>
+						<div class="box box3"></div>
+						<div class="box box2"></div>
+						<div class="box box1"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Card Swiper</h4>
+			<p>Use multiple Swipe patches to swipe cards off a stack.</p>
+		</div>
+		<div class="grid-item" id="z-waggle">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen ipad">
+						<div class="box"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>2D Waggle</h4>
+			<p>Use the Swipe patch to drag a layer and the Velocity patch to make it rotate in 2D based on how fast you&rsquo;re dragging.</p>
+		</div>
+		<div class="grid-item" id="xy-waggle">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen ipad">
+						<div class="box"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>3D Waggle</h4>
+			<p>Use the Swipe patch to drag a layer and the Velocity patch to make it rotate in 3D based on how fast you&rsquo;re dragging.</p>
+		</div>
+		<h5>Interfaces</h5>
+		<div class="grid-item" id="tap-to-zoom">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen iphone">
+						<div class="photo"></div>
+						<div class="chrome"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Tap to Zoom</h4>
+			<p>Animate between two states when the screen is tapped.</p>
+		</div>
+		<div class="grid-item" id="long-press-preview">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen iphone">
+						<div class="overlay"></div>
+						<div class="sticker"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Long Press Preview</h4>
+			<p>Start an animation once a touch has been down and stationary for a certain amount of time.</p>
+		</div>
+		<div class="grid-item" id="filter-reveal">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen iphone">
+						<div class="photo"></div>
+						<div class="filters"></div>
+						<div class="selection"></div>
+						<div class="buttons"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Filter Reveal</h4>
+			<p>Shows how to synchronize several effects on a swipe using the Swipe patch.</p>
+		</div>
+		<div class="grid-item" id="swipe-navigation">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen iphone">
+						<div class="feed"></div>
+						<div class="detail"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Swipe Navigation</h4>
+			<p>Slide in a new layer from the right when a hit area is tapped and go back by swiping.</p>
+		</div>
+		<div class="grid-item" id="paged-scrolling">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen iphone">
+						<div id="scroll-stickers"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Paged Scrolling</h4>
+			<p>Shows how to use the Scroll patch to make a layer scrollable and snap to pages.</p>
+		</div>
+		<div class="grid-item" id="compose-modal">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen iphone">
+						<div class="feed"></div>
+						<div class="modal"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Compose Modal</h4>
+			<p>Slide in a new window when you tap a button and hook up buttons in that window to dismiss it.</p>
+		</div>
+		<div class="grid-item" id="master-detail">
+			<a class="download-link" href="#" target="_blank">
+				<div class="download-label">
+					<div class="download-icon">Download</div>
+				</div>
+				<div class="thumbnail">
+					<div class="screen ipad">
+						<div class="tab1"></div>
+						<div class="tab2"></div>
+						<div class="tab3"></div>
+						<div class="touchpoint"></div>
+					</div>
+				</div>
+			</a>
+			<h4>Master Detail</h4>
+			<p>Shows how to change the view on the right side based on taps on the left. Uses an Index Switch to remember the tab.</p>
+		</div>
+	</div>
+
 </div>
 
-
-<div class="unit radial">
-	<div class="heading">Next steps</div>
-	<ul class="patches-list" style="margin-right: 40px;">
-		<li>Join the <a href="https://www.facebook.com/groups/origami.community/" target="_blank">Origami Community</a> Facebook group.</li>
-		<li>Like the <a href="https://www.facebook.com/origami.qc" target="_blank">Origami page</a> on Facebook.</li>
-		<li>Learn about the <a href="http://www.facebook.com/design" target="_blank">Facebook Design</a> team</li>
-	</ul>
-	<ul class="patches-list">
-		<li>Follow <a href="https://twitter.com/facebookorigami" target="_blank">@facebookorigami</a> on Twitter</li>
-		<li>View <a href="https://github.com/facebook/origami" target="_blank">Origami on Github</a></li>
-	</ul>
-	<div style="clear: both;"></div>
-</div>
-
-
-</div>
 </body>
 </html>
 
-<div id="footer">
-	Copyright &copy; 2013-2014 Facebook, Inc. All rights reserved. &middot; <a href="../license/">License</a>
-</div>
+
+		<div id="end-mark"><div class="end-mark-icon"></div></div>
+</div> <!-- end wrapper -->
+
+</body>
+</html>

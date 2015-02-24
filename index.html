@@ -1,165 +1,276 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Origami - Design prototyping with Quartz Composer</title>
- 	<meta name="author" content="Facebook, Inc." />
-	<meta property="og:title" content="Origami" />
-	<meta property="og:description" content="Origami is a free toolkit for Quartz Composer that makes interactive design prototyping easy." />
-	<meta property="og:url" content="https://origami.facebook.com/" />
-	<meta property="og:image" content="https://facebook.github.io/origami/images/origami.png" />
-	<link rel="image_src" href="images/origami.png" />
-	<link rel="stylesheet" type="text/css" href="css/origami.css" />
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/callout.js"></script>
-	<script type="text/javascript" src="js/spring.js"></script>
-	<script type="text/javascript" src="js/spring-utils.js"></script>
-	<script type="text/javascript" src="js/example.js"></script>
-	<script type="text/javascript" src="js/ga.js"></script>
-	<script type="text/javascript" src="js/origami.js"></script>
+	<title>Origami &mdash; Design Prototyping</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://origami.facebook.com"/>
+	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:image" content="https://facebook.github.io/origami/images/blog-hero.jpg" />
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/homepage.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src='/public/js/homepage.js'></script>
+	<script type="text/javascript" src='/public/js/ga.js'></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
-<body>
-<div id="page">
+<body ontouchstart="">
 
-<div id="logo"></div>
+<div id="wrapper">
+	<div id="section-hero">
+		<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
 
-<div class="unit">
-	<div id="intro">
-		<div id="header-type">
-			<div id="title">Origami</div>
-			<div class="version">Version 1.4</div>
-			<div class="heading">A free design prototyping toolkit for Quartz Composer.</div>
-		</div>
-		<p>Most designers today create static mockups to communicate app ideas. But increasingly apps are anything but static, which means as designers we need a better tool for interaction design.</p>
-		<p>Origami is a free toolkit for Quartz Composer&mdash;created by the <a href="https://www.facebook.com/design" target="_blank">Facebook Design</a> team&mdash;that makes interactive design prototyping easy and doesn’t require programming.</p>
-	</div>	
-</div>
 
-<div class="unit" style="padding-top: 0px; padding-bottom: 0px;">
-	<div class="heading">How does it work?</div>
-</div>
+	
+	<li class="item">
+	
 
-<div class="unit editor">
-	<div class="phone">
-		<div class="photo-container">
-			<div id="example-photo" class="photo" onmousedown="this.className='photo down'">
-				<div class="pill">Click to Switch</div>
+	
+		<a href="/examples">Examples</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/tutorials">Tutorials</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/documentation">Documentation</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a>
+	
+	</li>
+
+
+
+</ul>
+
+				<div id="hero-content-wrapper">
+			<div id="block1">
+				<div id="hero-content">
+					<div class="logo"></div>
+					<p class="description">Origami is a free tool for designing modern user interfaces. Quickly put together a prototype, run it on your iPhone or iPad, iterate on it, and export code snippets your engineers can use.
+		<br/><br/>We created Origami to help us design and build many of our products at Facebook, including Instagram, Paper, Messenger, Slingshot, Rooms, and Groups. We&rsquo;re excited to see what people make with it.</p>
+					<ul id="download-buttons" class="buttons" class="cf">
+						<a href="/download"><li>Download Origami</li></a>
+					</ul>
+				</div>
+			</div>
+			<div id="block2">
+				<div id="fourbyfour">
+					<div id="ropey-rows">
+						<div class="thumbnail">
+							<div class="screen ipad">
+								<div class="row row1"></div>
+								<div class="row row2"></div>
+								<div class="row row3"></div>
+								<div class="row row4"></div>
+								<div class="row row5"></div>
+								<div class="row row6"></div>
+								<div class="touchpoint"></div>
+							</div>
+						</div>
+					</div>
+					<div id="card-swiper">
+						<div class="thumbnail">
+							<div class="screen ipad">
+								<div class="check"></div>
+								<div class="box box3"></div>
+								<div class="box box2"></div>
+								<div class="box box1"></div>
+								<div class="touchpoint"></div>
+							</div>
+						</div>
+					</div>
+					<div id="z-waggle">
+						<div class="thumbnail">
+							<div class="screen ipad">
+								<div class="box"></div>
+								<div class="touchpoint"></div>
+							</div>
+						</div>
+					</div>
+					<div id="xy-waggle">
+						<div class="thumbnail">
+							<div class="screen ipad">
+								<div class="box"></div>
+								<div class="touchpoint"></div>
+							</div>
+						</div>
+					</div>				
+				</div>
 			</div>
 		</div>
+	
 	</div>
-</div>
-
-<div class="unit quartz-composer">
-	<div class="quartz-composer-feature">
-		<p><strong>Quartz Composer</strong> is a freely-available Mac OS X application by Apple that's been around for nearly a decade. It was never designed for the purpose of interaction prototyping though: it's primarily a motion graphics tool.</p>
-		<p>Out of the box without Origami, interaction prototyping with Quartz Composer is complicated. Origami provides a set of tools for Quartz Composer that make interaction prototyping a lot easier.</p>
+	
+	<div id="section-gestures">
+		<div class="header">
+			<h2>Easy to Use Gestures</h2>
+			<p>Get your swipe on with the most advanced and easy to use gesture components out there.</p>
+		</div>
+		<div id="gesture-types">
+			<div class="gesture-type" id="scroll-gesture">
+				<div class="header">
+					<h2>Scroll</h2>
+					<p>Origami 2.0 has our most powerful scroll component yet. It supports free, paged, and wheel of fortune scrolling and a ton of advanced features.</p>
+				</div>
+				<div class="gesture-animation">
+					<div id="scroll-stickers"></div>
+					<div class="touchpoint"></div>
+				</div>
+			</div>
+			<div class="gesture-type" id="swipe-gesture">
+				<div class="header">
+					<h2>Swipe</h2>
+					<p>Easily make anything swipe-able and synchronize effects with our easy to use Swipe component. Just add it, connect a cable, and you&rsquo;re done.</p>
+				</div>
+				<div class="gesture-animation">
+					<div id="swipe-background"></div>
+					<div id="swipe-list"></div>
+					<div id="swipe-feed"></div>
+					<div class="touchpoint"></div>
+				</div>
+			</div>
+			<div class="gesture-type" id="tap-gesture">
+				<div class="header">
+					<h2>Tap</h2>
+					<p>Prototype with taps, double taps, and long presses with easy to use components.</p>
+				</div>
+				<div class="gesture-animation">
+					<div id="heart"></div>
+					<div class="touchpoint"></div>
+				</div>
+			</div>
+		</div>
+		<div id="gesture-patches">
+			<div class="patches">
+				<p>See how simple it is to tie effects to a swipe. Drag from Progress to the background&rsquo;s Opacity.</p>
+			</div>
+			<div id="swipe-y-value" class="patch-values">0</div>
+			<div id="swipe-opacity-value" class="patch-values">1</div>
+			<div id="progress-port" class="pulsing-port"></div>
+			<div id="opacity-port" class="pulsing-port"></div>
+			<div id="progress-cable" class="cable"></div>
+			<div id="progress-hit-area" class="port-hit-area"></div>
+			<div id="opacity-hit-area" class="port-hit-area"></div>
+		</div>
 	</div>
-</div>
-
-<div class="unit radial">
-	<div class="heading">What&rsquo;s included?</div>
-	<ul class="patches-list" style="margin-right: 40px;">
-		<li><strong>Switch</strong> Toggles between on and off and remembers its current state.</li>
-		<li><strong>Scroll</strong> Lets you allow the user to scroll an image.</li>
-		<li><strong>Pop Animation</strong> Animate a changing value with Bounciness and Speed values on a spring.</li>
-		<li><strong>Bouncy Animation</strong> Animate a changing value with a spring using Friction and Tension values.</li>
-		<li><strong>Classic Animation</strong> Animate a changing number with a specified duration and easing curve.</li>
-		<li><strong>Transition</strong> Takes a number in the range of 0 to 1 and converts it to a range starting with Start Value and ending in End Value.</li>
-		<li><strong>Color Transition</strong> Fades between two colors.</li>
-		<li><strong>Image Transition</strong> Fades between two images.</li>
-		<li><strong>Interaction 2</strong> Lets you get clicks on Layer patches. It works with Render in Image patches, iterators, and the Phone patch.</li>
-		<li><strong>Layer Group</strong> Lets you group layers together.</li>
-		<li><strong>Progress</strong> Takes a value in a given range and outputs the progress of where the value is in the range.</li>
-		<li><strong>Hex Color</strong> Converts a hex string to a color.</li>
-		<li><strong>Cursor Control</strong> Allows you to hide or change the OS X cursor when it's over the viewer window.</li>
-	</ul>
-	<ul class="patches-list">
-		<li><strong>Layer</strong> Lets you put an image on screen and adjust how it shows up.</li>
-		<li><strong>Text Layer</strong> Lets you put text on screen.</li>
-		<li><strong>Fill Layer</strong> Fills the screen with a color.</li>
-		<li><strong>Button</strong> Shows a button with a customizable label and background. Connect it to the Interaction 2 patch to make it interactive.</li>
-		<li><strong>Hit Area</strong> Lets you specify an area on screen to get clicks on. Connect it to an Interaction 2 patch to make it interactive.</li>
-		<li><strong>Phone</strong> Draws a phone (iPhone, Android or Windows Phone) or iPad with a specified screen image.</li>
-		<li><strong>Browser Chrome</strong> Styles the viewer window to look like a web browser.</li>
-		<li><strong>Timer</strong> Runs a timer for a specified duration starting with a specified signal. It outputs the state of the timer as well as the time elapsed.</li>
-		<li><strong>Counter 2</strong> Represents a number that can be incremented, decremented or set to a specific value.</li>
-		<li><strong>Index Switch</strong> Switches between multiple index values and remembers its current index.</li>
-		<li><strong>Velocity</strong> Outputs the difference in value between the previous frame and current frame.</li>
-	</ul>
-	<div style="clear: both;"></div>
-
-	<div class="divider"></div>
-
-	<div class="heading">Improvements to Quartz Composer</div>
-	<ul class="patches-list" style="margin-right: 40px;">
-		<li>Retina support for the viewer</li>
-		<li>Automatically add a Layer patch when you drag in an image</li>
-		<li>The up and down arrow keys can be used in text fields in the Inspector window</li>
-		<li>Disabled patches show up as dimmed</li>
-		<li>Redesigned toolbar icons</li>
-	</ul>
-	<ul class="patches-list">
-		<li>Native full screen support in the viewer window</li>
-		<li>Connections are maintained when a splitter is deleted</li>
-		<li>Fix an issue introduced in 10.8 that replaced spaces with underscores in port names</li>
-		<li>Fix a crash introduced in 10.9 when you close a document</li>
-		<li>Linear port connections</li>
-	</ul>
-	<div style="clear: both;"></div>
-</div>
-
-<a name="getstarted"></a>
-<div class="unit get-started">
-	<div class="steps-container">
-		<div class="heading">Get started now <span style="font: 30px 'Lucida Grande';">&#8594;</span></div>
-		<a class="action-step" href="https://developer.apple.com/register/" target="_blank">
-			<div class="step-header">
-				<div class="step-number">1</div>
-				<div class="step-divider"></div>
-				<div class="step-title">Register as an Apple Developer</div>
+	
+	<div id="section-presentation">
+		<div class="header">
+			<h2>Present in Style</h2>
+			<p>Show off your designs in presentations with full screen, backgrounds, and a number of different of devices. All while controlling your prototype with an iPhone or iPad running Origami Live.</p>
+		</div>
+		<div id="tv">
+			<div id="screen">
+				<div class="hand"></div>
+				<div class="mockup"></div>
+				<div class="phone"></div>
+				<div class="darkening"></div>
+				<div class="lighting"></div>
 			</div>
-			<img src="images/xcode.png" style="padding-top: 28px;" />
-		</a>
-		<a class="action-step" href="https://origami.facebook.com/quartzcomposer/" target="_blank">
-			<div class="step-header">
-				<div class="step-number">2</div>
-				<div class="step-divider"></div>
-				<div class="step-title">Download and Install Quartz Composer</div>
-			</div>
-			<img src="images/quartz-composer.png" />
-		</a>
-		<a class="action-step" href="download/">
-			<div class="step-header">
-				<div class="step-number">3</div>
-				<div class="step-divider"></div>
-				<div class="step-title">Download and Install Origami 1.4</div>
-			</div>
-			<img src="images/installer.png" />
-		</a>
+		</div>
+		<div id="controller">
+			<p>Try our presentation controls.</p>
+			<ul id="keys" class="cf">
+				<li id="hand-key">H</li>
+				<li id="minus-key"></li>
+				<li id="plus-key"></li>
+				<li id="fullscreen-key">F</li>
+			</ul>
+		</div>
 	</div>
-	<div class="requirements">Requires Mac OS X 10.8 or higher.</div>
-</div>
+	
+	<div id="section-code">
+		<div id="code-image">
+			<div class="header">
+				<h2>Code Export</h2>
+				<p>Export code snippets to iOS, Android, and the web with a click.</p>
+			</div>
+			<div class="main-content cf">
+				<div id="code-menu"></div>
+				<div class="description">
+					<p>Origami can now export code for the parts of your prototypes you used to have to tediously spec to engineers. Now with the click of a button, you can deliver your animation specs as code to your engineers that they can copy-and-paste into the project.<br/><br/>
+					This uses our free, open source animation frameworks to deliver the exact same feel across all platforms. Take a look at some sample code this can generate.</p>
+					<ul id="code-buttons" class="buttons" class="cf">
+						<a href="https://gist.github.com/bwalkin/f3cadeceb3815d62c9e2" target="_blank"><li>iOS .m</li></a>
+						<a href="https://gist.github.com/bwalkin/093f28328a6da0f2070f"><li>Android. java</li></a>
+						<a href="https://gist.github.com/bwalkin/6ae3958fd39f3518e71c"><li>Web .js</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="section-photoshop">
+		<div class="body-text">
+			<h2>Sketch + Origami</h2>
+			<p>Origami lets you create links between layers in your prototype and layers in your Sketch file. Once they're linked up, hitting a keyboard shortcut will instantly update your prototype with all of the latest assets without interrupting your prototype. You can even update assets with one hand while interacting with them in Origami Live with the other.</p>
+			<p><br/>If you're a Photoshop user, we've got you covered too. Origami layers can also be linked to PSD files.</p>
+		</div>
+		<div class="gradient-divider"></div>
+	</div>
+	
+	<div id="section-desktop">
+		<div class="header">
+			<h2>Prototype for desktop, too</h2>
+			<p>Use Origami to prototype desktop websites and apps with features like text input, custom cursors, FaceTime camera, OS X drag and drop, and a resizable web browser frame for prototyping responsive designs.</p>
+		</div>
+		<div id="rooms-site">
+			<div id="rooms-clipview">
+				<div class="rooms-street cf" id="street1"></div>
+				<div class="rooms-street cf" id="street2"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="section-get-started">
+		<div class="centered-content">
+			<div class="header">
+				<h2>Get started today.</h2>
+				<p>Download Origami and quickly get up and running with examples, tutorials, documentation, and a helpful community.</p>
+			</div>
+			<ul id="download-buttons" class="buttons" class="cf">
+				<a href="/download"><li>Download Origami</li></a>
+			</ul>
+			<div id="help-buttons">
+				<div class="help-button" id="examples-button"><a href="/examples">Examples<p>Get sample files showing how to build common UI patterns and interactions.</p></a></div>
+				<div class="help-button" id="tutorials-button"><a href="/tutorials">Tutorials<p>New to Origami? Not a problem. Become an expert by following our step-by-step tutorials.</p></a></div>
+				<div class="help-button" id="documentation-button"><a href="/documentation">Documentation<p>Get detailed descriptions of all of the components of Origami.</p></a></div>
+				<div class="help-button" id="community-button"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community<p>A community of friendly folks ready to help you with Origami.</p></a></div>
+			</div>
+		</div>
+	</div>
 
-<div class="unit radial">
-	<div class="heading">Next steps</div>
-	<ul class="patches-list" style="margin-right: 40px;">
-		<li>Join the <a href="https://www.facebook.com/groups/origami.community/" target="_blank">Origami Community</a> Facebook group.</li>
-		<li>Like the <a href="https://www.facebook.com/origami.qc" target="_blank">Origami page</a> on Facebook.</li>
-		<li>Learn about the <a href="http://www.facebook.com/design" target="_blank">Facebook Design</a> team</li>
-	</ul>
-	<ul class="patches-list">
-		<li>Follow <a href="https://twitter.com/facebookorigami" target="_blank">@facebookorigami</a> on Twitter</li>
-		<li>Download Origami <a href="examples/">example files</a></li>
-		<li>View <a href="https://github.com/facebook/origami" target="_blank">Origami on Github</a></li>
-	</ul>
-	<div style="clear: both;"></div>
-</div>
 
-</div>
-
-<div id="footer">
-	Copyright &copy; 2013-2014 Facebook, Inc. All rights reserved. &middot; <a href="license/">License</a>
-</div>
+		
+</div> <!-- end wrapper -->
 
 </body>
 </html>

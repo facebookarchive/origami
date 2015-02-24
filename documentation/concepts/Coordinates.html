@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Origami &mdash; Coordinates</title>
+	<meta property="og:title" content="Origami"/>
+	<meta property="og:description" content="Design Prototyping">
+	<meta property="og:url" content="http://origami.facebook.com"/>
+	<meta name="author" content="Facebook, Inc." />
+	<meta property="og:image" content="https://facebook.github.io/origami/images/blog-hero.jpg" />
+	<link rel="stylesheet" type="text/css" href="/public/css/global.css">
+	<link rel="stylesheet" type="text/css" href="/public/css/documentation.css">
+	<script type='text/javascript' src='/public/js/jquery-2.1.0.min.js'></script>
+	<script type='text/javascript' src='/public/js/rebound.js'></script>
+	<script type='text/javascript' src='/public/js/global.js'></script>
+	<script type='text/javascript' src=''></script>
+	<script type="text/javascript" src='/public/js/ga.js'></script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body class="light">
+
+<div id="wrapper">
+	<ul id="nav" class="cf">
+	<li class="logo"><a href="/">Origami</a></li>
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/examples">Examples</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="/tutorials">Tutorials</a>
+	
+	</li>
+
+
+
+	
+	<li class="item current">
+	
+
+	
+		<a href="/documentation">Documentation</a>
+	
+	</li>
+
+
+
+	
+	<li class="item">
+	
+
+	
+		<a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a>
+	
+	</li>
+
+
+
+</ul>
+
+
+	<div id="docs-wrapper">
+		
+
+	<ul class="docs">
+		<li>Concepts
+			<ul>
+			
+			
+				
+
+				  
+				<li><a href="/documentation/index.html">Introduction </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/KeyboardShortcuts.html">Keyboard Shortcuts </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><span>Coordinates</span></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/concepts/Progress.html">Progress Values </a></li>
+				  
+
+			  
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			</ul>
+		</li>
+
+		<li>Patches
+			<ul>
+			
+				
+			
+				
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Color-Transition.html">Color Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/3D-Orientation.html">3D Orientation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Border.html">Border </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Bouncy-Animation.html">Bouncy Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Browser-Buttons.html">Browser Buttons </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/BrowserChrome.html">Browser Chrome </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Button.html">Button </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Classic-Animation.html">Classic Animation </a></li>
+				  
+
+			  
+			
+				
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Counter-2.html">Counter 2 </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Cursor-Control.html">Cursor Control </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Delay.html">Delay </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Layer.html">Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/PopAnimation.html">Pop Animation </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Progress.html">Progress </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Switch.html">Switch </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/TextLayer.html">Text Layer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Timer.html">Timer </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Transition.html">Transition </a></li>
+				  
+
+			  
+			
+				
+
+				  
+				<li><a href="/documentation/patches/Velocity.html">Velocity </a></li>
+				  
+
+			  
+			
+			</ul>
+		</li>
+	</ul>
+
+	
+		<div class="doc-content">
+			<h1> Coordinates </h1>
+		<p>In constrast to built-in Quartz Composer patches, the Origami patches (eg. Layer / Text Layer / Layer Group) use pixel coordinates.</p>
+
+<p>The origin, or location of the (x = 0, y = 0) coordinate, is in the center of the device screen. Coordinates increase upwards and to the right. Points downward and leftward of the center have negative coordinates.</p>
+
+<p>For illustration, below is a Layer Group of height 400 pixels and width 300 pixels:</p>
+
+<div class="coord-example">
+    <div class="dot dot-center dot-center-y dot-center-x"></div>
+    <div class="label dot-center dot-center-y dot-center-x">0, 0</div>
+
+    <div class="dot dot-top-right dot-top dot-right"></div>
+    <div class="label dot-top-right dot-top dot-right">150, 200</div>
+
+    <div class="dot dot-bottom-left dot-bottom dot-left"></div>
+    <div class="label dot-bottom-left dot-bottom dot-left">-150, -200</div>
+
+</div>
+
+
+<h2>Anchor Point</h2>
+
+<p>Some patches take an <em>Anchor Point</em> input. This input changes the origin of the coordinate system, but only for that patch.</p>
+
+<div class="coord-example">
+    <div class="dot dot-top-left dot-top dot-left"></div>
+    <div class="label dot-top-left dot-top dot-left">Top Left</div>
+
+    <div class="dot dot-top-center dot-top dot-center-x"></div>
+    <div class="label dot-top-center dot-top dot-center-x">Top Center</div>
+
+    <div class="dot dot-top-right dot-top dot-right"></div>
+    <div class="label dot-top-right dot-top dot-right">Top Right</div>
+
+    <div class="dot dot-center-left dot-center-y dot-left"></div>
+    <div class="label dot-center-left dot-center-y dot-left">Center Left</div>
+
+    <div class="dot dot-center dot-center-y dot-center-x"></div>
+    <div class="label dot-center dot-center-y dot-center-x">Center</div>
+
+    <div class="dot dot-center-right dot-center-y dot-right"></div>
+    <div class="label dot-center-right dot-center-y dot-right">Center Right</div>
+
+    <div class="dot dot-bottom-left dot-bottom dot-left"></div>
+    <div class="label dot-bottom-left dot-bottom dot-left">Bottom Left</div>
+
+    <div class="dot dot-bottom-center dot-bottom dot-center-x"></div>
+    <div class="label dot-bottom-center dot-bottom dot-center-x">Bottom Center</div>
+
+    <div class="dot dot-bottom-right dot-bottom dot-right"></div>
+    <div class="label dot-bottom-right dot-bottom dot-right">Bottom Right</div>
+</div>
+
+
+<p>Here's an example of a Text Layer positioned from the "Top Left" Anchor Point:</p>
+
+<div class="coord-example">
+    <div class="dot dot-top-left dot-top dot-left"></div>
+    <div class="box dot-top-left dot-top dot-left">Button Text</div>
+</div>
+
+
+<p>From the bottom right:</p>
+
+<div class="coord-example">
+    <div class="dot dot-bottom-right dot-bottom dot-right"></div>
+    <div class="box dot-bottom-right dot-bottom dot-right">Button Text</div>
+</div>
+
+
+<p>Notice that if you position a Layer by its Bottom Right, it positions its right edge to the right of the screen and bottom edge to the bottom of the screen, not its center. This makes it convenient to quickly move a layer to a corner of the screen, or position it within its parent.</p>
+
+<p>If you want to inset it left by 40 pixels and up by 40 pixels, give it an X Position of -40 and a Y Position of 40.</p>
+
+<div class="coord-example">
+    <div class="dot dot-bottom-right dot-bottom dot-right"></div>
+    <div class="box inset-40 dot-bottom-right dot-bottom dot-right">Button Text</div>
+    <div class="label dot-bottom-right dot-bottom dot-right">-40, 40</div>
+</div>
+
+
+
+
+		</div>
+	</div>
+</div> <!-- end wrapper -->
+
+</body>
+</html>

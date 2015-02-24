@@ -1,0 +1,171 @@
+/* @override 
+	http://localhost:4000/public/css/global.css */
+
+@import url('flex.css');
+
+/* All Sections */
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    -webkit-font-smoothing: antialiased;
+}
+ 
+a {
+	color:inherit;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: auto;
+	-webkit-user-select:text;
+}
+ 
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.28;
+}
+
+p {
+	-webkit-user-select:text;
+	cursor: auto;
+}
+
+h2 {
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 39px;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 29px;
+	font-weight: normal;
+}
+
+#wrapper {
+	overflow-x: hidden;
+}
+
+/* Nav Bar */
+
+#nav {
+	border-bottom:  1px solid rgba(255, 255, 255, .3);
+	padding: 3px 33px 15px;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#nav li {
+	font-size: 15px;
+	line-height: 20px;
+	float: left;
+}
+
+#nav li.logo {
+	background-image: url('../images/logo-small-black-2x.png');
+	background-size: 59px 17px;
+	background-repeat: no-repeat;
+	background-position: center 2.5px;
+	width: 59px;
+	height: 20px;
+	margin-right: 36px;
+	margin-top: 12px;
+	color: rgba(0, 0, 0, 0);
+}
+
+#nav li.item {
+	margin: 12px 34px 0 0;
+	font-weight: normal;
+	-webkit-user-select: none;
+}
+
+#nav li.download {
+	float: right;
+}
+
+#nav li.item a {
+	font-weight: inherit;
+}
+
+#nav li.item.current {
+	font-weight: normal;
+	color: rgb(0, 114, 255);
+}
+
+
+/* Nav Bar Color Invert */
+
+body.light #nav {
+	background-color: rgb(250, 250, 250);
+	border-bottom:  1px solid rgba(0, 0, 0, .08);
+	position: relative;
+}
+
+body.light #nav li.logo {
+	background-image: url('../images/logo-small-black-2x.png');
+}
+
+/* Headers */
+
+h2 {
+	padding-top: 70px;
+	padding-bottom: 16px;
+}
+
+.header p {
+	color: rgb(128, 128, 128);
+}
+
+.header {
+	max-width: 580px;
+	padding: 0 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+p::selection {
+	background: rgba(0, 0, 0, .1);	
+}
+
+#end-mark {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.end-mark-icon {
+	width: 22px;
+	height: 18px;
+	background-image: url('../images/end-mark.png');
+	background-size: 22px 18px;
+	margin: 0 auto;
+}
+
+/* Clear Fix */
+
+.cf:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html[xmlns] .cf {
+	display: block;
+}
+
+* html .cf {
+	height: 1%;
+}
+
+@media only screen and (max-width: 460px) {
+}

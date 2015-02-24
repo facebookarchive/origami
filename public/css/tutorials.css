@@ -1,0 +1,70 @@
+#tutorials {
+	list-style-type: none;
+	max-width: 850px;
+	padding: 15px;
+	margin: 72px auto 0;
+}
+
+.tutorial {
+	margin-bottom: 100px;
+}
+
+.embed-container {
+	background-color: #e5e5e5;	
+}
+
+.tutorial-info {
+	margin-top: 24px;	
+	position: relative;
+}
+
+a.download-button {
+	top: 0;
+	right: 0;
+	position: absolute;
+	line-height: 32px;
+	font-weight: normal;
+	color: rgb(0, 114, 255);
+	border: 1px solid rgb(0, 114, 255);
+	font-size: 14px;
+	border-radius: 2px;
+	padding: 0 12px 0 32px;
+	background-image: url('../images/download-blue.png');
+	background-size: 12px 14px;
+	background-repeat: no-repeat;
+	background-position: 12px 9px;
+	text-decoration: none;
+}
+
+a.download-button:active {
+	background-color: rgba(0, 114, 255, .1);
+}
+
+.tutorial-info h3 {
+	font-size: 16px;
+	margin-bottom: 8px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+}
+
+.tutorial-info p {
+	margin-bottom: 1em;
+	color: rgb(128, 128, 128);
+	max-width: 550px;
+	margin-right: 150px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+@media only screen and (max-width: 610px) {
+	a.download-button {
+		position: relative;
+		top: auto;
+		right: auto;
+		display: inline-block;
+	}
+	
+	.tutorial-info p {
+		margin-right: 0;	
+	}
+}

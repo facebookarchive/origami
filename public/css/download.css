@@ -1,0 +1,127 @@
+#downloads {
+	max-width: 768px;
+	margin: 72px auto;
+	padding: 32px;
+}
+
+.mac-steps {
+	list-style-type: none;
+	margin: 36px 0;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}
+
+.mac-steps a {
+	font-weight: normal;
+}
+
+.step {
+	width: 200px;
+	border-radius: 6px;
+}
+
+.step * {
+	cursor: pointer;
+}
+
+.step:hover {
+	background-color: rgba(0, 0, 0, .03);
+}
+
+.step-info {
+	padding: 20px 20px 20px 40px;
+	position: relative;
+}
+
+.step-info::before {
+	position: absolute;
+	left: 16px;
+	top: 20px;
+	color: rgba(0, 0, 0, .5);	
+}
+
+.step-1 .step-info::before {
+	content: '1.';
+}
+
+.step-2 .step-info::before {
+	content: '2.';
+}
+
+.step-3 .step-info::before {
+	content: '3.';
+}
+
+.step-image {
+	width: 200px;
+	height: 160px;
+	background-size: 200px 160px;
+	background-repeat: no-repeat;
+}
+
+.step-1 .step-image { 
+	background-image: url('../images/xcode.png');
+}
+
+.step-2 .step-image { 
+	background-image: url('../images/qc.png');
+}
+
+.step-3 .step-image { 
+	background-image: url('../images/origami.png');
+}
+
+.ios {
+	border-top: 1px solid #e5e5e5;
+	padding-top: 36px;
+}
+
+.ios-content {
+	margin-top: 36px;
+}
+
+.ios-icon {
+	width: 86px;
+	height: 86px;
+	background-size: 86px 86px;
+	background-repeat: no-repeat;
+	background-image: url('../images/live-icon.png');
+	float: left;
+}
+
+.ios-info {
+	margin-top: 20px;
+	float: left;
+	margin-left: 20px;
+}
+
+a.get {
+	font-weight: normal;
+	color: #0084ff;
+	margin-top: 4px;
+	display: inline-block;
+}
+
+@media only screen and (max-width: 460px) {
+	.mac-steps {
+		-webkit-flex-flow: center;
+		-webkit-align-items: center;
+	}
+	
+	.step {
+		margin: 0 auto;
+	}
+	
+	.ios h3, .mac h3 {
+		text-align: center;
+	}
+	
+	.ios-info {
+		margin-left: 0;
+	}
+
+}
