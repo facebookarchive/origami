@@ -971,6 +971,7 @@
 }
 
 #code-buttons li {
+	font-weight: normal;
 	margin-right: 10px;
 	padding: 3px 10px;
 }
@@ -1112,7 +1113,7 @@
 }
 
 #download-buttons {
-	margin-top: 35px;
+	margin-top: 40px;
 	text-align: center;
 	list-style: none;
 	display: inline-block;
@@ -1125,7 +1126,10 @@
 	line-height: 26px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
-	/*font-size: 23px;*/
+}
+
+#section-get-started #download-buttons li {
+	font-size: 17px;
 }
 
 .download-arrow {

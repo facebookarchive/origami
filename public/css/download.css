@@ -15,6 +15,10 @@
 	-webkit-flex-wrap: wrap;
 }
 
+.mac-steps a {
+	font-weight: normal;
+}
+
 .step {
 	width: 200px;
 	border-radius: 6px;
@@ -90,9 +94,9 @@
 }
 
 .ios-info {
-	margin-top: 11px;
+	margin-top: 20px;
 	float: left;
-	margin-left: 12px;
+	margin-left: 20px;
 }
 
 a.get {
