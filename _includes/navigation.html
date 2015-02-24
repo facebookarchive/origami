@@ -8,13 +8,19 @@
 	<li class="item">
 	{% endif %}
 
-	{% if link.target %}
-		<a href="{{ site.baseurl }}{{ link.url }}" target="{{ link.target }}">{{ link.text }}</a>
+	{% if link.url contains 'http' %}
+		{% assign finalLink = link.url %}
 	{% else %}
-		<a href="{{ site.baseurl }}{{ link.url }}">{{ link.text }}</a>
+		{% assign finalLink = site.baseurl | append:link.url %}
 	{% endif %}
-	
+
+	{% if link.target %}
+		<a href="{{ finalLink }}" target="{{ link.target }}">{{ link.text }}</a>
+	{% else %}
+		<a href="{{ finalLink }}">{{ link.text }}</a>
+	{% endif %}
 	</li>
+
 {% endfor %}
-  <li class="item"><a href="https://www.facebook.com/groups/origami.community/" target="_blank">Community</a></li>
+
 </ul>

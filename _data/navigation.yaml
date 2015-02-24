@@ -4,3 +4,6 @@
   url: /tutorials
 - text: Documentation
   url: /documentation
+- text: Community
+  url: https://www.facebook.com/groups/origami.community/
+  target: _blank
