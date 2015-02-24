@@ -1108,7 +1108,7 @@
 /* Photoshop Section */
 
 #section-photoshop {
-	background-image: url('../images/photoshop.jpg');
+	background-image: url('../images/sketch.jpg');
 	background-size: calc(904px * 0.9) calc(757px * 0.9);
 	background-position-x: calc(50% - 360px);
 	background-position-y: bottom;
