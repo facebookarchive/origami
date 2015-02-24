@@ -64,6 +64,16 @@ browser-chrome:
       desc: Enables or disables the forward button in the toolbar.
   desc: Styles the viewer window to look like a web browser when the composition is running. Click the right most toolbar button to stop the viewer. The back and forward buttons are accessible through the Browser Buttons patch.
 
+browser-buttons:
+  name: Browser Buttons
+  type: producer
+  outputs:
+    - name: Back
+      desc: A boolean that changes between 0 and 1 based on if the back button is down or not.
+    - name: Forward
+      desc: A boolean that changes between 0 and 1 based on if the forward button is down or not.
+  desc: Gives you the state of the back and forward buttons from the Browser Chrome patch. Useful for prototyping navigating between pages on the desktop web.
+
 switch:
   name: Switch
   type: processor
