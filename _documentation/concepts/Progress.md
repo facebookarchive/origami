@@ -1,9 +1,9 @@
 ---
-title: Progress
+title: Progress Values
 layout: documentation
 css: /public/css/documentation.css
 ---
 
-Values in the range of 0.0 to 1.0 are a very common concept in Origami prototyping. By expressing your animations in this range, you can connect one underlying animation value to many transition patches, whose ranges may be in pixels, units of scale, rotations, etc.
+Values in the range of 0 to 1 are a common concept in Origami prototyping. By animating values in this range, you are keeping your animations generic so they can be translated to specific layer properties using the Transition patch.
 
-You can consider the output of a Switch, which is True or False to be 1 or 0, then plug its result into the input of Pop Animation, then connect Transition patches to the output of Pop Animation. This will give you the most basic type of animation, where there are two states: switch is on and switch is off. For each transition patch, toggling the switch will animate between its start and end value, but the overall animation can stil be described in terms of 0.0 to 1.0 or a percent completed.
+Usually you will have a Switch that is flipping between 0 and 1. That feeds into a Pop Animation patch which animates the change between 0 and 1 called a progress value. Then you generally connect that progress value to multiple Transition patches to adjust potentially many different layer properties of many different layers. All of the animations will be synchronized on the same animation curve.
