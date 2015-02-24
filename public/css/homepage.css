@@ -1421,7 +1421,14 @@
 	}
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 667px) {
+	#section-hero {
+		padding: 108px 0 72px;
+	}
+	
+	#hero-content-wrapper {
+		height: auto;
+	}
 
 }
 
