@@ -55,9 +55,10 @@ h3 {
 
 #nav {
 	border-bottom:  1px solid rgba(255, 255, 255, .3);
-	padding: 15px 33px;
+	padding: 8px 33px 15px;
 	list-style: none;
 	position: absolute;
+	top: 0;
 	width: 100%;
 }
 
@@ -75,11 +76,12 @@ h3 {
 	width: 59px;
 	height: 20px;
 	margin-right: 36px;
+	margin-top: 7px;
 	color: rgba(0, 0, 0, 0);
 }
 
 #nav li.item {
-	margin: 0 17px;
+	margin: 7px 34px 0 0;
 	font-weight: normal;
 	-webkit-user-select: none;
 }
@@ -163,4 +165,7 @@ html[xmlns] .cf {
 
 * html .cf {
 	height: 1%;
+}
+
+@media only screen and (max-width: 460px) {
 }

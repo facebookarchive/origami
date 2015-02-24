@@ -34,8 +34,10 @@
 	background-size: cover;
 	background-position: center;*/
 	width: 100%;
-	height: 100%;
-	min-height: 500px;
+	min-height: 100%;
+	padding: 72px 0;
+	position: relative;
+	/* min-height: 500px; */
 	/*color: black;*/
 }
 
@@ -1214,7 +1216,8 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 100vh;
+	min-height: 100vh;
+	padding: 72px 0;
 	color: white;
 	text-align: center;
 	display: -webkit-flex;
