@@ -1212,6 +1212,10 @@
 
 @media only screen and (max-width: 1024px) {
 	
+	#gesture-patches {
+		display: none;	
+	}
+	
 	#section-code .main-content {
 		width: 100vw;
 	}
@@ -1250,9 +1254,6 @@
 }
 
 @media only screen and (max-width: 860px) {
-	#gesture-patches {
-		display: none;	
-	}
 	
 	#section-photoshop {
 		background-position: right 36px bottom 0;
@@ -1269,4 +1270,20 @@
 
 @media only screen and (max-width: 610px) {
 
+}
+
+@media only screen and (max-width: 460px) {
+	
+	#tv {
+		-webkit-transform: scale3d(.4, .4, 1);
+	}
+	
+	#section-code .description {
+		width: 100%;
+		padding: 0 12px;	
+	}
+	
+	#section-photoshop {
+		height: 960px;	
+	}
 }

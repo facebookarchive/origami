@@ -101,3 +101,23 @@ a.get {
 	margin-top: 4px;
 	display: inline-block;
 }
+
+@media only screen and (max-width: 460px) {
+	.mac-steps {
+		-webkit-flex-flow: center;
+		-webkit-align-items: center;
+	}
+	
+	.step {
+		margin: 0 auto;
+	}
+	
+	.ios h3, .mac h3 {
+		text-align: center;
+	}
+	
+	.ios-info {
+		margin-left: 0;
+	}
+
+}
