@@ -74,6 +74,60 @@ browser-buttons:
       desc: A boolean that changes between 0 and 1 based on if the forward button is down or not.
   desc: Gives you the state of the back and forward buttons from the Browser Chrome patch. Useful for prototyping navigating between pages on the desktop web.
 
+button:
+  name: Button
+  type: consumer
+  inputs:
+    - name: Enable
+      desc: Enable or disable the button.
+    - name: Anchor Point
+      desc: A point in the containing Layer Group this layer is positioned relative to.
+    - name: X Position
+      desc: The horizontal position in pixels.
+    - name: Y Position
+      desc: The vertical position in pixels.
+    - name: Width
+      desc: The width in pixels.
+    - name: Height
+      desc: The height in pixels.
+    - name: Background Image
+      desc: The image to show behind the button title.
+    - name: Background Color
+      desc: The fill color of the button background.
+    - name: Title
+      desc: The button label.
+    - name: Title Color
+      desc: The color of the label.
+    - name: Title Font Name
+      desc: The font to use for the label.
+    - name: Title Font Size
+      desc: The size of the font in pixels.
+    - name: Title Offset
+      desc: The vertical position of the label relative to the background.
+    - name: Corner Radius
+      desc: The radius of the corners in pixels.
+    - name: Opacity
+      desc: The opacity of the layer. From 0% (0) to 100% (1).
+    - name: Scale
+      desc: The scale of the layer. 100% (1) is the default scale and 0% (0) is completely hidden.
+  desc: Shows a button with a customizable label and background. Connect it to the Interaction 2 patch to make it interactive.
+
+classic-animation:
+  name: Classic Animation
+  type: processor
+  inputs:
+    - name: Number
+      desc: The number to animate. Usually a number changing between 0 and 1.
+    - name: Duration
+      desc: The length of the animation in seconds.
+    - name: Curve
+      desc: The animation curve to animate with.
+  outputs:
+    - name: Progress
+      desc: The current value of the animation. Usually between 0 and 1.
+  desc: |
+    Animate a changing number with a specified duration and easing curve. This is an old school alternative to using the Pop Animation patch.
+
 switch:
   name: Switch
   type: processor
