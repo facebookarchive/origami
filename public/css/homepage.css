@@ -199,9 +199,11 @@
 	position: relative;
 	padding-bottom: 70px;
 	
-	border-top-color: rgba(0,0,0,0.08);
+/*	border-top-color: rgba(0,0,0,0.08);
 	border-top-style: solid;
-	border-top-width: 1px;
+	border-top-width: 1px;*/
+	
+	background-color: rgb(249,249,249);
 }
 
 #gesture-types {
@@ -1110,7 +1112,7 @@
 /* Photoshop Section */
 
 #section-photoshop {
-	background-image: url('../images/photoshop.jpg');
+	background-image: url('../images/sketch.jpg');
 	background-size: calc(904px * 0.9) calc(757px * 0.9);
 	background-position-x: calc(50% - 360px);
 	background-position-y: bottom;
