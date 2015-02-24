@@ -101,6 +101,7 @@
 
 .gesture-type p {
 	height: 110px;
+	font-size: 14px;
 }
 
 .gesture-animation {
@@ -1228,7 +1229,8 @@
 	
 	#section-code #code-menu {
 		float: none;
-		margin: 0 auto 24px;
+		margin: 0 auto 50px;
+		/*margin-bottom: 10px;*/
 	}
 	
 	#section-code .description {
