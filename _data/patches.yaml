@@ -46,6 +46,23 @@ bouncy-animation:
   desc: |
     This patch lets you animate a value using a spring animation. The Pop Animation patch is the more modern version of this patch with easier to use controls and Code Export support, so it&rsquo;s recommended that you use it instead. However, if you&rsquo;re trying to animate something in an Iterator, you'll usually want to use this patch instead of Pop Animation since this will be able to animate each iteration independently. 
 
+browser-chrome:
+  name: Browser Chrome
+  type: consumer
+  inputs:
+    - name: Enable
+      desc: Enable or disable the theming of the Viewer window.
+    - name: Window Title
+      desc: Set the title of the Viewer window. 10.9 only.
+    - name: URL
+      desc: URL to display in the address bar.
+    - name: Favicon
+      desc: Takes a 16 px square image and displays it in the address bar. 10.9 only.
+    - name: Enable Back
+      desc: Enables or disables the back button in the toolbar.
+    - name: Enable Forward
+      desc: Enables or disables the forward button in the toolbar.
+  desc: Styles the viewer window to look like a web browser when the composition is running. Click the right most toolbar button to stop the viewer. The back and forward buttons are accessible through the Browser Buttons patch.
 
 switch:
   name: Switch
@@ -253,24 +270,6 @@ touch:
     Outputs the difference in value between the previous frame and current frame. For example, if the value was 2 in the previous frame and it's currently 5, the velocity will be 3.
     
     This patch supports iterators.
-
-browser-chrome:
-  name: Browser Chrome
-  type: consumer
-  inputs:
-    - name: Enable
-      desc: Enable or disable the restyling of the Viewer window
-    - name: Window Title
-      desc: Set the title of the Viewer window to match your website's title
-    - name: URL
-      desc: URL to display in the Viewer window's address bar
-    - name: Favicon
-      desc: Connect an Image to this port to set the favorites icon of the browser UI
-    - name: Enable Back
-      desc: Enables or disables the Back button to be clicked
-    - name: Enable Forward
-      desc: Enables or disables the Forward button to be clicked
-  desc: Styles the viewer window to look like a web browser when the composition is running. Click the downloads button to stop the viewer. The back and forward buttons are accessible through the Browser Buttons patch.
 
 timer:
   name: Timer
