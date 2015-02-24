@@ -1250,11 +1250,15 @@
 }
 
 @media only screen and (max-width: 860px) {
+	#gesture-patches {
+		display: none;	
+	}
+	
 	#section-photoshop {
 		background-position: right 36px bottom 0;
 	}
 	
-		#section-presentation {
+	#section-presentation {
 		height: 700px;	
 	}
 	
