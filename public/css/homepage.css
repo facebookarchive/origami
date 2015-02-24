@@ -187,7 +187,7 @@
 	background-color: black;
 }
 
-.touchpoint {
+#section-hero .touchpoint {
 	width: 70px;
 	height: 70px;
 	background-image: url('../images/touch-point.png');
