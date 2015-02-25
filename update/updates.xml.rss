@@ -7,23 +7,23 @@
     <language>en</language>      
     <item>
       <title>
-        2.0
+        2.0.1
       </title>
       <description>
-        2.0
+        2.0.1
       </description>
       <pubDate>
-        Tue, 24 Feb 2015 00:00:00 +0800
+        Tue, 24 Feb 2015 18:00:00 +0800
       </pubDate>
       <sparkle:releaseNotesLink>
         http://origami.facebook.com/update/release-notes.html
       </sparkle:releaseNotesLink>
       <enclosure
-        sparkle:shortVersionString="2.0"
-        sparkle:version="8"
-        sparkle:dsaSignature="MCwCFGnBk5/XL0cjP1pu3okowZz0AFnCAhR9Ez13S6BhN75rbDpB374U8ChIWw=="
+        sparkle:shortVersionString="2.0.1"
+        sparkle:version="9"
+        sparkle:dsaSignature="MCwCFDit8eSAiOm52pGdKaFboYj/MdcZAhQdsNIBA2LQUOnMZc0gtIqJUo7TPg=="
         url="http://origami.facebook.com/update/installers/Origami.zip"
-        length="26680223"
+        length="26681770"
         type="application/octet-stream" />
     </item>
   </channel>
