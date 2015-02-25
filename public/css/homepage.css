@@ -1308,13 +1308,13 @@
 
 .help-button {
 	width: 200px;
-	height: 200px;
+	height: 160px;
+	margin: auto 10px;
 	background-size: 70px 56px;
 	background-position-x: 50%;
 	background-position-y: 8%;
 	background-repeat: no-repeat;
-	padding-top: 71px;
-	margin: auto 10px;	
+	-webkit-user-select:none;
 }
 
 #help-buttons p {
@@ -1322,13 +1322,15 @@
 	margin-top: 6px;
 	padding-left: 10px;
 	padding-right: 10px;
-	-webkit-user-select:none;
-	cursor: default;
 }
 
 #help-buttons a {
 	text-decoration: none;
 	font-weight: normal;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding-top: 71px;
 }
 
 #examples-button {
