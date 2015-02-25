@@ -45,6 +45,11 @@
 	background: rgba(255, 255, 255, .3);	
 }
 
+#section-hero .buttons li:active,
+#section-hero .buttons li.active {
+	background-color: rgba(0,0,0,.05);
+}
+
 #section-hero .buttons li {
 	border-color: #666;
 	/*color: #737373;;*/
