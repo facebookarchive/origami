@@ -3,8 +3,10 @@
 	<ul class="docs">
 		<li>Concepts
 			<ul>
-			{% assign sorted = site.documentation | sort:"weight", "last" %}
-			{% for doc in sorted" %}
+			{% assign by_title = site.documentation | sort:"title" %}
+			{% assign by_weight = site.documentation | sort:"weight", "last"  %}
+
+			{% for doc in by_weight %}
 				{% if doc.relative_path contains "concepts" or doc.title == "Introduction" %}
 
 				  {% if doc.url == page.url %}
@@ -20,7 +22,7 @@
 
 		<li>Patches
 			<ul>
-			{% for doc in sorted %}
+			{% for doc in by_title %}
 				{% if doc.relative_path contains "patches" %}
 
 				  {% if doc.url == page.url %}
