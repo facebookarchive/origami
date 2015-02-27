@@ -25,7 +25,7 @@ viewer:
   desc: Toggle Status Bar
 - letter: =
   desc: Next background
-- letter: --
+- letter: "&#45;"
   desc: Previous background
 
 patches:
