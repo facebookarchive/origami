@@ -163,9 +163,11 @@ p {
 
 h2 {
 	font-size: 18px;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	margin-top: 2em;
+	margin-bottom: 0.6em;
 	padding: 0;
+	font-weight: normal;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 dl {

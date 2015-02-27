@@ -12,7 +12,7 @@ Origami provides a variety of keyboard shortcuts for common functions.
 	{% include shortcut-list.html items=site.data.shortcuts.patches %}
 {% endcomment %}
 
-## Patches
+## Hover and Press
 
 These keyboard shortcuts can be used when hovering over the canvas or a port.
 

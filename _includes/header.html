@@ -14,5 +14,11 @@
 	<script type='text/javascript' src='{{ site.baseurl }}/public/js/global.js'></script>
 	<script type='text/javascript' src='{{ site.baseurl }}{{ page.js }}'></script>
 	<script type="text/javascript" src='{{ site.baseurl }}/public/js/ga.js'></script>
+	<script>
+		var parts = (location.host || 'localhost').split(':');
+		if (parts.length == 2) {
+			document.write('<script src="http://' + parts[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+		}
+	</script>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>

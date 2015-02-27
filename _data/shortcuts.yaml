@@ -35,9 +35,9 @@ patches:
   desc: Delay
 - letter: m
   desc: Multiplexer
-- letter: p
+- letter: u
   desc: Pulse
-- letter: s
+- letter: S
   desc: Switch
 - letter: t
   desc: Transition
@@ -63,5 +63,5 @@ patches:
   desc: Reverse Progress
 - letter: L
   desc: Live Image
-- letter: S
+- letter: s
   desc: Splitter
