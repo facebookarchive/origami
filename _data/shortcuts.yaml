@@ -1,67 +1,160 @@
 app:
-  - letter: F
-    modifiers:
-      - cmd
-    desc: Open Viewer in Full Screen Mode
-  - letter: M
-    modifiers:
-      - shift
-      - cmd
-    desc: Create Macro
   - letter: N
     modifiers:
       - option
       - cmd
     desc: New Origami Template
+  - letter: M
+    modifiers:
+      - shift
+      - cmd
+    desc: Create Macro Patch
+  - letter: "&#9650;"
+    modifiers:
+      - cmd
+    desc: Go up a level
+  - letter: "&#9660;"
+    modifiers:
+      - cmd
+    desc: Go into selected patch
+
+inspector:
+  - letter: "&#9650;"
+    desc: Increase number by 1
+  - letter: "&#9660;"
+    desc: Decrease number by 1
+  - letter: "&#9650;"
+    modifiers:
+      - shift
+    desc: Increase number by 10
+  - letter: "&#9660;"
+    modifiers:
+      - shift
+    desc: Decrease number by 10
+  - letter: "&#9650;"
+    modifiers:
+      - shift
+      - option
+    desc: Increase number by 0.1
+  - letter: "&#9660;"
+    modifiers:
+      - shift
+      - option
+    desc: Decrease number by 0.1
+
+select:
+  - letter: "&#9166;"
+    desc: Rename patch
 
 viewer:
 - letter: F
-  desc: Toggle fullscreen within the viewer window &mdash; hides the device and hand
+  desc: Go full screen inside the viewer window
 - letter: H
-  desc: Toggle showing the hand
-- letter: /
-  modifiers:
-  - cmd
-  desc: Toggle Status Bar
+  desc: Show or hide the hand
 - letter: =
   desc: Next background
 - letter: --
   desc: Previous background
+- letter: F
+  modifiers:
+    - cmd
+  desc: Fullscreen the viewer window
+- letter: .
+  modifiers:
+  - cmd
+  desc: Stop the prototype
+- letter: R
+  modifiers:
+  - cmd
+  desc: Start the prototype
+- letter: /
+  modifiers:
+  - cmd
+  desc: Show or hide the status bar
+- letter: E
+  modifiers:
+  - cmd
+  - shift
+  desc: Show the editor window
 
 patches:
-- letter: a
+- letter: A
   desc: Pop Animation
-- letter: d
-  desc: Delay
-- letter: m
-  desc: Multiplexer
-- letter: u
-  desc: Pulse
-- letter: S
-  desc: Switch
-- letter: t
+- letter: T
   desc: Transition
-- letter: k
-  desc: Keyboard
-- letter: s
-  desc: Switch
-- letter: u
-  desc: Pulse
-- letter: d
+- letter: L
+  desc: Layer
+- letter: I
+  desc: Interaction 2
+- letter: C
+  desc: Conditional
+- letter: D
   desc: Delay
-- letter: g
+- letter: S
+  modifiers:
+    - shift
+  desc: Switch
+- letter: H
+  desc: Hit Area
+- letter: T
+  modifiers:
+    - shift
+  desc: Text Layer
+- letter: K
+  desc: Keyboard
+- letter: U
+  desc: Pulse
+- letter: D
+  desc: Delay
+- letter: G
   desc: Layer Group
-- letter: w
+- letter: W
   desc: Wireless Broadcaster
 - letter: W
+  modifiers:
+    - shift
   desc: Wireless Receiver
-- letter: i
-  desc: Interaction 2
-- letter: c
-  desc: Conditional
-- letter: r
+- letter: P
+  desc: Publish port
+- letter: P
+  modifiers:
+    - shift
+  desc: Publish and name port
+- letter: R
   desc: Reverse Progress
 - letter: L
+  modifiers:
+    - shift
   desc: Live Image
-- letter: s
+- letter: S
   desc: Splitter
+- letter: M
+  desc: Multiplexer
+- letter: U
+  desc: Pulse
+- letter: +
+  desc: Add (Math)
+- letter: --
+  desc: Minus (Math)
+- letter: x
+  desc: Multiply (Math)
+- letter: /
+  desc: Divide (Math)
+- letter: 5
+  modifiers:
+    - shift
+  desc: Modulus (Math)
+- letter: A
+  modifiers:
+    - shift
+  desc: AND (Logic)
+- letter: O
+  modifiers:
+    - shift
+  desc: OR (Logic)
+- letter: N
+  modifiers:
+    - shift
+  desc: NOT (Logic)
+- letter: .
+  desc: Replace a patch with a new copy you can dive into and vice versa
