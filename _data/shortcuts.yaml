@@ -42,7 +42,7 @@ inspector:
       - option
     desc: Decrease number by 0.1
 
-select:
+select-all:
   - letter: "&#9166;"
     desc: Rename patch
 

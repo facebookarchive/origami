@@ -342,3 +342,9 @@ hr {
 	line-height: 20px;
 }
 
+h6 {
+  font: 12px "HelveticaNeue-Medium", 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
