@@ -14,6 +14,12 @@
 	<script type='text/javascript' src='/origami/public/js/global.js'></script>
 	<script type='text/javascript' src='/origami'></script>
 	<script type="text/javascript" src='/origami/public/js/ga.js'></script>
+	<script>
+		var parts = (location.host || 'localhost').split(':');
+		if (parts.length == 2) {
+			document.write('<script src="http://' + parts[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+		}
+	</script>
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 </head>
 <body class="light">
@@ -339,11 +345,11 @@
 	
 		<div class="doc-content">
 			<h1> Keyboard Shortcuts </h1>
-		<p>Origami provides a variety of keyboard shortcuts for common functions.</p>
+		<p>Origami provides a variety of keyboard shortcuts for common functions. Mastering these will enable you build sophisticated prototypes incredibly fast.</p>
 
-<h2>Patches</h2>
+<h2>Hover and Press</h2>
 
-<p>These keyboard shortcuts can be used when hovering over the canvas or a port.</p>
+<p>These keyboard shortcuts can be used when hovering over the canvas and/or a port.</p>
 
 <dl class="shortcuts">
 
@@ -351,7 +357,7 @@
         <dt>
             
             
-            <span class="key letter">a</span>
+            <span class="key letter">A</span>
         </dt>
         <dd class=""><p>Pop Animation</p>
 </dd>
@@ -361,47 +367,7 @@
         <dt>
             
             
-            <span class="key letter">d</span>
-        </dt>
-        <dd class=""><p>Delay</p>
-</dd>
-    </div>
-
-    <div class="shortcut hbox">
-        <dt>
-            
-            
-            <span class="key letter">m</span>
-        </dt>
-        <dd class=""><p>Multiplexer</p>
-</dd>
-    </div>
-
-    <div class="shortcut hbox">
-        <dt>
-            
-            
-            <span class="key letter">p</span>
-        </dt>
-        <dd class=""><p>Pulse</p>
-</dd>
-    </div>
-
-    <div class="shortcut hbox">
-        <dt>
-            
-            
-            <span class="key letter">s</span>
-        </dt>
-        <dd class=""><p>Switch</p>
-</dd>
-    </div>
-
-    <div class="shortcut hbox">
-        <dt>
-            
-            
-            <span class="key letter">t</span>
+            <span class="key letter">T</span>
         </dt>
         <dd class=""><p>Transition</p>
 </dd>
@@ -411,9 +377,9 @@
         <dt>
             
             
-            <span class="key letter">k</span>
+            <span class="key letter">L</span>
         </dt>
-        <dd class=""><p>Keyboard</p>
+        <dd class=""><p>Layer</p>
 </dd>
     </div>
 
@@ -421,9 +387,9 @@
         <dt>
             
             
-            <span class="key letter">s</span>
+            <span class="key letter">I</span>
         </dt>
-        <dd class=""><p>Switch</p>
+        <dd class=""><p>Interaction 2</p>
 </dd>
     </div>
 
@@ -431,9 +397,9 @@
         <dt>
             
             
-            <span class="key letter">u</span>
+            <span class="key letter">C</span>
         </dt>
-        <dd class=""><p>Pulse</p>
+        <dd class=""><p>Conditional</p>
 </dd>
     </div>
 
@@ -441,7 +407,7 @@
         <dt>
             
             
-            <span class="key letter">d</span>
+            <span class="key letter">D</span>
         </dt>
         <dd class=""><p>Delay</p>
 </dd>
@@ -451,7 +417,79 @@
         <dt>
             
             
-            <span class="key letter">g</span>
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">S</span>
+        </dt>
+        <dd class=""><p>Switch</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">H</span>
+        </dt>
+        <dd class=""><p>Hit Area</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">T</span>
+        </dt>
+        <dd class=""><p>Text Layer</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">K</span>
+        </dt>
+        <dd class=""><p>Keyboard</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">U</span>
+        </dt>
+        <dd class=""><p>Pulse</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">D</span>
+        </dt>
+        <dd class=""><p>Delay</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">G</span>
         </dt>
         <dd class=""><p>Layer Group</p>
 </dd>
@@ -461,7 +499,7 @@
         <dt>
             
             
-            <span class="key letter">w</span>
+            <span class="key letter">W</span>
         </dt>
         <dd class=""><p>Wireless Broadcaster</p>
 </dd>
@@ -470,6 +508,12 @@
     <div class="shortcut hbox">
         <dt>
             
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
             
             <span class="key letter">W</span>
         </dt>
@@ -481,9 +525,9 @@
         <dt>
             
             
-            <span class="key letter">i</span>
+            <span class="key letter">P</span>
         </dt>
-        <dd class=""><p>Interaction 2</p>
+        <dd class=""><p>Publish port</p>
 </dd>
     </div>
 
@@ -491,9 +535,15 @@
         <dt>
             
             
-            <span class="key letter">c</span>
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">P</span>
         </dt>
-        <dd class=""><p>Conditional</p>
+        <dd class=""><p>Publish and name port</p>
 </dd>
     </div>
 
@@ -501,7 +551,7 @@
         <dt>
             
             
-            <span class="key letter">r</span>
+            <span class="key letter">R</span>
         </dt>
         <dd class=""><p>Reverse Progress</p>
 </dd>
@@ -510,6 +560,12 @@
     <div class="shortcut hbox">
         <dt>
             
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
             
             <span class="key letter">L</span>
         </dt>
@@ -527,20 +583,13 @@
 </dd>
     </div>
 
-</dl>
-
-
-<h2>Viewer</h2>
-
-<dl class="shortcuts">
-
     <div class="shortcut hbox">
         <dt>
             
             
-            <span class="key letter">F</span>
+            <span class="key letter">M</span>
         </dt>
-        <dd class=""><p>Toggle fullscreen within the viewer window &mdash; hides the device and hand</p>
+        <dd class=""><p>Multiplexer</p>
 </dd>
     </div>
 
@@ -548,9 +597,156 @@
         <dt>
             
             
-            <span class="key letter">H</span>
+            <span class="key letter">U</span>
         </dt>
-        <dd class=""><p>Toggle showing the hand</p>
+        <dd class=""><p>Pulse</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">+</span>
+        </dt>
+        <dd class=""><p>Add (Math)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">--</span>
+        </dt>
+        <dd class=""><p>Minus (Math)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">x</span>
+        </dt>
+        <dd class=""><p>Multiply (Math)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">/</span>
+        </dt>
+        <dd class=""><p>Divide (Math)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">5</span>
+        </dt>
+        <dd class=""><p>Modulus (Math)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">A</span>
+        </dt>
+        <dd class=""><p>AND (Logic)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">O</span>
+        </dt>
+        <dd class=""><p>OR (Logic)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">N</span>
+        </dt>
+        <dd class=""><p>NOT (Logic)</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">.</span>
+        </dt>
+        <dd class=""><p>Replace a patch with a new copy you can dive into and vice versa</p>
+</dd>
+    </div>
+
+</dl>
+
+
+<p><br>These keyboard shortcuts can be used when hovering over particular patches:</p>
+
+<ul class="bulleted-list">
+  <li>Hover over an Image patch and hit 'g' to embed it in a Layer Group.
+  <li>Hover over any patch with an Opacity port and press 0-9 to change the opacity</li>
+  <li>Hover over a Keyboard patch and type a character to get that key</li>
+</ul>
+
+
+<h2>Select and Press</h2>
+
+<p>These keyboard shortcuts can be used by selecting patches and pressing the shortcut.</p>
+
+<h6>All Patches</h6>
+
+
+
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">&#9166;</span>
+        </dt>
+        <dd class=""><p>Rename patch</p>
 </dd>
     </div>
 
@@ -564,9 +760,550 @@
                 
             </span>
             
+            <span class="key letter">&#9664;</span>
+        </dt>
+        <dd class=""><p>Left align patches</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">&#9654;</span>
+        </dt>
+        <dd class=""><p>Right align patches</p>
+</dd>
+    </div>
+
+</dl>
+
+
+
+
+<h6>Blue Patches</h6>
+
+
+
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">E</span>
+        </dt>
+        <dd class=""><p>Enable / Disable</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">]</span>
+        </dt>
+        <dd class=""><p>Bring Forward</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">[</span>
+        </dt>
+        <dd class=""><p>Send Backward</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">]</span>
+        </dt>
+        <dd class=""><p>Bring to Front</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">[</span>
+        </dt>
+        <dd class=""><p>Send to Back</p>
+</dd>
+    </div>
+
+</dl>
+
+
+
+
+<h6>Patches with Adjustable Numbers of Ports</h6>
+
+
+
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">]</span>
+        </dt>
+        <dd class=""><p>Add Port</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">[</span>
+        </dt>
+        <dd class=""><p>Remove Port</p>
+</dd>
+    </div>
+
+</dl>
+
+
+
+
+<h6>Typed Patches</h6>
+
+
+
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">V</span>
+        </dt>
+        <dd class=""><p>Change to Virtual</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">B</span>
+        </dt>
+        <dd class=""><p>Change to Boolean</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">I</span>
+        </dt>
+        <dd class=""><p>Change to Index</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">N</span>
+        </dt>
+        <dd class=""><p>Change to Number</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">C</span>
+        </dt>
+        <dd class=""><p>Change to Color</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">S</span>
+        </dt>
+        <dd class=""><p>Change to String</p>
+</dd>
+    </div>
+
+</dl>
+
+
+
+
+<h6>Math Patch</h6>
+
+
+
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">P</span>
+        </dt>
+        <dd class=""><p>Change to Plus</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">-</span>
+        </dt>
+        <dd class=""><p>Change to Minus</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">x</span>
+        </dt>
+        <dd class=""><p>Change to Multiply</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
             <span class="key letter">/</span>
         </dt>
-        <dd class=""><p>Toggle Status Bar</p>
+        <dd class=""><p>Change to Divide</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">%</span>
+        </dt>
+        <dd class=""><p>Change to Modulus</p>
+</dd>
+    </div>
+
+</dl>
+
+
+
+
+<h6>Logic Patch</h6>
+
+
+
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">A</span>
+        </dt>
+        <dd class=""><p>Change to AND</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">O</span>
+        </dt>
+        <dd class=""><p>Change to OR</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">N</span>
+        </dt>
+        <dd class=""><p>Change to NOT</p>
+</dd>
+    </div>
+
+</dl>
+
+
+<h2>Viewer</h2>
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">F</span>
+        </dt>
+        <dd class=""><p>Go full screen inside the viewer window</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">H</span>
+        </dt>
+        <dd class=""><p>Show or hide the hand</p>
 </dd>
     </div>
 
@@ -584,20 +1321,11 @@
         <dt>
             
             
-            <span class="key letter">--</span>
+            <span class="key letter">&#45;</span>
         </dt>
         <dd class=""><p>Previous background</p>
 </dd>
     </div>
-
-</dl>
-
-
-<h2>Quartz Composer</h2>
-
-<p>Keyboard shortcuts in Quartz Composer frequently used when building Origami compositions</p>
-
-<dl class="shortcuts">
 
     <div class="shortcut hbox">
         <dt>
@@ -611,7 +1339,106 @@
             
             <span class="key letter">F</span>
         </dt>
-        <dd class=""><p>Open Viewer in Full Screen Mode</p>
+        <dd class=""><p>Fullscreen the viewer window</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">.</span>
+        </dt>
+        <dd class=""><p>Stop the prototype</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">R</span>
+        </dt>
+        <dd class=""><p>Start the prototype</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">/</span>
+        </dt>
+        <dd class=""><p>Show or hide the status bar</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">E</span>
+        </dt>
+        <dd class=""><p>Show the editor window</p>
+</dd>
+    </div>
+
+</dl>
+
+
+<h2>Editor</h2>
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2318;
+                
+            </span>
+            
+            <span class="key letter">N</span>
+        </dt>
+        <dd class=""><p>New Origami Template</p>
 </dd>
     </div>
 
@@ -633,7 +1460,7 @@
             
             <span class="key letter">M</span>
         </dt>
-        <dd class=""><p>Create Macro</p>
+        <dd class=""><p>Create Macro Patch</p>
 </dd>
     </div>
 
@@ -643,9 +1470,19 @@
             
             <span class="key modifier">
                 
-                &#x2325;
+                &#x2318;
                 
             </span>
+            
+            <span class="key letter">&#9650;</span>
+        </dt>
+        <dd class=""><p>Go up a level</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
             
             <span class="key modifier">
                 
@@ -653,9 +1490,112 @@
                 
             </span>
             
-            <span class="key letter">N</span>
+            <span class="key letter">&#9660;</span>
         </dt>
-        <dd class=""><p>New Origami Template</p>
+        <dd class=""><p>Go into selected patch</p>
+</dd>
+    </div>
+
+</dl>
+
+
+<h2>Inspector Panel</h2>
+
+<dl class="shortcuts">
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">&#9650;</span>
+        </dt>
+        <dd class=""><p>Increase number by 1</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key letter">&#9660;</span>
+        </dt>
+        <dd class=""><p>Decrease number by 1</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">&#9650;</span>
+        </dt>
+        <dd class=""><p>Increase number by 10</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key letter">&#9660;</span>
+        </dt>
+        <dd class=""><p>Decrease number by 10</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">&#9650;</span>
+        </dt>
+        <dd class=""><p>Increase number by 0.1</p>
+</dd>
+    </div>
+
+    <div class="shortcut hbox">
+        <dt>
+            
+            
+            <span class="key modifier">
+                
+                &#x21E7;
+                
+            </span>
+            
+            <span class="key modifier">
+                
+                &#x2325;
+                
+            </span>
+            
+            <span class="key letter">&#9660;</span>
+        </dt>
+        <dd class=""><p>Decrease number by 0.1</p>
 </dd>
     </div>
 

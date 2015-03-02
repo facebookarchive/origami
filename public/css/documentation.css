@@ -162,10 +162,12 @@ p {
 }
 
 h2 {
-	font-size: 18px;
-	margin-top: 1em;
-	margin-bottom: 0.5em;
+	font-size: 19px;
+	margin-top: 2em;
+	margin-bottom: 0.6em;
 	padding: 0;
+	font-weight: normal;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 dl {
@@ -296,7 +298,7 @@ hr {
 }
 
 .shortcuts div.shortcut {
-	height: 3em;
+	height: 2.8em;
 	margin: 0.5em 0;
 }
 
@@ -305,33 +307,44 @@ hr {
 }
 
 .shortcuts div.shortcut dd {
-	padding-left: .5em;
-	padding-top: 1em;
-	box-align: center;
+	padding-left: .8em;
 	color: black;
+	margin-top: 7px;
 }
 
 .key.modifier, .key.letter {
 	display: inline-block;
-	background: #ffffff;
-	color: #8b8b8b;
-	margin: 0;
-	color: black;
-	font: 1.5em "HelveticaNeue-Light", 'Helvetica Neue', Helvetica, sans-serif;
-	border: 1px solid grey;
+	color: rgba(0,0,0,0.7);
+	font: 16px "HelveticaNeue", 'Helvetica Neue', Helvetica, sans-serif;
+	/*border: 1px solid rgba(0, 0, 0, .3);*/
 	border-radius: 2px;
+	background-color: rgba(0,0,0,0.07);
 	text-align: center;
-	padding: .25em;
-	height: 2em;
-	margin-right: 6px;
+	height: 1.9em;
+	line-height: 1.9em;
+	margin-right: 2px;
+  width: 1.9em;
 }
 
-.key.letter {
-	/*text-transform: uppercase;*/
-	width: 2em;
-}
+/*.key.letter {*/
+	/*text-transform: uppercase;*!/
+	width: 1.8em;
+}*/
 
 .key.modifier {
-	width: 3em;
+	width: 2.3em;
 }
 
+.bulleted-list li {
+  list-style-type: disc;
+	color: rgba(0,0,0,0.65);
+	font-size: 14px;
+	line-height: 20px;
+}
+
+h6 {
+  font: 12px "HelveticaNeue-Medium", 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 15px;
+}
