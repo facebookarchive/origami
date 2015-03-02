@@ -32,6 +32,21 @@ These keyboard shortcuts can be used by selecting patches and pressing the short
 <h6>All Patches</h6>
 {% include shortcut-list.html items=site.data.shortcuts.select-all %}
 
+<h6>Blue Patches</h6>
+{% include shortcut-list.html items=site.data.shortcuts.select-blue %}
+
+<h6>Patches with Adjustable Numbers of Ports</h6>
+{% include shortcut-list.html items=site.data.shortcuts.select-port-count %}
+
+<h6>Typed Patches</h6>
+{% include shortcut-list.html items=site.data.shortcuts.select-typed %}
+
+<h6>Math Patch</h6>
+{% include shortcut-list.html items=site.data.shortcuts.select-math %}
+
+<h6>Logic Patch</h6>
+{% include shortcut-list.html items=site.data.shortcuts.select-logic %}
+
 ## Viewer
 
 {% include shortcut-list.html items=site.data.shortcuts.viewer %}

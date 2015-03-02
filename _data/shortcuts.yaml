@@ -45,7 +45,126 @@ inspector:
 select-all:
   - letter: "&#9166;"
     desc: Rename patch
+  - letter: "&#9664;"
+    modifiers:
+      - cmd
+    desc: Left align patches  
+  - letter: "&#9654;"
+    modifiers:
+      - cmd
+    desc: Right align patches
 
+select-blue:
+  - letter: E
+    modifiers:
+      - shift
+      - option
+    desc: Enable / Disable
+  - letter: "]"
+    modifiers:
+      - cmd
+    desc: Bring Forward
+  - letter: "["
+    modifiers:
+      - cmd
+    desc: Send Backward
+  - letter: "]"
+    modifiers:
+      - cmd
+      - shift
+    desc: Bring to Front
+  - letter: "["
+    modifiers:
+      - cmd
+      - shift
+    desc: Send to Back
+
+select-port-count:
+  - letter: "]"
+    modifiers:
+      - cmd
+    desc: Add Port
+  - letter: "["
+    modifiers:
+      - cmd
+    desc: Remove Port
+
+select-math:
+  - letter: P
+    modifiers:
+      - option
+      - shift
+    desc: Change to Plus
+  - letter: "-"
+    modifiers:
+      - option
+      - shift
+    desc: Change to Minus
+  - letter: "x"
+    modifiers:
+      - option
+      - shift
+    desc: Change to Multiply
+  - letter: "/"
+    modifiers:
+      - option
+      - shift
+    desc: Change to Divide
+  - letter: "%"
+    modifiers:
+      - option
+      - shift
+    desc: Change to Modulus
+
+select-logic:
+  - letter: A
+    modifiers:
+      - option
+      - shift
+    desc: Change to AND
+  - letter: O
+    modifiers:
+      - option
+      - shift
+    desc: Change to OR
+  - letter: N
+    modifiers:
+      - option
+      - shift
+    desc: Change to NOT
+
+select-typed:
+  - letter: V
+    modifiers:
+      - shift
+      - option
+    desc: Change to Virtual
+  - letter: B
+    modifiers:
+      - shift
+      - option
+    desc: Change to Boolean
+  - letter: I
+    modifiers:
+      - shift
+      - option
+    desc: Change to Index
+  - letter: N
+    modifiers:
+      - shift
+      - option
+    desc: Change to Number
+  - letter: C
+    modifiers:
+      - shift
+      - option
+    desc: Change to Color
+  - letter: S
+    modifiers:
+      - shift
+      - option
+    desc: Change to String
+    
 viewer:
 - letter: F
   desc: Go full screen inside the viewer window
