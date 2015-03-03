@@ -100,7 +100,7 @@ select-math:
       - option
       - shift
     desc: Change to Minus
-  - letter: "x"
+  - letter: X
     modifiers:
       - option
       - shift
@@ -253,9 +253,9 @@ patches:
   desc: Pulse
 - letter: +
   desc: Add (Math)
-- letter: --
+- letter: "-"
   desc: Minus (Math)
-- letter: x
+- letter: X
   desc: Multiply (Math)
 - letter: /
   desc: Divide (Math)
