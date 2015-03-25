@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; 3D Orientation</title>
+	<title>Origami &mdash; Code Export</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -131,7 +131,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/concepts/CodeExport.html">Code Export </a></li>
+				<li><span>Code Export</span></li>
 				  
 
 			  
@@ -189,7 +189,7 @@
 				
 
 				  
-				<li><span>3D Orientation</span></li>
+				<li><a href="/origami/documentation/patches/3D-Orientation.html">3D Orientation </a></li>
 				  
 
 			  
@@ -354,79 +354,45 @@
 
 	
 		<div class="doc-content">
-			<h1> 3D Orientation </h1>
-		
+			<h1> Code Export </h1>
+		<p>Code Export is a new feature in Origami 2.0 that exports animations in Origami prototypes as code snippets that you can send to your engineers. It can export Objective-C for iOS, Java for Android, and JavaScript for the web.</p>
 
-<p>This is a convenience patch that breaks out the 3D Orientation from the Device Info patch into pitch, roll, and yaw values you can use in your prototypes. These values reflect the physical orientation of your connected device running Origami Live. Try plugging these values into text layers and watch how the values change as you rotate your device.</p>
+<p>The goal of code export is to improve the workflow between design and engineering by enabling designers to quickly export animation constants, so their engineers can achieve exactly the same effects with minimal effort.</p>
 
+<p>Code Export relies on the <a href="https://github.com/facebook/pop">Pop</a> framework for iOS, <a href="http://facebook.github.io/rebound/">Rebound</a> for Android, and <a href="https://github.com/facebook/rebound-js">Rebound JS</a> for the web to deliver the exact same Origami animations across platforms.</p>
 
+<h2>What it exports</h2>
 
+<p>This feature currently exports the names and values of:</p>
 
-<div class="patch-block">
-    <div class="patch processor">
-        <h3>3D Orientation</h3>
-        <ul class="inputs">
-            
-            <li>3D Orientation</li>
-            
-        </ul>
-        <ul class="outputs">
-            
-            <li>Pitch</li>
-            
-            <li>Roll</li>
-            
-            <li>Yaw</li>
-            
-        </ul>
-        <hr>
-    </div>
-</div>
+<ul class="bulleted-list">
+<li>Pop Animation patches</li>
+<li>Transition patches connected to Pop Animation patches</li>
+<li>The connections between those Transition patches and Layers</li>
+</ul>
 
 
+<p><br>This is the majority of what you need when you&rsquo;re implementing an animation in a product that was designed in Origami.</p>
 
+<h2>What it doesn&rsquo;t</h2>
 
-<div class="port-descriptions">
-    <div class="inputs">
-        <dl>
-        
-            <dt>3D Orientation</dt>
-            
-            <dd><p>Takes a structure containing 'pitch', 'roll', and 'yaw' keys, usually provided by the Device Info patch.</p>
-</dd>
-            
-        
-        </dl>
-    </div>
+<p>Code Export intentionally doesn&rsquo;t export the entire prototype to code. Prototypes are meant to be quick and dirty design explorations, where designers can rapidly try and evaluate a number of ideas. Prototypes usually contain images that have fake data (like in a news feed) or represent standard system components. They&rsquo;re also usually only in one language, not built to resize to different screen sizes, not built to optimize for performance, handle accessibility modes, etc. They exist to help you make design decisions, not to be a final product to ship to users.</p>
 
-    <div class="outputs ports-block">
-        <dl>
-        
-            <dt>Pitch</dt>
-            
-            <dd><p>Outputs the pitch of the 3D orientation.</p>
-</dd>
-            
-        
-            <dt>Roll</dt>
-            
-            <dd><p>Outputs the roll of the 3D orientation.</p>
-</dd>
-            
-        
-            <dt>Yaw</dt>
-            
-            <dd><p>Outputs the yaw of the 3D orientation.</p>
-</dd>
-            
-        
-        </dl>
-    </div>
-    <hr>
-</div>
+<p>We built Code Export to focus only on exporting the parts of your prototype that make sense to integrate into an actual product.</p>
 
+<h2>How to use it</h2>
 
+<p>In the Origami menu, select Code Export and then choose the platform you'd like to export to. Origami will generate code that an engineer can integrate into the project.</p>
 
+<p>For examples of how to integrate the exported code, check out these projects created by <a href="https://twitter.com/will_bailey">Will Bailey</a> that use the code exported from the <a href="https://www.dropbox.com/s/xcmzr6sefn13abf/Introduction%20to%20Origami.zip?dl=0">Tap to Zoom</a> example.</p>
+
+<p>The <a href="http://wsb.im/origami-code-export-tap-to-zoom/index.html">web project</a> uses the exported code on a webpage. It includes the <a href="https://github.com/facebook/rebound-js">Rebound JS</a> library and the JavaScript file exported by Origami. The rest of the code sets up the DOM elements and hooks them up to the Origami layers.</p>
+
+<p>The <a href="https://github.com/willbailey/origami_code_export_tap_to_zoom_android">Android project</a> uses the exported code in an Android project. It includes the <a href="http://facebook.github.io/rebound/">Rebound</a> library and Java file exported by Origami. Download the project from GitHub to see how the code is integrated.</p>
+
+<h2>More on the way</h2>
+
+<p>We&rsquo;re just getting started with Code Export. We have many things on the list that we plan to build support for like Classic Animation patches and Delay patches, and even more on our wish list for the future. Post suggestions for what you&rsquo;d like to see supported in our <a href="https://www.facebook.com/groups/origami.community/">community group</a>.</p>
 
 		</div>
 	</div>
