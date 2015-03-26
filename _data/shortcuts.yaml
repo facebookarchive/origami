@@ -223,8 +223,6 @@ patches:
   desc: Keyboard
 - letter: U
   desc: Pulse
-- letter: D
-  desc: Delay
 - letter: G
   desc: Layer Group
 - letter: W
