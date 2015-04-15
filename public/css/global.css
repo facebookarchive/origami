@@ -94,6 +94,10 @@ h3 {
 	font-weight: inherit;
 }
 
+#nav li.item a:hover {
+	cursor: pointer;
+}
+
 #nav li.item.current {
 	font-weight: normal;
 	color: rgb(0, 114, 255);
