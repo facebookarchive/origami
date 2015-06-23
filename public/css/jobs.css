@@ -1,0 +1,141 @@
+
+#topspread {
+	margin-top: 10em;
+	margin-bottom: 200px;
+}
+
+.logo-jobs {
+	background-image: url('../images/big-bird@2x.png');
+	background-size: 244px 249px;
+	width: 244px;
+	height: 249px;
+}
+
+#jobs-top-content {
+	margin-left: 123px;
+}
+
+#jobs-top-content h1 {
+	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	line-height: 61px;
+	font-weight: 500;
+	margin-bottom: 0.5em;
+}
+
+#content #jobs-top-content p {
+	padding-right: 0;
+}
+
+/* Mobile version */
+@media (max-width: 600px) {
+	#jobs-top-content {
+		margin-left: 0;
+	}
+	#topspread {
+		margin-top: 44px;
+		display: block;
+	}
+
+	#jobs-top-content h1 {
+		font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 41px;
+		line-height: 48px;
+		font-weight: 500;
+		margin-bottom: 0.5em;
+	}
+
+	.logo-jobs {
+		background-image: url('../images/big-bird@2x.png');
+		background-size: 150px 155px;
+		width: 150px;
+		height: 155px;
+		margin-bottom: 35px;
+	}
+}
+
+#content {
+	max-width: 830px;
+	margin: auto;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-bottom: 100px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+#content .job-section {
+	position: relative;
+}
+
+#content p,
+#content li {
+	padding-right: 13em;
+}
+
+#content p {
+	margin-bottom: 1em;
+}
+
+#content li {
+	padding-bottom: 0.5em;
+}
+
+#content h3 {
+	font-size: 21px;
+	margin-top: 4em;
+	font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	line-height: 27px;
+	font-weight:600;
+	margin-bottom: 1em;
+}
+
+#content h4 {
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+
+#content .job-section .apply-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: center;
+	border-radius: 2px;
+	border: 1px solid rgb(0, 113, 255);
+}
+
+.apply-button a {
+	color: rgb(0, 113, 255);
+	display: block;
+	font-size: 14px;
+	font-weight: lighter;
+	padding: 0.2em 2.0em 0.4em;
+}
+
+@media (max-width: 600px) {
+	#content p,
+	#content li {
+		padding-right: 0;
+	}
+
+	#content .job-section {
+		padding-bottom: 4em;
+	}
+
+	.apply-button a {
+		color: rgb(0, 113, 255);
+		padding: 0.2em 2.0em 0.4em;
+	}
+
+	#content .job-section .apply-button {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		width: 7em;
+	}
+
+}
+
+
+
