@@ -148,6 +148,35 @@ p::selection {
 	margin: 0 auto;
 }
 
+/* Action Button */
+
+a.action-button {
+  line-height: 32px;
+	font-weight: normal;
+	color: rgb(0, 114, 255);
+	border: 1px solid rgb(0, 114, 255);
+	font-size: 14px;
+	border-radius: 2px;
+	text-decoration: none;
+	top: 0;
+	right: 0;
+	position: absolute;
+	padding: 0 12px;
+}
+
+a.action-button:active {
+	background-color: rgba(0, 114, 255, .1);
+}
+
+@media only screen and (max-width: 610px) {
+	a.action-button {
+		position: relative;
+		top: auto;
+		right: auto;
+		display: inline-block;
+	}
+}
+
 /* Clear Fix */
 
 .cf:after {

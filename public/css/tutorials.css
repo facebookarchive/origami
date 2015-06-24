@@ -19,25 +19,11 @@
 }
 
 a.download-button {
-	top: 0;
-	right: 0;
-	position: absolute;
-	line-height: 32px;
-	font-weight: normal;
-	color: rgb(0, 114, 255);
-	border: 1px solid rgb(0, 114, 255);
-	font-size: 14px;
-	border-radius: 2px;
-	padding: 0 12px 0 32px;
+	padding-left: 32px;
 	background-image: url('../images/download-blue.png');
 	background-size: 12px 14px;
 	background-repeat: no-repeat;
 	background-position: 12px 9px;
-	text-decoration: none;
-}
-
-a.download-button:active {
-	background-color: rgba(0, 114, 255, .1);
 }
 
 .tutorial-info h3 {
@@ -57,13 +43,6 @@ a.download-button:active {
 }
 
 @media only screen and (max-width: 610px) {
-	a.download-button {
-		position: relative;
-		top: auto;
-		right: auto;
-		display: inline-block;
-	}
-	
 	.tutorial-info p {
 		margin-right: 0;	
 	}
