@@ -99,6 +99,12 @@ h3 {
 	color: rgb(0, 114, 255);
 }
 
+@media only screen and (max-width: 610px) {
+  #nav li.item {
+	  margin: 12px 24px 0 0;
+	}
+}
+
 
 /* Nav Bar Color Invert */
 
