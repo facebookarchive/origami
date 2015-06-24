@@ -99,6 +99,12 @@ h3 {
 	color: rgb(0, 114, 255);
 }
 
+@media only screen and (max-width: 610px) {
+  #nav li.item {
+	  margin: 12px 24px 0 0;
+	}
+}
+
 
 /* Nav Bar Color Invert */
 
@@ -146,6 +152,35 @@ p::selection {
 	background-image: url('../images/end-mark.png');
 	background-size: 22px 18px;
 	margin: 0 auto;
+}
+
+/* Action Button */
+
+a.action-button {
+  line-height: 32px;
+	font-weight: normal;
+	color: rgb(0, 114, 255);
+	border: 1px solid rgb(0, 114, 255);
+	font-size: 14px;
+	border-radius: 2px;
+	text-decoration: none;
+	top: 0;
+	right: 0;
+	position: absolute;
+	padding: 0 12px;
+}
+
+a.action-button:active {
+	background-color: rgba(0, 114, 255, .1);
+}
+
+@media only screen and (max-width: 610px) {
+	a.action-button {
+		position: relative;
+		top: auto;
+		right: auto;
+		display: inline-block;
+	}
 }
 
 /* Clear Fix */

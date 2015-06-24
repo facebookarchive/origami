@@ -1,0 +1,125 @@
+
+#topspread {
+	margin-top: 10em;
+	margin-bottom: 200px;
+}
+
+.logo-jobs {
+	background-image: url('../images/big-bird@2x.png');
+	background-size: 244px 249px;
+	width: 244px;
+	height: 249px;
+	margin-top: 20px;
+}
+
+#jobs-top-content {
+	margin-left: 110px;
+}
+
+#jobs-top-content h1 {
+	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: 500;
+	margin-bottom: 0.7em;
+}
+
+#content #jobs-top-content p {
+	padding-right: 0;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+/* Mobile version */
+@media (max-width: 600px) {
+	#jobs-top-content {
+		margin-left: 0;
+	}
+	#topspread {
+		margin-top: 44px;
+		display: block;
+	}
+
+	#jobs-top-content h1 {
+		font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 41px;
+		line-height: 48px;
+		font-weight: 500;
+		margin-bottom: 0.5em;
+	}
+
+	.logo-jobs {
+		background-image: url('../images/big-bird@2x.png');
+		background-size: 150px 155px;
+		width: 150px;
+		height: 155px;
+		margin-bottom: 35px;
+	}
+}
+
+#content {
+	max-width: 830px;
+	margin: auto;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-bottom: 100px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+#content .job-section {
+	position: relative;
+}
+
+#content p,
+#content li {
+	padding-right: 13em;
+}
+
+#content p {
+	margin-bottom: 1em;
+}
+
+#content li {
+	padding-bottom: 0.5em;
+}
+
+#content h3 {
+	font-size: 21px;
+	margin-top: 4em;
+	font-family: "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	line-height: 27px;
+	font-weight:600;
+	margin-bottom: 1em;
+}
+
+#content h4 {
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+a.action-button {
+	margin-top: -1px;
+}
+
+@media (max-width: 600px) {
+  #topspread {
+    margin-bottom: 120px;
+  }
+
+	#content p,
+	#content li {
+		padding-right: 0;
+	}
+
+	#content .job-section {
+		padding-bottom: 2em;
+	}
+
+	a.action-button {
+		margin-top: 1.2em;
+	}
+}
+
+
+
