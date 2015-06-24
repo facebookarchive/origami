@@ -103,6 +103,10 @@ a.action-button {
 }
 
 @media (max-width: 600px) {
+  #topspread {
+    margin-bottom: 120px;
+  }
+
 	#content p,
 	#content li {
 		padding-right: 0;
