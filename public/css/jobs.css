@@ -9,22 +9,25 @@
 	background-size: 244px 249px;
 	width: 244px;
 	height: 249px;
+	margin-top: 20px;
 }
 
 #jobs-top-content {
-	margin-left: 123px;
+	margin-left: 110px;
 }
 
 #jobs-top-content h1 {
 	font-family: 'HelveticaNeue-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 50px;
-	line-height: 61px;
+	line-height: 60px;
 	font-weight: 500;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.7em;
 }
 
 #content #jobs-top-content p {
 	padding-right: 0;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 /* Mobile version */
@@ -106,7 +109,7 @@ a.action-button {
 	}
 
 	#content .job-section {
-		padding-bottom: 4em;
+		padding-bottom: 2em;
 	}
 
 	a.action-button {
