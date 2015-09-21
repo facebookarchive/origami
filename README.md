@@ -10,7 +10,7 @@ Get LiveReload from the Mac App Store. It's $10. To set it up, drag the _site fo
 
 To install Jekyll follow these instructions: https://www.andrewmunsell.com/tutorials/jekyll-by-example/installing-jekyll
 
-Then start jekyll in Terminal by cd'ing into the repo and running jekyll serve —baseurl /origami —watch
+Then start jekyll in Terminal by cd'ing into the repo and running jekyll serve --baseurl /origami --watch
 
 To generate the internal documentation, mount your devserver with ExpanDrive, then
 jekyll serve --baseurl /~yourusername/origami -d /Volumes/dev/public_html/origami
