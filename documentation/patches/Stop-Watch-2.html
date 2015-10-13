@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Stop Watch 2</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -624,7 +624,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Stop-Watch-2.html">Stop Watch 2 </a></li>
+				<li><span>Stop Watch 2</span></li>
 				  
 
 			  
@@ -779,8 +779,81 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Stop Watch 2 </h1>
+		
+
+<p>Counts the time since the patch was turned on/reset, and outputs it in seconds or frames. Supports iterators.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Stop Watch 2</h3>
+        <ul class="inputs">
+            
+            <li>On
+</li>
+            
+            <li>Reset Signal</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Time</li>
+            
+            <li>Frames</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>On
+</dt>
+            
+            <dd><p>Turns the stop watch on if checked. Pauses the stop watch if not.</p>
+</dd>
+            
+        
+            <dt>Reset Signal</dt>
+            
+            <dd><p>Pulse to reset the stop watch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Time</dt>
+            
+            <dd><p>The time elapsed in seconds.</p>
+</dd>
+            
+        
+            <dt>Frames</dt>
+            
+            <dd><p>The amount of frames elapsed.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

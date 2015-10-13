@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Viewer Size</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -752,7 +752,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Viewer-Size.html">Viewer Size </a></li>
+				<li><span>Viewer Size</span></li>
 				  
 
 			  
@@ -779,8 +779,79 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Viewer Size </h1>
+		
+
+<p>Outputs the size of the selected viewer style. It's meant to be plugged into a Layer Group patch which is then plugged into a Viewer patch.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Viewer Size</h3>
+        <ul class="inputs">
+            
+            <li>Type</li>
+            
+            <li>Orientation</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Pixels Wide</li>
+            
+            <li>Pixels High</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Type</dt>
+            
+            <dd><p>A predefined list of devices the Viewer patch supports.</p>
+</dd>
+            
+        
+            <dt>Orientation</dt>
+            
+            <dd><p>Rotates the Viewer to Portrait or Landscape orientation. You can input a 0 (Portrait) or 1 (Landscape) to change the Viewer based on interactions in the prototype.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Pixels Wide</dt>
+            
+            <dd><p>The width of the viewer type. Connect to a Layer Group.</p>
+</dd>
+            
+        
+            <dt>Pixels High</dt>
+            
+            <dd><p>The height of the viewer type. Connect to a Layer Group.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

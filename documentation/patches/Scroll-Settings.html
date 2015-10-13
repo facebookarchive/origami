@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Scroll Settings</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -608,7 +608,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Scroll-Settings.html">Scroll Settings </a></li>
+				<li><span>Scroll Settings</span></li>
 				  
 
 			  
@@ -779,8 +779,151 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Scroll Settings </h1>
+		
+
+<p>Sets basic settings of a Scroll patch, such as resetting the scroll position, content size, bounds size, page padding, and direction locking.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Scroll Settings</h3>
+        <ul class="inputs">
+            
+            <li>Content Width</li>
+            
+            <li>Content Height</li>
+            
+            <li>Bounds Width</li>
+            
+            <li>Bounds Height</li>
+            
+            <li>Direction Locking</li>
+            
+            <li>Jump Style</li>
+            
+            <li>Jump X Position</li>
+            
+            <li>Jump Y Position</li>
+            
+            <li>Jump to X</li>
+            
+            <li>Jump to Y</li>
+            
+            <li>Page Padding</li>
+            
+            <li>Advanced Settings</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Settings</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Content Width</dt>
+            
+            <dd><p>The width of the content being scrolled. Typically this is automatically detected when you plug an Image into the Scroll patch.</p>
+</dd>
+            
+        
+            <dt>Content Height</dt>
+            
+            <dd><p>The height of the content being scrolled. Typically this is automatically detected when you plug an Image into the Scroll patch.</p>
+</dd>
+            
+        
+            <dt>Bounds Width</dt>
+            
+            <dd><p>The width of the scroll view. Typically this is automatically detected from the Layer Group the Scroll patch is inside. Overriding this can be useful when you want an image to be scrolled in a smaller area than what is visible.</p>
+</dd>
+            
+        
+            <dt>Bounds Height</dt>
+            
+            <dd><p>The height of the scroll view. Typically this is automatically detected from the Layer Group the Scroll patch is inside. Overriding this can be useful when you want an image to be scrolled in a smaller area than what is visible.</p>
+</dd>
+            
+        
+            <dt>Direction Locking</dt>
+            
+            <dd><p>Locks each scroll gesture to its starting direction (vertical or horizontal). Disable this to allow for diagonal scrolling.</p>
+</dd>
+            
+        
+            <dt>Jump Style</dt>
+            
+            <dd><p>Lets you specify whether you want jumping to be immediate or animated when you pulse the Jump ports.</p>
+</dd>
+            
+        
+            <dt>Jump X Position</dt>
+            
+            <dd><p>A horizontal position between 0 and 1 that you want to scroll to when you pulse the Jump port.</p>
+</dd>
+            
+        
+            <dt>Jump Y Position</dt>
+            
+            <dd><p>A vertical position between 0 and 1 that you want to scroll to when you pulse the Jump port.</p>
+</dd>
+            
+        
+            <dt>Jump to X</dt>
+            
+            <dd><p>Pulse this to scroll the content to the specified Jump X Position.</p>
+</dd>
+            
+        
+            <dt>Jump to Y</dt>
+            
+            <dd><p>Pulse this to scroll the content to the specified Jump Y Position.</p>
+</dd>
+            
+        
+            <dt>Page Padding</dt>
+            
+            <dd><p>Adds padding between pages when using Paging or Wheel of Fortune scrolling.</p>
+</dd>
+            
+        
+            <dt>Advanced Settings</dt>
+            
+            <dd><p>Connect to a Scroll Advanced Settings patch for additional control.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Settings</dt>
+            
+            <dd><p>Connect to the Settings port on the Scroll patch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Live Image</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -510,7 +510,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Live-Image.html">Live Image </a></li>
+				<li><span>Live Image</span></li>
 				  
 
 			  
@@ -779,8 +779,78 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Live Image </h1>
+		
+
+<p>Imports an image from your computer. When the image contents change, the Live Image patch will automatically update with the new image.</p>
+
+
+
+
+<p>You can choose the image using a file picker by clicking the Choose File button in the Patch Settings inspector.</p>
+
+
+
+
+<p>By default, this patch will keep a copy of the latest image in the Origami file in case the original is moved or deleted. You can customize this behavior in the Patch Settings inspector.</p>
+
+
+
+
+<p>Tip: You can create a Live Image patch by hold down Cmd+Option when dragging an image on to the editor window.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Live Image</h3>
+        <ul class="inputs">
+            
+            <li>Location</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Image</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Location</dt>
+            
+            <dd><p>The file path to the image. It supports absolute and relative paths.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Image</dt>
+            
+            <dd><p>The image.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

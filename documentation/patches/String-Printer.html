@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; String Printer</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -632,7 +632,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/String-Printer.html">String Printer </a></li>
+				<li><span>String Printer</span></li>
 				  
 
 			  
@@ -779,8 +779,63 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> String Printer </h1>
+		
+
+<p>Takes a number of strings of text and combines them. Define how they are combined in the patch Settings (CMD + 2), where a new input port is added for every "%@" you type.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>String Printer</h3>
+        <ul class="inputs">
+            
+            <li>Argument</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>String</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Argument</dt>
+            
+            <dd><p>Takes a string of text, and replaces the corresponding "%@" with it. e.g. Argument</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>String</dt>
+            
+            <dd><p>The combined string.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

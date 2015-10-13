@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Multi-stop Progress</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -526,7 +526,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Multi-Stop-Progress.html">Multi-stop Progress </a></li>
+				<li><span>Multi-stop Progress</span></li>
 				  
 
 			  
@@ -779,8 +779,71 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Multi-stop Progress </h1>
+		
+
+<p>Gives you the progress of a value inside of a structure of stops. For example, if the value was 200, and the stops were 100, 150, and 250, this would output 1.5.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Multi-stop Progress</h3>
+        <ul class="inputs">
+            
+            <li>Value</li>
+            
+            <li>Stops</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Progress</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Value</dt>
+            
+            <dd><p>The number value that's between the stops.</p>
+</dd>
+            
+        
+            <dt>Stops</dt>
+            
+            <dd><p>A structure of stops that you want to compare to the value. You can use the Structure Creator patch to create the list of stops.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Progress</dt>
+            
+            <dd><p>A value that starts around 0 and ends at the number of stops minus 1. For example, if the value is at stop</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

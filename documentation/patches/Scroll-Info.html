@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Scroll Info</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -600,7 +600,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Scroll-Info.html">Scroll Info </a></li>
+				<li><span>Scroll Info</span></li>
 				  
 
 			  
@@ -779,8 +779,107 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Scroll Info </h1>
+		
+
+<p>Gets detailed information from a Scroll patch including the current position, current page, number of pages, and scrollbar size and position.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Scroll Info</h3>
+        <ul class="inputs">
+            
+            <li>Info</li>
+            
+            <li>Axis</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Current Position</li>
+            
+            <li>Current Page</li>
+            
+            <li>Page Count</li>
+            
+            <li>Scrollbar</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Info</dt>
+            
+            <dd><p>Connect to the Info output from a Scroll patch.</p>
+</dd>
+            
+        
+            <dt>Axis</dt>
+            
+            <dd><p>Select the axis of interest. If you want both, use two Scroll Info patches.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Current Position</dt>
+            
+            <dd><p>The current scroll position as a 0 to 1 value, where 0 is scrolled to the top, and 1 is scrolled to the bottom (for vertical scrollers).</p>
+</dd>
+            
+        
+            <dt>Current Page</dt>
+            
+            <dd><p>A number value that reflects which page you're on (e.g, 0, 1, 2, 3...).</p>
+</dd>
+            
+        
+            <dt>Page Count</dt>
+            
+            <dd><p>The number of pages, determined by dividing the content size by the bounds size.</p>
+</dd>
+            
+        
+            <dt>Scrollbar</dt>
+            
+            <dd><p>Outputs a structure of values to create an iOS / OS X style scrollbar. Scrollbars need to be enabled in Scroll Advanced Settings for this to work.</p>
+
+<p>Image: An iOS style, pill-shaped scrollbar. Plug it into a Layer.</p>
+
+<p>Width/Height: The width and height of the scrollbar. Unnecessary to use unless you are not using the Image and creating a custom design.</p>
+
+<p>X: The horizontal position of the scrollbar.</p>
+
+<p>Y: The vertical position of the scrollbar.</p>
+
+<p>Color: Color for the scrollbar, set by the Scrollbar Color setting in Scroll Advanced Settings.</p>
+
+<p>Opacity: The opacity of the scrollbar. Fades away when you stop scrolling.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

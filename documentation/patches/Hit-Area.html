@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Hit Area</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -434,7 +434,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Hit-Area.html">Hit Area </a></li>
+				<li><span>Hit Area</span></li>
 				  
 
 			  
@@ -779,8 +779,95 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Hit Area </h1>
+		
+
+<p>Lets you get touches in a specific rectangle on screen. Once you've placed the hit area, connect it to an Interaction 2, and plug the top port of both patches into each other get touches on the area. Turn off "Setup Mode" once you&rsquo;ve positioned it to hide the red overlay.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch consumer">
+        <h3>Hit Area</h3>
+        <ul class="inputs">
+            
+            <li>Anchor Point</li>
+            
+            <li>X Position</li>
+            
+            <li>Y Position</li>
+            
+            <li>Width</li>
+            
+            <li>Height</li>
+            
+            <li>Setup Mode</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Anchor Point</dt>
+            
+            <dd><p>A point in the containing Layer Group this layer is positioned relative to.</p>
+</dd>
+            
+        
+            <dt>X Position</dt>
+            
+            <dd><p>The horizontal position in pixels.</p>
+</dd>
+            
+        
+            <dt>Y Position</dt>
+            
+            <dd><p>The vertical position in pixels.</p>
+</dd>
+            
+        
+            <dt>Width</dt>
+            
+            <dd><p>The width in pixels.</p>
+</dd>
+            
+        
+            <dt>Height</dt>
+            
+            <dd><p>The height in pixels.</p>
+</dd>
+            
+        
+            <dt>Setup Mode</dt>
+            
+            <dd><p>When Setup Mode is on, the hit area will draw a red overlay to help you position it. Turn this off once you've positioned it to hide the overlay.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Scroll</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -584,7 +584,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Scroll.html">Scroll </a></li>
+				<li><span>Scroll</span></li>
 				  
 
 			  
@@ -779,8 +779,133 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Scroll </h1>
+		
+
+<p>Lets you scroll a layer using free, paging, or "wheel of fortune" scrolling.</p>
+
+
+
+
+<p>To use:</p>
+
+
+
+
+<p>First connect the Image/Layer Group you want to scroll to the Scroll and Layer patches so the Scroll patch knows the dimensions of what it's scrolling and the image is displayed.</p>
+
+
+
+
+<p>Then connect the Scroll patch&rsquo;s X and/or Y positions to the Layer&rsquo;s X and/or Y positions.</p>
+
+
+
+
+<p>If using multiple Scroll patches, tie each one to a specific layer by connecting the Scroll patch's interaction port (link) on the top right to the Layer's interaction port on the top left. Note: if you are scrolling a Layer Group, layers inside the Layer Group may intercept touch events (link to Interaction patch events section).</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Scroll</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Image</li>
+            
+            <li>X Scrolling</li>
+            
+            <li>Y Scrolling</li>
+            
+            <li>Settings</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>X Position</li>
+            
+            <li>Y Position</li>
+            
+            <li>Info</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>Turn off to stop touches from scrolling.</p>
+</dd>
+            
+        
+            <dt>Image</dt>
+            
+            <dd><p>The image you want to scroll. The patch uses this to determine the size of what you're scrolling. This image should be the same size as the layer that you intend to scroll. This is optional if you specify Content Width/Height in an attached Scroll Settings patch.</p>
+
+<p>Note: The image needs to be wider (if scrolling horizontally) or taller (if scrolling vertically) than the containing Layer Group for it to scroll.</p>
+</dd>
+            
+        
+            <dt>X Scrolling</dt>
+            
+            <dd><p>Sets the horizontal scrolling behavior to Free (default), Paging (e.g. iOS home screen), or Wheel of Fortune (paging with the ability to flick harder to scroll through more pages, e.g. cover flow).</p>
+</dd>
+            
+        
+            <dt>Y Scrolling</dt>
+            
+            <dd><p>Sets the vertical scrolling behavior to Free, Paging, or Wheel of Fortune.</p>
+</dd>
+            
+        
+            <dt>Settings</dt>
+            
+            <dd><p>Takes optional settings from a Scroll Settings or Scroll Advanced Settings patch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>X Position</dt>
+            
+            <dd><p>The horizontal position of the scroller. Connect to the X Position of the Layer you want to scroll horizontally.</p>
+</dd>
+            
+        
+            <dt>Y Position</dt>
+            
+            <dd><p>The vertical position of the scroller. Connect to the Y Position of the Layer you want to scroll vertically.</p>
+</dd>
+            
+        
+            <dt>Info</dt>
+            
+            <dd><p>Additional information about the current Scroll status. Connect to a Scroll Info patch to read it.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

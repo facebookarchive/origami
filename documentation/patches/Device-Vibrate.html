@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Device Vibrate</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -394,7 +394,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Device-Vibrate.html">Device Vibrate </a></li>
+				<li><span>Device Vibrate</span></li>
 				  
 
 			  
@@ -779,8 +779,63 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Device Vibrate </h1>
+		
+
+<p>Triggers the vibration motor in the connected iPhone or iPad running the Origami app. Use this patch in prototypes to buzz the phone.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch consumer">
+        <h3>Device Vibrate</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Vibrate Signal</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>Turn on to allow vibration signals to vibrate the device.</p>
+</dd>
+            
+        
+            <dt>Vibrate Signal</dt>
+            
+            <dd><p>Takes a pulse that causes the device to vibrate. Due to iOS limitations, it's not possible to control the duration or strength of the vibration.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Device Info</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -386,7 +386,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Device-Info.html">Device Info </a></li>
+				<li><span>Device Info</span></li>
 				  
 
 			  
@@ -779,8 +779,127 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Device Info </h1>
+		
+
+<p>Gives you information about the connected iPhone or iPad running the Origami Live app.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Device Info</h3>
+        <ul class="inputs">
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Connected</li>
+            
+            <li>Width</li>
+            
+            <li>Height</li>
+            
+            <li>Is iPad</li>
+            
+            <li>Is Portrait</li>
+            
+            <li>Retina</li>
+            
+            <li>Touches</li>
+            
+            <li>3D Orientation</li>
+            
+            <li>Acceleration</li>
+            
+            <li>Rotation Rate</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Connected</dt>
+            
+            <dd><p>Outputs a 1 if the device is connected and running Origami Live.</p>
+</dd>
+            
+        
+            <dt>Width</dt>
+            
+            <dd><p>The width of the screen in pixels.</p>
+</dd>
+            
+        
+            <dt>Height</dt>
+            
+            <dd><p>The height of the screen in pixels.</p>
+</dd>
+            
+        
+            <dt>Is iPad</dt>
+            
+            <dd><p>Outputs a 1 if the device is an iPad. Outputs 0 if the device is an iPhone.</p>
+</dd>
+            
+        
+            <dt>Is Portrait</dt>
+            
+            <dd><p>Outputs a 1 if the device is in portrait orientation. Outputs a 0 if the device is in landscape.</p>
+</dd>
+            
+        
+            <dt>Retina</dt>
+            
+            <dd><p>Outputs a 1 if the device has a retina screen.</p>
+</dd>
+            
+        
+            <dt>Touches</dt>
+            
+            <dd><p>A structure of touch points on the device.</p>
+</dd>
+            
+        
+            <dt>3D Orientation</dt>
+            
+            <dd><p>A structure of values that describe how the device is positioned in 3D space. Connect to a 3D Orientation patch to break it out into pitch, roll, and yaw values. This structure also contains a quaternion representation for more advanced usage.</p>
+</dd>
+            
+        
+            <dt>Acceleration</dt>
+            
+            <dd><p>The physical acceleration that user imparts on the device.</p>
+</dd>
+            
+        
+            <dt>Rotation Rate</dt>
+            
+            <dd><p>The physical 3D rotation rate of the device.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

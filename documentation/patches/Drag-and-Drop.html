@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Drag and Drop</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -402,7 +402,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Drag-and-Drop.html">Drag and Drop </a></li>
+				<li><span>Drag and Drop</span></li>
 				  
 
 			  
@@ -779,8 +779,95 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Drag and Drop </h1>
+		
+
+<p>Lets you get drag and drop events on the viewer window. Helpful for prototyping desktop UIs with file dragging from your Mac into the viewer. Supports dragging multiple files at a time.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Drag and Drop</h3>
+        <ul class="inputs">
+            
+            <li>Cursor</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>X Position</li>
+            
+            <li>Y Position</li>
+            
+            <li>File Path</li>
+            
+            <li>Dragging</li>
+            
+            <li>Drop Signal</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Cursor</dt>
+            
+            <dd><p>The style of the cursor when dragging.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>X Position</dt>
+            
+            <dd><p>The horizontal position of the mouse while dragging inside the viewer window.</p>
+</dd>
+            
+        
+            <dt>Y Position</dt>
+            
+            <dd><p>The vertical position of the mouse while dragging inside the viewer window.</p>
+</dd>
+            
+        
+            <dt>File Path</dt>
+            
+            <dd><p>The paths of the files being dragged into the window. These can be connected to Live Image patches to display images that are being dragged over the window (even before dropping).</p>
+</dd>
+            
+        
+            <dt>Dragging</dt>
+            
+            <dd><p>Outputs a 1 if files are being dragged over the viewer.</p>
+</dd>
+            
+        
+            <dt>Drop Signal</dt>
+            
+            <dd><p>Outputs a pulse when the user releases their mouse to drop files on the viewer window.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

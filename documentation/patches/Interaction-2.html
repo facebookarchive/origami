@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Interaction 2</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -466,7 +466,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Interaction-2.html">Interaction 2 </a></li>
+				<li><span>Interaction 2</span></li>
 				  
 
 			  
@@ -779,8 +779,87 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Interaction 2 </h1>
+		
+
+<p>Lets you get touches on Layer patches (Layer, Text Layer, Hit Area, etc) or the whole screen. To get touches on a Layer patch, connect the top right port on the Interaction 2 patch to the top left port of the Layer patch.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Interaction 2</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Down</li>
+            
+            <li>Up</li>
+            
+            <li>Tap</li>
+            
+            <li>Drag</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>When this is off, the layer will be opted out of the interaction system. If you have a layer you don't want to be interactive (say a styling image) that&rsquo;s covering another layer that you want to get interactions on, connect an Interaction 2 patch to it and turn Enable off. That will let touches pass through it to the layer below.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Down</dt>
+            
+            <dd><p>Outputs a 1 when the touch is down on the layer.</p>
+</dd>
+            
+        
+            <dt>Up</dt>
+            
+            <dd><p>Outputs a pulse once the touch has been released from the layer as long as the touch is inside of the layer. This is recommended for most buttons.</p>
+</dd>
+            
+        
+            <dt>Tap</dt>
+            
+            <dd><p>Outputs a pulse once the touch has been released from the layer as long as the touch hasn't moved. This is recommended for buttons that are also scrollable or swappable. This port lets you distinguish a touch meant to swipe the button or a group containing the button from and a touch meant to tap the button. In all other cases, buttons should use the Up port.</p>
+</dd>
+            
+        
+            <dt>Drag</dt>
+            
+            <dd><p>Outputs a 1 if the touch started down on the layer and stays 1 until the touch is released (even if you move off the layer). Useful for prototyping drag-and-drop or scrubbing interactions.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

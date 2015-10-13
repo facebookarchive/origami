@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Index Switch</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -458,7 +458,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Index-Switch.html">Index Switch </a></li>
+				<li><span>Index Switch</span></li>
 				  
 
 			  
@@ -779,8 +779,89 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Index Switch </h1>
+		
+
+<p>A switch that supports more than two states. Index Switches are useful for holding a state that is one of several options, e.g. a tab bar or menu item selection.</p>
+
+
+
+
+<p>Each Input port takes a pulse. When it receives the pulse, the value of the switch will be changed to the port number that was pulsed. For example, if you pulse the Input 2 port, the Index Switch will output the value 2.</p>
+
+
+
+
+<p>Change the number of states by selecting the Index Switch patch and opening the Patch Settings inspector.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Index Switch</h3>
+        <ul class="inputs">
+            
+            <li>Input 0</li>
+            
+            <li>Input 1</li>
+            
+            <li>Input 2</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Index</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Input 0</dt>
+            
+            <dd><p>Pulse to switch the output to 0.</p>
+</dd>
+            
+        
+            <dt>Input 1</dt>
+            
+            <dd><p>Pulse to switch the output to 1.</p>
+</dd>
+            
+        
+            <dt>Input 2</dt>
+            
+            <dd><p>Pulse to switch the output to 2.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Index</dt>
+            
+            <dd><p>The current index of the switch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

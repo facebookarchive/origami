@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Swipe</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -672,7 +672,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Swipe.html">Swipe </a></li>
+				<li><span>Swipe</span></li>
 				  
 
 			  
@@ -779,8 +779,135 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Swipe </h1>
+		
+
+<p>Lets you swipe a Layer between any two positions with spring physics. You can customize the behavior with the Swipe Settings patch.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Swipe</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Direction</li>
+            
+            <li>Start Position</li>
+            
+            <li>End Position</li>
+            
+            <li>Flip</li>
+            
+            <li>Jump to Start</li>
+            
+            <li>Jump to End</li>
+            
+            <li>Settings</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Position</li>
+            
+            <li>Progress</li>
+            
+            <li>Index</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>Turn off to ignore user input.</p>
+</dd>
+            
+        
+            <dt>Direction</dt>
+            
+            <dd><p>Sets the swipe direction.</p>
+</dd>
+            
+        
+            <dt>Start Position</dt>
+            
+            <dd><p>The position in pixels where the layer should start.</p>
+</dd>
+            
+        
+            <dt>End Position</dt>
+            
+            <dd><p>The position in pixels where the layer should end.</p>
+</dd>
+            
+        
+            <dt>Flip</dt>
+            
+            <dd><p>Pulse to animate the current position to the other position.</p>
+</dd>
+            
+        
+            <dt>Jump to Start</dt>
+            
+            <dd><p>Pulse to animate the current position to the Start Position.</p>
+</dd>
+            
+        
+            <dt>Jump to End</dt>
+            
+            <dd><p>Pulse to animate the current position to the End Position.</p>
+</dd>
+            
+        
+            <dt>Settings</dt>
+            
+            <dd><p>Connect to a Swipe Settings patch for additional customizations.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Position</dt>
+            
+            <dd><p>The current position of the swipe. This is in pixels between or around the Start and End Positions. Connect this to the layer you're moving.</p>
+</dd>
+            
+        
+            <dt>Progress</dt>
+            
+            <dd><p>A 0-1 value that describes where you are between the Start and End positions. Connect to Transition patches to synchronize other effects with the swipe.</p>
+</dd>
+            
+        
+            <dt>Index</dt>
+            
+            <dd><p>0 if it's at the Start Position, 1 if it's at the End Position. This value only changes once the user releases their touch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

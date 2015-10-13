@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Long Press</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -518,7 +518,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Long-Press.html">Long Press </a></li>
+				<li><span>Long Press</span></li>
 				  
 
 			  
@@ -779,8 +779,71 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Long Press </h1>
+		
+
+<p>Lets you get a long press interaction. A long press is a press that&rsquo;s held for a given duration without being moved.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Long Press</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Duration</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Press</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>When this is off, the patch won&rsquo;t respond to presses.</p>
+</dd>
+            
+        
+            <dt>Duration</dt>
+            
+            <dd><p>The amount of time in seconds the touch needs to be down for before it&rsquo;s considered a long press.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Press</dt>
+            
+            <dd><p>Outputs a 1 once your finger has been down for the specified duration and remains a 1 until you release your finger.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

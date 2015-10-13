@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Scroll Advanced Settings</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -592,7 +592,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Scroll-Advanced-Settings.html">Scroll Advanced Settings </a></li>
+				<li><span>Scroll Advanced Settings</span></li>
 				  
 
 			  
@@ -779,8 +779,175 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Scroll Advanced Settings </h1>
+		
+
+<p>Lets you configure advanced settings for a Scroll patch. The output can be plugged into the Settings port on the Scroll patch or the Scroll Settings patch.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Scroll Advanced Settings</h3>
+        <ul class="inputs">
+            
+            <li>Page Padding X</li>
+            
+            <li>Page Padding Y</li>
+            
+            <li>Scale</li>
+            
+            <li>Scrollbars</li>
+            
+            <li>Scrollbar Color</li>
+            
+            <li>Scrolling Friction</li>
+            
+            <li>Rubberband Tension</li>
+            
+            <li>Rubberband Friction</li>
+            
+            <li>Rubberband Slip</li>
+            
+            <li>Custom Inputs</li>
+            
+            <li>Sample Inputs</li>
+            
+            <li>X Input</li>
+            
+            <li>Y Input</li>
+            
+            <li>X Force</li>
+            
+            <li>Y Force</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Settings</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Page Padding X</dt>
+            
+            <dd><p>Allows you to specify padding in the horizontal direction when using Paging or Wheel of Fortune scrolling. Overrides Page Padding in Scroll Settings.</p>
+</dd>
+            
+        
+            <dt>Page Padding Y</dt>
+            
+            <dd><p>Allows you to specify padding in the vertical direction when using Paging or Wheel of Fortune scrolling. Overrides Page Padding in Scroll Settings.</p>
+</dd>
+            
+        
+            <dt>Scale</dt>
+            
+            <dd><p>Scales the position of the scroller (not the representation of the image on screen). Useful in cases where the object you're scrolling changes scale and you want it to be scrollable in both scales. E.g. the feed strip in Facebook Paper is scrollable when it's scaled down at the bottom of the screen and when it's scaled to full screen.</p>
+</dd>
+            
+        
+            <dt>Scrollbars</dt>
+            
+            <dd><p>Calculate scroll bar information that can be accessed with the Scroll Info patch.</p>
+</dd>
+            
+        
+            <dt>Scrollbar Color</dt>
+            
+            <dd><p>Choose between a Dark or Light scrollbar. This will show up in the Scrollbar output from the Scroll Info patch.</p>
+</dd>
+            
+        
+            <dt>Scrolling Friction</dt>
+            
+            <dd><p>A value between 0 and 1 that controls how quickly the scroller decelerates in Free Scrolling and Wheel of Fortune modes.</p>
+</dd>
+            
+        
+            <dt>Rubberband Tension</dt>
+            
+            <dd><p>A value between 0 and 1 that affects how the scroller feels when you drag past the edge of the scroller and release your finger.</p>
+</dd>
+            
+        
+            <dt>Rubberband Friction</dt>
+            
+            <dd><p>A value between 0 and 1 that affects how the scroller feels when you drag past the edge of the scroller and release your finger.</p>
+</dd>
+            
+        
+            <dt>Rubberband Slip</dt>
+            
+            <dd><p>A value between 0 and 1 that affects how much of your finger movement is applied to the scroller once you pass the edges.</p>
+</dd>
+            
+        
+            <dt>Custom Inputs</dt>
+            
+            <dd><p>Enables custom X/Y Inputs below.</p>
+</dd>
+            
+        
+            <dt>Sample Inputs</dt>
+            
+            <dd><p>Whether the scroll patch should be overridden with the custom inputs. This is usually connected to a boolean value that reflects whether a touch is down on the scroller.</p>
+</dd>
+            
+        
+            <dt>X Input</dt>
+            
+            <dd><p>Takes a value in units (not pixels) and uses the amount it changes to override the standard click/tap scroll input.</p>
+</dd>
+            
+        
+            <dt>Y Input</dt>
+            
+            <dd><p>Takes a value in units (not pixels) and uses the amount it changes to override the standard click/tap scroll input.</p>
+</dd>
+            
+        
+            <dt>X Force</dt>
+            
+            <dd><p>Insert a horizontal velocity in units (not pixels) into the scroller.</p>
+</dd>
+            
+        
+            <dt>Y Force</dt>
+            
+            <dd><p>Insert a vertical velocity in units (not pixels) into the scroller.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Settings</dt>
+            
+            <dd><p>Connect to the Settings port on the Scroll patch or the Scroll Settings patch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

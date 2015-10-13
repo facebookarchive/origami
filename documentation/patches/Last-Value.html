@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Last Value</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -478,7 +478,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Last-Value.html">Last Value </a></li>
+				<li><span>Last Value</span></li>
 				  
 
 			  
@@ -779,8 +779,63 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Last Value </h1>
+		
+
+<p>This patch outputs the value that was input during the previous frame. In an Iterator, it will output the value input in the previous frame for the current iteration index.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch producer">
+        <h3>Last Value</h3>
+        <ul class="inputs">
+            
+            <li>Value</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Last Value</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Value</dt>
+            
+            <dd><p>The current value.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Last Value</dt>
+            
+            <dd><p>The value in the previous frame.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Layer Group</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -494,7 +494,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Layer-Group.html">Layer Group </a></li>
+				<li><span>Layer Group</span></li>
 				  
 
 			  
@@ -779,8 +779,95 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Layer Group </h1>
+		
+
+<p>A layer group lets you group multiple layers and have them show up on a single layer. It&rsquo;s useful for organizing your projects as well making it easier to animate multiple layers at the same time. It&rsquo;s similar to the Layer Groups in Sketch and Photoshop, except that it has a size that it will crop its contents to.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Layer Group</h3>
+        <ul class="inputs">
+            
+            <li>Render</li>
+            
+            <li>Texture Target</li>
+            
+            <li>Texture Mipmapping</li>
+            
+            <li>Pixels Wide</li>
+            
+            <li>Pixels High</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Image</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Render</dt>
+            
+            <dd><p>Turning this off will disable all the patches inside the Layer Group from running. Using this port to turn off rendering when your layer group isn&rsquo;t visible may help you improve performance. However, note that Origami Live does not support turning this port off at this time (although it will support disabling Layers to achieve similar performance gains).</p>
+</dd>
+            
+        
+            <dt>Texture Target</dt>
+            
+            <dd><p>Quartz Composer legacy option. Ignore this.</p>
+</dd>
+            
+        
+            <dt>Texture Mipmapping</dt>
+            
+            <dd><p>Quartz Composer legacy option. Ignore this.</p>
+</dd>
+            
+        
+            <dt>Pixels Wide</dt>
+            
+            <dd><p>The width of the Layer Group in pixels.</p>
+</dd>
+            
+        
+            <dt>Pixels High</dt>
+            
+            <dd><p>The height of the Layer Group in pixels.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Image</dt>
+            
+            <dd><p>The image of the layer group. Must be connected to a Layer to have it show up.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

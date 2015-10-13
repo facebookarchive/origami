@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Swipe Settings</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -680,7 +680,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Swipe-Settings.html">Swipe Settings </a></li>
+				<li><span>Swipe Settings</span></li>
 				  
 
 			  
@@ -779,8 +779,95 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Swipe Settings </h1>
+		
+
+<p>Additional settings for the Swipe patch.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Swipe Settings</h3>
+        <ul class="inputs">
+            
+            <li>Bounciness</li>
+            
+            <li>Speed</li>
+            
+            <li>Start Rubberband</li>
+            
+            <li>End Rubberband</li>
+            
+            <li>Direction Locking</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Settings</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Bounciness</dt>
+            
+            <dd><p>A number between 0 and 20 that controls how much the spring overshoots and bounces when the touch is released.</p>
+</dd>
+            
+        
+            <dt>Speed</dt>
+            
+            <dd><p>A number between 0 and 20 that controls how fast the spring moves when the touch is released.</p>
+</dd>
+            
+        
+            <dt>Start Rubberband</dt>
+            
+            <dd><p>A value between 0 and 1 that controls how much resistance there is when you swipe past the start position.</p>
+</dd>
+            
+        
+            <dt>End Rubberband</dt>
+            
+            <dd><p>A value between 0 and 1 that controls how much resistance there is when you swipe past the end position.</p>
+</dd>
+            
+        
+            <dt>Direction Locking</dt>
+            
+            <dd><p>Locks each swipe to its starting direction (vertical or horizontal). Disable this to allow for sloppy swipes.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Settings</dt>
+            
+            <dd><p>Connect to the Settings port on the Swipe patch.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

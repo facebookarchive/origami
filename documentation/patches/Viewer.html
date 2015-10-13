@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Viewer</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -736,7 +736,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Viewer.html">Viewer </a></li>
+				<li><span>Viewer</span></li>
 				  
 
 			  
@@ -779,8 +779,63 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Viewer </h1>
+		
+
+<p>Styles the viewer to look like a phone, tablet, watch, or browser, and draws the supplied image on the screen. The viewer style can be selected with the "Viewer Size" patch. Press the "F" key to toggle full-screen mode, the "H" key to toggle the hands, and the +/- keys to change backgrounds.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch consumer">
+        <h3>Viewer</h3>
+        <ul class="inputs">
+            
+            <li>Enable</li>
+            
+            <li>Image</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Enable</dt>
+            
+            <dd><p>When checked, the viewer is visible.</p>
+</dd>
+            
+        
+            <dt>Image</dt>
+            
+            <dd><p>The image to display inside a device. Viewer uses the dimensions of this image to automatically determine which device to display. Typically you should use a Layer Group with its size set with a Viewer Size patch, which contains presets matched with specific devices.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Origami &mdash; Introduction</title>
+	<title>Origami &mdash; Structure Combine</title>
 	<meta property="og:title" content="Origami"/>
 	<meta property="og:description" content="Origami is a free tool for designing modern user interfaces.">
 	<meta property="og:url" content="http://facebook.github.io/origami/"/>
@@ -120,7 +120,7 @@
 				
 
 				  
-				<li><span>Introduction</span></li>
+				<li><a href="/origami/documentation/index.html">Introduction </a></li>
 				  
 
 			  
@@ -640,7 +640,7 @@
 				
 
 				  
-				<li><a href="/origami/documentation/patches/Structure-Combine.html">Structure Combine </a></li>
+				<li><span>Structure Combine</span></li>
 				  
 
 			  
@@ -779,8 +779,71 @@
 
 	
 		<div class="doc-content">
-			<h1> Introduction </h1>
-		<p>Here you can learn all about Origami. We&rsquo;ll be adding more documentation here in the coming weeks.</p>
+			<h1> Structure Combine </h1>
+		
+
+<p>Merges two structures together. Indexed structures get appended to each other (second after the first), and keyed structures are merged with keys in the second structure overwriting duplicate keys in the first.</p>
+
+
+
+
+<div class="patch-block">
+    <div class="patch processor">
+        <h3>Structure Combine</h3>
+        <ul class="inputs">
+            
+            <li>Structure 1</li>
+            
+            <li>Structure 2</li>
+            
+        </ul>
+        <ul class="outputs">
+            
+            <li>Structure</li>
+            
+        </ul>
+        <hr>
+    </div>
+</div>
+
+
+
+
+<div class="port-descriptions">
+    <div class="inputs">
+        <dl>
+        
+            <dt>Structure 1</dt>
+            
+            <dd><p>The first structure.</p>
+</dd>
+            
+        
+            <dt>Structure 2</dt>
+            
+            <dd><p>The second structure.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+
+    <div class="outputs ports-block">
+        <dl>
+        
+            <dt>Structure</dt>
+            
+            <dd><p>The combined structure.</p>
+</dd>
+            
+        
+        </dl>
+    </div>
+    <hr>
+</div>
+
+
+
 
 		</div>
 	</div>
