@@ -162,18 +162,18 @@ counter-2:
     - name: Number
       desc: The current Number value of the Counter
   desc: |
-    Represents a number that can be incremented, decremented or set to a specific value. To increment, pulse the "Increase" port and to decrement, pulse the "Decrease" port. To jump to a specific number, specify the number in the "Jump to Number" port and pulse the "Jump" port.
+    Represents a number that can be increased, decreased, or set to a specific value. To increase it, pulse the Increase port and to decrease, pulse the Decrease port. To jump to a specific number, specify the number in the Jump to Number port and pulse the Jump port.
 
-    The number can be optionally constrained within a boundary that starts at 0 and wraps around after a maximum number of values has been reached. Incrementing at the end value will wrap back around to the start value and decrementing at the start value will wrap back around to the end value. To set a constraint, set the "Maximum Count" port to a value greater than 0. If the counter is constrained, the "Jump to Number" value must fall within bounds, otherwise it will be wrapped according to the boundary.
+    The number can be optionally constrained within a boundary that starts at 0 and wraps after a maximum number of values has been reached. Incrementing at the end value will wrap back around to the start value and decrementing at the start value will wrap back around to the end value. To set a constraint, set the Maximum Count port to a value greater than 0. If the counter is constrained, the Jump to Number value must fall within bounds, otherwise it will be wrapped according to the boundary.
 
 cursor-control:
   name: Cursor Control
   type: consumer
   inputs:
     - name: Enable
-      desc: Enables the cursor control patch
+      desc: Enables the cursor control patch.
     - name: Style
-      desc: The style of the cursor to display
+      desc: The style of the cursor to display.
     - name: Hide
       desc: Enable this port to hide the cursor when its over the viewer window.
   desc: |
@@ -184,16 +184,216 @@ delay:
   type: processor
   inputs:
     - name: Value
-      desc: The Value to delay
+      desc: The number value to delay.
     - name: Duration
-      desc: The amount of time to delay the value
+      desc: The amount of time to delay the change in value.
     - name: Style
-      desc: You can delay a value when it's increasing, decreasing, or always
+      desc: |
+        Delay Always will delay all changes in the value by the duration. Delay Increasing will delay changes from a smaller number to a larger one (e.g. 0 to 1), and Delay Decreasing will delay changes from a larger number to a smaller one (e.g. 1 to 0). 
+
+        These last two options are useful for only delaying one direction of an animation. e.g. you want a window to animate on screen immediately, but animate off screen after a delay. You'd connect the Switch that holds this state to a Delay patch and set the Style to Delay Decreasing, so the delay only takes effect when the Switch turns off. You'd then connect the Delay patch to an animation patch.
   outputs:
     - name: Value
-      desc: The value that was delayed
+      desc: The delayed value.
   desc: |
-    Lets you delay a change by some duration in seconds.
+    Delay a change by a duration in seconds.
+
+desktop-scroll:
+  name: Desktop Scroll
+  type: producer
+  desc: |
+    Freely scroll a Layer using a trackpad or a Magic Mouse. 
+    
+    To use, connect the image you want to scroll to both the Desktop Scroll and Layer patches, and connect the Desktop Scroll's X and/or Y positions to the Layer. The Layer needs to be set to an Anchor Point of Center.
+  inputs:
+    - name: Enable
+      desc: When turned off, the patch will ignore scroll events. Any scroll animations previously started will continue.
+    - name: Image
+      desc: The image you want to scroll. The patch uses this to determine the size of what you're scrolling. This image should be the same size as the layer that you intend to scroll.
+    - name: Direction Locking
+      desc: Locks each scroll gesture to its starting direction (vertical or horizontal). Disable this to allow for diagonal scrolling.
+  outputs:
+    - name: X Position
+      desc: The horizontal position of the scroller. Connect to the X Position of the Layer you want to scroll horizontally.
+    - name: Y Position
+      desc: The vertical position of the scroller. Connect to the Y Position of the Layer you want to scroll vertically.
+
+device-info:
+  name: Device Info
+  type: producer
+  desc: Gives you information about the connected iPhone or iPad running the Origami Live app.
+  outputs:
+    - name: Connected
+      desc: Outputs a 1 if the device is connected and running Origami Live.
+    - name: Width
+      desc: The width of the screen in pixels.
+    - name: Height
+      desc: The height of the screen in pixels.
+    - name: Is iPad
+      desc: Outputs a 1 if the device is an iPad. Outputs 0 if the device is an iPhone.
+    - name: Is Portrait
+      desc: Outputs a 1 if the device is in portrait orientation. Outputs a 0 if the device is in landscape.
+    - name: Retina
+      desc: Outputs a 1 if the device has a retina screen.
+    - name: Touches
+      desc: A structure of touch points on the device.
+    - name: 3D Orientation
+      desc: A structure of values that describe how the device is positioned in 3D space. Connect to a 3D Orientation patch to break it out into pitch, roll, and yaw values. This structure also contains a quaternion representation for more advanced usage.
+    - name: Acceleration
+      desc: The physical acceleration that user imparts on the device.
+    - name: Rotation Rate
+      desc: The physical 3D rotation rate of the device.
+
+hex-to-rgb:
+  name: Hex to RGB
+  type: processor
+  desc: Converts a hex string to red, green, and blue components.
+  inputs:
+    - name: Hex
+      desc: The hex value you want to covert to RGB. e.g. #3b5998
+  outputs:
+    - name: Red
+      desc: The amount of red in the color from 0 to 1.
+    - name: Green
+      desc: The amount of green in the color from 0 to 1.
+    - name: Blue
+      desc: The amount of blue in the color from 0 to 1.  
+
+hit-area:
+  name: Hit Area
+  type: consumer
+  desc: Lets you get touches in a specific rectangle on screen. Once you've placed the hit area, connect it to an Interaction 2, and plug the top port of both patches into each other get touches on the area. Turn off "Setup Mode" once you&rsquo;ve positioned it to hide the red overlay.
+  inputs:
+    - name: Anchor Point
+      desc: A point in the containing Layer Group this layer is positioned relative to.
+    - name: X Position
+      desc: The horizontal position in pixels.
+    - name: Y Position
+      desc: The vertical position in pixels.
+    - name: Width
+      desc: The width in pixels.
+    - name: Height
+      desc: The height in pixels.
+    - name: Setup Mode
+      desc: When Setup Mode is on, the hit area will draw a red overlay to help you position it. Turn this off once you've positioned it to hide the overlay.
+
+image-transition:
+  name: Image Transition
+  type: producer
+  desc: Fade between two images.
+  inputs:
+    - name: Progress
+      desc: A value between 0 and 1 that represents how far you are through the transition.
+    - name: Start Image
+      desc: An image displayed at full opacity when Progress is 0.
+    - name: End Image
+      desc: An image displayed at full opacity when Progress is 1.
+  outputs:
+    - name: Image
+      desc: The current image.
+
+image-with-shadow:
+  name: Image with Shadow
+  type: producer
+  desc: Adds a shadow to an image based on shadow information provided by the Shadow Info patch.
+  inputs:
+    - name: Image
+      desc: The image you want to apply the shadow to.
+    - name: Shadow Info
+      desc: A description of a shadow from a Shadow Info patch.
+  outputs:
+    - name: Image
+      desc: The image with the shadow added.
+
+index-switch:
+  name: Index Switch
+  type: processor
+  desc: |
+    A switch that supports more than two states. Index Switches are useful for holding a state that is one of several options, e.g. a tab bar or menu item selection.
+    
+    Each Input port takes a pulse. When it receives the pulse, the value of the switch will be changed to the port number that was pulsed. For example, if you pulse the Input 2 port, the Index Switch will output the value 2.
+    
+    Change the number of states by selecting the Index Switch patch and opening the Patch Settings inspector.
+  inputs:
+    - name: Input 0
+      desc: Pulse to switch the output to 0.
+    - name: Input 1
+      desc: Pulse to switch the output to 1.
+    - name: Input 2
+      desc: Pulse to switch the output to 2.
+  outputs:
+    - name: Index
+      desc: The current index of the switch.
+      
+interaction-2:
+  name: Interaction 2
+  type: producer
+  desc: Lets you get touches on Layer patches (Layer, Text Layer, Hit Area, etc) or the whole screen. To get touches on a Layer patch, connect the top right port on the Interaction 2 patch to the top left port of the Layer patch.
+  inputs:
+    - name: Enable
+      desc: When this is off, the layer will be opted out of the interaction system. If you have a layer you don't want to be interactive (say a styling image) that&rsquo;s covering another layer that you want to get interactions on, connect an Interaction 2 patch to it and turn Enable off. That will let touches pass through it to the layer below.
+  outputs:
+    - name: Down
+      desc: Outputs a 1 when the touch is down on the layer.
+    - name: Up
+      desc: Outputs a pulse once the touch has been released from the layer as long as the touch is inside of the layer. This is recommended for most buttons.
+    - name: Tap
+      desc: Outputs a pulse once the touch has been released from the layer as long as the touch hasn't moved. This is recommended for buttons that are also scrollable or swappable. This port lets you distinguish a touch meant to swipe the button or a group containing the button from and a touch meant to tap the button. In all other cases, buttons should use the Up port.
+    - name: Drag
+      desc: Outputs a 1 if the touch started down on the layer and stays 1 until the touch is released (even if you move off the layer). Useful for prototyping drag-and-drop or scrubbing interactions.
+
+device-vibrate:
+  name: Device Vibrate
+  type: consumer
+  desc: |
+    Triggers the vibration motor in the connected iPhone or iPad running the Origami app. Use this patch in prototypes to buzz the phone.
+  inputs:
+    - name: Enable
+      desc: Turn on to allow vibration signals to vibrate the device.
+    - name: Vibrate Signal
+      desc: Takes a pulse that causes the device to vibrate. Due to iOS limitations, it's not possible to control the duration or strength of the vibration.
+
+drag-and-drop:
+  name: Drag and Drop
+  type: producer
+  desc: Lets you get drag and drop events on the viewer window. Helpful for prototyping desktop UIs with file dragging from your Mac into the viewer. Supports dragging multiple files at a time.
+  inputs:
+    - name: Cursor
+      desc: The style of the cursor when dragging.
+  outputs:
+    - name: X Position
+      desc: The horizontal position of the mouse while dragging inside the viewer window.
+    - name: Y Position
+      desc: The vertical position of the mouse while dragging inside the viewer window.
+    - name: File Path
+      desc: The paths of the files being dragged into the window. These can be connected to Live Image patches to display images that are being dragged over the window (even before dropping).
+    - name: Dragging
+      desc: Outputs a 1 if files are being dragged over the viewer.
+    - name: Drop Signal
+      desc: Outputs a pulse when the user releases their mouse to drop files on the viewer window.
+
+fill-layer:
+  name: Fill Layer
+  type: consumer
+  desc: Fills the containing layer group with a color.
+  inputs:
+    - name: Enable
+      desc: Whether the fill is visible or not.
+    - name: Color
+      desc: The color of the fill.
+    - name: Opacity
+      desc: How visible the fill is from 0 (0%) to 1 (100%).
+      
+hex-color:
+  name: Hex Color
+  type: processor
+  desc: Converts a hex string to a color. Useful for converting colors used on the web.
+  inputs:
+    - name: Hex
+      desc: The hex value you want to convert to a color. e.g. #3b5998
+  outputs:
+    - name: Color
+      desc: A color type representing the hex value.
 
 switch:
   name: Switch
@@ -213,30 +413,362 @@ switch:
     
     The Flip port is useful for a symmetrical interaction &mdash; e.x. tapping a photo repeatedly to zoom it to large and small sizes. The Turn On and Turn Off port are useful for other interactions where you have different actions to control the switch. For example, for a compose window, you might have the compose button turn on the switch (animating in the window) and the Cancel and Done buttons in the window turning off the switch.
     
-
-#--- NOT REVIEWED
-
 progress:
   name: Progress
   type: processor
   desc: |
-    Outputs a decimal value between 0 and 1 representing the progress of a Value within a range defined by a given Minimum and Maximum.
-
-    Animation patches output a Progress value that you can use along with a Transition patch to animate values in an arbitrary range.
-
+    Outputs where a value is located between a Start and End value. If the value is at the Start Value, it will output a 0. If it's at the End Value, it will output a 1.
+    
+    For example, say you wanted a bar to slide up when you scrolled from one scroll position to another. You'd connect the scroll position to Value and enter the scroll positions to the Start and End values. Then you'll have scrolling inside that range as a 0 to 1 (Progress) value that you could then connect to a Transition patch that slides the bar up.
   inputs:
-    - name: Minimum
-      desc: The lower end of the range.
-    - name: Maximum
-      desc: The upper end of the range.
     - name: Value
-      desc: A value that you wish to redefine in terms of the Minimum - Maximum range. Its value may be lower than Minimum or higher than Maxumum. This may happen for example with you have a bouncy that exceeds its target value or the user is rubber-banding within a scrollable range.
+      desc: The value between the start and end values.
+    - name: Start Value
+      desc: The start of the range. When the Value equals the Start Value, the progress will be 0.
+    - name: End Value
+      desc: The end of the range. When the Value equals the End Value, the progress will be 1.
   outputs:
     - name: Progress
-      desc: |
-        A decimal number between 0 and 1 describing Value as a percent of the distance between Minumum and Maxumum. If Value is equal to Minimum, Progress will be 0.
+      desc: A number between 0 and 1 that reflects where the value is in the range. If the Value provided is greater or less than the Start/End Value, the Progress output will scale proportionally beyond 0 or 1.
+      
+rectangle:
+  name: Rectangle
+  type: producer
+  desc: Creates a rectangle image. Plug the Image output into a Layer to display it.
+  inputs:
+    - name: Width
+      desc: The width of the rectangle in pixels.
+    - name: Height
+      desc: The height of the rectangle in pixels.
+    - name: Color
+      desc: The color of the rectangle.
+  outputs:
+    - name: Image
+      desc: An image of the rectangle.
+      
+repeating-pulse:
+  name: Repeating Pulse
+  type: processor
+  desc: Repeatedly outputs a 1 at regular intervals, and stays a 0 all other times.
+  inputs:
+    - name: Duration
+      desc: The number of seconds between pulses.
+  outputs:
+    - name: Pulse
+      desc: Outputs a 1 for a single frame.
 
-        If the Value provided is greater or less than the range provided, the output will scale proportionally beyond 1 or 0.
+reverse-progress:
+  name: Reverse Progress
+  type: processor
+  desc: Reverses a progress value. Handy when you need perform a transition in the reverse direction. It's equivalent to a Transition patch going from 1 to 0.
+  inputs:
+    - name: Progress
+      desc: A number between 0 and 1.
+  outputs:
+    - name: Progress
+      desc: The reversed progress value between 0 and 1.
+
+rgb-to-hex:
+  name: RGB to Hex
+  type: processor
+  desc: Converts an RGB color to a Hex value for use with a Hex Color patch.
+  inputs:
+    - name: Red
+      desc: The amount of red in the color from 0 to 1.
+    - name: Green
+      desc: The amount of green in the color from 0 to 1.
+    - name: Blue
+      desc: The amount of blue in the color from 0 to 1.
+  outputs:
+    - name: Hex
+      desc: A hex value.
+      
+scroll:
+  name: Scroll
+  type: producer
+  desc: |
+    Lets you scroll a layer using free, paging, or "wheel of fortune" scrolling.
+    
+    To use:
+    
+    First connect the Image/Layer Group you want to scroll to the Scroll and Layer patches so the Scroll patch knows the dimensions of what it's scrolling and the image is displayed.
+    
+    Then connect the Scroll patch&rsquo;s X and/or Y positions to the Layer&rsquo;s X and/or Y positions.
+    
+    If using multiple Scroll patches, tie each one to a specific layer by connecting the Scroll patch's interaction port (link) on the top right to the Layer's interaction port on the top left. Note: if you are scrolling a Layer Group, layers inside the Layer Group may intercept touch events (link to Interaction patch events section).
+  inputs:
+    - name: Enable
+      desc: Turn off to stop touches from scrolling.
+    - name: Image
+      desc: |
+        The image you want to scroll. The patch uses this to determine the size of what you're scrolling. This image should be the same size as the layer that you intend to scroll. This is optional if you specify Content Width/Height in an attached Scroll Settings patch.
+        
+        Note: The image needs to be wider (if scrolling horizontally) or taller (if scrolling vertically) than the containing Layer Group for it to scroll.
+    - name: X Scrolling
+      desc: Sets the horizontal scrolling behavior to Free (default), Paging (e.g. iOS home screen), or Wheel of Fortune (paging with the ability to flick harder to scroll through more pages, e.g. cover flow).
+    - name: Y Scrolling
+      desc: Sets the vertical scrolling behavior to Free, Paging, or Wheel of Fortune.
+    - name: Settings
+      desc: Takes optional settings from a Scroll Settings or Scroll Advanced Settings patch.
+  outputs:
+    - name: X Position
+      desc: The horizontal position of the scroller. Connect to the X Position of the Layer you want to scroll horizontally.
+    - name: Y Position
+      desc: The vertical position of the scroller. Connect to the Y Position of the Layer you want to scroll vertically.
+    - name: Info
+      desc: Additional information about the current Scroll status. Connect to a Scroll Info patch to read it.
+    
+scroll-advanced-settings:
+  name: Scroll Advanced Settings
+  type: processor
+  desc: Lets you configure advanced settings for a Scroll patch. The output can be plugged into the Settings port on the Scroll patch or the Scroll Settings patch.
+  inputs:
+    - name: Page Padding X
+      desc: Allows you to specify padding in the horizontal direction when using Paging or Wheel of Fortune scrolling. Overrides Page Padding in Scroll Settings.
+    - name: Page Padding Y
+      desc: Allows you to specify padding in the vertical direction when using Paging or Wheel of Fortune scrolling. Overrides Page Padding in Scroll Settings.
+    - name: Scale
+      desc: Scales the position of the scroller (not the representation of the image on screen). Useful in cases where the object you're scrolling changes scale and you want it to be scrollable in both scales. E.g. the feed strip in Facebook Paper is scrollable when it's scaled down at the bottom of the screen and when it's scaled to full screen.
+    - name: Scrollbars
+      desc: Calculate scroll bar information that can be accessed with the Scroll Info patch.
+    - name: Scrollbar Color
+      desc: Choose between a Dark or Light scrollbar. This will show up in the Scrollbar output from the Scroll Info patch.
+    - name: Scrolling Friction
+      desc: A value between 0 and 1 that controls how quickly the scroller decelerates in Free Scrolling and Wheel of Fortune modes.
+    - name: Rubberband Tension
+      desc: A value between 0 and 1 that affects how the scroller feels when you drag past the edge of the scroller and release your finger.
+    - name: Rubberband Friction
+      desc: A value between 0 and 1 that affects how the scroller feels when you drag past the edge of the scroller and release your finger.
+    - name: Rubberband Slip
+      desc: A value between 0 and 1 that affects how much of your finger movement is applied to the scroller once you pass the edges.
+    - name: Custom Inputs
+      desc: Enables custom X/Y Inputs below.
+    - name: Sample Inputs
+      desc: Whether the scroll patch should be overridden with the custom inputs. This is usually connected to a boolean value that reflects whether a touch is down on the scroller.
+    - name: X Input
+      desc: Takes a value in units (not pixels) and uses the amount it changes to override the standard click/tap scroll input.
+    - name: Y Input
+      desc: Takes a value in units (not pixels) and uses the amount it changes to override the standard click/tap scroll input.
+    - name: X Force
+      desc: Insert a horizontal velocity in units (not pixels) into the scroller.
+    - name: Y Force
+      desc: Insert a vertical velocity in units (not pixels) into the scroller.
+  outputs:
+    - name: Settings
+      desc: Connect to the Settings port on the Scroll patch or the Scroll Settings patch.
+    
+
+scroll-info:
+  name: Scroll Info
+  type: processor
+  desc: Gets detailed information from a Scroll patch including the current position, current page, number of pages, and scrollbar size and position.
+  inputs:
+    - name: Info
+      desc: Connect to the Info output from a Scroll patch.
+    - name: Axis
+      desc: Select the axis of interest. If you want both, use two Scroll Info patches.
+  outputs:
+    - name: Current Position
+      desc: The current scroll position as a 0 to 1 value, where 0 is scrolled to the top, and 1 is scrolled to the bottom (for vertical scrollers).
+    - name: Current Page
+      desc: A number value that reflects which page you're on (e.g, 0, 1, 2, 3...).
+    - name: Page Count
+      desc: The number of pages, determined by dividing the content size by the bounds size.
+    - name: Scrollbar
+      desc: |
+        Outputs a structure of values to create an iOS / OS X style scrollbar. Scrollbars need to be enabled in Scroll Advanced Settings for this to work.
+        
+        Image: An iOS style, pill-shaped scrollbar. Plug it into a Layer.
+        
+        Width/Height: The width and height of the scrollbar. Unnecessary to use unless you are not using the Image and creating a custom design.
+        
+        X: The horizontal position of the scrollbar.
+        
+        Y: The vertical position of the scrollbar.
+        
+        Color: Color for the scrollbar, set by the Scrollbar Color setting in Scroll Advanced Settings.
+        
+        Opacity: The opacity of the scrollbar. Fades away when you stop scrolling.
+
+scroll-settings:
+  name: Scroll Settings
+  type: processor
+  desc: Sets basic settings of a Scroll patch, such as resetting the scroll position, content size, bounds size, page padding, and direction locking.
+  inputs: 
+    - name: Content Width
+      desc: The width of the content being scrolled. Typically this is automatically detected when you plug an Image into the Scroll patch.
+    - name: Content Height
+      desc: The height of the content being scrolled. Typically this is automatically detected when you plug an Image into the Scroll patch.
+    - name: Bounds Width
+      desc: The width of the scroll view. Typically this is automatically detected from the Layer Group the Scroll patch is inside. Overriding this can be useful when you want an image to be scrolled in a smaller area than what is visible.
+    - name: Bounds Height
+      desc: The height of the scroll view. Typically this is automatically detected from the Layer Group the Scroll patch is inside. Overriding this can be useful when you want an image to be scrolled in a smaller area than what is visible.
+    - name: Direction Locking
+      desc: Locks each scroll gesture to its starting direction (vertical or horizontal). Disable this to allow for diagonal scrolling.
+    - name: Jump Style
+      desc: Lets you specify whether you want jumping to be immediate or animated when you pulse the Jump ports.
+    - name: Jump X Position
+      desc: A horizontal position between 0 and 1 that you want to scroll to when you pulse the Jump port.
+    - name: Jump Y Position
+      desc: A vertical position between 0 and 1 that you want to scroll to when you pulse the Jump port.
+    - name: Jump to X
+      desc: Pulse this to scroll the content to the specified Jump X Position.
+    - name: Jump to Y
+      desc: Pulse this to scroll the content to the specified Jump Y Position.
+    - name: Page Padding
+      desc: Adds padding between pages when using Paging or Wheel of Fortune scrolling.
+    - name: Advanced Settings
+      desc: Connect to a Scroll Advanced Settings patch for additional control.
+  outputs:
+    - name: Settings
+      desc: Connect to the Settings port on the Scroll patch.
+
+shadow-info:
+  name: Shadow Info
+  type: processor
+  desc: Defines attributes of a shadow for the Image with Shadow and Text Layer patches.
+  inputs:
+    - name: Size
+      desc: The radius of the shadow.
+    - name: X Position
+      desc: The horizontal offset of the shadow.
+    - name: Y Position
+      desc: The vertical offset of the shadow.
+    - name: Color
+      desc: The color of the shadow.
+    - name: Opacity
+      desc: The opacity of the shadow.
+  outputs:
+    - name: Shadow
+      desc: Shadow information to connect to an Image with Shadow and Text Layer patch.
+      
+stop-watch-2:
+  name: Stop Watch 2
+  type: processor
+  desc: Counts the time since the patch was turned on/reset, and outputs it in seconds or frames. Supports iterators.
+  inputs:
+    - name: |
+        On
+      desc: Turns the stop watch on if checked. Pauses the stop watch if not.
+    - name: Reset Signal
+      desc: Pulse to reset the stop watch.
+  outputs:
+    - name: Time
+      desc: The time elapsed in seconds.
+    - name: Frames
+      desc: The amount of frames elapsed.
+
+string-printer:
+  name: String Printer
+  type: processor
+  desc: |
+    Takes a number of strings of text and combines them. Define how they are combined in the patch Settings (CMD + 2), where a new input port is added for every "%@" you type.
+  inputs:
+    - name: Argument #1
+      desc: Takes a string of text, and replaces the corresponding "%@" with it. e.g. Argument #2 replaces the second "%@" specified in the patch Settings.
+  outputs:
+    - name: String
+      desc: The combined string.
+
+structure-combine: 
+  name: Structure Combine
+  type: processor
+  desc: Merges two structures together. Indexed structures get appended to each other (second after the first), and keyed structures are merged with keys in the second structure overwriting duplicate keys in the first.
+  inputs:
+    - name: Structure 1
+      desc: The first structure.
+    - name: Structure 2
+      desc: The second structure.
+  outputs:
+    - name: Structure
+      desc: The combined structure.
+      
+structure-creator:
+  name: Structure Creator
+  type: processor
+  desc: Creates an indexed or keyed structure containing multiple values. You can set the number of items in the structure and the type of value in the Settings panel (CMD+2). Use Structure Index/Key Member to access the values from the created structure.
+  inputs:
+    - name: Input 0
+      desc: The first value in the structure.
+    - name: Input 1
+      desc: The second value in the structure.
+  outputs:
+    - name: Structure
+      desc: The resulting indexed or keyed structure.
+      
+structure-index-member:
+  name: Structure Index Member
+  type: processor
+  desc: Outputs an item at a given index in a structure.
+  inputs:
+    - name: Structure
+      desc: The structure containing the item.
+    - name: Index
+      desc: The number of the item you want to access, where the first member is at index 0.
+  outputs:
+    - name: Member
+      desc: The chosen item.
+
+structure-key-member:
+  name: Structure Key Member
+  type: processor
+  desc: Outputs the member of a structure assigned to the provided key.
+  inputs:
+    - name: Structure
+      desc: The structure containing the item.
+    - name: Key
+      desc: A string of the key.
+  outputs:
+    - name: Member
+      desc: The chosen item.
+      
+swipe:
+  name: Swipe
+  type: producer
+  desc: Lets you swipe a Layer between any two positions with spring physics. You can customize the behavior with the Swipe Settings patch.
+  inputs:
+    - name: Enable
+      desc: Turn off to ignore user input.
+    - name: Direction
+      desc: Sets the swipe direction.
+    - name: Start Position
+      desc: The position in pixels where the layer should start.
+    - name: End Position
+      desc: The position in pixels where the layer should end.
+    - name: Flip
+      desc: Pulse to animate the current position to the other position.
+    - name: Jump to Start
+      desc: Pulse to animate the current position to the Start Position.
+    - name: Jump to End
+      desc: Pulse to animate the current position to the End Position.
+    - name: Settings
+      desc: Connect to a Swipe Settings patch for additional customizations.
+  outputs:
+    - name: Position
+      desc: The current position of the swipe. This is in pixels between or around the Start and End Positions. Connect this to the layer you're moving.
+    - name: Progress
+      desc: A 0-1 value that describes where you are between the Start and End positions. Connect to Transition patches to synchronize other effects with the swipe.
+    - name: Index
+      desc: 0 if it's at the Start Position, 1 if it's at the End Position. This value only changes once the user releases their touch.
+      
+swipe-settings:
+  name: Swipe Settings
+  type: processor
+  desc: Additional settings for the Swipe patch.
+  inputs:
+    - name: Bounciness
+      desc: A number between 0 and 20 that controls how much the spring overshoots and bounces when the touch is released.
+    - name: Speed
+      desc: A number between 0 and 20 that controls how fast the spring moves when the touch is released.
+    - name: Start Rubberband
+      desc: A value between 0 and 1 that controls how much resistance there is when you swipe past the start position.
+    - name: End Rubberband
+      desc: A value between 0 and 1 that controls how much resistance there is when you swipe past the end position.
+    - name: Direction Locking
+      desc: Locks each swipe to its starting direction (vertical or horizontal). Disable this to allow for sloppy swipes.
+  outputs:
+    - name: Settings
+      desc: Connect to the Settings port on the Swipe patch.
 
 transition:
   name: Transition
@@ -265,10 +797,10 @@ layer:
   type: consumer
   inputs:
     - name: Enable
-      desc: When false, the Layer is invisible
+      desc: Turn on to display the layer.
     - name: Anchor Point
       desc: |
-        A point within the Layer's container (current Layer Group or Device patch) that you would like to position the layer relative to.
+        A point within the Layer&rsquo;s container (current Layer Group or Device patch) that you would like to position the layer relative to.
         
         Options for positioning are:
 
@@ -287,7 +819,7 @@ layer:
     - name: Y Position
       desc: Number of pixels up from the position specified in the Anchor Point.
     - name: Z Position
-      desc: Depth component of a layer's position in 3D space. Units are in pixels as with Width / Height
+      desc: Depth component of a layer&rsquo;s position in 3D space. Units are in pixels as with Width / Height
     - name: X Rotation
       desc: Rotate a layer in 3D space along a horizontal line centered on the Anchor Point.
     - name: Y Rotation
@@ -296,13 +828,13 @@ layer:
       desc: Rotate a layer in two dimensions, or the Z component of a 3D rotation
     - name: Width
       desc: |
-        The width on screen in pixels the Layer's Image will be shown. The eventual width is also affected by Scale and the transform of the current Layer Group.
+        The width on screen in pixels the Layer&rsquo;s Image will be shown. The eventual width is also affected by Scale and the transform of the current Layer Group.
 
           If a value of 0.0 is passed in, the layer will take on the size of the current value of its Image input.
 
     - name: Height
       desc: |
-        The height on screen in pixels the Layer's Image will be shown. The eventual height is also affected by Scale and the transform of the current Layer Group.
+        The height on screen in pixels the Layer&rsquo;s Image will be shown. The eventual height is also affected by Scale and the transform of the current Layer Group.
 
         If a value of 0.0 is passed in, the Layer will take on the size of the current value of its Image input.
 
@@ -318,7 +850,81 @@ layer:
       desc: How much to increase or decrease the size of the Layer. A value of 0.0 will make it invisible, whereas 2.0 will make it twice the normal size.
   desc: |
     Display image on screen and adjust how it shows up.
-  usage: Build your interface out of Layer patches. They can recieve taps in combination with the Interaction patch.
+  usage: Build your interface out of Layer patches. They can receive taps in combination with the Interaction patch.
+
+layer-group:
+  name: Layer Group
+  type: processor
+  desc: A layer group lets you group multiple layers and have them show up on a single layer. It&rsquo;s useful for organizing your projects as well making it easier to animate multiple layers at the same time. It&rsquo;s similar to the Layer Groups in Sketch and Photoshop, except that it has a size that it will crop its contents to.
+  inputs:
+    - name: Render
+      desc: Turning this off will disable all the patches inside the Layer Group from running. Using this port to turn off rendering when your layer group isn&rsquo;t visible may help you improve performance. However, note that Origami Live does not support turning this port off at this time (although it will support disabling Layers to achieve similar performance gains).
+    - name: Texture Target
+      desc: Quartz Composer legacy option. Ignore this.
+    - name: Texture Mipmapping
+      desc: Quartz Composer legacy option. Ignore this.
+    - name: Pixels Wide
+      desc: The width of the Layer Group in pixels.
+    - name: Pixels High
+      desc: The height of the Layer Group in pixels.
+  outputs:
+    - name: Image
+      desc: The image of the layer group. Must be connected to a Layer to have it show up.
+
+layer-group-size:
+  name: Layer Group Size
+  type: processor
+  desc: Outputs the size of the containing Layer Group.
+  outputs:
+    - name: Width
+      desc: The width of the Layer Group in pixels.
+    - name: Height
+      desc: The height of the Layer Group in pixels.
+      
+live-image:
+  name: Live Image
+  type: producer
+  desc: |
+    Imports an image from your computer. When the image contents change, the Live Image patch will automatically update with the new image.
+  
+    You can choose the image using a file picker by clicking the Choose File button in the Patch Settings inspector.
+  
+    By default, this patch will keep a copy of the latest image in the Origami file in case the original is moved or deleted. You can customize this behavior in the Patch Settings inspector.
+  
+    Tip: You can create a Live Image patch by hold down Cmd+Option when dragging an image on to the editor window.
+  inputs:
+    - name: Location
+      desc: The file path to the image. It supports absolute and relative paths.
+  outputs:
+    - name: Image
+      desc: The image.
+
+long-press:
+  name: Long Press
+  type: producer
+  desc: Lets you get a long press interaction. A long press is a press that&rsquo;s held for a given duration without being moved.
+  inputs:
+    - name: Enable
+      desc: When this is off, the patch won&rsquo;t respond to presses.
+    - name: Duration
+      desc: The amount of time in seconds the touch needs to be down for before it&rsquo;s considered a long press.
+  outputs:
+    - name: Press
+      desc: Outputs a 1 once your finger has been down for the specified duration and remains a 1 until you release your finger.
+
+multi-stop-progress:
+  name: Multi-stop Progress
+  type: processor
+  desc: Gives you the progress of a value inside of a structure of stops. For example, if the value was 200, and the stops were 100, 150, and 250, this would output 1.5.
+  inputs:
+    - name: Value
+      desc: The number value that's between the stops.
+    - name: Stops
+      desc: A structure of stops that you want to compare to the value. You can use the Structure Creator patch to create the list of stops.
+  outputs:
+    - name: Progress
+      desc: A value that starts around 0 and ends at the number of stops minus 1. For example, if the value is at stop #0, the progress will be 0. If the value is at stop #3, the progress will be 3.
+      
 
 textlayer:
   name: Text Layer
@@ -327,49 +933,28 @@ textlayer:
     - name: Enable
       desc: When false, the Layer is invisible
     - name: Anchor Point
-      desc: |
-        A point within the Layer's container (current Layer Group or Device patch) that you would like to position the layer relative to.
-        
-        Options for positioning are:
-
-        1. Top Left
-        1. Top Center
-        1. Top Right
-        1. Center Left
-        1. Center
-        1. Center Right
-        1. Bottom Left
-        1. Bottom Center
-        1. Bottom Right
-
+      desc: Like the Layer patch, the Anchor Point changes how the X/Y Position behave in relation to the containing Layer Group. For Text Layers, the Anchor Point also changes the text alignment.
     - name: Text
-      desc: A string that you would like to display. You can either set this value directly by double-clicking on the patch input, or connect it to a dynamic input that builds the string from other values.
+      desc: The text you want to display, which can contain line breaks. You can dynamically change text by using patches like String Printer or Multiplexer (set to String type). Colored Emoji are not supported.
     - name: Font Name
       desc: The font family with which to render the text. For example HelveticaNeue-Bold
     - name: X Position
-      desc: Number of pixels to the right of the position specified in Anchor Point
+      desc: The horizontal position in pixels.
     - name: Y Position
-      desc: Number of pixels up from the position specified in Anchor Point
+      desc: The vertical position in pixels.
     - name: Width
-      desc: |
-        The width in pixels of the box on screen that will contain the text. If a value of 0.0 is passed in, the text will be a single line, as wide as necessary.
-                          
-
+      desc: The width in pixels of the text box. If the width is 0, it will auto-size to a single line.
     - name: Height
-      desc: |
-        The height in pixels of the box on screen that will contain the text. If a value of 0.0 is passed in, the text not be vertically constrained.
-        
+      desc: The height in pixels of the text box. If the height is 0, it will auto-size to the required amount of lines.
     - name: Shadow Info
-      desc: Draw a shadow on the text by configuring a Shadow Info patch connected to this input
+      desc: Connect a Shadow Info patch to generate a text shadow.
     - name: Color
-      desc: A color with which the Image will be tinted before display. You can use this with a pure white image to display the same shape in different colors.
+      desc: The color of the text.
     - name: Opacity
-      desc: How visible the layer is from 0 (invisible) to 1 (visible).
+      desc: How visible the text is from 0 (hidden) to 1 (visible).
     - name: Scale
-      desc: How much to increase or decrease the size of the Text Layer. A value of 0.0 will make it invisible, whereas 2.0 will make it twice the normal size.
-  desc: |
-    Text Layers allow you show text on screen. Anchor Point determines the point from which the text will be layed out as well as the text alignment of the whole block. 
-  usage: Build your interface out of Layer patches. They can recieve taps in combination with the Interaction patch.
+      desc: The scale of the text.
+  desc: Lets you show and style text.
 
 
 velocity:
@@ -377,12 +962,83 @@ velocity:
   type: processor
   inputs:
     - name: Value
+      desc: The changing value.
   outputs:
     - name: Velocity
+      desc: The difference in value between the previous and current frames.
   desc: |
-    Outputs the difference in value between the previous frame and current frame. For example, if the value was 2 in the previous frame and it's currently 5, the velocity will be 3.
+    Outputs the difference in value between the previous frame and current frame. For example, if the value was 2 in the previous frame and it&rsquo;s currently 5, the velocity will be 3.
     
     This patch supports iterators.
+
+viewer:
+  name: Viewer
+  type: consumer
+  desc: |
+    Styles the viewer to look like a phone, tablet, watch, or browser, and draws the supplied image on the screen. The viewer style can be selected with the "Viewer Size" patch. Press the "F" key to toggle full-screen mode, the "H" key to toggle the hands, and the +/- keys to change backgrounds.
+  inputs:
+    - name: Enable
+      desc: When checked, the viewer is visible.
+    - name: Image
+      desc: The image to display inside a device. Viewer uses the dimensions of this image to automatically determine which device to display. Typically you should use a Layer Group with its size set with a Viewer Size patch, which contains presets matched with specific devices.
+
+viewer-info:
+  name: Viewer Info
+  type: producer
+  desc: Gives you information about the viewer window.
+  outputs:
+    - name: Pixels Wide
+      desc: The width of the viewer window.
+    - name: Pixels High
+      desc: The height of the viewer window.
+    - name: Full Screen
+      desc: Outputs a 1 if the viewer is in the Quartz Composer full screen mode.
+    - name: Focused
+      desc: Outputs a 1 if the viewer is the key window.
+    - name: Retina
+      desc: Outputs a 1 if the viewer is on a retina display.
+
+viewer-size:
+  name: Viewer Size
+  type: producer
+  desc: Outputs the size of the selected viewer style. It's meant to be plugged into a Layer Group patch which is then plugged into a Viewer patch.
+  inputs:
+    - name: Type
+      desc: A predefined list of devices the Viewer patch supports.
+    - name: Orientation
+      desc: Rotates the Viewer to Portrait or Landscape orientation. You can input a 0 (Portrait) or 1 (Landscape) to change the Viewer based on interactions in the prototype.
+  outputs:
+    - name: Pixels Wide
+      desc: The width of the viewer type. Connect to a Layer Group.
+    - name: Pixels High
+      desc: The height of the viewer type. Connect to a Layer Group.
+      
+wireless-broadcaster:
+  name: Wireless Broadcaster
+  type: consumer
+  desc: Sends values wirelessly through the composition. Name the value by double clicking the patch and typing in a new name. Then add a Wireless Receiver patch and tell it which value to receive in its Settings panel. The composition needs to be running for the Settings panel to display the broadcasted values.
+  inputs:
+    - name: Value
+      desc: The value to send wirelessly to another place in the composition.
+      
+wireless-receiver:
+  name: Wireless Receiver
+  type: producer
+  desc: Outputs values it receives wirelessly in the composition. Broadcast a value with the Wireless Broadcaster patch and use this patch to output it. Select the broadcasted value you'd like to output in the Settings panel for this patch. The composition needs to be running for the Settings panel to display the broadcasted values.
+  outputs:
+    - name: Value
+      desc: The value received from the Wireless Broadcaster it's paired with.
+
+last-value:
+  name: Last Value
+  type: producer
+  desc: This patch outputs the value that was input during the previous frame. In an Iterator, it will output the value input in the previous frame for the current iteration index.
+  inputs:
+    - name: Value
+      desc: The current value.
+  outputs:
+    - name: Last Value
+      desc: The value in the previous frame.
 
 touch:
   name: Touch
@@ -394,38 +1050,50 @@ touch:
       desc: Coordinate in pixels of the current mouse or touch (1 finger) position
     - name: Down
   desc: |
-    Outputs the location of the mouse or touch on the screen and whether it's down or not, anywhere on screen. Use Interaction 2 instead if you want taps on a specific layer.
+    Outputs the location of the mouse or touch on the screen and whether it&rsquo;s down or not, anywhere on screen. Use Interaction 2 instead if you want taps on a specific layer.
 
 timer:
   name: Timer
   type: processor
   inputs:
     - name: Turn On
-      desc: A pulse on this port will begin timing
+      desc: Pulse this to start the timer.
     - name: Duration
-      desc: How long to run the timer for
+      desc: How long to run the timer for in seconds.
   outputs:
     - name: Time
+      desc: The elapsed time in seconds.
     - name: Done
-      desc: Sends a pulse when the timer is done
-  desc: Runs a timer for a specified duration starting with a specified signal. It outputs the state of the timer as well as the time elapsed.
+      desc: Outputs a pulse when the timer is done.
+  desc: Runs a timer for a specified duration, and outputs if the timer is done as well as the time elapsed.
+
+touch:
+  name: Touch
+  type: producer
+  desc: Outputs the location of the mouse or touch on the screen and whether it's down or not. Use the Interaction 2 patch instead if you want touch events for a specific layer.
+  outputs:
+    - name: X Position
+      desc: The horizontal position of the mouse or touch in pixels.
+    - name: Y Position
+      desc: The vertical position of the mouse or touch in pixels.
+    - name: Down
+      desc: Outputs true when the mouse is clicked down or the touch is active.
 
 bouncy:
   name: Pop Animation
   type: producer
   inputs:
     - name: Number
-      desc: The changing value you wish to animate. This is the target value to which Pop Animation will animate.
+      desc: The value you wish to animate. The Pop Animation patch will animate the changes in this value. Typically this is connected to a patch outputting a 0 or 1, like a Switch.
     - name: Bounciness
-      desc: A qualitative feeling of how springy the animation will feel. This can be changed as the animation is running for advanced effects.
+      desc: How springy the animation will feel, between 0 and 20.
     - name: Speed
-      desc: A qualitative feeling of how fast the animation progresses towards the target value. This can be changed as the animation is running for advanced effects.
+      desc: How fast the animation will feel, between 0 and 20.
   outputs:
     - name: Progress
-      desc: Animated value
+      desc: The animating value. Typically this is an animation between 0 and 1 (0% and 100%) and is connected to Transition patches.
   desc: |
-    Animate a changing value with a spring. You can use the Code Export feature in the Origami menu to use these animations in your built products.
-
+    Animate a changing value with a spring. This is the preferred way to animate in Origami.  You can use the Code Export feature in the Origami menu to use these animations in your products.
   usage: |
     Typically you connect the input of Pop Animation to a Switch representing some state change, and the output to any number of Transitions, controlling different properties in the interface that should change based on the state change in the Switch. These Transitions will move together since their values are derived from the same Pop Animation patch.
 
