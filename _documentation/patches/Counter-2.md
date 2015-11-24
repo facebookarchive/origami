@@ -4,4 +4,4 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.counter-2 %}
+{% include patch.html patch="counter-2" %}

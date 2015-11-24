@@ -4,5 +4,5 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.fill-layer %}
+{% include patch.html patch="fill-layer" %}
 

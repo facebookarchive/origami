@@ -4,4 +4,4 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.delay %}
+{% include patch.html patch="delay" %}

@@ -4,5 +4,5 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.drag-and-drop %}
+{% include patch.html patch="drag-and-drop" %}
 

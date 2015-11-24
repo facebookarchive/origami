@@ -4,5 +4,5 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.3d-orientation %}
+{% include patch.html patch="3d-orientation" %}
 

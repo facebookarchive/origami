@@ -4,5 +4,5 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.interaction-2 %}
+{% include patch.html patch="interaction-2" %}
 

@@ -4,5 +4,5 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.multi-stop-progress %}
+{% include patch.html patch="multi-stop-progress" %}
 

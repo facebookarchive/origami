@@ -4,5 +4,5 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch=site.data.patches.scroll-advanced-settings %}
+{% include patch.html patch="scroll-advanced-settings" %}
 
