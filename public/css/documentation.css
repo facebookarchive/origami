@@ -141,7 +141,6 @@ div.patch ul {
 /* Style ports */
 div.patch ul li span {
     list-style-position: inside;
-    font-size: 12px;
 }
 
 div.patch h3 {
@@ -179,6 +178,40 @@ div.patch ul.outputs li {
 	padding-right: 13px;
     background: url('../images/port-2x.png') right center no-repeat;
     background-size: 10px 16px;
+}
+
+div.patch span.patch-value {
+	opacity: .5;
+}
+
+
+/* Style a chain of patches */
+ul.patch-chain {
+	overflow-x: scroll;
+	white-space: nowrap
+}
+
+ul.patch-chain > li {
+	margin-right: 5px;
+	display: inline-block;
+}
+
+ul.patch-chain > li:last-child {
+	margin-right: 0;
+}
+
+.cable {
+	background-color: rgb(254, 186, 1);
+	top: 10px;
+	left: 100%;
+	margin-top: 1px;
+	margin-left: -12px;
+	width: 34px;
+	height: 4px;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 1;
+	-webkit-transform-origin: left center;
 }
 
 h1 {

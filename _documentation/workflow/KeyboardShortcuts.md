@@ -2,7 +2,7 @@
 title: Keyboard Shortcuts
 layout: documentation
 css: /public/css/documentation.css
-weight: 1000
+weight: 2
 ---
 
 Origami provides a variety of keyboard shortcuts for common functions. Mastering these will enable you build sophisticated prototypes incredibly fast.

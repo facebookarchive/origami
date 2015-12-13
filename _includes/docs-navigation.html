@@ -1,38 +1,75 @@
+<ul class="docs">
+	<li>Basics
+		<ul>
+		{% assign by_title = site.documentation | sort:"title" %}
+		{% assign by_weight = site.documentation | sort:"weight", "last"  %}
+
+		{% for doc in by_weight %}
+			{% if doc.relative_path contains "basics" or doc.title == "Introduction" %}
+
+				{% if doc.url == page.url %}
+					<li><span>{{ doc.title }}</span></li>
+				{% else %}
+					<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
+				{% endif %}
+
+		  {% endif %}
+		{% endfor %}
+		</ul>
+	</li>
 
 
-	<ul class="docs">
-		<li>Concepts
-			<ul>
-			{% assign by_title = site.documentation | sort:"title" %}
-			{% assign by_weight = site.documentation | sort:"weight", "last"  %}
+	<li>Workflow
+		<ul>
+		{% assign by_title = site.documentation | sort:"title" %}
+		{% assign by_weight = site.documentation | sort:"weight", "last"  %}
 
-			{% for doc in by_weight %}
-				{% if doc.relative_path contains "concepts" or doc.title == "Introduction" %}
+		{% for doc in by_weight %}
+			{% if doc.relative_path contains "workflow" %}
 
-				  {% if doc.url == page.url %}
-				<li><span>{{ doc.title }}</span></li>
-				  {% else %}
-				<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
-				  {% endif %}
+				{% if doc.url == page.url %}
+					<li><span>{{ doc.title }}</span></li>
+				{% else %}
+					<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
+				{% endif %}
 
-			  {% endif %}
-			{% endfor %}
-			</ul>
-		</li>
+		  {% endif %}
+		{% endfor %}
+		</ul>
+	</li>
 
-		<li>Patches
-			<ul>
-			{% for doc in by_title %}
-				{% if doc.relative_path contains "patches" %}
+	<li>Concepts
+		<ul>
+		{% assign by_title = site.documentation | sort:"title" %}
+		{% assign by_weight = site.documentation | sort:"weight", "last"  %}
 
-				  {% if doc.url == page.url %}
-				<li><span>{{ doc.title }}</span></li>
-				  {% else %}
-				<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
-				  {% endif %}
+		{% for doc in by_weight %}
+			{% if doc.relative_path contains "concepts" %}
 
-			  {% endif %}
-			{% endfor %}
-			</ul>
-		</li>
-	</ul>
+				{% if doc.url == page.url %}
+					<li><span>{{ doc.title }}</span></li>
+				{% else %}
+					<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
+				{% endif %}
+
+		  {% endif %}
+		{% endfor %}
+		</ul>
+	</li>
+
+	<li>Patches
+		<ul>
+		{% for doc in by_title %}
+			{% if doc.relative_path contains "patches" %}
+
+				{% if doc.url == page.url %}
+					<li><span>{{ doc.title }}</span></li>
+				{% else %}
+					<li><a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }} </a></li>
+				{% endif %}
+
+		  {% endif %}
+		{% endfor %}
+		</ul>
+	</li>
+</ul>

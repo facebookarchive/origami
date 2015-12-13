@@ -5,7 +5,7 @@ css: /public/css/documentation.css
 weight: 1000
 ---
 
-In constrast to built-in Quartz Composer patches, the Origami patches (eg. Layer / Text Layer / Layer Group) use pixel coordinates.
+In contrast to built-in Quartz Composer patches, the Origami patches (eg. Layer / Text Layer / Layer Group) use pixel coordinates.
 
 The origin, or location of the (x = 0, y = 0) coordinate, is in the center of the device screen. Coordinates increase upwards and to the right. Points downward and leftward of the center have negative coordinates.
 
