@@ -4,4 +4,4 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch="textlayer" %}
+{% include patch.html patch="text-layer" %}

@@ -9,3 +9,5 @@ highlighter: pygments
 collections:
   documentation:
     output: true
+
+gems: [jekyll-paginate]
