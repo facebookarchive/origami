@@ -277,6 +277,58 @@ hit-area:
     - name: Setup Mode
       desc: When Setup Mode is on, the hit area will draw a red overlay to help you position it. Turn this off once you've positioned it to hide the overlay.
 
+logic:
+  name: Logic
+  type: processor unlabeled
+  desc: |
+    Lets you take multiple boolean values (default 2) and combine them for different logic operations. The common ones are:
+
+    **AND** (&#8679; + A): if all boolean inputs are true, output true.
+
+    **OR** (&#8679; + O): if any boolean inputs are true, output true.
+
+    **NOT** (&#8679; + N): if Boolean &num;1 is true, output false, and vice versa. Other boolean inputs are ignored.
+
+    Change the operations in the Patch Inspector or double-clicking on the patch. Add more inputs in Patch Settings.
+  inputs:
+    - name: Boolean &num;1
+      desc: A boolean value (true/false, on/off, or 0/1).
+    - name: Boolean &num;2
+      desc: A boolean value (true/false, on/off, or 0/1).
+  outputs:
+    - name: Boolean Result
+      desc: |
+        The resulting logic.
+
+math:
+  name: Math
+  type: processor unlabeled
+  desc: |
+    Lets you take multiple numbers (default 2) and perform mathematical operations. The common ones are:
+
+    **Addition** (= or +) 
+
+    **Subtraction** (-)
+
+    **Multiplication** (*)
+
+    **Division** (/)
+
+    **Minimum**: Outputs the smallest between two numbers.
+
+    **Maximum**: Outputs the largest between two numbers.
+
+    Change the operations in the Patch Inspector or double-clicking on the patch. Add more inputs in Patch Settings.
+  inputs:
+    - name: Number &num;1
+      desc: A number.
+    - name: Number &num;2
+      desc: A number.
+  outputs:
+    - name: Number Result
+      desc: |
+        The resulting number.
+
 image-transition:
   name: Image Transition
   type: producer
@@ -328,7 +380,10 @@ index-switch:
 interaction-2:
   name: Interaction 2
   type: producer
-  desc: Lets you get touches on Layer patches (Layer, Text Layer, Hit Area, etc) or the whole screen. To get touches on a Layer patch, connect the top right port on the Interaction 2 patch to the top left port of the Layer patch.
+  desc: |
+    Lets you get touches on Layer patches (Layer, Text Layer, Hit Area, etc) or the whole screen. To get touches on a Layer patch, connect the top right port on the Interaction 2 patch to the top left port of the Layer patch.
+
+    Touches are prioritized by whichever Layer is on top (layer order is shown in the top right of a Layer patch, higher number on top). If using on a Layer Group, touches will be sent to any Layers inside the Layer Group (counter this by attaching Interaction 2 patches to inside Layers, and disabling them).
   inputs:
     - name: Enable
       desc: When this is off, the layer will be opted out of the interaction system. If you have a layer you don't want to be interactive (say a styling image) that&rsquo;s covering another layer that you want to get interactions on, connect an Interaction 2 patch to it and turn Enable off. That will let touches pass through it to the layer below.
@@ -395,6 +450,17 @@ hex-color:
     - name: Color
       desc: A color type representing the hex value.
 
+keyboard:
+  name: Keyboard
+  type: producer
+  desc: |
+    Lets you get key presses (from your computer only) from any number of keys.
+
+    Change the key/add more key outputs in Patch Settings.
+  outputs:
+    - name: Key ' '
+      desc: Outputs a 1 if the key is pressed, and a 0 if not.
+
 switch:
   name: Switch
   type: processor
@@ -418,7 +484,7 @@ progress:
   type: processor
   desc: |
     Outputs where a value is located between a Start and End value. If the value is at the Start Value, it will output a 0. If it's at the End Value, it will output a 1.
-    
+
     For example, say you wanted a bar to slide up when you scrolled from one scroll position to another. You'd connect the scroll position to Value and enter the scroll positions to the Start and End values. Then you'll have scrolling inside that range as a 0 to 1 (Progress) value that you could then connect to a Transition patch that slides the bar up.
   inputs:
     - name: Value
@@ -430,7 +496,7 @@ progress:
   outputs:
     - name: Progress
       desc: A number between 0 and 1 that reflects where the value is in the range. If the Value provided is greater or less than the Start/End Value, the Progress output will scale proportionally beyond 0 or 1.
-      
+
 rectangle:
   name: Rectangle
   type: producer
@@ -445,7 +511,7 @@ rectangle:
   outputs:
     - name: Image
       desc: An image of the rectangle.
-      
+
 repeating-pulse:
   name: Repeating Pulse
   type: processor
@@ -482,7 +548,7 @@ rgb-to-hex:
   outputs:
     - name: Hex
       desc: A hex value.
-      
+
 scroll:
   name: Scroll
   type: producer
@@ -491,11 +557,12 @@ scroll:
     
     To use:
     
-    First connect the Image/Layer Group you want to scroll to the Scroll and Layer patches so the Scroll patch knows the dimensions of what it's scrolling and the image is displayed.
+    First connect the Image or Layer Group you want to scroll to the Scroll and Layer patches' Image ports. This way, the Scroll patch knows the dimensions of what it's scrolling, and the Layer patch knows what Image to display.
     
-    Then connect the Scroll patch&rsquo;s X and/or Y positions to the Layer&rsquo;s X and/or Y positions.
+    Then connect the Scroll patch&rsquo;s X and/or Y positions to the Layer&rsquo;s X and/or Y positions. Important: The Layer's Anchor Point needs to be set to Center to work properly — this is why the Scroll values go from negative to positive (anchored around a center value of 0).
     
-    If using multiple Scroll patches, tie each one to a specific layer by connecting the Scroll patch's interaction port (link) on the top right to the Layer's interaction port on the top left. Note: if you are scrolling a Layer Group, layers inside the Layer Group may intercept touch events (link to Interaction patch events section).
+    If using multiple Scroll patches, tie each one to a specific layer by connecting the Scroll patch's interaction port (link) on the top right to the Layer's interaction port on the top left. Note: if you are scrolling a Layer Group, layers inside the Layer Group may intercept touch events (see Interaction 2 for more detail).
+
   inputs:
     - name: Enable
       desc: Turn off to stop touches from scrolling.
@@ -517,7 +584,7 @@ scroll:
       desc: The vertical position of the scroller. Connect to the Y Position of the Layer you want to scroll vertically.
     - name: Info
       desc: Additional information about the current Scroll status. Connect to a Scroll Info patch to read it.
-    
+
 scroll-advanced-settings:
   name: Scroll Advanced Settings
   type: processor
@@ -556,7 +623,7 @@ scroll-advanced-settings:
   outputs:
     - name: Settings
       desc: Connect to the Settings port on the Scroll patch or the Scroll Settings patch.
-    
+
 
 scroll-info:
   name: Scroll Info
@@ -641,7 +708,7 @@ shadow-info:
   outputs:
     - name: Shadow
       desc: Shadow information to connect to an Image with Shadow and Text Layer patch.
-      
+
 stop-watch-2:
   name: Stop Watch 2
   type: processor
@@ -682,7 +749,7 @@ structure-combine:
   outputs:
     - name: Structure
       desc: The combined structure.
-      
+
 structure-creator:
   name: Structure Creator
   type: processor
@@ -695,7 +762,7 @@ structure-creator:
   outputs:
     - name: Structure
       desc: The resulting indexed or keyed structure.
-      
+
 structure-index-member:
   name: Structure Index Member
   type: processor
@@ -721,7 +788,7 @@ structure-key-member:
   outputs:
     - name: Member
       desc: The chosen item.
-      
+
 swipe:
   name: Swipe
   type: producer
@@ -924,9 +991,9 @@ multi-stop-progress:
   outputs:
     - name: Progress
       desc: A value that starts around 0 and ends at the number of stops minus 1. For example, if the value is at stop #0, the progress will be 0. If the value is at stop #3, the progress will be 3.
-      
 
-textlayer:
+
+text-layer:
   name: Text Layer
   type: consumer
   inputs:
@@ -1012,19 +1079,19 @@ viewer-size:
       desc: The width of the viewer type. Connect to a Layer Group.
     - name: Pixels High
       desc: The height of the viewer type. Connect to a Layer Group.
-      
+
 wireless-broadcaster:
   name: Wireless Broadcaster
   type: consumer
-  desc: Sends values wirelessly through the composition. Name the value by double clicking the patch and typing in a new name. Then add a Wireless Receiver patch and tell it which value to receive in its Settings panel. The composition needs to be running for the Settings panel to display the broadcasted values.
+  desc: Sends values wirelessly through the composition. Name the value by double clicking the patch and typing in a new name. Then add a [Wireless Receiver](../Wireless-Receiver) patch and tell it which value to receive in its Settings panel. The composition needs to be running for the Settings panel to display the broadcasted values.
   inputs:
     - name: Value
       desc: The value to send wirelessly to another place in the composition.
-      
+
 wireless-receiver:
   name: Wireless Receiver
   type: producer
-  desc: Outputs values it receives wirelessly in the composition. Broadcast a value with the Wireless Broadcaster patch and use this patch to output it. Select the broadcasted value you'd like to output in the Settings panel for this patch. The composition needs to be running for the Settings panel to display the broadcasted values.
+  desc: Outputs values it receives wirelessly in the composition. Broadcast a value with the [Wireless Broadcaster](../Wireless-Broadcaster) patch and use this patch to output it. Select the broadcasted value you'd like to output in the Settings panel for this patch. The composition needs to be running for the Settings panel to display the broadcasted values.
   outputs:
     - name: Value
       desc: The value received from the Wireless Broadcaster it's paired with.
@@ -1098,5 +1165,90 @@ bouncy:
     Typically you connect the input of Pop Animation to a Switch representing some state change, and the output to any number of Transitions, controlling different properties in the interface that should change based on the state change in the Switch. These Transitions will move together since their values are derived from the same Pop Animation patch.
 
 
+multiplexer:
+  name: Multiplexer
+  type: processor
+  inputs:
+    - name: Source Index
+      desc: The number (starting at 0) of the Source input you want the Multiplexer to output.
+    - name: Source &num;0
+      desc: |
+        An input of any type. Add more in the Patch Settings.
 
+        Defaults to Virtual (i.e. any type), but can be set to Boolean, Index, Number, Color, String, Image, or Structure in the Patch Settings.
+    - name: Source &num;1
+      desc: |
+        An input of any type. (See above)
+  outputs:
+    - name: Output
+      desc: The Source with the same number as in Source Index.
+  desc: |
+    Given any number of Source inputs, lets you choose one of them to output by entering a number into Source Index. 
 
+    Think of it like a more advanced Transition patch &mdash; but it can handle more than 2 inputs (adjustable in Patch Settings), and multiple types of inputs. Unlike Transition patches, you cannot smoothly transition in between 2 inputs.
+
+    Often used with an Index Switch or Counter plugged into Source Index to toggle between the Sources (e.g. in a Tab Bar, or advancing through a slideshow)
+
+demultiplexer:
+  name: Demultiplexer
+  type: processor
+  inputs:
+    - name: Destination Index
+      desc: The number (starting at 0) of the Destination output you want the input to pass through.
+    - name: Input
+      desc: |
+        An input of any type. Add more in the Patch Settings.
+
+        Defaults to Virtual (i.e. any type), but can be set to Boolean, Index, Number, Color, String, Image, or Structure in the Patch Settings.
+    - name: Reset Value
+      desc: |
+        An input of any type. Hidden by default &mdash; enable it in Patch Settings
+
+        This value will be passed to all Destinations that are not selected.
+  outputs:
+    - name: Destination &num;1
+      desc: Outputs the Input or Reset Value, depending on which Destination Index is selected.
+    - name: Destination &num;2
+      desc: Outputs the Input or Reset Value, depending on which Destination Index is selected.
+    - name: Destination &num;3
+      desc: Outputs the Input or Reset Value, depending on which Destination Index is selected.
+    - name: Destination &num;4
+      desc: Outputs the Input or Reset Value, depending on which Destination Index is selected.
+  desc: |
+    Given any number of Destinations and an Input, lets you choose one of them to pass the Input value to. 
+
+    Enable the Reset Value (in Patch Settings) to have a default that is passed to all non-selected Destinations.
+
+    Often used with an Index Switch or Counter plugged into Destination Index, with Boolean set as the type &mdash; On as the Input, and Off as the Reset Value. Then the Destinations are often hooked up to different Layer Enable ports to show one at a time (e.g. in a tab bar).
+
+iterator:
+  name: Iterator
+  type: processor
+  inputs:
+    - name: Enable
+      desc: Enables the Iterator
+    - name: Iterations
+      desc: The number of times you want the contents repeated.
+  desc: |
+    Iterators are an easy way to minimize repetitive patches that do the same thing. They are similar to loops in programming. A common reason to use Iterators is to display many of the same Layers, with different attributes (e.g. a News Feed). This way if you update one Layer you update all of them at the same time &mdash; it will make your prototyping much faster.
+
+    Enter the Iterator by double-clicking on it (or &#8984; + &darr;) and place your patches within. Use [Iterator Info](../Iterator-Info) to get current iteration index numbers to do different things with your patches inside.
+
+    Caveat &mdash; you can only publish values out if there are no blue consumer patches within.
+
+    Read more about working with Iterators [here](../../concepts/Iterators).
+
+iterator-info:
+  name: Iterator Info
+  type: producer
+  outputs:
+    - name: Current Index
+      desc: The current iteration index/cycle (starting at 0 for the first iteration).
+    - name: Current Position
+      desc: The current progress between 0 and 1 (think percentage) of the Iterator.
+    - name: Iterations
+      desc: The total number times the containing Iterator will repeat.
+  desc: |
+    Used inside [Iterators](../Iterator). Provides information to use to do different things with patches depending on the iteration index.
+
+    Caveat &mdash; in the editor, only the last iteration index is visible for debugging. Read more about Iterators [here](../../concepts/Iterators).

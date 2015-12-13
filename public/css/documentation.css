@@ -53,8 +53,16 @@ ul.docs ul li {
 	min-height: calc(100vh - 126px);
 }
 
+.doc-content a:hover {
+	text-decoration: underline;
+}
 .doc-content ul {
 	list-style-type: none;
+}
+
+.doc-content * {
+	-webkit-user-select: text;
+	cursor: auto;
 }
 
 .doc-content p {
@@ -67,6 +75,11 @@ ul.docs ul li {
 div.patch-block {
 	padding-top: 16px;
 	padding-bottom: 16px;
+}
+
+div.patch-block * {
+	-webkit-user-select: none;
+	cursor: default;
 }
 
 div.patch {
@@ -89,6 +102,24 @@ div.patch.consumer {
 
 div.patch.producer {
 	background: rgb(174, 93, 218);
+}
+
+div.patch.unlabeled {
+
+}
+
+div.patch.unlabeled ul li {
+	text-indent: -9999px;
+}
+
+div.patch.unlabeled h3 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	margin-top: -15px;
+	text-align: center;
+	background: none;
 }
 
 div.patch * {
@@ -168,6 +199,13 @@ h2 {
 	padding: 0;
 	font-weight: normal;
 	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h6 {
+  font: 12px "HelveticaNeue-Medium", 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 15px;
 }
 
 dl {
@@ -335,16 +373,9 @@ hr {
 	width: 2.3em;
 }
 
-.bulleted-list li {
+.bulleted-list > li {
   list-style-type: disc;
 	color: rgba(0,0,0,0.65);
 	font-size: 14px;
 	line-height: 20px;
-}
-
-h6 {
-  font: 12px "HelveticaNeue-Medium", 'Helvetica Neue', Helvetica, sans-serif;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  padding-top: 15px;
 }
