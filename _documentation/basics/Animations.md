@@ -118,6 +118,7 @@ With a Progress of 0:
           <hr>
         </div>
       </div>
+    </li>
     <li>
       <div class="patch-block">
         <div class="patch consumer">
@@ -152,6 +153,7 @@ With a Progress of .5:
           <hr>
         </div>
       </div>
+    </li>
     <li>
       <div class="patch-block">
         <div class="patch consumer">
@@ -186,6 +188,7 @@ With a Progress of 1:
           <hr>
         </div>
       </div>
+    </li>
     <li>
       <div class="patch-block">
         <div class="patch consumer">

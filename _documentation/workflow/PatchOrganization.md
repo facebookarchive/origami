@@ -15,7 +15,7 @@ Easily rename a patch by selecting it and pressing Enter/Return. Explain what th
 Add a node by right-clicking on the document and hitting "Add Note...".
 
 ## Organize patches left to right
-Since patches take inputs from the left and output to the right, it makes sense to order them from left to right. Generally purple/black patches on the right, and blue patches always on the right (since they never have outputs).
+Since patches take inputs from the left and output to the right, it makes sense to order them from left to right. Generally purple/black patches on the left, and blue patches always on the right (since they never have outputs).
 
 Organizing all Layers so they are vertically stacked in their Layer order will help make the document more readable. Use &#8984; + &larr; or &#8984; + &rarr; to easily left/right align patches.
 
