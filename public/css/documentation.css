@@ -188,7 +188,7 @@ div.patch span.patch-value {
 /* Style a chain of patches */
 ul.patch-chain {
 	overflow-x: scroll;
-	white-space: nowrap
+	white-space: nowrap;
 }
 
 ul.patch-chain > li {
@@ -411,4 +411,141 @@ hr {
 	color: rgba(0,0,0,0.65);
 	font-size: 14px;
 	line-height: 20px;
+}
+
+/* Interface Illustration */
+.interface-preview {
+	position: relative;
+	width: 500px;
+	height: 250px;
+	margin-bottom: 15px;
+}
+
+.interface-window {
+	position: absolute;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2), 0 0 0 .5px rgba(0,0,0,.18);
+	overflow: hidden;
+	background: white;
+}
+
+.interface-toolbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 10px;
+	box-shadow: 0 0 0 .5px rgba(0,0,0,.2);
+	background: #E8E6E8;
+	padding-top: 2px;
+	font-size: 7px;
+	font-family: "SF UI Text", "HelveticaNeue-Medium";
+	text-align: center;
+}
+
+.interface-toolbar.full {
+	height: 20px;
+}
+
+.interface-editor {
+	background: #333;
+	width: 300px;
+	height: 240px;
+}
+
+.interface-editor .patch {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	padding-top: 20px;
+	margin: 0;
+	box-shadow: 0 0 0 .5px rgba(0,0,0,.2);
+}
+
+
+.interface-editor .cable {
+	margin: 0;
+	z-index: 0;
+}
+
+.interface-viewer {
+	background: white;
+	width: 150px;
+	height: 240px;
+	left: 310px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.interface-viewer-phone {
+	width: 90px;
+	height: 180px;
+	background: #111;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.interface-viewer-phone-screen {
+	width: 82px;
+	height: 140px;
+	background: #29CCFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.interface-inspector {
+	width: 70px;
+	height: 100px;
+	left: 220px;
+	top: 130px;
+	background: #ECECEC;
+	padding: 5px;
+	padding-top: 13px;
+}
+
+.interface-inspector-input {
+	width: 40px;
+	height: 6px;
+	margin-left: 15px;
+	margin-bottom: 4px;
+}
+
+.interface-library {
+	width: 70px;
+	height: 140px;
+	left: 10px;
+	top: 90px;
+	background: #ECECEC;
+	padding: 5px;
+	padding-top: 13px;
+}
+
+.interface-library-list {
+	width: 100%;
+	height: 55px;
+	margin-bottom: 5px;
+}
+
+.interface-library-docs {
+	width: 100%;
+	height: 50px;
+	margin-bottom: 5px;
+}
+
+.interface-library-search {
+	width: 100%;
+	height: 6px;
+}
+
+.interface-input {
+	background: white;
+	box-shadow: 0 0 0 .5px rgba(0,0,0,.1);
 }

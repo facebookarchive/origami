@@ -5,7 +5,7 @@ css: /public/css/documentation.css
 weight: 1
 ---
 
-You can try your prototypes on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206) — currently iOS only.
+You can try your prototypes on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206) &mdash; currently iOS only.
 
 ## Using Origami Live
 After downloading Origami Live from the app store, simply open Quartz Composer, plug in your device to your computer with USB, and then open Origami Live. Your current prototype will automatically show up, and you can immediately interact with the prototype.

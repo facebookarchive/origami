@@ -10,11 +10,51 @@ Origami is built on Quartz Composer. This section will give you an introduction 
 ## Interface
 
   There are four main windows:
+  <div class="interface-preview">
+    <div class="interface-editor interface-window">
+      <div class="interface-toolbar full">Editor</div>
+      <div class="cable" style="top: 49px; left: 120px; width: 120px; height: 1px;"></div>
+      <div class="patch producer" style="top: 40px; left: 110px;"></div>
+      <div class="patch processor" style="top: 40px; left: 160px; width: 60px; height: 30px;"></div>
+      <div class="patch consumer" style="top: 40px; left: 230px; height: 60px;"></div>
+    </div>
+    <div class="interface-viewer interface-window">
+      <div class="interface-toolbar full">Viewer</div>
+      <div class="interface-viewer-phone">
+      <div class="interface-viewer-phone-screen"></div>
+      </div>
+    </div>
+    <div class="interface-inspector interface-window">
+      <div class="interface-toolbar">Inspector</div>
+      <div class="interface-inspector-input interface-input"></div>
+      <div class="interface-inspector-input interface-input"></div>
+      <div class="interface-inspector-input interface-input"></div>
+      <div class="interface-inspector-input interface-input"></div>
+      <div class="interface-inspector-input interface-input"></div>
+    </div>
+    <div class="interface-library interface-window">
+      <div class="interface-toolbar">Library</div>
+      <div class="interface-library-list interface-input"></div>
+      <div class="interface-library-docs interface-input"></div>
+      <div class="interface-library-search interface-input"></div>
+    </div>
+  </div>
   <ul class="bulleted-list">
-  <li>**Editor**: The editor is where you define all the interactions, logic, and layers (via Patches) for how your prototype behaves and looks.</li>
-  <li>**Viewer**: The viewer is where you see and interact with your prototype. You can mirror the viewer on your iOS device over USB with [Origami Live](http://itunes.apple.com/app/id942636206) (Android support in progress).</li>
-  <li>**Patch Inspector** (&#8984; + i): The inspector lets you change parameters or settings (&#8984; + 2) for a selected patch. You can also use the docked Parameters view (accessible from the toolbar).</li>
-  <li>**Patch Library** (&#8984; + &crarr;): The library lets you quickly find and add a patch.</li>
+  <li>**Editor**
+    <br>
+    The editor is where you define all the layers and interactions for your prototype, using blocks called "patches".</li>
+  <li>**Viewer**
+    <br>
+    The viewer is where you see and interact with your prototype. You can [preview](../workflow/DevicePreview) on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206).
+  </li>
+  <li>**Patch Inspector** (&#8984; + i)
+    <br>
+    The inspector lets you change parameters or settings (&#8984; + 2) for a selected patch. You can also use the docked Parameters view (accessible from the toolbar).
+  </li>
+  <li>**Patch Library** (&#8984; + &crarr;)
+    <br>
+    The library lets you quickly find and add a patch.
+  </li>
   </ul>
 
   A good way to organize your windows is **Window > Resize to Thirds** (&#8984; + &#8997; + &#8963; + 0) to dock your Editor to the left and Viewer to the right, and only bring up the Inspector/Library when you need them.
