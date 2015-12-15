@@ -4,17 +4,17 @@ layout: documentation
 css: /public/css/documentation.css
 ---
 
-Iterators (link) are an easy way to minimize repetitive patches that do the same thing. They are similar to loops in programming. A common reason to use Iterators is to display many of the same Layers, with different attributes (e.g. a News Feed). This way if you update one Layer you update all of them at the same time &mdash; it will make your prototyping much faster.
+[Iterators](../../patches/Iterator) are an easy way to minimize repetitive patches that do the same thing. They are similar to loops in programming. A common reason to use Iterators is to display many of the same Layers, with different attributes (e.g. a News Feed). This way if you update one Layer you update all of them at the same time &mdash; it will make your prototyping much faster.
 
 ## Using Current Index to build repeating layouts
-The foundation of working with Iterators is to using the Current Index value from Iterator Info (link). Lets say you have an Iterator with a count of 5. Iterator basically clones all the contents 5 times, and for each clone it provides a different index from Iterator Info (where the first clone has an index of 0, second clone has an index of 1, and so on).
+The foundation of working with Iterators is to using the Current Index value from [Iterator Info](../../patches/Iterator-Info). Lets say you have an Iterator with a count of 5. Iterator basically clones all the contents 5 times, and for each clone it provides a different index from Iterator Info (where the first clone has an index of 0, second clone has an index of 1, and so on).
 
 In practice, one of the most common modifications to Current Index is multiplying it by an offset to place stack items horizontally or vertically. For example, if you were prototyping the Instagram feed, where each feed item is about the same height (let's say 850 for a 750px wide screen, with 100px for padding and author and caption), we would connect a Math patch to Current Index, set to multiply by 750px, and plug that into the Y Position of the Layer patch rendering the feed item.
 
 ## Using Current Index to have dynamic content
 Current Index is also very useful to handle displaying dynamic content from a structure.
 
-Let's say we have a list of friends. For each friend you want to have a different name. In an Iterator, you cannot manually input the text for each Text Layer. However, if you create a structure of names outside the Iterator (With Structure Creator (link) set to String), you can pass in that structure of names and use Structure Index Member with Current Index to get each name for each index.
+Let's say we have a list of friends. For each friend you want to have a different name. In an Iterator, you cannot manually input the text for each Text Layer. However, if you create a structure of names outside the Iterator (With [Structure Creator](../../patches/Structure-Creator) set to String), you can pass in that structure of names and use [Structure Index Member](../../patches/Structure-Index-Member) with Current Index to get each name for each index.
 
 ## Challenges and Caveats
 There are several caveats with Iterators that can be limiting, and one crash-inducing issue. However, iterators are helpful enough to justify their use even with these issues.

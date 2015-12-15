@@ -561,7 +561,7 @@ scroll:
     
     Then connect the Scroll patch&rsquo;s X and/or Y positions to the Layer&rsquo;s X and/or Y positions. Important: The Layer's Anchor Point needs to be set to Center to work properly — this is why the Scroll values go from negative to positive (anchored around a center value of 0).
     
-    If using multiple Scroll patches, tie each one to a specific layer by connecting the Scroll patch's interaction port (link) on the top right to the Layer's interaction port on the top left. Note: if you are scrolling a Layer Group, layers inside the Layer Group may intercept touch events (see Interaction 2 for more detail).
+    If using multiple Scroll patches, tie each one to a specific layer by connecting the Scroll patch's interaction port on the top right to the Layer's interaction port on the top left. Note: if you are scrolling a Layer Group, layers inside the Layer Group may intercept touch events (see Interaction 2 for more detail).
 
   inputs:
     - name: Enable
