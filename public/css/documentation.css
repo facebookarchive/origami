@@ -184,6 +184,36 @@ div.patch span.patch-value {
 	opacity: .5;
 }
 
+/* Patch value animations */
+
+/* Flicker super fast */
+span.patch-value.flicker {
+	 animation: flicker .25s linear infinite;
+}
+
+/* Flicker steadily */
+span.patch-value.repeating-signal {
+	 animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  51% { opacity: .5; }
+  100% { opacity: .5; }
+}
+
+/* Flash on once every x seconds */
+span.patch-value.repeating-pulse {
+	 animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: .5; }
+  10% { opacity: .5; }
+  11% { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 /* Style a chain of patches */
 ul.patch-chain {
@@ -434,17 +464,13 @@ hr {
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 10px;
+	height: 20px;
 	box-shadow: 0 0 0 .5px rgba(0,0,0,.2);
 	background: #E8E6E8;
-	padding-top: 2px;
-	font-size: 7px;
+	padding-top: 4px;
+	font-size: 10px;
 	font-family: "SF UI Text", "HelveticaNeue-Medium";
 	text-align: center;
-}
-
-.interface-toolbar.full {
-	height: 20px;
 }
 
 .interface-editor {
@@ -461,7 +487,6 @@ hr {
 	margin: 0;
 	box-shadow: 0 0 0 .5px rgba(0,0,0,.2);
 }
-
 
 .interface-editor .cable {
 	margin: 0;
@@ -499,8 +524,6 @@ hr {
 	justify-content: center;
 }
 
-
-
 .interface-inspector {
 	width: 70px;
 	height: 100px;
@@ -508,7 +531,7 @@ hr {
 	top: 130px;
 	background: #ECECEC;
 	padding: 5px;
-	padding-top: 13px;
+	padding-top: 25px;
 }
 
 .interface-inspector-input {
@@ -525,7 +548,7 @@ hr {
 	top: 90px;
 	background: #ECECEC;
 	padding: 5px;
-	padding-top: 13px;
+	padding-top: 25px;
 }
 
 .interface-library-list {
@@ -536,7 +559,7 @@ hr {
 
 .interface-library-docs {
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	margin-bottom: 5px;
 }
 
@@ -548,4 +571,68 @@ hr {
 .interface-input {
 	background: white;
 	box-shadow: 0 0 0 .5px rgba(0,0,0,.1);
+}
+
+/* Pulse and Signal graph illustration */
+.pulse-graph {
+	position: relative;
+	width: 320px;
+	height: 200px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin: 30px 0 50px;
+}
+
+.pulse-graph-line {
+	background: red;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+
+.pulse-graph-x-axis {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.pulse-graph-y-axis-label {
+	position: absolute;
+	left: 0;
+}
+
+.pulse-graph-y-axis-label.top {
+	position: absolute;
+	top: 0;
+}
+
+.pulse-graph-y-axis-label.bottom {
+	bottom: 10px;
+}
+
+/* Pulse frame illustration */
+.frame-reel {
+	white-space: nowrap;
+	margin: 30px 0;
+}
+
+.frame {
+	width: 100px;
+	background: #EEE;
+	margin-right: 10px;
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	font-size: 19px;
+	padding: 30px 0;
+}
+
+.frame.off {
+	color: #CCC;
+}
+
+.frame.selected {
+	border: 2px solid #CCC;
 }

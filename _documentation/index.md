@@ -60,7 +60,7 @@ Origami is built on Quartz Composer. This section will give you an introduction 
   A good way to organize your windows is **Window > Resize to Thirds** (&#8984; + &#8997; + &#8963; + 0) to dock your Editor to the left and Viewer to the right, and only bring up the Inspector/Library when you need them.
 
 ## Patches
-  Patches are the building blocks of Origami. They are used to capture interactions, compute logic, and draw to the viewer. They take and give information with Ports, and use Cables to pass that information to other Patches. You can add patches from the Patch Library (&#8984; + &crarr;).
+  Patches are the building blocks of Origami. They are used to capture interactions, compute logic, and draw to the viewer. Each patch passes and receives information to other patches via its ports and cables. You can add patches from the Patch Library (&#8984; + &crarr;).
 
   <div class="patch-block">
     <div class="patch processor">

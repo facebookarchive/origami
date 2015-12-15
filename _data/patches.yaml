@@ -523,6 +523,24 @@ repeating-pulse:
     - name: Pulse
       desc: Outputs a 1 for a single frame.
 
+pulse:
+  name: Pulse
+  type: processor
+  desc: |
+    Given a state, outputs On (lasting for a frame) whenever the state turns on (leading) or off (trailing).
+
+    Read more about [Pulses & Signals](../../concepts/PulseSignal).
+  inputs:
+    - name: Input Signal
+      desc: The number of seconds between pulses.
+    - name: Detection Mode
+      desc: |
+        Set to Leading to output a Pulse when the Input Signal turns On.
+        Set to Trailing to output a Pulse when the Input Signal turns Off.
+  outputs:
+    - name: Pulse
+      desc: Outputs a 1 for a single frame when the Signal turns On or Off.
+
 reverse-progress:
   name: Reverse Progress
   type: processor
