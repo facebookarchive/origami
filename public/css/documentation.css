@@ -1,6 +1,12 @@
 /* @override 
 	http://localhost:4000/public/css/documentation.css */
 
+#docs-scrolling-wrapper {
+	width: 100%;
+	overflow-x: scroll;
+	padding: 36px 0;
+}
+
 #docs-wrapper {
 	max-width: 900px;
 	min-width: 768px;
@@ -14,6 +20,7 @@ ul.docs {
 	float: left;
 	line-height: 1.5em;
 	font-size: 13px;
+	border-right: 1px solid #e5e5e5;
 }
 
 ul.docs ul {
@@ -48,7 +55,7 @@ ul.docs ul li {
 
 .doc-content {
 	padding: 0 48px;
-	margin: 36px 0 36px 200px;
+	margin-left: 199px; /*-1px left to overlap border for varying content height*/
 	border-left: 1px solid #e5e5e5;
 	min-height: calc(100vh - 126px);
 }
@@ -441,6 +448,7 @@ hr {
 	color: rgba(0,0,0,0.65);
 	font-size: 14px;
 	line-height: 20px;
+	margin-bottom: 8px;
 }
 
 /* Interface Illustration */

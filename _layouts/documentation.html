@@ -3,13 +3,14 @@
 
 <div id="wrapper">
 	{% include navigation.html %}
-
-	<div id="docs-wrapper">
-		{% include docs-navigation.html %}
-	
-		<div class="doc-content">
-			<h1> {{ page.title }} </h1>
-		{{ content }}
-		</div>
+  <div id="docs-scrolling-wrapper">
+  	<div id="docs-wrapper">
+  		{% include docs-navigation.html %}
+  	
+  		<div class="doc-content">
+  			<h1> {{ page.title }} </h1>
+  		{{ content }}
+  		</div>
+    </div>
 	</div>
 {% include footer.html %}
