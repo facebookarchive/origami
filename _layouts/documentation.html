@@ -2,15 +2,34 @@
 <body class="light">
 
 <div id="wrapper">
-	{% include navigation.html %}
+  {% include navigation.html %}
   <div id="docs-scrolling-wrapper">
-  	<div id="docs-wrapper">
-  		{% include docs-navigation.html %}
-  	
-  		<div class="doc-content">
-  			<h1> {{ page.title }} </h1>
-  		{{ content }}
-  		</div>
+    <div id="docs-wrapper">
+      {% include docs-navigation.html %}
+      <div class="doc-content">
+        <h1> {{ page.title }} </h1>
+        {{ content }}
+        {% if page.nav %}
+        <div id="doc-footer">
+          {% if page.nav.prev %}
+          <div id="doc-footer-prev">
+            <a href={{page.nav.prev.path}}>
+            &larr; {{page.nav.prev.label}}
+            </a>
+          </div>
+          {% endif %}
+          <div id="doc-footer-center">
+          </div>
+          {% if page.nav.next %}
+          <div id="doc-footer-next">
+            <a href={{page.nav.next.path}}>
+            {{page.nav.next.label}} &rarr;
+            </a>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
     </div>
-	</div>
+  </div>
 {% include footer.html %}

@@ -3,6 +3,13 @@ title: Layers
 layout: documentation
 css: /public/css/documentation.css
 weight: 1
+nav:
+  prev:
+    label: Introduction
+    path: ../../index
+  next:
+    label: Interactions
+    path: ../Interactions
 ---
 
 [Layers](../../patches/Layer) help draw to the viewer. They work like layers in Sketch and Photoshop: every layer has style attributes (e.g. position, size, an Image or Color to show...), can be different types (see list below), and can be layered on top of each other.
@@ -52,7 +59,3 @@ Unlike the other attributes of a Layer, the order is determined with a dropdown 
 
 ## Layer Groups
 [Layer Groups](../../patches/Layer-Group) help you organize your Layers together. Create one from the patch library or simply hit 'g' (tip: hover over an image patch to group that image and inherti its size). You can double-click (or &#8984; + &darr;) to get into a Layer Group, and click "Edit Parent" in the toolbar (or &#8984; + &uarr;) to exit a Layer Group.
-
-<br>
-
-Next: [Interactions &rarr;](../Interactions)

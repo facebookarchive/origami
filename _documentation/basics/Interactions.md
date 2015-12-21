@@ -3,6 +3,13 @@ title: Interactions
 layout: documentation
 css: /public/css/documentation.css
 weight: 2
+nav:
+  prev:
+    label: Layers
+    path: ../Layers
+  next:
+    label: States
+    path: ../States
 ---
 
 Interaction patches pass information about user interactions (touches, swipes, key presses) in the viewer.
@@ -40,7 +47,3 @@ One thing you'll notice with some interaction patches (Interaction 2, Scroll, Sw
 Once you've tied an interaction to a Layer, you will only get interactions if that Layer is the topmost layer at that position. Change layer order with the dropdown in the top-right of a Layer patch.
 
 Likewise, if you have Layers inside a Layer Group, you will only get interactions for the innermost/topmost Layer you are touching. To get interactions on a Layer Group, simply add Interaction 2 patches to each Layer within, and toggle the Enable port off.
-
-<br>
-
-Next: [States &rarr;](../States)

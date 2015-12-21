@@ -3,6 +3,13 @@ title: States
 layout: documentation
 css: /public/css/documentation.css
 weight: 3
+nav:
+  prev:
+    label: Interactions
+    path: ../Interactions
+  next:
+    label: Animations
+    path: ../Animations
 ---
 
 Every prototype has multiple states it can transition between. In Origami, Switch patches help keep track of which state you are in. They are like light switches and can be toggled with [interaction patches](../Interactions).
@@ -185,7 +192,3 @@ Both Switch and Index Switch patches output a number for the state that is activ
   <li>Index 3 &rarr; 4th state</li>
   <li>...</li>
 </ul>
-
-<br>
-
-Next: [Animations &rarr;](../Animations)

@@ -39,15 +39,14 @@ There are several caveats with Iterators that can be limiting, and one crash-ind
 
   <ul class="bulleted-list">
   	<li>
-      <strong>No consumer patch inside</strong>
+      No consumer patch inside
       <br>
       Lets say you want to pass a number out of an Iterator. If you publish it, how does the Iterator know which value to pass out? The answer is to pass all of the values out as a structure and pick the one you want from within.
       <br><br>
       To create a structure of the values within the Iterator, we can use the Queue patch, which works very well with Iterators if the Queue size is the same as the Iterator count. Simply enable Filling, and pass in the value you want to store. Then publish the Queue's output structure. Now you can access the value you want outside of the Iterator with a [Structure Index Member](../../patches/Structure-Index-Member).
-      <br><br>
     </li>
     <li>
-      <strong>Consumer patches inside</strong>
+      Consumer patches inside
       <br>
       Due to the QC limitation that blue consumer patches cannot have any outputs, you have to use a [Wireless Broadcaster](../../patches/Wireless-Broadcaster) to pass any values out. The Wireless Broadcaster doesn't work 100% properly in an Iterator (only passes the last index) and will require a workaround before it can pass out a value from a specific index that is not the last one.
       <br><br>

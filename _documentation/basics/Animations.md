@@ -3,6 +3,10 @@ title: Animations
 layout: documentation
 css: /public/css/documentation.css
 weight: 4
+nav:
+  prev:
+    label: States
+    path: ../States
 ---
 
 Animation patches in Origami are designed to be fluid and reversible: they take any changing number and tween it to be smooth.
@@ -172,6 +176,77 @@ With a Progress of .5:
 With a Progress of 1:
 
   <ul class="patch-chain">
+    <li>
+      <div class="patch-block">
+        <div class="patch processor">
+          <h3>Transition</h3>
+          <ul class="inputs">
+            <li>Progress <span class="patch-value">1</span></li>
+            <li>Start Value <span class="patch-value">100</span></li>
+            <li>End Value <span class="patch-value">200</span></li>
+          </ul>
+          <ul class="outputs">
+            <li>Value</li>
+            <div class="cable">
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="patch-block">
+        <div class="patch consumer">
+          <h3>Layer</h3>
+          <ul class="inputs">
+            <li>Width <span class="patch-value">200</span></li>
+            <li>Height</li>
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+In combination with an animation patch, you can now animate between any two values easily:
+
+
+  <ul class="patch-chain">
+    <li>
+      <div class="patch-block">
+        <div class="patch producer">
+          <h3>Interaction</h3>
+          <ul class="inputs">
+            <li>Enable</li>
+          </ul>
+          <ul class="outputs">
+            <li>Down</li>
+            <li>Up</li>
+            <li>Tap</li>
+            <li>Drag</li>
+            <div class="cable"></div>
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="patch-block">
+        <div class="patch processor">
+          <h3>Pop Animation</h3>
+          <ul class="inputs">
+            <li>Number <span class="patch-value">1</span></li>
+            <li>Bounciness</li>
+            <li>Speed</li>
+          </ul>
+          <ul class="outputs">
+            <li>Progress</li>
+            <div class="cable"></div>
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
     <li>
       <div class="patch-block">
         <div class="patch processor">

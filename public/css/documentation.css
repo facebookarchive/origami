@@ -61,7 +61,7 @@ ul.docs ul li {
 }
 
 .doc-content a:hover {
-	text-decoration: underline;
+	color: black;
 }
 .doc-content ul {
 	list-style-type: none;
@@ -130,7 +130,7 @@ div.patch.unlabeled h3 {
 }
 
 div.patch * {
-	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, sans-serif !important;
 	font-size: 11px;
 	line-height: 1.5em;
 }
@@ -224,8 +224,13 @@ span.patch-value.repeating-pulse {
 
 /* Style a chain of patches */
 ul.patch-chain {
-	overflow-x: scroll;
 	white-space: nowrap;
+}
+
+@media only screen and (min-width: 768px) {
+	ul.patch-chain {
+		overflow-x: scroll;
+	}
 }
 
 ul.patch-chain > li {
@@ -235,6 +240,12 @@ ul.patch-chain > li {
 
 ul.patch-chain > li:last-child {
 	margin-right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	ul.patch-chain > li:last-child {
+		padding-right: 48px;
+	}
 }
 
 .cable {
@@ -252,7 +263,7 @@ ul.patch-chain > li:last-child {
 }
 
 h1 {
-	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 30px;
 	font-weight: normal;
 	margin-bottom: .8em;
@@ -268,7 +279,7 @@ h2 {
 	margin-bottom: 0.6em;
 	padding: 0;
 	font-weight: normal;
-	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 h6 {
@@ -643,4 +654,23 @@ hr {
 
 .frame.selected {
 	border: 2px solid #CCC;
+}
+
+/* Footer nav between docs */
+#doc-footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0 20px;
+}
+
+#doc-footer a {
+	font-weight: normal;
+}
+
+#doc-footer-prev {
+	color: #777;
+}
+
+#doc-footer-next a {
+	color: rgb(0, 114, 255)
 }

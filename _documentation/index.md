@@ -3,9 +3,13 @@ title: Introduction
 layout: documentation
 css: /public/css/documentation.css
 weight: -1
+nav:
+  next:
+    label: Layers
+    path: ../basics/Layers
 ---
 
-Origami is built on Quartz Composer. This section will give you an introduction to its interface and the building blocks: patches and cables.
+Origami is built on Quartz Composer, a graphics visualization application by Apple. This section will give you an introduction to its interface and the building blocks: patches and cables.
 
 ## Interface
 
@@ -162,5 +166,3 @@ Origami is built on Quartz Composer. This section will give you an introduction 
       </div>
     </li>
   </ul>
-
-Next: [Layers &rarr;](../basics/Layers)
