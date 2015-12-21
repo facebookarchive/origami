@@ -23,7 +23,7 @@ Interaction patches pass information about user interactions (touches, swipes, k
     <li>
       [Keyboard &rarr;](../../patches/Keyboard)
       <br>
-      This shows whenever a key is pressed in the viewer. Use the Patch Inspector > Settings to set a specific key.
+      This shows whenever a key is pressed in the viewer. Use the patch inspector settings to set a specific key.
       <br><br>
     </li>
     <li>
@@ -40,3 +40,7 @@ One thing you'll notice with some interaction patches (Interaction 2, Scroll, Sw
 Once you've tied an interaction to a Layer, you will only get interactions if that Layer is the topmost layer at that position. Change layer order with the dropdown in the top-right of a Layer patch.
 
 Likewise, if you have Layers inside a Layer Group, you will only get interactions for the innermost/topmost Layer you are touching. To get interactions on a Layer Group, simply add Interaction 2 patches to each Layer within, and toggle the Enable port off.
+
+<br>
+
+Next: [States &rarr;](../States)

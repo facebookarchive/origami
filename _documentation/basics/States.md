@@ -185,3 +185,7 @@ Both Switch and Index Switch patches output a number for the state that is activ
   <li>Index 3 &rarr; 4th state</li>
   <li>...</li>
 </ul>
+
+<br>
+
+Next: [Animations &rarr;](../Animations)

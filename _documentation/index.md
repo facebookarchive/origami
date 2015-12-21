@@ -42,14 +42,14 @@ Origami is built on Quartz Composer. This section will give you an introduction 
   <ul class="bulleted-list">
   <li>**Editor**
     <br>
-    The editor is where you define all the layers and interactions for your prototype, using blocks called "patches".</li>
+    Also known as the graph. The editor is where you define all the layers, interactions, and logic for your prototype, using blocks called "patches".</li>
   <li>**Viewer**
     <br>
-    The viewer is where you see and interact with your prototype. You can [preview](../workflow/DevicePreview) on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206).
+    The viewer is where you see and interact with your prototype. You can [preview and interact](../workflow/DevicePreview) with your prototypes on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206).
   </li>
   <li>**Patch Inspector** (&#8984; + i)
     <br>
-    The inspector lets you change parameters or settings (&#8984; + 2) for a selected patch. You can also use the docked Parameters view (accessible from the toolbar).
+    The inspector lets you change parameters for a selected patch. You can also use the docked Parameters view (accessible from the toolbar). The inspector contains three modes you can toggle with the dropdown at the top: Input Parameters (&#8984; + 1), Settings (&#8984; + 2), and Published Inputs & Outputs (&#8984; + 3).
   </li>
   <li>**Patch Library** (&#8984; + &crarr;)
     <br>
@@ -77,6 +77,14 @@ Origami is built on Quartz Composer. This section will give you an introduction 
     </div>
   </div>
 
+  Patch types:
+  <ul class="bulleted-list">
+    <li>**Black (Processor)** patches are take inputs and process them to create various outputs. Think of it like a function in programming.</li>
+    <li>**Purple (Producer)** patches have are similar to processors, but typically provide [interactions](../../basics/Interactions) (e.g. Interaction 2, Swipe, Keyboard...) from the viewer.</li>
+    <li>**Blue (Consumer)** patches are what's displayed in the viewer.</li>
+    <li>Patches must be connected to a Consumer (like a Layer) to work. This is helps optimize performance for your prototype.</li>
+  </ul>
+
 ## Ports
   Ports allow patches to take information in and spit information back out. The ports on the left side of a patch are **inputs**, and the ones on the right are **outputs**. You can edit **Inputs** with the **Patch Inspector** (&#8984; + i) or double-clicking the port.
   
@@ -95,9 +103,9 @@ Origami is built on Quartz Composer. This section will give you an introduction 
 ## Cables
   Cables pass information (values) from patch to patch via their ports. Think of values like water and electricity, and cables as the pipes and cables that move them from place to place. The values flow in one direction: **left-to-right from an output to an input** of the same value type.
 
-  To create a cable, drag from an output port (on the right of a patch) to an input port (on the left of a patch). Hold &#8997; and click to connect an Output to multiple Inputs quickly. To disconnect a cable, drag the right end out of the Input port.
+  To create a cable, drag from an output port (on the right of a patch) to an input port (on the left of a patch). To disconnect a cable, drag the right end out of the Input port.
 
-  An Output may provide multiple cables, but an Input can only accept one cable at a time. Use patches like Math, Logic, Transition, or Multiplexer to combine or select from multiple cables.
+  An Output may provide multiple cables, but an Input can only accept one cable at a time. Use patches like Math, Logic, Transition, or Multiplexer to combine or select from multiple cables. To quickly connect an ouput to multiple inputs, drag from the output and hold &#8997; while clicking on the inputs.
 
 ## Connecting them together
   An example of a typical setup of patches is shown below, where 3 different patches pass values to each other with cables through their ports in order to create an Interaction that Switches a Layer on and off.
@@ -155,10 +163,4 @@ Origami is built on Quartz Composer. This section will give you an introduction 
     </li>
   </ul>
 
-  A note on the different colors of patches:
-  <ul class="bulleted-list">
-    <li>Purple (Producer) and black (Processor) are similar in that they both have inputs and outputs, but producers typically provide [interactions](../../basics/Interactions) (e.g. Interaction 2, Swipe, Keyboard...).</li>
-    <li>Blue (Consumer) patches are what's displayed in the viewer.</li>
-    <li>Patches must be connected to a Consumer (like a Layer) to work. This is due to performance optimizations.</li>
-  </ul>
-
+Next: [Layers &rarr;](../basics/Layers)
