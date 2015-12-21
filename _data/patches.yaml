@@ -1270,3 +1270,22 @@ iterator-info:
     Used inside [Iterators](../Iterator). Provides information to use to do different things with patches depending on the iteration index.
 
     Caveat &mdash; in the editor, only the last iteration index is visible for debugging. Read more about Iterators [here](../../concepts/Iterators).
+
+
+sample-and-hold:
+  name: Sample and Hold
+  type: processor
+  inputs:
+    - name: Value
+      desc: The value you wish to store.
+    - name: Sampling
+      desc: Set whether the patch is sampling the value to store. Turn sampling off to keep the currently stored value.
+    - name: Reset Signal
+      desc: When on, clears the currently stored value.
+  outputs:
+    - name: Value
+      desc: The currently stored value.
+  desc: |
+    Given any value of any type (from a number to an image to a structure), store and remember it as the output until you sample another value or reset.
+
+    The value stored does not persist across document restarts. Kineme makes a version of Sample and Hold that does persist.
