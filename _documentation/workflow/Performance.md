@@ -3,6 +3,10 @@ title: Performance
 layout: documentation
 css: /public/css/documentation.css
 weight: 5
+nav:
+  prev:
+    label: Patch Organization
+    path: ../PatchOrganization
 ---
 
 One of the problems you may run into often is lag. Quartz Composer is a heavyweight application that depends on transforming and creating images on a frame-by-frame basis, and may not run at full speed all the time. These are a few tips to help.
@@ -19,7 +23,7 @@ The two main ways to do this are:
 
   <ul class="bulleted-list">
     <li>
-      **Toggling Layers**:
+      **Toggling Layers**
       <br>
       Toggling the Enable port on a Layer will cause it to not be displayed in the Viewer/Origami Live. This is handy for when a Layer is off the screen. Due to the way QC optimizes patches to only run if they are connected to an enabled blue consumer patch, this will also disable all the patches that are connected to it (unless they are connected to another Layer), including Layer Groups, which gives a performance boost.
       <br><br>
@@ -27,7 +31,7 @@ The two main ways to do this are:
       <br><br>
     </li>
     <li>
-      **Toggling "Render" on Layer Groups**:
+      **Toggling "Render" on Layer Groups**
       <br>
       This will freeze all updates within the Layer Group, including any Interactions. Toggle it when you are sure a Layer Group will not be updated (e.g. disabling Layer Groups inside a tab that isn't active, and enabling it when the parent tab is active).
       <br><br>

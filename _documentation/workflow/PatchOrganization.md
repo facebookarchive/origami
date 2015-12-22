@@ -3,6 +3,13 @@ title: Patch Organization
 layout: documentation
 css: /public/css/documentation.css
 weight: 4
+nav:
+  prev:
+    label: Code Export
+    path: ../CodeExport
+  next:
+    label: Performance
+    path: ../Performance
 ---
 
 It's easy to get lost in all the crossing cables. Here are some tips to help you organize your document.

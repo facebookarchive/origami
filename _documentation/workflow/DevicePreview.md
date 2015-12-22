@@ -3,7 +3,16 @@ title: Device Preview
 layout: documentation
 css: /public/css/documentation.css
 weight: 1
+nav:
+  prev:
+    label: Sketch Import
+    path: ../SketchImport
+  next:
+    label: Keyboard Shortcuts
+    path: ../KeyboardShortcuts
 ---
+
+<a class="action-button" href="http://itunes.apple.com/app/id942636206" target="_blank">Download Origami Live</a>
 
 You can try your prototypes on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206) &mdash; currently iOS only.
 

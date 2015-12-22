@@ -3,7 +3,16 @@ title: Sketch Import
 layout: documentation
 css: /public/css/documentation.css
 weight: 0
+nav:
+  prev:
+    label: Animations
+    path: ../../basics/Animations
+  next:
+    label: Device Preview
+    path: ../DevicePreview
 ---
+
+<a class="action-button" href="https://github.com/tarngerine/sketch-origami-export/archive/master.zip" target="_blank">Download Sketch Plugin</a>
 
 New in Origami 2.1, you can now import a file from Sketch to start prototyping in seconds. Just hit **File > Import Sketch File...** and it will import the currently open Sketch document and place all the Layers in the correct, center-anchored position in the appropriate Layer Groups (supports multiple Artboards as well).
 

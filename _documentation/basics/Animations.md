@@ -7,6 +7,9 @@ nav:
   prev:
     label: States
     path: ../States
+  next:
+    label: Sketch Import
+    path: ../../workflow/SketchImport
 ---
 
 Animation patches in Origami are designed to be fluid and reversible: they take any changing number and tween it to be smooth.

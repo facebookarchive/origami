@@ -54,15 +54,14 @@ ul.docs ul li {
 }
 
 .doc-content {
-	padding: 0 48px;
+	padding-left: 48px;
+	margin-right: 48px;
 	margin-left: 199px; /*-1px left to overlap border for varying content height*/
 	border-left: 1px solid #e5e5e5;
 	min-height: calc(100vh - 126px);
+	position: relative;
 }
 
-.doc-content a:hover {
-	color: black;
-}
 .doc-content ul {
 	list-style-type: none;
 }
@@ -76,7 +75,14 @@ ul.docs ul li {
 	font-size: 14px;
 	line-height: 18px;
 	color: #585858;
-	/*max-width: 530px;*/
+}
+
+.doc-content a:hover {
+	color: black;
+}
+
+.doc-content a.action-button:hover {
+	color: rgb(0, 114, 255);
 }
 
 div.patch-block {
