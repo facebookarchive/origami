@@ -1279,7 +1279,7 @@ sample-and-hold:
     - name: Value
       desc: The value you wish to store.
     - name: Sampling
-      desc: Set whether the patch is sampling the value to store. Turn sampling off to keep the currently stored value.
+      desc: Whether the patch is sampling the value to store. Turn sampling off to keep the currently stored value.
     - name: Reset Signal
       desc: When on, clears the currently stored value.
   outputs:
@@ -1288,4 +1288,26 @@ sample-and-hold:
   desc: |
     Given any value of any type (from a number to an image to a structure), store and remember it as the output until you sample another value or reset.
 
-    The value stored does not persist across document restarts. Kineme makes a version of Sample and Hold that does persist.
+    The value stored does not persist across document restarts. Kineme makes a version of Sample and Hold that does persist.sample-and-hold:
+
+queue:
+  name: Queue
+  type: processor
+  inputs:
+    - name: Value
+      desc: The value you wish to store.
+    - name: Filling
+      desc: Whether the patch is filling the value to store. Turn filling off to keep the currently stored values.
+    - name: Queue Size
+      desc: The number of slots available to fill in the queue. Typically matched with the containing iterator count.
+    - name: Reset Signal
+      desc: When on, clears the currently stored values.
+  outputs:
+    - name: Queue
+      desc: A structure of the currently stored values.
+  desc: |
+    Similar to Sample & Hold, but can store an arbitrary amount of values of any type and store it in a structure (called a queue). Once you disable filling, the queue will remember its values until you start filling again or reset it.
+
+    The values stored do not persist across document restarts.
+
+    Typically used in an iterator to grab a value across each iteration. Match the queue size to the iterator count, enable filling, and pass the queue out of the iterator to use it. Read more about using Queues in the [Iterator concept](../../concepts/Iterators).

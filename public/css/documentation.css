@@ -111,24 +111,6 @@ div.patch.producer {
 	background: rgb(174, 93, 218);
 }
 
-div.patch.unlabeled {
-
-}
-
-div.patch.unlabeled ul li {
-	text-indent: -9999px;
-}
-
-div.patch.unlabeled h3 {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 50%;
-	margin-top: -15px;
-	text-align: center;
-	background: none;
-}
-
 div.patch * {
 	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, sans-serif !important;
 	font-size: 11px;
@@ -150,6 +132,14 @@ div.patch ul li span {
     list-style-position: inside;
 }
 
+div.patch.unlabeled {
+	display: inline-flex;
+}
+
+div.patch.unlabeled ul {
+	padding: 5px;
+}
+
 div.patch h3 {
 	font-size: 12px;
 	text-align: left;
@@ -160,11 +150,20 @@ div.patch h3 {
 	border-top-right-radius: 4px;
 }
 
+div.patch.unlabeled h3 {
+	order: 1;
+	align-self: center;
+	text-align: center;
+	background: none;
+	padding: 0;
+}
+
 div.patch ul.inputs {
 	text-align: left;
 	float: left;
 	position: relative;
 	padding-right: 14px;
+	order: 0;
 }
 
 div.patch ul.outputs {
@@ -173,18 +172,43 @@ div.patch ul.outputs {
 	position: relative;
 	float: right;
 	padding-left: 14px;
+	order: 2;
+}
+
+div.patch ul.outputs li.published:after,
+div.patch ul.inputs li.published:after {
+	background: rgb(70, 211, 68);
 }
 
 div.patch ul.inputs li {
-	padding-left: 13px;
-    background: url('../images/port-2x.png') left center no-repeat;
-    background-size: 10px 16px;
+	padding-left: 13px;	
+  position: relative;
+}
+
+
+div.patch ul.inputs li:after,
+div.patch ul.outputs li:after {
+	content: " ";
+	display: block;
+	background: white;
+	border-radius: 6px;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 5px;
+}
+
+div.patch ul.inputs li:after {
+	left: 2px;
 }
 
 div.patch ul.outputs li {
 	padding-right: 13px;
-    background: url('../images/port-2x.png') right center no-repeat;
-    background-size: 10px 16px;
+  position: relative;
+}
+
+div.patch ul.outputs li:after {
+	right: 2px;
 }
 
 div.patch span.patch-value {
@@ -224,7 +248,7 @@ span.patch-value.repeating-pulse {
 
 /* Style a chain of patches */
 ul.patch-chain {
-	white-space: nowrap;
+	display: inline-flex;
 }
 
 @media only screen and (min-width: 768px) {
@@ -234,8 +258,9 @@ ul.patch-chain {
 }
 
 ul.patch-chain > li {
-	margin-right: 5px;
-	display: inline-block;
+	margin-right: 10px;
+	flex-shrink: 0;
+	flex-grow: 0;
 }
 
 ul.patch-chain > li:last-child {
@@ -246,6 +271,10 @@ ul.patch-chain > li:last-child {
 	ul.patch-chain > li:last-child {
 		padding-right: 48px;
 	}
+}
+
+ul.patch-chain .unlabeled {
+	margin-top: 38px;
 }
 
 .cable {

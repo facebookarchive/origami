@@ -8,7 +8,13 @@
 		<h3>{{ patch.name }}</h3>
 		<ul class="inputs">
 			{% for port in patch.inputs %}
-			<li class={{ port.class }}>{{ port.name }}</li>
+			<li class={{ port.class }}>
+				{% if patch.type contains "unlabeled" %}
+					&nbsp;
+				{% else %}
+					{{ port.name }}
+				{% endif %}
+			</li>
 			{% endfor %}
 		</ul>
 		<ul class="outputs">
