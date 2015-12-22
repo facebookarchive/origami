@@ -2,6 +2,11 @@
 title: Iterators
 layout: documentation
 css: /public/css/documentation.css
+weight: 4
+nav:
+  prev:
+    label: Pulse & Signal
+    path: ../PulseSignal
 ---
 
 [Iterators](../../patches/Iterator) are an easy way to minimize repetitive patches that do the same thing. They are similar to loops in programming. A common reason to use Iterators is to display many of the same Layers, with different attributes (e.g. a News Feed). This way if you update one Layer you update all of them at the same time &mdash; it will make your prototyping much faster.
@@ -116,11 +121,11 @@ There are two different methods depending on if your Iterator has a blue consume
 
 **No consumer patch inside**
 <br>
-Lets say you want to pass a number out of an Iterator. If you publish it, how does the Iterator know which value to pass out? The answer is to pass all of the values out as a structure and pick the one you want from within.
+Lets say you want to pass a number out of an Iterator. If you publish it (right click the patch and select an output to publish), how does the Iterator know which value to pass out? The answer is to pass all of the values out as a structure and pick the one you want from within.
 <br><br>
 To create a structure of the values within the Iterator, we can use the [Queue](../../patches/queue) patch, which works very well with Iterators if the Queue size is the same as the Iterator count. Simply enable Filling, and pass in the value you want to store. Then publish the Queue's output structure. Now you can access the value you want outside of the Iterator with a [Structure Index Member](../../patches/Structure-Index-Member).
 
-For example, if we wish to pass out the Y Position values we calculated when laying out the example Instagram feed at the top of this page, we would take the output of that Math patch and fill it into a Queue, and then publish it like so:
+For example, if we wish to pass out the Y Position values we calculated when laying out the example Instagram feed at the top of this page, we would take the output of that Math patch and fill it into a Queue, and then publish it by right clicking on the patch and selecting the queue port, or hovering on the queue output and hitting <span class="key letter inline">P</span>:
   <ul class="patch-chain">
     <li>
       <div class="patch-block">

@@ -51,20 +51,20 @@ Origami is built on Quartz Composer, a graphics visualization application by App
     <br>
     The viewer is where you see and interact with your prototype. You can [preview and interact](../workflow/DevicePreview) with your prototypes on your device over USB with [Origami Live](http://itunes.apple.com/app/id942636206).
   </li>
-  <li>**Patch Inspector** (&#8984; + i)
+  <li>**Patch Inspector** <span class="key modifier inline">&#8984;</span><span class="key letter inline">i</span>
     <br>
-    The inspector lets you change parameters for a selected patch. You can also use the docked Parameters view (accessible from the toolbar). The inspector contains three modes you can toggle with the dropdown at the top: Input Parameters (&#8984; + 1), Settings (&#8984; + 2), and Published Inputs & Outputs (&#8984; + 3).
+    The inspector lets you change parameters for a selected patch. You can also use the docked Parameters view (accessible from the toolbar). The inspector contains three modes you can toggle with the dropdown at the top: Input Parameters <span class="key modifier inline">&#8984;</span><span class="key letter inline">1</span>, Settings <span class="key modifier inline">&#8984;</span><span class="key letter inline">2</span>, and Published Inputs & Outputs <span class="key modifier inline">&#8984;</span><span class="key letter inline">3</span>.
   </li>
-  <li>**Patch Library** (&#8984; + &crarr;)
+  <li>**Patch Library** <span class="key modifier inline">&#8984;</span><span class="key letter inline">&crarr;</span>
     <br>
     The library lets you quickly find and add a patch.
   </li>
   </ul>
 
-  A good way to organize your windows is **Window > Resize to Thirds** (&#8984; + &#8997; + &#8963; + 0) to dock your Editor to the left and Viewer to the right, and only bring up the Inspector/Library when you need them.
+  A good way to organize your windows is **Window > Resize to Thirds** <span class="key modifier inline">&#8984;</span><span class="key modifier inline">&#8997;</span><span class="key modifier inline">&#8963;</span><span class="key letter inline">0</span> to dock your Editor to the left and Viewer to the right, and only bring up the Inspector/Library when you need them.
 
 ## Patches
-  Patches are the building blocks of Origami. They are used to capture interactions, compute logic, and draw to the viewer. Each patch passes and receives information to other patches via its ports and cables. You can add patches from the Patch Library (&#8984; + &crarr;).
+  Patches are the building blocks of Origami. They are used to capture interactions, compute logic, and draw to the viewer. Each patch passes and receives information to other patches via its ports and cables. You can add patches from the Patch Library <span class="key modifier inline">&#8984;</span><span class="key letter inline">&crarr;</span>.
 
   <div class="patch-block">
     <div class="patch processor">
@@ -90,7 +90,7 @@ Origami is built on Quartz Composer, a graphics visualization application by App
   </ul>
 
 ## Ports
-  Ports allow patches to take information in and spit information back out. The ports on the left side of a patch are **inputs**, and the ones on the right are **outputs**. You can edit **Inputs** with the **Patch Inspector** (&#8984; + i) or double-clicking the port.
+  Ports allow patches to take information in and spit information back out. The ports on the left side of a patch are **inputs**, and the ones on the right are **outputs**. You can edit **Inputs** with the **Patch Inspector** <span class="key modifier inline">&#8984;</span><span class="key letter inline">i</span> or double-clicking the port.
   
   Each port has a different type of information it can take &mdash; the important types of values used in Origami are:
   <ul class="bulleted-list">
@@ -109,7 +109,7 @@ Origami is built on Quartz Composer, a graphics visualization application by App
 
   To create a cable, drag from an output port (on the right of a patch) to an input port (on the left of a patch). To disconnect a cable, drag the right end out of the Input port.
 
-  An Output may provide multiple cables, but an Input can only accept one cable at a time. Use patches like Math, Logic, Transition, or Multiplexer to combine or select from multiple cables. To quickly connect an ouput to multiple inputs, drag from the output and hold &#8997; while clicking on the inputs.
+  An Output may provide multiple cables, but an Input can only accept one cable at a time. Use patches like Math, Logic, Transition, or Multiplexer to combine or select from multiple cables. To quickly connect an ouput to multiple inputs, drag from the output and hold span class="key modifier inline">&#8997;</span> while clicking on the inputs.
 
 ## Connecting them together
   An example of a typical setup of patches is shown below, where 3 different patches pass values to each other with cables through their ports in order to create an Interaction that Switches a Layer on and off.

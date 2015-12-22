@@ -3,6 +3,13 @@ title: Keyboard Shortcuts
 layout: documentation
 css: /public/css/documentation.css
 weight: 2
+nav:
+  prev:
+    label: Device Preview
+    path: ../DevicePreview
+  next:
+    label: Patch Organization
+    path: ../PatchOrganization
 ---
 
 Origami provides a variety of keyboard shortcuts for common functions. Mastering these will enable you build sophisticated prototypes incredibly fast.

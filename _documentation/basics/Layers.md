@@ -14,19 +14,19 @@ nav:
 
 [Layers](../../patches/Layer) help draw to the viewer. They work like layers in Sketch and Photoshop: every layer has style attributes (e.g. position, size, an Image or Color to show...), can be different types (see list below), and can be layered on top of each other.
 
-Add a layer with the patch library (&#8984; + &crarr;), or their [keyboard shortcuts](../../workflow/KeyboardShortcuts).
+Add a layer with the patch library <span class="key modifier inline">&#8984;</span><span class="key letter inline">&crarr;</span>, or their [keyboard shortcuts](../../workflow/KeyboardShortcuts).
 
 ## Layer patches
   <ul class="bulleted-list">
     <li>
-      [Layer &rarr;](../../patches/Text-Layer)
+      [Layer &rarr;](../../patches/Text-Layer) <span class="key letter inline">L</span>
       <br>
       Display a rectangle or image. For non-rectangle shapes, use patches like Circle Image or Rounded Rectangle that create an image to plug into a Layer.
       <br><br>
       In most situations, you'll be working with an image from your designs by copy-pasting or drag-and-dropping into the editor. This will automatically create a layer patch for you with the image connected.
     </li>
     <li>
-      [Text Layer &rarr;](../../patches/Text-Layer)
+      [Text Layer &rarr;](../../patches/Text-Layer) <span class="key modifier inline">&#8679;</span><span class="key letter inline">T</span>
       <br>
       Display text with adjustable font settings.
     </li>
@@ -58,4 +58,4 @@ Read more about the [Coordinate System](../../concepts/Coordinates).
 Unlike the other attributes of a Layer, the order is determined with a dropdown at the top right of the Patch (instead of with an input). To dynamically change the order of a Layer, simply tweak the Z Position by a fraction (e.g. +/-0.0001).
 
 ## Layer Groups
-[Layer Groups](../../patches/Layer-Group) help you organize your Layers together. Create one from the patch library or simply hit 'g' (tip: hover over an image patch to group that image and inherti its size). You can double-click (or &#8984; + &darr;) to get into a Layer Group, and click "Edit Parent" in the toolbar (or &#8984; + &uarr;) to exit a Layer Group.
+[Layer Groups](../../patches/Layer-Group) help you organize your Layers together. Create one from the patch library or simply hit <span class="key letter inline">G</span> (tip: hover over an image patch to group that image and inherti its size). You can double-click or <span class="key modifier inline">&#8984;</span><span class="key letter inline">&darr;</span> to get into a Layer Group, and click "Edit Parent" in the toolbar or <span class="key modifier inline">&#8984;</span><span class="key letter inline">&uarr;</span> to exit a Layer Group.

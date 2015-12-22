@@ -2,6 +2,14 @@
 title: Pulse & Signal
 layout: documentation
 css: /public/css/documentation.css
+weight: 3
+nav:
+  prev:
+    label: Progress Values
+    path: ../Progress
+  next:
+    label: Iterators
+    path: ../Iterators
 ---
 
 Pulses and signals are a core concept in Origami, especially for representing and toggling states. To understand them you must first understand how [States](../../basics/States) are represented by On/Off (shown in the interface as a checkbox, with a &#10003; when it's on).
@@ -221,7 +229,7 @@ To fix this, we should **pulse** each port (pass On &#10003; for a single frame)
 ## Creating pulses
 How do you create pulses? Most situations where you need a pulse are with [interactions](../../basics/Interactions), e.g. a single tap, or a key press. The [Interaction 2](../../patches/Interaction-2) patch, for example, will output a single pulse from the Tap port when you tap on the viewer (whereas the Down port will output a continous signal depending on how long your finger is down).
 
-Another common situation is when you want to **know when a Signal changes**, e.g. if you want to turn on a Switch after another Switch turns off. In this case, you'd use a [Pulse](../../patches/Pulse) patch.
+Another common situation is when you want to **know when a Signal changes**, e.g. if you want to turn on a Switch after another Switch turns off. In this case, you'd use a [Pulse](../../patches/Pulse) <span class="key letter inline">U</span> patch.
 
 In this example below, when Switch 1 turns off, Switch 2 will turn on:
 
@@ -275,4 +283,4 @@ In this example below, when Switch 1 turns off, Switch 2 will turn on:
     </li>
   </ul>
 
-You can even combine Pulse with [Delay](../../patches/Delay) patches to create a Switch that turns itself off a few seconds after it's turned on.
+You can even combine Pulse with [Delay](../../patches/Delay) <span class="key letter inline">D</span> patches to create a Switch that turns itself off a few seconds after it's turned on.

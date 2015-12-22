@@ -18,9 +18,10 @@ Every prototype has multiple states it can transition between. In Origami, Switc
 
   <ul class="bulleted-list">
     <li>
-      [Switch &rarr;](../../patches/Switch)
+      [Switch &rarr;](../../patches/Switch) <span class="key modifier inline">&#8679;</span><span class="key letter inline">S</span>
       <br>
       The Switch patch is like a light switch: turning it on keeps it on, and turning it off keeps it off. They are helpful to build simple two-state interactions, e.g. showing and hiding comments in a popover.
+      <br>
       <ul class="patch-chain">
         <li>
           <div class="patch-block">
@@ -68,6 +69,7 @@ Every prototype has multiple states it can transition between. In Origami, Switc
           </div>
         </li>
       </ul>
+      <br>
       Multiple Switch patches can combined with [Logic patches](../../patches/Logic) to build on top of each other, e.g. opening a composer with different attachment options which the user can toggle.
       <br><br>
     </li>

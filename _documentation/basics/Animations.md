@@ -17,7 +17,7 @@ Animation patches in Origami are designed to be fluid and reversible: they take 
 ## Animation patches
   <ul class="bulleted-list">
     <li>
-      [Pop Animation &rarr;](../../patches/Pop-Animation)
+      [Pop Animation &rarr;](../../patches/Pop-Animation) <span class="key letter inline">A</span>
       <br>
       Pop Animation allows you to use the natural bouncy animations that power Paper, and easily pass values to your developers with the the [Pop](https://github.com/facebook/pop) framework for iOS, [Rebound](http://facebook.github.io/rebound/) for Android, and [Rebound JS](https://github.com/facebook/rebound-js) for the web.
       <br><br>

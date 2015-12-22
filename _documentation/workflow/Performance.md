@@ -2,17 +2,20 @@
 title: Performance
 layout: documentation
 css: /public/css/documentation.css
-weight: 5
+weight: 4
 nav:
   prev:
     label: Patch Organization
     path: ../PatchOrganization
+  next:
+    label: Code Export
+    path: ../CodeExport
 ---
 
 One of the problems you may run into often is lag. Quartz Composer is a heavyweight application that depends on transforming and creating images on a frame-by-frame basis, and may not run at full speed all the time. These are a few tips to help.
 
 ## Simple Editor and Viewer tweaks
-The fastest way to boost performance is to disable Inline Value preview. You can easily toggle it off from the **Origami bird menu > Display Inline Values**.
+The fastest way to boost performance is to disable Inline Value preview. You can easily toggle it off from the **Origami bird menu > Display Inline Values** <span class="key modifier inline">&#8984;</span><span class="key modifier inline">&#8997;</span><span class="key modifier inline">&#8963;</span><span class="key letter inline">V</span>.
 
 You can also put a limit on the frames per second (FPS) of the Viewer in **Preferences > Viewer**. 30FPS is reasonable for most prototypes.
 

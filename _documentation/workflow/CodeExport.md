@@ -2,14 +2,14 @@
 title: Code Export
 layout: documentation
 css: /public/css/documentation.css
-weight: 3
+weight: 5
 nav:
   prev:
-    label: Keyboard Shortcuts
-    path: ../KeyboardShortcuts
+    label: Performance
+    path: ../Performance
   next:
-    label: Patch Organization
-    path: ../PatchOrganization
+    label: Coordinates
+    path: ../../concepts/Coordinates
 ---
 
 Code Export is a new feature in Origami 2.0 that exports animations in Origami prototypes as code snippets that you can send to your engineers. It can export Objective-C for iOS, Java for Android, and JavaScript for the web. 

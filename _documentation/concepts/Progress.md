@@ -2,6 +2,14 @@
 title: Progress Values
 layout: documentation
 css: /public/css/documentation.css
+weight: 2
+nav:
+  prev:
+    label: Coordinates
+    path: ../Coordinates
+  next:
+    label: Pulse & Signal
+    path: ../PulseSignal
 ---
 
 Values in the range of 0 to 1 are a common concept in Origami prototyping. By animating values in this range, you are keeping your animations generic so they can be translated to specific layer properties using the Transition patch.
