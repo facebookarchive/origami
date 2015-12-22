@@ -6,10 +6,10 @@ weight: 2
 nav:
   prev:
     label: Layers
-    path: ../Layers
+    path: Layers
   next:
     label: States
-    path: ../States
+    path: States
 ---
 
 Interaction patches pass information about user interactions (touches, swipes, key presses) in the viewer.

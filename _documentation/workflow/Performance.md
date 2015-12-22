@@ -6,10 +6,10 @@ weight: 4
 nav:
   prev:
     label: Patch Organization
-    path: ../PatchOrganization
+    path: PatchOrganization
   next:
     label: Code Export
-    path: ../CodeExport
+    path: CodeExport
 ---
 
 One of the problems you may run into often is lag. Quartz Composer is a heavyweight application that depends on transforming and creating images on a frame-by-frame basis, and may not run at full speed all the time. These are a few tips to help.

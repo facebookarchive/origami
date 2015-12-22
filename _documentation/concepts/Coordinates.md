@@ -6,10 +6,10 @@ weight: 1
 nav:
   prev:
     label: Code Export
-    path: ../../workflow/CodeExport
+    path: ../workflow/CodeExport
   next:
     label: Progress Values
-    path: ../Progress
+    path: Progress
 ---
 
 In contrast to built-in Quartz Composer patches, the Origami patches (eg. Layer / Text Layer / Layer Group) use pixel coordinates.

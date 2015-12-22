@@ -6,10 +6,10 @@ weight: 2
 nav:
   prev:
     label: Device Preview
-    path: ../DevicePreview
+    path: DevicePreview
   next:
     label: Patch Organization
-    path: ../PatchOrganization
+    path: PatchOrganization
 ---
 
 Origami provides a variety of keyboard shortcuts for common functions. Mastering these will enable you build sophisticated prototypes incredibly fast.

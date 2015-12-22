@@ -6,10 +6,10 @@ weight: 0
 nav:
   prev:
     label: Animations
-    path: ../../basics/Animations
+    path: ../basics/Animations
   next:
     label: Device Preview
-    path: ../DevicePreview
+    path: DevicePreview
 ---
 
 <a class="action-button" href="https://github.com/tarngerine/sketch-origami-export/archive/master.zip" target="_blank">Download Sketch Plugin</a>

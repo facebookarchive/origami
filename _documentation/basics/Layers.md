@@ -6,10 +6,10 @@ weight: 1
 nav:
   prev:
     label: Introduction
-    path: ../../index
+    path: ../index
   next:
     label: Interactions
-    path: ../Interactions
+    path: Interactions
 ---
 
 [Layers](../../patches/Layer) help draw to the viewer. They work like layers in Sketch and Photoshop: every layer has style attributes (e.g. position, size, an Image or Color to show...), can be different types (see list below), and can be layered on top of each other.

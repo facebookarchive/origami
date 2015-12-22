@@ -6,10 +6,10 @@ weight: 3
 nav:
   prev:
     label: Keyboard Shortcuts
-    path: ../KeyboardShortcuts
+    path: KeyboardShortcuts
   next:
     label: Performance
-    path: ../Performance
+    path: Performance
 ---
 
 It's easy to get lost in all the crossing cables. Here are some tips to help you organize your document.

@@ -6,7 +6,7 @@ weight: -1
 nav:
   next:
     label: Layers
-    path: ../basics/Layers
+    path: basics/Layers
 ---
 
 Origami is built on Quartz Composer, a graphics visualization application by Apple. This section will give you an introduction to its interface and the building blocks: patches and cables.

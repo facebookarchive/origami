@@ -6,7 +6,7 @@ weight: 4
 nav:
   prev:
     label: Pulse & Signal
-    path: ../PulseSignal
+    path: PulseSignal
 ---
 
 [Iterators](../../patches/Iterator) are an easy way to minimize repetitive patches that do the same thing. They are similar to loops in programming. A common reason to use Iterators is to display many of the same Layers, with different attributes (e.g. a News Feed). This way if you update one Layer you update all of them at the same time &mdash; it will make your prototyping much faster.

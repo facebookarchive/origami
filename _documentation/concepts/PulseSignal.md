@@ -6,10 +6,10 @@ weight: 3
 nav:
   prev:
     label: Progress Values
-    path: ../Progress
+    path: Progress
   next:
     label: Iterators
-    path: ../Iterators
+    path: Iterators
 ---
 
 Pulses and signals are a core concept in Origami, especially for representing and toggling states. To understand them you must first understand how [States](../../basics/States) are represented by On/Off (also known as a boolean, shown in the interface as a checkbox, with a &#10003; when it's on).

@@ -4,7 +4,6 @@ description: "Design prototyping with Quartz Composer"
 paginate: 10
 
 markdown: rdiscount
-permalink: pretty
 highlighter: pygments
 collections:
   documentation:

@@ -6,10 +6,10 @@ weight: 2
 nav:
   prev:
     label: Coordinates
-    path: ../Coordinates
+    path: Coordinates
   next:
     label: Pulse & Signal
-    path: ../PulseSignal
+    path: PulseSignal
 ---
 
 Values in the range of 0 to 1 are a common concept in Origami prototyping. By animating values in this range, you are keeping your animations generic so they can be translated to specific layer properties using the Transition patch.
