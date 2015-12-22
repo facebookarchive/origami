@@ -283,17 +283,17 @@ logic:
   desc: |
     Lets you take multiple boolean values (default 2) and combine them for different logic operations. The common ones are:
 
-    **AND** (&#8679; + A): if all boolean inputs are true, output true.
+    **AND** <span class="key modifier inline">&#8679;</span><span class="key letter inline">A</span>: if all boolean inputs are true, output 1 (true).
 
-    **OR** (&#8679; + O): if any boolean inputs are true, output true.
+    **OR** <span class="key modifier inline">&#8679;</span><span class="key letter inline">O</span>: if any boolean inputs are true, output 1 (true).
 
-    **NOT** (&#8679; + N): if Boolean &num;1 is true, output false, and vice versa. Other boolean inputs are ignored.
+    **NOT** <span class="key modifier inline">&#8679;</span><span class="key letter inline">N</span>: if Boolean 1 is true, output 0 (false), and vice versa. Other boolean inputs are ignored.
 
     Change the operations in the Patch Inspector or double-clicking on the patch. Add more inputs in Patch Settings.
   inputs:
-    - name: Boolean &num;1
+    - name: Boolean 1
       desc: A boolean value (true/false, on/off, or 0/1).
-    - name: Boolean &num;2
+    - name: Boolean 2
       desc: A boolean value (true/false, on/off, or 0/1).
   outputs:
     - name: Boolean Result
@@ -306,13 +306,13 @@ math:
   desc: |
     Lets you take multiple numbers (default 2) and perform mathematical operations. The common ones are:
 
-    **Addition** (= or +) 
+    **Addition** <span class="key letter inline">+</span>
 
-    **Subtraction** (-)
+    **Subtraction** <span class="key letter inline">-</span>
 
-    **Multiplication** (*)
+    **Multiplication** <span class="key letter inline">*</span>
 
-    **Division** (/)
+    **Division** <span class="key letter inline">/</span>
 
     **Minimum**: Outputs the smallest between two numbers.
 
@@ -320,14 +320,42 @@ math:
 
     Change the operations in the Patch Inspector or double-clicking on the patch. Add more inputs in Patch Settings.
   inputs:
-    - name: Number &num;1
+    - name: Number 1
       desc: A number.
-    - name: Number &num;2
+    - name: Number 2
       desc: A number.
   outputs:
     - name: Number Result
       desc: |
         The resulting number.
+
+conditional:
+  name: Conditional
+  type: processor
+  desc: |
+    Takes a number, index or boolean and compares it with another. Outputs 0 or 1 (true or false) depending on the condition you've set.
+
+    Adjust the tolerance to allow for minor variances. e.g. when working with a Pop Animation value, the value usually ends up being around +/- .0001 off due to spring physics (oscillates infinitely), so increasing the tolerance to ~.0001 will allow for the condition to pass even if it's slightly off.
+  inputs:
+    - name: First Value
+      desc: A number, index or boolean you wish to compare.
+    - name: Condition
+      desc: |
+        The condition you wish to use to compare the two values. The options are:
+
+        1. Is Equal
+        1. Is Not Equal
+        1. Is Greater Than
+        1. Is Greater Than or Equal To
+        1. Is Less Than
+        1. Is Less Than or Equal To
+    - name: Second Value
+      desc: A number, index or boolean you wish to compare the first value with.
+    - name: Tolerance
+      desc: A number, typically in the decimals. Allows the condition to pass even if it's slightly off.
+  outputs:
+    - name: Result
+      desc: Outputs a 1 if the condition is true.
 
 image-transition:
   name: Image Transition

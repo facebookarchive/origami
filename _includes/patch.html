@@ -19,7 +19,13 @@
 		</ul>
 		<ul class="outputs">
 			{% for port in patch.outputs %}
-			<li>{{ port.name }}</li>
+			<li class={{ port.class }}>
+				{% if patch.type contains "unlabeled" %}
+					&nbsp;
+				{% else %}
+					{{ port.name }}
+				{% endif %}
+			</li>
 			{% endfor %}
 		</ul>
 		<hr>

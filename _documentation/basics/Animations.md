@@ -87,7 +87,7 @@ This example below will scale a Layer from 0 to 1 (or 0% to 100%) when you touch
 ## Specifying Transitions
 Animating from 0 to 1 is simple, but what about animating between other values?
 
-[Transition](../../patches/Transition) patches let you transform that 0/1 into any start/end value:
+[Transition](../../patches/Transition) <span class="key letter inline">T</span> patches let you transform that 0/1 into any start/end value:
 
   <div class="patch-block">
     <div class="patch processor">
