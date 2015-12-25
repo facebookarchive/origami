@@ -1,0 +1,1 @@
+var set%@Progress = function(progress) {%@};

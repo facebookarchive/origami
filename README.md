@@ -23,6 +23,6 @@ ln -s `pwd`/origami/Origami ~/Library/Graphics/Quartz\ Composer\ Patches
 
 Feedback
 --------
-Your feedback is important in making Origami better – feel free to open an [Issue](https://github.com/facebook/origami/issues) here on GitHub or send us a tweet [@facebookorigami](https://twitter.com/facebookorigami).
+Your feedback is important in making Origami better – feel free to open an [Issue](https://github.com/facebook/origami/issues) here on GitHub or post in our [community](https://www.facebook.com/groups/origami.community/).
 
 We hope you enjoy using Origami, happy prototyping!

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Outputs values it receives wirelessly in the composition. Broadcast a value with the Wireless Broadcaster patch and use this patch to output it. Select the broadcasted value you'd like to output in the Settings panel for this patch. The composition needs to be running for the Settings panel to display the broadcasted values.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Wireless Receiver</string>
+    </dict>
+  </dict>
+</plist>

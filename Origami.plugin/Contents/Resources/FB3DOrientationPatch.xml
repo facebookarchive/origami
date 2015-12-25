@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>This is a convenience patch that breaks out a 3D orientation structure (from the Device Info patch) into pitch, roll, and yaw ports.
+      
+      
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>3D Orientation</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>input3DOrientation</key>
+      <dict>
+        <key>description</key>
+        <string>A structure containing "pitch", "roll", and "yaw" keys.</string>
+        <key>name</key>
+        <string>3D Orientation</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputPitch</key>
+      <dict>
+        <key>description</key>
+        <string>Pitch</string>
+        <key>name</key>
+        <string>Pitch</string>
+      </dict>
+      <key>outputRoll</key>
+      <dict>
+        <key>description</key>
+        <string>Roll</string>
+        <key>name</key>
+        <string>Roll</string>
+      </dict>
+      <key>outputYaw</key>
+      <dict>
+        <key>description</key>
+        <string>Yaw</string>
+        <key>name</key>
+        <string>Yaw</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

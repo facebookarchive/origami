@@ -1,0 +1,384 @@
+// (ctrl alt cmd O)
+// Export for Origami v1.1 - Julius Tarng
+// Based on bomberstudio + cemre's sketch-framer
+// - Exports all groups (append name with * to flatten subgroups) and layers (appended with +), similar to sketch-framer plugin
+// - Saves all assets to Sketch's temp directory under Origami Projects/[doc displayName]
+
+preflight();
+var debug = false;
+var origami_directory = "Origami Blueprints/" + [doc displayName].split(".sketch")[0] + ".origamiblueprint",
+    export_directory = NSTemporaryDirectory() + origami_directory, //temp one avoiding sandboxing
+    export_scale_factor = 1,
+    layers_metadata = [],
+    current_artboard = 0,
+    exported_layer_count = 0,
+    inside_top_level_group = false, //not artboard position shift
+    top_level_group_pos = {"x" : 0, "y" : 0},
+    layer_names = []; // to prevent conflicting filenames
+main();
+
+//
+// Main export functions
+//
+
+function main() {
+  loggle("========================= Export for Origami log =========================");
+  [doc showMessage:"Exporting for Origami"];
+
+  var layers = [[doc currentPage] layers],
+      fileManager = [NSFileManager defaultManager],
+      settings_filepath = export_directory + "/data.json",
+      settings = [[NSMutableDictionary alloc] init], // for data.json file
+      settings_exists = [fileManager fileExistsAtPath:settings_filepath];
+
+  if ([selection count] > 0) {
+    var has_top_level_group = false;
+    for (var i=0; i<[selection count]; i++) {
+      var s = [selection objectAtIndex:i];
+      if ([[s parentGroup] isMemberOfClass:[MSPage class]]) {
+        has_top_level_group = true;
+      }
+    }
+    if (has_top_level_group) {
+      layers = selection; // only override with selection if selecting an artboard/top level group
+    }
+  }
+
+  // Get scale factor
+  export_scale_factor = 1;
+
+  // Process layers
+  for (var i=0; i<[layers count]; i++) {
+    var layer = [layers objectAtIndex:i];
+    var group_name = "";
+    if (is_group(layer)) { 
+      group_name = [layer name];
+    }
+    if (![layer isMemberOfClass:[MSArtboardGroup class]]) {
+      inside_top_level_group = true;
+      top_level_group_pos = calculate_real_position_for(layer);
+    }
+    var p = process_layer(layer, 0, group_name);
+    if (p != undefined) {
+      layers_metadata.push(p);
+    }
+
+    // Reset hiding on all children after all exports so dimensions are correct for groups with hidden children
+    loggle("Finished processing layer<" + [layer name] + ">. Resetting hiding on all children");
+    for (var j=0; j<[[layer children] count]; j++) {
+      var child = [[layer children] objectAtIndex:j];
+      if ([child name].indexOf("@@hidden") > -1]) {
+        [child setIsVisible:false];
+        [child setName:[child name].split("@@hidden")[0])];
+      } 
+    }
+  }
+
+  [doc showMessage:"Exporting " + layer_names.length + " assets for Origami"];
+
+  // Write settings
+  [settings setValue:export_scale_factor forKey:@"scale"];
+  [settings setValue:layers_metadata forKey:@"layers"];
+  [settings setValue:exported_layer_count forKey:@"layer_count"];
+  var scaleJSON = [NSJSONSerialization dataWithJSONObject:settings options:NSJSONWritingPrettyPrinted error:nil];
+  scaleJSON = [[NSString alloc] initWithData:scaleJSON encoding:NSUTF8StringEncoding];
+  loggle("Making data.json file with contents: " + scaleJSON);
+  [scaleJSON writeToFile:settings_filepath atomically:true encoding:NSUTF8StringEncoding error:null];
+
+  // Print path for Origami use
+  log(export_directory);
+}
+
+function process_layer(layer, depth, artboard_name) {
+  var layer_data;
+
+  // Process groups (including artboards) and layers marked with +, and ungrouped layers outside of artboards
+  if (should_export_layer(layer) || (!is_group(layer) && (depth == 0) && !(should_ignore_layer(layer)))) {
+    // Duplicate name check
+    check_name_conflict(layer, depth, artboard_name);
+    layer_names.push(artboard_name + [layer name]);
+
+    if ([layer isVisible] == 0) { 
+      loggle("Layer hidden, showing layer addingnd adding hidden suffix");
+      layer_hidden = true;
+      [layer setIsVisible:true];
+      [layer setName:[layer name] + "@@hidden"];
+    }
+
+    var e = export_layer(layer, depth, artboard_name);
+    if (e != undefined) {
+      layer_data = e;
+    } 
+
+    // Recursively go through sublayers if group not flattened with *
+    if (is_group(layer) && !should_flatten_layer(layer) && !is_symbol(layer)) {
+      var sublayers = [layer layers];
+      var has_exportable_children = false;
+      var layers_holder = []
+      // Sketch returns sublayers in reverse, so we'll iterate backwards
+      for (var sub=([sublayers count] - 1); sub >= 0; sub--) {
+        var current = [sublayers objectAtIndex:sub];
+        var d = process_layer(current, depth+1, artboard_name);
+        if (d != undefined) {
+          layers_holder.push(d);
+          has_exportable_children = true;
+        }
+      }
+      if (has_exportable_children) {
+        if (e != undefined) { // if group itself had an exported png, add to sublayers
+          layers_holder.push(e)
+        }
+        layer_data = metadata_for(layer, layer);
+        layer_data.type = "group";
+        layer_data.layers = layers_holder;
+      }
+    }
+  }
+
+  return layer_data;
+}
+
+function export_layer(layer, depth, artboard_name) {
+  // Copy off-screen, out of artboard so it is not masked by artboard
+  var layer_copy = [layer duplicate];
+  [layer_copy removeFromParent];
+  [[doc currentPage] addLayers: [layer_copy]];
+  var frame = [layer_copy frame];
+  [frame setX: -999999];
+  [frame setY: -999999];
+  var included_layers = [];
+  var has_art = false;
+  var mask_layer;
+  var layer_data;
+
+  log_depth("Processing <" + [layer name] + "> of type <" + [layer className] + ">", depth);
+  if (is_group(layer) && !is_symbol(layer)) {
+    var sublayers = [layer_copy layers];
+    for (var sub = ([sublayers count] - 1); sub >= 0; sub--) {
+      var sublayer = [sublayers objectAtIndex:sub];
+
+      log_depth_core("Processing sublayer <" + [sublayer name] + ">", depth, " ");
+      // Check for mask
+      if ([sublayer hasClippingMask]) {
+        log_depth_core("Masking with <" + [sublayer name] + ">", depth, " ");
+        mask_layer = sublayer;
+      }
+      // If sublayer should be exported on its own
+      if((should_export_layer(sublayer) && !should_flatten_layer(layer)) || [sublayer isVisible] == 0) {
+        log_depth_core("Removing <" + [sublayer name] + ">", depth, " ");
+        [sublayer removeFromParent];
+      } else {
+        log_depth_core("Keeping <" + [sublayer name] + ">", depth, " ");
+        included_layers.push([sublayer name]);
+        has_art = true;
+      }
+
+    }
+    log_depth_core("Finished processing sublayers", depth, " ");
+  } else {
+    has_art = true;
+  }
+
+  log_depth("Has art: " + has_art, depth);
+
+  if (has_art) {
+    // Metadata
+    layer_data = metadata_for(layer, layer_copy);
+    layer_data.type = "layer";
+    exported_layer_count++;
+
+    // Export PNG
+    if (artboard_name !== "") {
+      artboard_name = "/" + sanitize_filename(artboard_name);
+    }
+    var path_to_file = export_directory + artboard_name + "/" + sanitize_filename([layer name]) + ".png";
+    log_depth("Exporting <" + path_to_file + "> including sublayers (" + included_layers.join(", ") + ")", depth);
+    var rect;
+    if (mask_layer) {
+      rect = [MSSliceTrimming trimmedRectForSlice:mask_layer];
+    } else {
+      rect = [MSSliceTrimming trimmedRectForSlice:layer_copy];
+    }
+    var slice = [MSExportRequest requestWithRect:rect scale:export_scale_factor];
+    [doc saveArtboardOrSlice:slice toFile:path_to_file];
+  } else {
+    log_depth("Did not export <" + [layer name] + ">, no image", depth);
+  }
+
+  [layer_copy removeFromParent];
+  return layer_data;
+}
+
+function metadata_for(layer, layer_copy) {
+  loggle("Getting metadata for " + [layer name]);
+  var gkrect = [GKRect rectWithRect:[MSSliceTrimming trimmedRectForSlice:layer_copy]],
+      position = calculate_real_position_for(layer),
+      x,y,w,h,
+      layer_hidden = [layer name].indexOf("@@hidden") > -1;
+
+  x = position.x;
+  y = position.y;
+  w = [gkrect width];
+  h = [gkrect height];
+
+  if ([layer isMemberOfClass:[MSArtboardGroup class]]) {
+    loggle("Resetting x and y to 0 because artboard");
+    x = 0;
+    y = 0;
+  }
+  if (inside_top_level_group) {
+    x-= top_level_group_pos.x;
+    y-= top_level_group_pos.y;
+    loggle("Shifting x by: " + top_level_group_pos.x);
+    loggle("Shifting y by: " + top_level_group_pos.y);
+  }
+  loggle("Metadata for <" + [layer name] + ">: { x:"+x+", y:"+y+", width:"+w+", height:"+h+"}");
+  return {
+    x: x,
+    y: y,
+    w: w,
+    h: h,
+    name : sanitize_filename([layer name]),
+    hidden : layer_hidden
+  };
+}
+
+function calculate_real_position_for(layer) {
+  var gkrect = [GKRect rectWithRect:[MSSliceTrimming trimmedRectForSlice:layer]],
+      absrect = [layer absoluteRect];
+  var rulerDeltaX = [absrect rulerX] - [absrect x],
+      rulerDeltaY = [absrect rulerY] - [absrect y],
+      GKRectRulerX = [gkrect x] + rulerDeltaX,
+      GKRectRulerY = [gkrect y] + rulerDeltaY;
+  return {
+    x: Math.round(GKRectRulerX),
+    y: Math.round(GKRectRulerY)
+  }
+}
+
+//
+// Helpers
+//
+function preflight() { 
+  var app_version = [NSApp applicationVersion].substr(0,1);
+  if (app_version < 3) {
+    alert("Export for Origami only supports Sketch 3 and above. You are running " + app_version, ". Please upgrade Sketch.");
+    return;
+  }
+}
+
+function combobox(msg, items, selectedItemIndex){
+  selectedItemIndex = selectedItemIndex || 0;
+
+  var combobox = [[NSComboBox alloc] initWithFrame:NSMakeRect(0,0,50,25)];
+  [combobox addItemsWithObjectValues:items];
+  [combobox selectItemAtIndex:selectedItemIndex];
+
+  var alert = [[NSAlert alloc] init];
+  [alert setMessageText:msg];
+  [alert addButtonWithTitle:'Save'];
+  [alert addButtonWithTitle:'Cancel'];
+  [alert setAccessoryView:combobox];
+
+  var responseCode = [alert runModal];
+  var combosel = [combobox indexOfSelectedItem];
+  var combovalue = [combobox stringValue];
+
+  return [responseCode, combosel, combovalue];
+}
+
+//
+// Layer Helpers
+//
+
+function should_ignore_layer(layer) {
+  return [layer name].slice(-1) == "-";
+}
+
+function should_flatten_layer(layer) {
+  return [layer name].slice(-1) == "*";
+}
+
+function should_make_layer_own_image(layer) {
+  return [layer name].slice(-1) == '+');
+}
+
+function should_export_layer(layer) {
+  return (is_group(layer) || should_make_layer_own_image(layer)) && !should_ignore_layer(layer);
+}
+
+function is_group(layer) {
+  return [layer isMemberOfClass:[MSLayerGroup class]] || [layer isMemberOfClass:[MSArtboardGroup class]]
+}
+
+function is_symbol(layer) {
+  return [layer parentOrSelfIsSymbol]; 
+}
+
+//
+// File helpers
+//
+
+function sanitize_filename(name) {
+  return name.replace(/(:|\/)/g ,"_").replace(/__/g,"_").replace("*","").replace("+","").replace("@@hidden",""); // TODO: replace spaces? /(\s|:|\/)/g
+}
+
+function check_name_conflict(layer, depth, artboard_name) {
+  var was_conflict = false;
+  if (array_contains(layer_names, artboard_name + [layer name])) {
+      was_conflict = true;
+      log_depth("Layer name conflict: <" + [layer name] + "> already exists in artboard <" + artboard_name + ">", depth);
+
+      // Preserve layer name modifiers + - *
+      var last_char = [layer name].slice(-1);
+      var has_modifier = should_ignore_layer(layer) || should_flatten_layer(layer) || should_make_layer_own_image(layer);
+      if (has_modifier) {
+        [layer setName:[layer name].split(last_char)[0]]; // Remove last_char
+      }
+      [layer setName:[layer name] + " copy"];
+      if (has_modifier) {
+        [layer setName:[layer name] + last_char];
+      }
+      log_depth("Renaming to: <" + [layer name] + ">", depth);
+
+      check_name_conflict(layer, depth, artboard_name);
+    }
+
+  return was_conflict;
+}
+
+//
+// Debug Helpers
+//
+
+function alert(msg, title){
+  var app = [NSApplication sharedApplication];
+  [app displayDialog:msg withTitle:title];
+}
+
+function log_depth(message, depth) {
+  log_depth_core(message, depth, ">");
+}
+
+function log_depth_core(message, depth, spacer) {
+  var padding = spacer;
+  for(var i=0; i<depth; i++) {
+    padding = padding + spacer;
+  }
+  loggle(padding + " " + message);
+}
+
+function loggle(message) {
+  if (debug) {
+    log(message);
+  }
+}
+
+function array_contains(array, object) {
+  for (i=0;i<array.length;i++) {
+    if (array[i] == object) {
+      return true;
+    }
+  }
+  return false;
+}
