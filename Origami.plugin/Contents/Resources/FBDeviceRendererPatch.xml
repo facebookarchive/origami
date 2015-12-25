@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>applePrivate</key>
+      <true/>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>This patch is used by the Layer patch to draw content on the connected iOS device running the Origami app. This patch is not meant to be used in any other cases. If you'd like to make your own patches that show up in the Origami app, base them on the Layer patch instead of this one.
+        
+        
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-215, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Device Renderer</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputXPosition</key>
+      <dict>
+        <key>description</key>
+        <string>X Position</string>
+        <key>name</key>
+        <string>X Position</string>
+      </dict>
+      <key>inputYPosition</key>
+      <dict>
+        <key>description</key>
+        <string>Y Position</string>
+        <key>name</key>
+        <string>Y Position</string>
+      </dict>
+      <key>inputZPosition</key>
+      <dict>
+        <key>description</key>
+        <string>Z Position</string>
+        <key>name</key>
+        <string>Z Position</string>
+      </dict>
+      <key>inputXRotation</key>
+      <dict>
+        <key>description</key>
+        <string>X Rotation</string>
+        <key>name</key>
+        <string>X Rotation</string>
+      </dict>
+      <key>inputYRotation</key>
+      <dict>
+        <key>description</key>
+        <string>Y Rotation</string>
+        <key>name</key>
+        <string>Y Rotation</string>
+      </dict>
+      <key>inputZRotation</key>
+      <dict>
+        <key>description</key>
+        <string>Z Rotation</string>
+        <key>name</key>
+        <string>Z Rotation</string>
+      </dict>
+      <key>inputImage</key>
+      <dict>
+        <key>description</key>
+        <string>Image</string>
+        <key>name</key>
+        <string>Image</string>
+      </dict>
+      <key>inputMaskImage</key>
+      <dict>
+        <key>description</key>
+        <string>Mask Image</string>
+        <key>name</key>
+        <string>Mask Image</string>
+      </dict>
+      <key>inputWidth</key>
+      <dict>
+        <key>description</key>
+        <string>Width</string>
+        <key>name</key>
+        <string>Width</string>
+      </dict>
+      <key>inputHeight</key>
+      <dict>
+        <key>description</key>
+        <string>Height</string>
+        <key>name</key>
+        <string>Height</string>
+      </dict>
+      <key>inputColor</key>
+      <dict>
+        <key>description</key>
+        <string>Color</string>
+        <key>name</key>
+        <string>Color</string>
+      </dict>
+      <key>inputAlpha</key>
+      <dict>
+        <key>description</key>
+        <string>Alpha</string>
+        <key>name</key>
+        <string>Alpha</string>
+      </dict>
+      <key>inputScale</key>
+      <dict>
+        <key>description</key>
+        <string>Scale</string>
+        <key>name</key>
+        <string>Scale</string>
+      </dict>
+      <key>inputAttachedRII</key>
+      <dict>
+        <key>description</key>
+        <string>Identifier for connected Render In Image patch</string>
+        <key>name</key>
+        <string>RII Identifier</string>
+      </dict>
+      <key>inputIterationCount</key>
+      <dict>
+        <key>description</key>
+        <string>Iteration Count</string>
+        <key>name</key>
+        <string>Iteration Count</string>
+      </dict>
+      <key>inputIterationIndex</key>
+      <dict>
+        <key>description</key>
+        <string>Iteration Index</string>
+        <key>name</key>
+        <string>Iteration Index</string>
+      </dict>
+      <key>inputFrameNumber</key>
+      <dict>
+        <key>description</key>
+        <string>Frame Number</string>
+        <key>name</key>
+        <string>Frame Number</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

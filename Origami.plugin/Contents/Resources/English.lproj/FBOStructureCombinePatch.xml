@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Merges two structures together. Indexed structures get appended to each other (second after the first), and keyed structures are merged with keys in the second structure overwriting duplicate keys in the first.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+Based on Kineme DataTools
+
+Copyright (c) 2011 Kosada, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+      <key>name</key>
+      <string>Structure Combine</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputStructure1</key>
+      <dict>
+        <key>description</key>
+        <string>The first structure</string>
+        <key>name</key>
+        <string>Structure 1</string>
+      </dict>
+      <key>inputStructure2</key>
+      <dict>
+        <key>description</key>
+        <string>The second structure</string>
+        <key>name</key>
+        <string>Structure 2</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputStructure</key>
+      <dict>
+        <key>description</key>
+        <string>The combined structure</string>
+        <key>name</key>
+        <string>Structure</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>
