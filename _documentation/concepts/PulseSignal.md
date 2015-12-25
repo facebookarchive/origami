@@ -12,10 +12,10 @@ nav:
     path: Iterators
 ---
 
-Pulses and signals are a core concept in Origami, especially for representing and toggling states. To understand them you must first understand how [States](../../basics/States) are represented by On/Off (also known as a boolean, shown in the interface as a checkbox, with a &#10003; when it's on).
+Pulses and signals are a core concept in Origami, especially for representing and toggling states. To understand them you must first understand how [States](../basics/States.html) are represented by On/Off (also known as a boolean, shown in the interface as a checkbox, with a &#10003; when it's on).
 
 ## Signals = On or Off
-A signal represents an on/off state. A good example of a signal is the [Switch](../../patches/Switch) patch's On/Off output.
+A signal represents an on/off state. A good example of a signal is the [Switch](../patches/Switch.html) patch's On/Off output.
 
 Below, the Switch is off, and it passes that Off signal to the Layer's Enable port:
 
@@ -227,9 +227,9 @@ To fix this, you could manually make sure to turn off the Turn On signal, but to
 
 
 ## Creating pulses
-How do you create pulses? Most situations where you need a pulse are with [interactions](../../basics/Interactions), e.g. a single tap, or a key press. The [Interaction 2](../../patches/Interaction-2) patch, for example, will output a single pulse from the Tap port when you tap on the viewer (whereas the Down port will output a continous signal depending on how long your finger is down).
+How do you create pulses? Most situations where you need a pulse are with [interactions](../basics/Interactions.html), e.g. a single tap, or a key press. The [Interaction 2](../patches/Interaction-2.html) patch, for example, will output a single pulse from the Tap port when you tap on the viewer (whereas the Down port will output a continous signal depending on how long your finger is down).
 
-Another common situation is when you want to know when a Signal changes, e.g. if you want to turn on a Switch after another Switch turns off. In this case, you'd use a [Pulse](../../patches/Pulse) <span class="key letter inline">U</span> patch.
+Another common situation is when you want to know when a Signal changes, e.g. if you want to turn on a Switch after another Switch turns off. In this case, you'd use a [Pulse](../patches/Pulse.html) <span class="key letter inline">U</span> patch.
 
 In this example below, when Switch 1 turns off, Switch 2 will turn on:
 
@@ -283,4 +283,4 @@ In this example below, when Switch 1 turns off, Switch 2 will turn on:
     </li>
   </ul>
 
-You can even combine Pulse with [Delay](../../patches/Delay) <span class="key letter inline">D</span> patches to create a Switch that turns itself off a few seconds after it's turned on.
+You can even combine Pulse with [Delay](../patches/Delay.html) <span class="key letter inline">D</span> patches to create a Switch that turns itself off a few seconds after it's turned on.

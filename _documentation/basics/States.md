@@ -12,13 +12,13 @@ nav:
     path: Animations
 ---
 
-Every prototype has multiple states it can transition between. In Origami, Switch patches help keep track of which state you are in. They are like light switches and can be toggled with [interaction patches](../Interactions).
+Every prototype has multiple states it can transition between. In Origami, Switch patches help keep track of which state you are in. They are like light switches and can be toggled with [interaction patches](../basics/Interactions.html).
 
 ## State patches
 
   <ul class="bulleted-list">
     <li>
-      [Switch &rarr;](../../patches/Switch) <span class="key modifier inline">&#8679;</span><span class="key letter inline">S</span>
+      [Switch &rarr;](../patches/Switch.html) <span class="key modifier inline">&#8679;</span><span class="key letter inline">S</span>
       <br>
       The Switch patch is like a light switch: turning it on keeps it on, and turning it off keeps it off. They are helpful to build simple two-state interactions, e.g. showing and hiding comments in a popover.
       <br>
@@ -70,15 +70,15 @@ Every prototype has multiple states it can transition between. In Origami, Switc
         </li>
       </ul>
       <br>
-      Multiple Switch patches can combined with [Logic patches](../../patches/Logic) to build on top of each other, e.g. opening a composer with different attachment options which the user can toggle.
+      Multiple Switch patches can combined with [Logic patches](../patches/Logic.html) to build on top of each other, e.g. opening a composer with different attachment options which the user can toggle.
       <br><br>
     </li>
     <li>
-      [Index Switch &rarr;](../../patches/Index-Switch)
+      [Index Switch &rarr;](../patches/Index-Switch.html)
       <br>
       Index Switch patches are useful for mutually exclusive states that cannot coexist, e.g. a tab bar.
       <br><br>
-      Index Switches are commonly used with [Multiplexers](../../patches/Multiplexer) to pass different values depending the state. For example, if you wanted to change a navigation bar title between 3 states:
+      Index Switches are commonly used with [Multiplexers](../patches/Multiplexer.html) to pass different values depending the state. For example, if you wanted to change a navigation bar title between 3 states:
       <ul class="patch-chain">
         <li>
           <div class="patch-block">
@@ -129,7 +129,7 @@ Every prototype has multiple states it can transition between. In Origami, Switc
       </ul>
     </li>
     <li>
-      [Counter 2 &rarr;](../../patches/Counter-2)
+      [Counter 2 &rarr;](../patches/Counter-2.html)
       <br>
       Counter patches are useful for mutually exclusive states that cannot coexist, and increment in a fixed order e.g. an onboarding flow.
       <ul class="patch-chain">

@@ -30,7 +30,7 @@ The two main ways to do this are:
       <br>
       Toggling the Enable port on a Layer will cause it to not be displayed in the Viewer/Origami Live. This is handy for when a Layer is off the screen. Due to the way QC optimizes patches to only run if they are connected to an enabled blue consumer patch, this will also disable all the patches that are connected to it (unless they are connected to another Layer), including Layer Groups, which gives a performance boost.
       <br><br>
-      Tip: Use a [Delay](../../patches/Delay) patch connected to Enable (with Delay Decreasing) to delay the disabling of a Layer if you are animating it off the screen.
+      Tip: Use a [Delay](../patches/Delay.html) patch connected to Enable (with Delay Decreasing) to delay the disabling of a Layer if you are animating it off the screen.
       <br><br>
     </li>
     <li>

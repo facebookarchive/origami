@@ -17,19 +17,19 @@ Animation patches in Origami are designed to be fluid and reversible: they take 
 ## Animation patches
   <ul class="bulleted-list">
     <li>
-      [Pop Animation &rarr;](../../patches/Pop-Animation) <span class="key letter inline">A</span>
+      [Pop Animation &rarr;](../patches/Pop-Animation.html) <span class="key letter inline">A</span>
       <br>
       Pop Animation allows you to use the natural bouncy animations that power Paper, and easily pass values to your developers with the the [Pop](https://github.com/facebook/pop) framework for iOS, [Rebound](http://facebook.github.io/rebound/) for Android, and [Rebound JS](https://github.com/facebook/rebound-js) for the web.
       <br><br>
     <li>
-      [Classic Animation &rarr;](../../patches/Classic-Animation)
+      [Classic Animation &rarr;](../patches/Classic-Animation.html)
       <br>
       Classic Animation allows you to specify a duration, provides more traditional curves, like linear, ease-in, and ease-out.
     </li>
   </ul>
 
 ## Animating values
-In combination with an [Interaction](../../patches/Interaction-2) or a [Switch](../../patches/Switch) patch, which output 0 or 1, an Animation patch can tween that value so it smoothly animates from 0 to 1, and vice versa.
+In combination with an [Interaction](../patches/Interaction-2.html) or a [Switch](../patches/Switch.html) patch, which output 0 or 1, an Animation patch can tween that value so it smoothly animates from 0 to 1, and vice versa.
 
 This example below will scale a Layer from 0 to 1 (or 0% to 100%) when you touch down, with a reversible and bouncy animation:
 
@@ -87,7 +87,7 @@ This example below will scale a Layer from 0 to 1 (or 0% to 100%) when you touch
 ## Specifying Transitions
 Animating from 0 to 1 is simple, but what about animating between other values?
 
-[Transition](../../patches/Transition) <span class="key letter inline">T</span> patches let you transform that 0/1 into any start/end value:
+[Transition](../patches/Transition.html) <span class="key letter inline">T</span> patches let you transform that 0/1 into any start/end value:
 
   <div class="patch-block">
     <div class="patch processor">

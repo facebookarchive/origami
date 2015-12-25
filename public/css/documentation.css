@@ -77,6 +77,10 @@ ul.docs ul li {
 	color: #585858;
 }
 
+.doc-content strong, .doc-content b {
+	font-weight: 500;
+}
+
 .doc-content a:hover {
 	color: black;
 }
@@ -144,6 +148,7 @@ div.patch.unlabeled {
 
 div.patch.unlabeled ul {
 	padding: 5px;
+	padding-bottom: 4px;
 }
 
 div.patch h3 {

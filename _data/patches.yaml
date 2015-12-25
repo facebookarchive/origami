@@ -121,7 +121,14 @@ classic-animation:
     - name: Duration
       desc: The length of the animation in seconds.
     - name: Curve
-      desc: The animation curve to animate with.
+      desc: |
+        The animation curve to animate with. The options are:
+
+        1. Linear
+        1. Quadratic In, Out, In & Out
+        1. Cubic In, Out, In & Out
+        1. Exponential In, Out, In & Out
+        1. Sinusoidal In, Out, In & Out
   outputs:
     - name: Progress
       desc: The current value of the animation. Usually between 0 and 1.
@@ -557,7 +564,7 @@ pulse:
   desc: |
     Given a state, outputs On (lasting for a frame) whenever the state turns on (leading) or off (trailing).
 
-    Read more about [Pulses & Signals](../../concepts/PulseSignal).
+    Read more about [Pulses & Signals](../concepts/PulseSignal.html).
   inputs:
     - name: Input Signal
       desc: The number of seconds between pulses.
@@ -1129,7 +1136,7 @@ viewer-size:
 wireless-broadcaster:
   name: Wireless Broadcaster
   type: consumer
-  desc: Sends values wirelessly through the composition. Name the value by double clicking the patch and typing in a new name. Then add a [Wireless Receiver](../Wireless-Receiver) patch and tell it which value to receive in its Settings panel. The composition needs to be running for the Settings panel to display the broadcasted values.
+  desc: Sends values wirelessly through the composition. Name the value by double clicking the patch and typing in a new name. Then add a [Wireless Receiver](Wireless-Receiver.html) patch and tell it which value to receive in its Settings panel. The composition needs to be running for the Settings panel to display the broadcasted values.
   inputs:
     - name: Value
       desc: The value to send wirelessly to another place in the composition.
@@ -1137,7 +1144,7 @@ wireless-broadcaster:
 wireless-receiver:
   name: Wireless Receiver
   type: producer
-  desc: Outputs values it receives wirelessly in the composition. Broadcast a value with the [Wireless Broadcaster](../Wireless-Broadcaster) patch and use this patch to output it. Select the broadcasted value you'd like to output in the Settings panel for this patch. The composition needs to be running for the Settings panel to display the broadcasted values.
+  desc: Outputs values it receives wirelessly in the composition. Broadcast a value with the [Wireless Broadcaster](Wireless-Broadcaster.html) patch and use this patch to output it. Select the broadcasted value you'd like to output in the Settings panel for this patch. The composition needs to be running for the Settings panel to display the broadcasted values.
   outputs:
     - name: Value
       desc: The value received from the Wireless Broadcaster it's paired with.
@@ -1278,11 +1285,11 @@ iterator:
   desc: |
     Iterators are an easy way to minimize repetitive patches that do the same thing. They are similar to loops in programming. A common reason to use Iterators is to display many of the same Layers, with different attributes (e.g. a News Feed). This way if you update one Layer you update all of them at the same time &mdash; it will make your prototyping much faster.
 
-    Enter the Iterator by double-clicking on it (or &#8984; + &darr;) and place your patches within. Use [Iterator Info](../Iterator-Info) to get current iteration index numbers to do different things with your patches inside.
+    Enter the Iterator by double-clicking on it (or &#8984; + &#9660;) and place your patches within. Use [Iterator Info](Iterator-Info.html) to get current iteration index numbers to do different things with your patches inside.
 
     Caveat &mdash; you can only publish values out if there are no blue consumer patches within.
 
-    Read more about working with Iterators [here](../../concepts/Iterators).
+    Read more about working with Iterators [here](../concepts/Iterators.html).
 
 iterator-info:
   name: Iterator Info
@@ -1295,9 +1302,9 @@ iterator-info:
     - name: Iterations
       desc: The total number times the containing Iterator will repeat.
   desc: |
-    Used inside [Iterators](../Iterator). Provides information to use to do different things with patches depending on the iteration index.
+    Used inside [Iterators](Iterator.html). Provides information to use to do different things with patches depending on the iteration index.
 
-    Caveat &mdash; in the editor, only the last iteration index is visible for debugging. Read more about Iterators [here](../../concepts/Iterators).
+    Caveat &mdash; in the editor, only the last iteration index is visible for debugging. Read more about Iterators [here](../concepts/Iterators.html).
 
 
 sample-and-hold:
@@ -1338,4 +1345,4 @@ queue:
 
     The values stored do not persist across document restarts.
 
-    Typically used in an iterator to grab a value across each iteration. Match the queue size to the iterator count, enable filling, and pass the queue out of the iterator to use it. Read more about using Queues in the [Iterator concept](../../concepts/Iterators).
+    Typically used in an iterator to grab a value across each iteration. Match the queue size to the iterator count, enable filling, and pass the queue out of the iterator to use it. Read more about using Queues in the [Iterator concept](../concepts/Iterators.html).
