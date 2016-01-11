@@ -1,7 +1,8 @@
 ---
-title: Text Layer
+title: Logic
 layout: documentation
 css: /public/css/documentation.css
 ---
 
-{% include patch.html patch="textlayer" %}
+{% include patch.html patch="logic" %}
+

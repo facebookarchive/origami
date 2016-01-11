@@ -25,7 +25,7 @@ a {
 }
  
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 1.28;
 }
@@ -36,13 +36,13 @@ p {
 }
 
 h2 {
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 39px;
 	font-weight: normal;
 }
 
 h3 {
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 29px;
 	font-weight: normal;
 }

@@ -1,6 +1,12 @@
 /* @override 
 	http://localhost:4000/public/css/documentation.css */
 
+#docs-scrolling-wrapper {
+	width: 100%;
+	overflow-x: scroll;
+	padding: 36px 0;
+}
+
 #docs-wrapper {
 	max-width: 900px;
 	min-width: 768px;
@@ -14,6 +20,7 @@ ul.docs {
 	float: left;
 	line-height: 1.5em;
 	font-size: 13px;
+	border-right: 1px solid #e5e5e5;
 }
 
 ul.docs ul {
@@ -47,26 +54,49 @@ ul.docs ul li {
 }
 
 .doc-content {
-	padding: 0 48px;
-	margin: 36px 0 36px 200px;
+	padding-left: 48px;
+	margin-right: 48px;
+	margin-left: 199px; /*-1px left to overlap border for varying content height*/
 	border-left: 1px solid #e5e5e5;
 	min-height: calc(100vh - 126px);
+	position: relative;
 }
 
 .doc-content ul {
 	list-style-type: none;
 }
 
+.doc-content * {
+	-webkit-user-select: text;
+	cursor: auto;
+}
+
 .doc-content p {
 	font-size: 14px;
 	line-height: 18px;
 	color: #585858;
-	/*max-width: 530px;*/
+}
+
+.doc-content strong, .doc-content b {
+	font-weight: 500;
+}
+
+.doc-content a:hover {
+	color: black;
+}
+
+.doc-content a.action-button:hover {
+	color: rgb(0, 114, 255);
 }
 
 div.patch-block {
 	padding-top: 16px;
 	padding-bottom: 16px;
+}
+
+div.patch-block * {
+	-webkit-user-select: none;
+	cursor: default;
 }
 
 div.patch {
@@ -92,7 +122,7 @@ div.patch.producer {
 }
 
 div.patch * {
-	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+	font-family: 'HelveticaNeue-Bold', 'Helvetica Neue', Helvetica, sans-serif !important;
 	font-size: 11px;
 	line-height: 1.5em;
 }
@@ -110,7 +140,15 @@ div.patch ul {
 /* Style ports */
 div.patch ul li span {
     list-style-position: inside;
-    font-size: 12px;
+}
+
+div.patch.unlabeled {
+	display: inline-flex;
+}
+
+div.patch.unlabeled ul {
+	padding: 5px;
+	padding-bottom: 4px;
 }
 
 div.patch h3 {
@@ -123,11 +161,20 @@ div.patch h3 {
 	border-top-right-radius: 4px;
 }
 
+div.patch.unlabeled h3 {
+	order: 1;
+	align-self: center;
+	text-align: center;
+	background: none;
+	padding: 0;
+}
+
 div.patch ul.inputs {
 	text-align: left;
 	float: left;
 	position: relative;
 	padding-right: 14px;
+	order: 0;
 }
 
 div.patch ul.outputs {
@@ -136,22 +183,127 @@ div.patch ul.outputs {
 	position: relative;
 	float: right;
 	padding-left: 14px;
+	order: 2;
+}
+
+div.patch ul.outputs li.published:after,
+div.patch ul.inputs li.published:after {
+	background: rgb(70, 211, 68);
 }
 
 div.patch ul.inputs li {
-	padding-left: 13px;
-    background: url('../images/port-2x.png') left center no-repeat;
-    background-size: 10px 16px;
+	padding-left: 13px;	
+  position: relative;
+}
+
+
+div.patch ul.inputs li:after,
+div.patch ul.outputs li:after {
+	content: " ";
+	display: block;
+	background: white;
+	border-radius: 6px;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	top: 5px;
+}
+
+div.patch ul.inputs li:after {
+	left: 2px;
 }
 
 div.patch ul.outputs li {
 	padding-right: 13px;
-    background: url('../images/port-2x.png') right center no-repeat;
-    background-size: 10px 16px;
+  position: relative;
+}
+
+div.patch ul.outputs li:after {
+	right: 2px;
+}
+
+div.patch span.patch-value {
+	opacity: .5;
+}
+
+/* Patch value animations */
+
+/* Flicker super fast */
+span.patch-value.flicker {
+	 animation: flicker .25s linear infinite;
+}
+
+/* Flicker steadily */
+span.patch-value.repeating-signal {
+	 animation: flicker 3s linear infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  51% { opacity: .5; }
+  100% { opacity: .5; }
+}
+
+/* Flash on once every x seconds */
+span.patch-value.repeating-pulse {
+	 animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: .5; }
+  10% { opacity: .5; }
+  11% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Style a chain of patches */
+ul.patch-chain {
+	display: inline-flex;
+}
+
+@media only screen and (min-width: 768px) {
+	ul.patch-chain {
+		overflow-x: scroll;
+	}
+}
+
+ul.patch-chain > li {
+	margin-right: 10px;
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+ul.patch-chain > li:last-child {
+	margin-right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	ul.patch-chain > li:last-child {
+		padding-right: 48px;
+	}
+}
+
+ul.patch-chain .unlabeled {
+	margin-top: 38px;
+}
+
+.cable {
+	background-color: rgb(254, 186, 1);
+	top: 10px;
+	left: 100%;
+	margin-top: 1px;
+	margin-left: -12px;
+	width: 34px;
+	height: 4px;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 1;
+	-webkit-transform-origin: left center;
 }
 
 h1 {
-	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 30px;
 	font-weight: normal;
 	margin-bottom: .8em;
@@ -167,7 +319,14 @@ h2 {
 	margin-bottom: 0.6em;
 	padding: 0;
 	font-weight: normal;
-	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h6 {
+  font: 12px "HelveticaNeue-Medium", 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  padding-top: 15px;
 }
 
 dl {
@@ -316,7 +475,6 @@ hr {
 	display: inline-block;
 	color: rgba(0,0,0,0.7);
 	font: 16px "HelveticaNeue", 'Helvetica Neue', Helvetica, sans-serif;
-	/*border: 1px solid rgba(0, 0, 0, .3);*/
 	border-radius: 2px;
 	background-color: rgba(0,0,0,0.07);
 	text-align: center;
@@ -326,25 +484,241 @@ hr {
   width: 1.9em;
 }
 
-/*.key.letter {*/
-	/*text-transform: uppercase;*!/
-	width: 1.8em;
-}*/
-
 .key.modifier {
 	width: 2.3em;
 }
 
-.bulleted-list li {
+.key.inline {
+	font-size: 14px;
+	margin-top: -2px;
+	margin-bottom: -2px;
+	/*vertical-align: bottom;*/
+	line-height: 1em;
+	height: auto;
+	width: 1.8em;
+	padding: 4px 0;
+}
+
+.bulleted-list > li {
   list-style-type: disc;
 	color: rgba(0,0,0,0.65);
 	font-size: 14px;
 	line-height: 20px;
+	margin-bottom: 8px;
 }
 
-h6 {
-  font: 12px "HelveticaNeue-Medium", 'Helvetica Neue', Helvetica, sans-serif;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  padding-top: 15px;
+/* Interface Illustration */
+.interface-preview {
+	position: relative;
+	width: 500px;
+	height: 250px;
+	margin-bottom: 15px;
 }
+
+.interface-window {
+	position: absolute;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2), 0 0 0 .5px rgba(0,0,0,.18);
+	overflow: hidden;
+	background: white;
+}
+
+.interface-toolbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 20px;
+	box-shadow: 0 0 0 .5px rgba(0,0,0,.2);
+	background: #E8E6E8;
+	padding-top: 4px;
+	font-size: 10px;
+	font-family: "SF UI Text", "HelveticaNeue-Medium";
+	text-align: center;
+}
+
+.interface-editor {
+	background: #333;
+	width: 300px;
+	height: 240px;
+}
+
+.interface-editor .patch {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	padding-top: 20px;
+	margin: 0;
+	box-shadow: 0 0 0 .5px rgba(0,0,0,.2);
+}
+
+.interface-editor .cable {
+	margin: 0;
+	z-index: 0;
+}
+
+.interface-viewer {
+	background: white;
+	width: 150px;
+	height: 240px;
+	left: 310px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+
+.interface-viewer-phone {
+	width: 90px;
+	height: 180px;
+	background: #111;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.interface-viewer-phone-screen {
+	width: 82px;
+	height: 140px;
+	background: #29CCFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.interface-inspector {
+	width: 70px;
+	height: 100px;
+	left: 220px;
+	top: 130px;
+	background: #ECECEC;
+	padding: 5px;
+	padding-top: 25px;
+}
+
+.interface-inspector-input {
+	width: 40px;
+	height: 6px;
+	margin-left: 15px;
+	margin-bottom: 4px;
+}
+
+.interface-library {
+	width: 70px;
+	height: 140px;
+	left: 10px;
+	top: 90px;
+	background: #ECECEC;
+	padding: 5px;
+	padding-top: 25px;
+}
+
+.interface-library-list {
+	width: 100%;
+	height: 55px;
+	margin-bottom: 5px;
+}
+
+.interface-library-docs {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 5px;
+}
+
+.interface-library-search {
+	width: 100%;
+	height: 6px;
+}
+
+.interface-input {
+	background: white;
+	box-shadow: 0 0 0 .5px rgba(0,0,0,.1);
+}
+
+/* Pulse and Signal graph illustration */
+.pulse-graph {
+	position: relative;
+	width: 320px;
+	height: 200px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	margin: 30px 0 50px;
+}
+
+.pulse-graph-line {
+	background: red;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+
+.pulse-graph-x-axis {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.pulse-graph-y-axis-label {
+	position: absolute;
+	left: 0;
+}
+
+.pulse-graph-y-axis-label.top {
+	position: absolute;
+	top: 0;
+}
+
+.pulse-graph-y-axis-label.bottom {
+	bottom: 10px;
+}
+
+/* Pulse frame illustration */
+.frame-reel {
+	white-space: nowrap;
+	margin: 30px 0;
+}
+
+.frame {
+	width: 100px;
+	background: #EEE;
+	margin-right: 10px;
+	border-radius: 3px;
+	display: inline-block;
+	text-align: center;
+	font-size: 19px;
+	padding: 30px 0;
+}
+
+.frame.off {
+	color: #CCC;
+}
+
+.frame.selected {
+	border: 2px solid #CCC;
+}
+
+/* Footer nav between docs */
+#doc-footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0 20px;
+}
+
+#doc-footer a {
+	font-weight: normal;
+}
+
+#doc-footer-prev {
+	color: #777;
+}
+
+#doc-footer-next a {
+	color: rgb(0, 114, 255)
+}
+
+/* Vimeo embed */
+.vimeo-embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .vimeo-embed-container iframe, .vimeo-embed-container object, .vimeo-embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
