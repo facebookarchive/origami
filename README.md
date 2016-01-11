@@ -27,7 +27,7 @@ Troubleshooting
 If you continually get the following error:
 
 ```
-Origami has been install to the wrong location(local library).Please uninstall origami using the uninstaller and reinstall from origami.facebook.com
+Origami has been installed to the wrong location (local library). Please uninstall Origami using the uninstaller and reinstall from origami.facebook.com
 ```
 
 Please manually move everything in `/Library/Graphics` to `~/Library/Graphics`. Open both folders in Terminal by pasting the following command:
