@@ -21,6 +21,22 @@ ln -s `pwd`/origami/Origami.plugin ~/Library/Graphics/Quartz\ Composer\ Patches
 ln -s `pwd`/origami/Origami ~/Library/Graphics/Quartz\ Composer\ Patches
 ```
 
+Troubleshooting
+--------
+
+If you continually get the following error:
+
+```
+Origami has been install to the wrong location(local library).Please uninstall origami using the uninstaller and reinstall from origami.facebook.com
+```
+
+Please manually move everything in `/Library/Graphics` to `~/Library/Graphics`. Open both folders in Terminal by pasting the following command:
+
+```
+open /Library/Graphics
+open ~/Library/Graphics
+```
+
 Feedback
 --------
 Your feedback is important in making Origami better – feel free to open an [Issue](https://github.com/facebook/origami/issues) here on GitHub or post in our [community](https://www.facebook.com/groups/origami.community/).
