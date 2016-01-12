@@ -84,7 +84,7 @@ Origami is built on Quartz Composer, a graphics visualization application by App
   Patch types:
   <ul class="bulleted-list">
     <li>**Black (Processor)** patches take inputs and process them to create various outputs.</li>
-    <li>**Purple (I)** patches are similar to processors, but typically provide [interactions](basics/Interactions.html) (e.g. Interaction 2, Swipe, Keyboard...) from the viewer.</li>
+    <li>**Purple (Provider)** patches are similar to processors, but typically provide [interactions](basics/Interactions.html) (e.g. Interaction 2, Swipe, Keyboard...) from the viewer.</li>
     <li>**Blue (Consumer)** patches are what's displayed in the viewer.</li>
     <li>Patches must be connected to a Consumer (like a Layer) to work. This helps optimize the performance of your prototype.</li>
   </ul>
