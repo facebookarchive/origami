@@ -73,7 +73,7 @@ ul.docs ul li {
 
 .doc-content p {
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 20px;
 	color: #585858;
 }
 
@@ -504,7 +504,7 @@ hr {
 	color: rgba(0,0,0,0.65);
 	font-size: 14px;
 	line-height: 20px;
-	margin-bottom: 8px;
+	margin-bottom: 10px;
 }
 
 /* Interface Illustration */

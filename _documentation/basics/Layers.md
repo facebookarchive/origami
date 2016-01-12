@@ -12,9 +12,9 @@ nav:
     path: Interactions
 ---
 
-[Layers](../patches/Layer.html) help draw to the viewer. They work like layers in Sketch and Photoshop: every layer has style attributes (e.g. position, size, an Image or Color to show...), can be different types (see list below), and can be layered on top of each other.
+[Layers](../patches/Layer.html) show content, like images, in the viewer. They work like layers in Sketch and Photoshop: every layer has style attributes (e.g. position, size, an Image or Color to show...), can be different types (see list below), and can be layered on top of each other.
 
-Add a layer with the patch library <span class="key modifier inline">&#8984;</span><span class="key letter inline">&#9166;</span>, or their [keyboard shortcuts](../workflow/KeyboardShortcuts.html).
+Add a layer with the patch library <span class="key modifier inline">&#8984;</span><span class="key letter inline">&#9166;</span>, or their [keyboard shortcuts](../workflow/KeyboardShortcuts.html). Quickly add an image as a layer by dragging and dropping the image on to the Editor.
 
 ## Layer patches
   <ul class="bulleted-list">
@@ -33,11 +33,11 @@ Add a layer with the patch library <span class="key modifier inline">&#8984;</sp
     <li>
       [Fill Layer &rarr;](../patches/Fill-Layer.html)
       <br>
-      Completely fill the containing Layer Group with a color. Similar to paint bucket in Photoshop.
+      Completely fill the containing Layer Group with a color.
     </li>
   </ul>
 ## Layer position
-Layers in Origami are positioned relative to the center of the viewer by default, where the center of the viewer is (x: 0, y: 0). You can change the Anchor Position from center to top left, but be aware most patches (like Scroll) expect Layers to remain centered.
+Layers in Origami are positioned in the center by default. You can easily position the layer in different corners of the layer group by changing the Anchor Position. Be aware that some patches (like Scroll) expect Layers to have a center anchor position.
 
 <div class="coord-example">
   <div class="dot dot-center dot-center-y dot-center-x"></div>
@@ -50,14 +50,16 @@ Layers in Origami are positioned relative to the center of the viewer by default
   <div class="label dot-bottom-left dot-bottom dot-left">-150, -200</div>
 </div>
 
-X Position behaves like Sketch/Photoshop, where increasing it moves right, and decreasing moves left. Y Position, however, behaves differently: increasing it moves up, and decreasing moves down.
+X Position behaves like Sketch and Photoshop, where increasing it moves right, and decreasing moves left. Y Position is reversed: increasing it moves up, and decreasing moves down.
 
 Read more about the [Coordinate System](../concepts/Coordinates.html).
 
 ## Layer order
-Unlike the other attributes of a Layer, the order is determined with a dropdown at the top right of the Patch (instead of with an input). You can also change the order by selecting the layer and hitting <span class="key modifier inline">&#8984;</span><span class="key letter inline">[</span> or <span class="key modifier inline">&#8984;</span><span class="key letter inline">]</span>.
+Unlike the other attributes of a Layer, the order is specified with a dropdown at the top right of the Patch. You can also change the order by selecting the layer and hitting <span class="key modifier inline">&#8984;</span><span class="key letter inline">[</span> or <span class="key modifier inline">&#8984;</span><span class="key letter inline">]</span>.
 
-To dynamically change the order of a Layer, simply tweak the Z Position by a fraction (e.g. +/-0.0001).
+To change the order of a Layer using patches, simply tweak the Z Position by a small amount (like 0.0001 pixels).
 
 ## Layer Groups
-[Layer Groups](../patches/Layer-Group.html) help you organize your Layers together. Create one from the patch library or simply hit <span class="key letter inline">G</span> (tip: hover over an image patch to group that image and inherit its size). You can double-click or <span class="key modifier inline">&#8984;</span><span class="key letter inline">&#9660;</span> to get into a Layer Group, and click **Edit Parent** in the toolbar or <span class="key modifier inline">&#8984;</span><span class="key letter inline">&#9650;</span> to exit a Layer Group.
+[Layer Groups](../patches/Layer-Group.html) help you organize your Layers together. Create one from the patch library or simply hit <span class="key letter inline">G</span> (tip: you can do this while hovered over an image patch to quickly group it). You can double-click or <span class="key modifier inline">&#8984;</span><span class="key letter inline">&#9660;</span> to get into a Layer Group, and click **Edit Parent** in the toolbar or <span class="key modifier inline">&#8984;</span><span class="key letter inline">&#9650;</span> to exit a Layer Group.
+
+Make sure to group layers whenever you want to animate multiple layers together. For example, if you're sliding up a window with multiple layers inside of it, putting those layers in a layer group will let you just animate up that one group up instead of needing to have cables connected to several different layers. 

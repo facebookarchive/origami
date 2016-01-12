@@ -12,7 +12,7 @@ nav:
     path: Animations
 ---
 
-Every prototype has multiple states it can transition between. In Origami, Switch patches help keep track of which state you are in. They are like light switches and can be toggled with [interaction patches](../basics/Interactions.html).
+Every prototype has multiple states it can transition between. Origami has several patches to help you manage these states.
 
 ## State patches
 
@@ -20,7 +20,7 @@ Every prototype has multiple states it can transition between. In Origami, Switc
     <li>
       [Switch &rarr;](../patches/Switch.html) <span class="key modifier inline">&#8679;</span><span class="key letter inline">S</span>
       <br>
-      The Switch patch is like a light switch: turning it on keeps it on, and turning it off keeps it off. They are helpful to build simple two-state interactions, e.g. showing and hiding comments in a popover.
+      The Switch patch works like a light switch. Flipping it when it's on will turn it off, and when it's off flipping it will turn it on. Switches help you build simple two-state interactions. For example you might have a Switch managing whether a photo is full screen or not or whether a modal view is on screen.
       <br>
       <ul class="patch-chain">
         <li>
@@ -46,7 +46,8 @@ Every prototype has multiple states it can transition between. In Origami, Switc
             <div class="patch processor">
               <h3>Switch</h3>
               <ul class="inputs">
-                <li>Turn On <span class="patch-value">&#10003;</span></li>
+                <li>Flip <span class="patch-value">&#10003;</span></li>
+                <li>Turn On</li>
                 <li>Turn Off</li>
               </ul>
               <ul class="outputs">
@@ -70,8 +71,6 @@ Every prototype has multiple states it can transition between. In Origami, Switc
         </li>
       </ul>
       <br>
-      Multiple Switch patches can combined with [Logic patches](../patches/Logic.html) to build on top of each other, e.g. opening a composer with different attachment options which the user can toggle.
-      <br><br>
     </li>
     <li>
       [Index Switch &rarr;](../patches/Index-Switch.html)
