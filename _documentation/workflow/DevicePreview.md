@@ -31,13 +31,5 @@ Sometimes the Origami Live may not reflect the composition you want, or any comp
 
 ## Performance
 
-Origami Live can run your prototypes at 60 fps by sending images from Quartz Composer on the Mac to the device only when necessary. If the images aren't frequently changing, Origami only needs to send small bits of information over USB every frame, like the positions of layers that are currently moving for example.
-
-Some tips to get your prototypes running faster:
-
-<ul class="bulleted-list">
-	<li>Make sure the Image outputs of your Layer Groups are directly connected to Layer patches (or the Viewer patch). Passing the image of a Layer Group through another patch (like Gaussian Blur) will make it so every time that image changes - either by changing the blur or by making any change to any layer inside the group - will cause it to send a new image to the device. You can try to fake a blur animation by fading a blurred layer on top of the non-blurred one.</li>
-	<li>Inline Values are helpful when you're building your prototype, but take a lot of processing power that would otherwise be used to speed up Origami Live. You can toggle Inline Values on and off in the Origami menu.</li>
-	<li>Avoid using the Enable port on Layers. Each time a layer is enabled, the list of layers gets regenerated on the device which can take some time. Use the Opacity port to hide and show layers instead.</li>
-	<li>Avoid animating the Color port on Layers.</li>
-</ul>
+Learn how to improve the frame rate of your Origami Live prototypes on the [performance](../workflow/Performance.html)
+page.
