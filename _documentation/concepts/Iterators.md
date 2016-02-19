@@ -113,9 +113,6 @@ Solution: Stop the composition before changing the Iterator count. If you wish t
 ## Only the last iteration values are visible in the editor
 Following the patch values in your composition is useful to help debug a problem. However, Iterators only show the values for the last iteration (e.g. if you have 10 iterations, it only shows the values for the 10th one). There isn't a real workaround for this, except changing the Iteration count or setting a Max on the index.
 
-## Interaction patches do not work properly
-Due to the way we built Interaction 2, hit testing is highly complicated and not supported inside Iterators. If you want to have interactions in an Iterator, you can manually implement hit testing in a separate Iterator that checks the X/Y positions of the Touch patch, and compares them with the rendered Layer positions.
-
 ## Passing values out of Iterators is difficult
 There are two different methods depending on if your Iterator has a blue consumer patch or not:
 
