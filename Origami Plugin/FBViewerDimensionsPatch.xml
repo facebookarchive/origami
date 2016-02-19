@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Gives you information about the viewer window.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Viewer Info</string>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputWidth</key>
+      <dict>
+        <key>description</key>
+        <string>Output top level rendering width</string>
+        <key>name</key>
+        <string>Pixels Wide</string>
+      </dict>
+      <key>outputHeight</key>
+      <dict>
+        <key>description</key>
+        <string>Output top level rendering height</string>
+        <key>name</key>
+        <string>Pixels High</string>
+      </dict>
+      <key>outputIsFullScreen</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a 1 if the viewer is full screen</string>
+        <key>name</key>
+        <string>Full Screen</string>
+      </dict>
+      <key>outputHasFocus</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a 1 if the viewer window has focus</string>
+        <key>name</key>
+        <string>Focused</string>
+      </dict>
+      <key>outputRetina</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a 1 if the viewer window is on a retina display</string>
+        <key>name</key>
+        <string>Retina</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

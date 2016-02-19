@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Lets you group layers together. Connect it to a Layer patch to display it and adjust how it shows up.
+        
+This patch is a renamed version of the Render in Image patch that comes with Quartz Composer to be consistent with the Origami naming scheme. It also does not require a Clear patch, unlike Render in Image.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+        
+Created by: Brandon Walkin, Drew Hamlin</string>
+      <key>name</key>
+      <string>Layer Group</string>
+    </dict>
+  </dict>
+</plist>

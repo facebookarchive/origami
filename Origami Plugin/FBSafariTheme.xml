@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Styles the viewer window to look like a web browser when the composition is running. Click the downloads button to stop the viewer. The back and forward buttons are accessible through the Browser Buttons patch.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin, Drew Hamlin</string>
+      <key>name</key>
+      <string>Browser Chrome</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputWindowTitle</key>
+      <dict>
+        <key>description</key>
+        <string>The title of the viewer window</string>
+        <key>name</key>
+        <string>Window Title</string>
+      </dict>
+      <key>inputURL</key>
+      <dict>
+        <key>description</key>
+        <string>The URL in the address bar</string>
+        <key>name</key>
+        <string>URL</string>
+      </dict>
+      <key>inputFavicon</key>
+      <dict>
+        <key>description</key>
+        <string>A 16 px icon next to the URL</string>
+        <key>name</key>
+        <string>Favicon</string>
+      </dict>
+      <key>inputBackEnabled</key>
+      <dict>
+        <key>description</key>
+        <string>Controls whether the back button looks enabled and is clickable</string>
+        <key>name</key>
+        <string>Enable Back</string>
+      </dict>
+      <key>inputForwardEnabled</key>
+      <dict>
+        <key>description</key>
+        <string>Controls whether the forward button looks enabled and is clickable</string>
+        <key>name</key>
+        <string>Enable Forward</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

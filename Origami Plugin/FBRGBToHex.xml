@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Converts an RGB color to hex.
+        
+        
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>RGB to Hex</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputRed</key>
+      <dict>
+        <key>description</key>
+        <string>Red</string>
+        <key>name</key>
+        <string>Red</string>
+      </dict>
+      <key>inputGreen</key>
+      <dict>
+        <key>description</key>
+        <string>Green</string>
+        <key>name</key>
+        <string>Green</string>
+      </dict>
+      <key>inputBlue</key>
+      <dict>
+        <key>description</key>
+        <string>Blue</string>
+        <key>name</key>
+        <string>Blue</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputHex</key>
+      <dict>
+        <key>description</key>
+        <string>Hex</string>
+        <key>name</key>
+        <string>Hex</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

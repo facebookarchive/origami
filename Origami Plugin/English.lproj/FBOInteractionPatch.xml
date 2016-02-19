@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Lets you get interactions on Layer patches, or the whole screen if the interaction port isn't connected.
+
+Down: Outputs a 1 if the touch is currently down on the layer. Useful for pressed states.
+Up: Sends a pulse when the layer is pressed and released. Useful for button actions.
+Tap: Sends a pulse when the layer is tapped while the touch is stationary. Useful for getting taps on a scrollable layer.
+Drag: Outputs a 1 if the touch started down on the layer and stays 1 until the touch is released.
+Enable: Lets you decide whether the layer should respond to interaction. One example of when you'd want to use this is if you had a shading layer in front of an interactive element. You'd need to disable interaction on the shading layer so you could get taps on the layer behind it.
+
+
+Origami
+http://origami.facebook.com/
+        
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+        
+Copyright: (c) 2013-2015, Facebook, Inc. All rights reserved.
+        
+Created by: Brandon Walkin, Mike Matas</string>
+      <key>name</key>
+      <string>Interaction 2</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputEnableInteraction</key>
+      <dict>
+        <key>description</key>
+        <string>Enable interaction for this layer. Turn this off to have taps pass through the layer.</string>
+        <key>name</key>
+        <string>Enable</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputInteraction</key>
+      <dict>
+        <key>description</key>
+        <string>Interaction</string>
+        <key>name</key>
+        <string>Interaction</string>
+      </dict>
+      <key>outputUp</key>
+      <dict>
+        <key>description</key>
+        <string>Sends a pulse when the layer is pressed and released. Useful for button actions.</string>
+        <key>name</key>
+        <string>Up</string>
+        <key>key</key>
+        <string>Click</string>
+      </dict>
+      <key>outputDrag</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a 1 if the touch started down on the layer and stays 1 until the touch is released.</string>
+        <key>name</key>
+        <string>Drag</string>
+      </dict>
+      <key>outputDown</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a 1 if the touch is currently down on the layer. Useful for pressed states.</string>
+        <key>name</key>
+        <string>Down</string>
+      </dict>
+      <key>outputTap</key>
+      <dict>
+        <key>description</key>
+        <string>Sends a pulse when the layer is tapped while the touch is stationary. Useful for getting taps on a scrollable layer.</string>
+        <key>name</key>
+        <string>Tap</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

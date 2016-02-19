@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Outputs information about the connected iOS device running the Origami app.
+        
+        
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Device Info</string>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputConnected</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs if an iOS device is connected over USB.</string>
+        <key>name</key>
+        <string>Connected</string>
+      </dict>
+      <key>outputWidth</key>
+      <dict>
+        <key>description</key>
+        <string>The width of the screen. Changes with orientation.</string>
+        <key>name</key>
+        <string>Width</string>
+      </dict>
+      <key>outputHeight</key>
+      <dict>
+        <key>description</key>
+        <string>The height of the screen. Changes with orientation.</string>
+        <key>name</key>
+        <string>Height</string>
+      </dict>
+      <key>outputIsPad</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs if the connected device is an iPad (1) or iPhone (0).</string>
+        <key>name</key>
+        <string>Is iPad</string>
+      </dict>
+      <key>outputIsPortrait</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs if the connected device is in portrait (1) or landscape (0) orientation.</string>
+        <key>name</key>
+        <string>Is Portrait</string>
+      </dict>
+      <key>outputIsRetina</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs if the connected device has a retina screen.</string>
+        <key>name</key>
+        <string>Retina</string>
+      </dict>
+      <key>outputTouches</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs a structure of current touch events on the connected device.</string>
+        <key>name</key>
+        <string>Touches</string>
+      </dict>
+      <key>output3DOrientation</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs the current pitch, roll, and yaw of the connected device.</string>
+        <key>name</key>
+        <string>3D Orientation</string>
+      </dict>
+      <key>outputAcceleration</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs the acceleration the user is imparting on the device.</string>
+        <key>name</key>
+        <string>Acceleration</string>
+      </dict>
+      <key>outputRotationRate</key>
+      <dict>
+        <key>description</key>
+        <string>Outputs the rotation rate of the device.</string>
+        <key>name</key>
+        <string>Rotation Rate</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

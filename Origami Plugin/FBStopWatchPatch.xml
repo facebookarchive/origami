@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Counts time and frames. Supports iterators.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Stop Watch 2</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputOn</key>
+      <dict>
+        <key>description</key>
+        <string>Turn on the stop watch</string>
+        <key>name</key>
+        <string>On</string>
+      </dict>
+      <key>inputResetSignal</key>
+      <dict>
+        <key>description</key>
+        <string>Reset the stop watch</string>
+        <key>name</key>
+        <string>Reset Signal</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputTime</key>
+      <dict>
+        <key>description</key>
+        <string>Time</string>
+        <key>name</key>
+        <string>Time</string>
+      </dict>
+      <key>outputFrames</key>
+      <dict>
+        <key>description</key>
+        <string>Frames</string>
+        <key>name</key>
+        <string>Frames</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

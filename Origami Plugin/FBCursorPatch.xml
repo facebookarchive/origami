@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Allows you to hide or change the OS X cursor when it's over the viewer window.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2013-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Cursor Control</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputStyle</key>
+      <dict>
+        <key>description</key>
+        <string>Change the cursor style</string>
+        <key>name</key>
+        <string>Style</string>
+        <key>menu</key>
+        <array>
+          <string>Default</string>
+          <string>Cross Hair</string>
+          <string>Open Hand</string>
+          <string>Closed Hand</string>
+          <string>I Beam</string>
+          <string>Pointing Hand</string>
+        </array>
+      </dict>
+      <key>inputHide</key>
+      <dict>
+        <key>description</key>
+        <string>Toggle to hide the cursor when it's over the viewer window.</string>
+        <key>name</key>
+        <string>Hide</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

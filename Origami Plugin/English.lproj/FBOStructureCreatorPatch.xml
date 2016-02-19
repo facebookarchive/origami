@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Lets you create a structure containing multiple values. You can set the number of items in the structure and the type of value in the Settings panel.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Structure Creator</string>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputStructure</key>
+      <dict>
+        <key>description</key>
+        <string>The created structure.</string>
+        <key>name</key>
+        <string>Structure</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

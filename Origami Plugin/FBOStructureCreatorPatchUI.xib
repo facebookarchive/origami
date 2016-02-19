@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FBOStructureCreatorPatchUI">
+            <connections>
+                <outlet property="view" destination="uER-nm-gka" id="gnZ-FW-Mi6"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="uER-nm-gka">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" id="grs-vY-O7q">
+                    <rect key="frame" x="171" y="299" width="15" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" maxValue="100" id="yDK-AN-8RG"/>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.inputCount" id="1j8-gp-xXz"/>
+                    </connections>
+                </stepper>
+                <textField verticalHuggingPriority="750" id="74g-VU-MLs">
+                    <rect key="frame" x="138" y="301" width="33" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="0" drawsBackground="YES" id="SZs-7l-9CX">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" positiveFormat="#,##0.###" negativeFormat="#,##0.###" numberStyle="decimal" paddingCharacter="*" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" decimalSeparator="." groupingSeparator="," currencyDecimalSeparator="." plusSign="+" minusSign="-" notANumberSymbol="NaN" perMillSymbol="‰" percentSymbol="%" exponentSymbol="E" positivePrefix="" positiveSuffix="" negativePrefix="-" negativeSuffix="" id="ZjC-Cb-7el">
+                            <real key="minimum" value="0.0"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.inputCount" id="efd-P3-Vyr"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="RHM-rY-85S">
+                    <rect key="frame" x="23" y="300" width="109" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Number of Inputs:" id="fa4-HB-7qQ">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" id="AYW-wx-wWl">
+                    <rect key="frame" x="135" y="351" width="133" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="Virtual" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Izh-sZ-FHh" id="LiA-Mq-BF9">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" title="OtherViews" id="inR-tN-YGq">
+                            <items>
+                                <menuItem title="Virtual" state="on" id="Izh-sZ-FHh">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem isSeparatorItem="YES" id="jah-Kp-hNI"/>
+                                <menuItem title="Boolean" id="Yy6-N9-fMR"/>
+                                <menuItem title="Index" id="4g1-dq-ask"/>
+                                <menuItem title="Number" id="tZO-il-ekT"/>
+                                <menuItem title="Color" id="KJL-ZP-PVG"/>
+                                <menuItem title="String" id="eyO-hN-GU8"/>
+                                <menuItem isSeparatorItem="YES" id="Rtc-sa-z9y"/>
+                                <menuItem title="Image" id="WoK-ki-aSs"/>
+                                <menuItem title="Structure" id="KnI-Sv-Iy3"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedValue" keyPath="self.inputType" id="n5L-Bq-1Hr"/>
+                    </connections>
+                </popUpButton>
+                <textField verticalHuggingPriority="750" id="A03-ZG-z0Z">
+                    <rect key="frame" x="23" y="353" width="109" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Type:" id="3xm-yY-rUn">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button id="QRB-Zu-WhZ">
+                    <rect key="frame" x="135" y="329" width="101" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Keyed" bezelStyle="regularSquare" imagePosition="left" controlSize="small" inset="2" id="uxc-3P-ZO1">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.keyed" id="9Jg-y5-alD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="250" y="373"/>
+        </customView>
+    </objects>
+</document>

@@ -1,0 +1,1538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A7A712618D7CBE80008D05A /* FBODynamicPortsPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A712018D7CBE80008D05A /* FBODynamicPortsPatch.m */; };
+		1A7A712718D7CBE80008D05A /* FBOMultiSwitchPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A712218D7CBE80008D05A /* FBOMultiSwitchPatch.m */; };
+		1A7A712818D7CBE80008D05A /* FBOMultiSwitchPatchUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7A712418D7CBE80008D05A /* FBOMultiSwitchPatchUI.m */; };
+		1A7A712918D7CBE80008D05A /* FBOMultiSwitchPatchUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7A712518D7CBE80008D05A /* FBOMultiSwitchPatchUI.xib */; };
+		3A41C9CB1859100500141593 /* NSObject+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A41C9CA1859100500141593 /* NSObject+FBAdditions.m */; };
+		3A63EDCF1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A63EDCE1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.m */; };
+		3A8E73A418C409DD00F57608 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E73A318C409DD00F57608 /* dsa_pub.pem */; };
+		3A9D3DF718C1211C0021812A /* FBOInteractionPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3DF518C1211C0021812A /* FBOInteractionPatch.xml */; };
+		3A9D3DFB18C123470021812A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9D3DFA18C123470021812A /* Sparkle.framework */; };
+		3A9D3DFE18C129F70021812A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A9D3DFA18C123470021812A /* Sparkle.framework */; };
+		3A9D3E0118C134E20021812A /* FBOrigamiAdditions+Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D3E0018C134E20021812A /* FBOrigamiAdditions+Preferences.m */; };
+		3A9D3E0318C3FD8A0021812A /* Origami.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A9D3E0218C3FD8A0021812A /* Origami.icns */; };
+		3AACD304185933AE0040742B /* NSString+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AACD303185933AE0040742B /* NSString+FBAdditions.m */; };
+		3AAF9DB918BAEBF9002B591F /* NSMenu+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF9DB818BAEBF9002B591F /* NSMenu+FBAdditions.m */; };
+		3AF2FE3218C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF2FE3118C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.m */; };
+		3AFA71041856768800A34E93 /* FBOrigamiAdditions+Mavericks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA71031856768800A34E93 /* FBOrigamiAdditions+Mavericks.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3AFA71071856771A00A34E93 /* FBOrigamiAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFA71061856771A00A34E93 /* FBOrigamiAdditions.m */; };
+		B12469A11B0E84A30002AFEC /* coscript in Resources */ = {isa = PBXBuildFile; fileRef = B12469A01B0E84A30002AFEC /* coscript */; };
+		B12469A31B0F92F50002AFEC /* Export for Origami.js in Resources */ = {isa = PBXBuildFile; fileRef = B12469A21B0F92F50002AFEC /* Export for Origami.js */; };
+		B12469A51B0F9C560002AFEC /* Export for Origami.sketchplugin in Resources */ = {isa = PBXBuildFile; fileRef = B12469A41B0F9C560002AFEC /* Export for Origami.sketchplugin */; };
+		B160AAEC1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.m in Sources */ = {isa = PBXBuildFile; fileRef = B160AAEB1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.m */; };
+		B50277531A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = B50277521A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.m */; };
+		B50277561A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B50277551A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.m */; };
+		B50816B3198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.m in Sources */ = {isa = PBXBuildFile; fileRef = B50816B1198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.m */; };
+		B50816B4198060F1007AEDAF /* FBPatchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50816B2198060F1007AEDAF /* FBPatchView.m */; };
+		B50816B71980F043007AEDAF /* QCIndexPort+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B50816B61980F043007AEDAF /* QCIndexPort+FBAdditions.m */; };
+		B50816BD1980F10E007AEDAF /* NSView+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B50816BC1980F10E007AEDAF /* NSView+FBAdditions.m */; };
+		B50F45AA18F9FB92005548DF /* FBCursorPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B50F45A818F9FB92005548DF /* FBCursorPatch.m */; };
+		B50F45AB18F9FB92005548DF /* FBCursorPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B50F45A918F9FB92005548DF /* FBCursorPatch.xml */; };
+		B516A2701A16A161009CD3E4 /* FBTextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B516A26F1A16A161009CD3E4 /* FBTextObject.m */; };
+		B51CE8D71A9BC05D00E1C156 /* FBWirelessController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51CE8CA1A9BC05D00E1C156 /* FBWirelessController.m */; };
+		B51CE8D81A9BC05D00E1C156 /* FBWirelessInPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B51CE8CC1A9BC05D00E1C156 /* FBWirelessInPatch.m */; };
+		B51CE8D91A9BC05D00E1C156 /* FBWirelessInPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8CD1A9BC05D00E1C156 /* FBWirelessInPatch.xml */; };
+		B51CE8DA1A9BC05D00E1C156 /* FBWirelessInPatchUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B51CE8CF1A9BC05D00E1C156 /* FBWirelessInPatchUI.m */; };
+		B51CE8DB1A9BC05D00E1C156 /* FBWirelessInPatchUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8D01A9BC05D00E1C156 /* FBWirelessInPatchUI.xib */; };
+		B51CE8DC1A9BC05D00E1C156 /* FBWirelessOutPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B51CE8D21A9BC05D00E1C156 /* FBWirelessOutPatch.m */; };
+		B51CE8DD1A9BC05D00E1C156 /* FBWirelessOutPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8D31A9BC05D00E1C156 /* FBWirelessOutPatch.xml */; };
+		B51CE8DE1A9BC05D00E1C156 /* FBWirelessOutPatchUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B51CE8D51A9BC05D00E1C156 /* FBWirelessOutPatchUI.m */; };
+		B51CE8DF1A9BC05D00E1C156 /* FBWirelessOutPatchUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8D61A9BC05D00E1C156 /* FBWirelessOutPatchUI.xib */; };
+		B51CE8E21A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.m in Sources */ = {isa = PBXBuildFile; fileRef = B51CE8E11A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.m */; };
+		B51CE8E51A9BC0ED00E1C156 /* Receive1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8E31A9BC0ED00E1C156 /* Receive1x.png */; };
+		B51CE8E61A9BC0ED00E1C156 /* Receive4x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8E41A9BC0ED00E1C156 /* Receive4x.png */; };
+		B51CE8E91A9BC0F600E1C156 /* Broadcast1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8E71A9BC0F600E1C156 /* Broadcast1x.png */; };
+		B51CE8EA1A9BC0F600E1C156 /* Broadcast4x.png in Resources */ = {isa = PBXBuildFile; fileRef = B51CE8E81A9BC0F600E1C156 /* Broadcast4x.png */; };
+		B52C925D1975D7F100AB5A6D /* FBDragAndDropPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B52C925B1975D7F100AB5A6D /* FBDragAndDropPatch.m */; };
+		B52C925E1975D7F100AB5A6D /* FBDragAndDropPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B52C925C1975D7F100AB5A6D /* FBDragAndDropPatch.xml */; };
+		B52C92611975D80000AB5A6D /* QCView+DragAndDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = B52C92601975D80000AB5A6D /* QCView+DragAndDrop.m */; };
+		B52C92641975D93000AB5A6D /* QCView+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B52C92631975D93000AB5A6D /* QCView+FBAdditions.m */; };
+		B53A9ABF18F31B9A00B5E151 /* FBSafariSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A9AB518F31B9A00B5E151 /* FBSafariSegmentedCell.m */; };
+		B53A9AC018F31B9A00B5E151 /* FBSafariTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A9AB718F31B9A00B5E151 /* FBSafariTheme.m */; };
+		B53A9AC118F31B9A00B5E151 /* FBSafariTheme.xml in Resources */ = {isa = PBXBuildFile; fileRef = B53A9AB818F31B9A00B5E151 /* FBSafariTheme.xml */; };
+		B53A9AC218F31B9A00B5E151 /* FBSafariThemeButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A9ABA18F31B9A00B5E151 /* FBSafariThemeButtons.m */; };
+		B53A9AC318F31B9A00B5E151 /* FBSafariThemeButtons.xml in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ABB18F31B9A00B5E151 /* FBSafariThemeButtons.xml */; };
+		B53A9AC418F31B9A00B5E151 /* FBSafariToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A9ABD18F31B9A00B5E151 /* FBSafariToolbarController.m */; };
+		B53A9AC518F31B9A00B5E151 /* FBSafariToolbarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ABE18F31B9A00B5E151 /* FBSafariToolbarController.xib */; };
+		B53A9ACF18F31E8600B5E151 /* FaviconFacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = B53A9AC818F31E8600B5E151 /* FaviconFacebook.png */; };
+		B53A9AD018F31E8600B5E151 /* FaviconFacebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B53A9AC918F31E8600B5E151 /* FaviconFacebook@2x.png */; };
+		B53A9AD118F31E8600B5E151 /* FaviconGeneric.png in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ACA18F31E8600B5E151 /* FaviconGeneric.png */; };
+		B53A9AD218F31E8600B5E151 /* FaviconGeneric@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ACB18F31E8600B5E151 /* FaviconGeneric@2x.png */; };
+		B53A9AD318F31E8600B5E151 /* RefreshIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ACC18F31E8600B5E151 /* RefreshIcon.png */; };
+		B53A9AD418F31E8600B5E151 /* RefreshIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ACD18F31E8600B5E151 /* RefreshIcon@2x.png */; };
+		B53A9AD518F31E8600B5E151 /* ToolbarDownloadsTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ACE18F31E8600B5E151 /* ToolbarDownloadsTemplate.pdf */; };
+		B53A9ADD18F32B6800B5E151 /* FBHexToRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A9AD818F32B6800B5E151 /* FBHexToRGB.m */; };
+		B53A9ADE18F32B6800B5E151 /* FBHexToRGB.xml in Resources */ = {isa = PBXBuildFile; fileRef = B53A9AD918F32B6800B5E151 /* FBHexToRGB.xml */; };
+		B53A9ADF18F32B6800B5E151 /* FBRGBToHex.m in Sources */ = {isa = PBXBuildFile; fileRef = B53A9ADB18F32B6800B5E151 /* FBRGBToHex.m */; };
+		B53A9AE018F32B6800B5E151 /* FBRGBToHex.xml in Resources */ = {isa = PBXBuildFile; fileRef = B53A9ADC18F32B6800B5E151 /* FBRGBToHex.xml */; };
+		B53EA5D418DD7AC600AD24A6 /* Run.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5D218DD7AC600AD24A6 /* Run.tiff */; };
+		B53EA5D518DD7AC600AD24A6 /* Run@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5D318DD7AC600AD24A6 /* Run@2x.tiff */; };
+		B53EA5DC18DD7BC500AD24A6 /* InputParameters.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5DA18DD7BC500AD24A6 /* InputParameters.tiff */; };
+		B53EA5DD18DD7BC500AD24A6 /* InputParameters@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5DB18DD7BC500AD24A6 /* InputParameters@2x.tiff */; };
+		B53EA5E218DD7DFF00AD24A6 /* SaveImage.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5E018DD7DFF00AD24A6 /* SaveImage.tiff */; };
+		B53EA5E318DD7DFF00AD24A6 /* SaveImage@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5E118DD7DFF00AD24A6 /* SaveImage@2x.tiff */; };
+		B53EA5E618DD888C00AD24A6 /* Stop.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5E418DD888C00AD24A6 /* Stop.tiff */; };
+		B53EA5E718DD888C00AD24A6 /* Stop@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5E518DD888C00AD24A6 /* Stop@2x.tiff */; };
+		B53EA5EE18DD88F800AD24A6 /* Editor.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5EC18DD88F800AD24A6 /* Editor.tiff */; };
+		B53EA5EF18DD88F800AD24A6 /* Editor@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5ED18DD88F800AD24A6 /* Editor@2x.tiff */; };
+		B53EA5F218DD891000AD24A6 /* Present.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5F018DD891000AD24A6 /* Present.tiff */; };
+		B53EA5F318DD891000AD24A6 /* Present@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5F118DD891000AD24A6 /* Present@2x.tiff */; };
+		B53EA5FC18DD8AE100AD24A6 /* Macro.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5F618DD8AE100AD24A6 /* Macro.tiff */; };
+		B53EA5FD18DD8AE100AD24A6 /* Macro@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5F718DD8AE100AD24A6 /* Macro@2x.tiff */; };
+		B53EA5FE18DD8AE100AD24A6 /* Parent.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5F818DD8AE100AD24A6 /* Parent.tiff */; };
+		B53EA5FF18DD8AE100AD24A6 /* Parent@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5F918DD8AE100AD24A6 /* Parent@2x.tiff */; };
+		B53EA60018DD8AE100AD24A6 /* Inspector.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5FA18DD8AE100AD24A6 /* Inspector.tiff */; };
+		B53EA60118DD8AE100AD24A6 /* Inspector@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA5FB18DD8AE100AD24A6 /* Inspector@2x.tiff */; };
+		B53EA60418DD8B6E00AD24A6 /* Parameters.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60218DD8B6E00AD24A6 /* Parameters.tiff */; };
+		B53EA60518DD8B6E00AD24A6 /* Parameters@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60318DD8B6E00AD24A6 /* Parameters@2x.tiff */; };
+		B53EA60818DD8B8400AD24A6 /* Viewer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60618DD8B8400AD24A6 /* Viewer.tiff */; };
+		B53EA60918DD8B8400AD24A6 /* Viewer@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60718DD8B8400AD24A6 /* Viewer@2x.tiff */; };
+		B53EA60C18DD8B9500AD24A6 /* ShowSettings.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60A18DD8B9500AD24A6 /* ShowSettings.tiff */; };
+		B53EA60D18DD8B9500AD24A6 /* ShowSettings@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60B18DD8B9500AD24A6 /* ShowSettings@2x.tiff */; };
+		B53EA61018DD8BF100AD24A6 /* CreateVirtualMacro.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60E18DD8BF100AD24A6 /* CreateVirtualMacro.tiff */; };
+		B53EA61118DD8BF100AD24A6 /* CreateVirtualMacro@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA60F18DD8BF100AD24A6 /* CreateVirtualMacro@2x.tiff */; };
+		B53EA61418DD8D2E00AD24A6 /* Patcherator.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61218DD8D2E00AD24A6 /* Patcherator.tiff */; };
+		B53EA61518DD8D2E00AD24A6 /* Patcherator@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61318DD8D2E00AD24A6 /* Patcherator@2x.tiff */; };
+		B53EA61F18DD95CF00AD24A6 /* ZoomIn.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61718DD95CF00AD24A6 /* ZoomIn.tiff */; };
+		B53EA62018DD95CF00AD24A6 /* ZoomIn@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61818DD95CF00AD24A6 /* ZoomIn@2x.tiff */; };
+		B53EA62118DD95CF00AD24A6 /* ZoomOut.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61918DD95CF00AD24A6 /* ZoomOut.tiff */; };
+		B53EA62218DD95CF00AD24A6 /* ZoomOut@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61A18DD95CF00AD24A6 /* ZoomOut@2x.tiff */; };
+		B53EA62318DD95CF00AD24A6 /* ZoomToDefault.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61B18DD95CF00AD24A6 /* ZoomToDefault.tiff */; };
+		B53EA62418DD95CF00AD24A6 /* ZoomToDefault@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61C18DD95CF00AD24A6 /* ZoomToDefault@2x.tiff */; };
+		B53EA62518DD95CF00AD24A6 /* ZoomToFit.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61D18DD95CF00AD24A6 /* ZoomToFit.tiff */; };
+		B53EA62618DD95CF00AD24A6 /* ZoomToFit@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA61E18DD95CF00AD24A6 /* ZoomToFit@2x.tiff */; };
+		B53EA63018DD9D3100AD24A6 /* DebugMode.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62818DD9D3100AD24A6 /* DebugMode.tiff */; };
+		B53EA63118DD9D3100AD24A6 /* DebugMode@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62918DD9D3100AD24A6 /* DebugMode@2x.tiff */; };
+		B53EA63218DD9D3100AD24A6 /* EditMode.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62A18DD9D3100AD24A6 /* EditMode.tiff */; };
+		B53EA63318DD9D3100AD24A6 /* EditMode@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62B18DD9D3100AD24A6 /* EditMode@2x.tiff */; };
+		B53EA63418DD9D3100AD24A6 /* PerformanceMode.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62C18DD9D3100AD24A6 /* PerformanceMode.tiff */; };
+		B53EA63518DD9D3100AD24A6 /* PerformanceMode@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62D18DD9D3100AD24A6 /* PerformanceMode@2x.tiff */; };
+		B53EA63618DD9D3100AD24A6 /* ProfileMode.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62E18DD9D3100AD24A6 /* ProfileMode.tiff */; };
+		B53EA63718DD9D3100AD24A6 /* ProfileMode@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = B53EA62F18DD9D3100AD24A6 /* ProfileMode@2x.tiff */; };
+		B545A8171ABA429B00D475A5 /* FBStopWatchPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B545A8151ABA429B00D475A5 /* FBStopWatchPatch.m */; };
+		B545A8181ABA429B00D475A5 /* FBStopWatchPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B545A8161ABA429B00D475A5 /* FBStopWatchPatch.xml */; };
+		B54831BB18627462000D2B2A /* FBOrigamiAdditions+Retina.m in Sources */ = {isa = PBXBuildFile; fileRef = B54831BA18627462000D2B2A /* FBOrigamiAdditions+Retina.m */; };
+		B54831D9186384B5000D2B2A /* FBOInteractionPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B54831D8186384B5000D2B2A /* FBOInteractionPatch.m */; };
+		B54831DE186385DD000D2B2A /* FBOInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54831DD186385DD000D2B2A /* FBOInteractionController.m */; };
+		B54831E11863898E000D2B2A /* NSObject+FBNoArcAdditons.m in Sources */ = {isa = PBXBuildFile; fileRef = B54831E01863898E000D2B2A /* NSObject+FBNoArcAdditons.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B54831E6186410B4000D2B2A /* OrigamiMenubar-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = B54831E2186410B4000D2B2A /* OrigamiMenubar-normal.png */; };
+		B54831E7186410B4000D2B2A /* OrigamiMenubar-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B54831E3186410B4000D2B2A /* OrigamiMenubar-normal@2x.png */; };
+		B548D75A196C897900A7C0B9 /* FBODelayPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B548D759196C897900A7C0B9 /* FBODelayPatch.m */; };
+		B548D75C196CB12600A7C0B9 /* FBODelayPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B548D75B196CB12600A7C0B9 /* FBODelayPatch.xml */; };
+		B54A58151963923F004BB2D6 /* POPConverterPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B54A58141963923F004BB2D6 /* POPConverterPatch.m */; };
+		B54A5817196393F6004BB2D6 /* POPConverterPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B54A5816196393F6004BB2D6 /* POPConverterPatch.xml */; };
+		B560B6BC1C7557110079B864 /* FBOrigamiAdditions+Stats.m in Sources */ = {isa = PBXBuildFile; fileRef = B560B6BB1C7557110079B864 /* FBOrigamiAdditions+Stats.m */; };
+		B56DC46718C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DC46618C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.m */; };
+		B5741F271A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.m in Sources */ = {isa = PBXBuildFile; fileRef = B5741F261A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.m */; };
+		B574FDA91861080400668D86 /* FBOrigamiAdditions+PluginLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDA81861080400668D86 /* FBOrigamiAdditions+PluginLoading.m */; };
+		B574FDAF1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDAE1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.m */; };
+		B574FDB218610AD200668D86 /* QCPort+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDB118610AD200668D86 /* QCPort+FBAdditions.m */; };
+		B574FDB518610CEE00668D86 /* QCPatchView+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDB418610CEE00668D86 /* QCPatchView+FBAdditions.m */; };
+		B574FDB818610CFD00668D86 /* QCPatch+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDB718610CFD00668D86 /* QCPatch+FBAdditions.m */; };
+		B574FDBB18610DBF00668D86 /* NSObject+AssociatedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDBA18610DBF00668D86 /* NSObject+AssociatedObjects.m */; };
+		B574FDBE18610E9B00668D86 /* NSDocument+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDBD18610E9B00668D86 /* NSDocument+FBAdditions.m */; };
+		B574FDC11861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDC01861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.m */; };
+		B574FDC41861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDC31861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.m */; };
+		B574FDCA1861289E00668D86 /* FBOrigamiAdditions+WindowMods.m in Sources */ = {isa = PBXBuildFile; fileRef = B574FDC91861289E00668D86 /* FBOrigamiAdditions+WindowMods.m */; };
+		B57D530C1A2D301300B805D3 /* Code Export in Resources */ = {isa = PBXBuildFile; fileRef = B57D530B1A2D301300B805D3 /* Code Export */; };
+		B593F0A61A2737DF003C664A /* FBOrigamiAdditions+CodeExport.m in Sources */ = {isa = PBXBuildFile; fileRef = B593F0A51A2737DF003C664A /* FBOrigamiAdditions+CodeExport.m */; };
+		B59541B419E1F5F400B4FC3A /* FBDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59541B219E1F5F400B4FC3A /* FBDeviceViewController.m */; };
+		B59541B519E1F5F400B4FC3A /* FBDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59541B319E1F5F400B4FC3A /* FBDeviceViewController.xib */; };
+		B59687C41BADEC72007682C7 /* FBLastValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B59687C21BADEC72007682C7 /* FBLastValue.m */; };
+		B59687C51BADEC72007682C7 /* FBLastValue.xml in Resources */ = {isa = PBXBuildFile; fileRef = B59687C31BADEC72007682C7 /* FBLastValue.xml */; };
+		B59692501A315E5D00FD991A /* FBOStructureCreatorPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B596924E1A315E5D00FD991A /* FBOStructureCreatorPatch.xml */; };
+		B59692521A318F5400FD991A /* FBOStructureCreatorPatchUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = B59692511A318F5400FD991A /* FBOStructureCreatorPatchUI.xib */; };
+		B596FE031A86D49500C1D132 /* FBViewerDimensionsPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B596FE011A86D49500C1D132 /* FBViewerDimensionsPatch.m */; };
+		B596FE041A86D49500C1D132 /* FBViewerDimensionsPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B596FE021A86D49500C1D132 /* FBViewerDimensionsPatch.xml */; };
+		B5B1D6BE1A5C66A2006E7A6A /* RefreshIconYosemite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1D6BD1A5C66A2006E7A6A /* RefreshIconYosemite@2x.png */; };
+		B5B1D6C01A5C693D006E7A6A /* TabsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1D6BF1A5C693D006E7A6A /* TabsIcon@2x.png */; };
+		B5B2E9F61A75AF9400F93A75 /* FBOStructureCombinePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B2E9F51A75AF9400F93A75 /* FBOStructureCombinePatch.m */; };
+		B5B2E9F91A75B30300F93A75 /* FBOStructureCombinePatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5B2E9F71A75B30300F93A75 /* FBOStructureCombinePatch.xml */; };
+		B5B4A3F51919A91B0044C3ED /* FBOProgressPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B4A3F41919A91B0044C3ED /* FBOProgressPatch.m */; };
+		B5B4A3F71919A96F0044C3ED /* FBOProgressPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5B4A3F61919A96F0044C3ED /* FBOProgressPatch.xml */; };
+		B5BB6FD91A101FB6005725C1 /* BWDeviceInfoReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FCB1A101FB6005725C1 /* BWDeviceInfoReceiver.m */; };
+		B5BB6FDA1A101FB6005725C1 /* FB3DOrientationPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FCD1A101FB6005725C1 /* FB3DOrientationPatch.m */; };
+		B5BB6FDB1A101FB6005725C1 /* FB3DOrientationPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6FCE1A101FB6005725C1 /* FB3DOrientationPatch.xml */; };
+		B5BB6FDC1A101FB6005725C1 /* FBDeviceInfoPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FD01A101FB6005725C1 /* FBDeviceInfoPatch.m */; };
+		B5BB6FDD1A101FB6005725C1 /* FBDeviceInfoPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6FD11A101FB6005725C1 /* FBDeviceInfoPatch.xml */; };
+		B5BB6FDE1A101FB6005725C1 /* FBDeviceRendererPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FD41A101FB6005725C1 /* FBDeviceRendererPatch.m */; };
+		B5BB6FDF1A101FB6005725C1 /* FBDeviceRendererPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6FD51A101FB6005725C1 /* FBDeviceRendererPatch.xml */; };
+		B5BB6FE01A101FB6005725C1 /* FBDeviceVibratePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FD71A101FB6005725C1 /* FBDeviceVibratePatch.m */; };
+		B5BB6FE11A101FB6005725C1 /* FBDeviceVibratePatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5BB6FD81A101FB6005725C1 /* FBDeviceVibratePatch.xml */; };
+		B5BB6FEB1A102083005725C1 /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FE61A102083005725C1 /* PTChannel.m */; };
+		B5BB6FEC1A102083005725C1 /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FE81A102083005725C1 /* PTProtocol.m */; };
+		B5BB6FED1A102083005725C1 /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FEA1A102083005725C1 /* PTUSBHub.m */; };
+		B5BB6FF01A1020AB005725C1 /* FBMutableOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FEF1A1020AB005725C1 /* FBMutableOrderedDictionary.m */; };
+		B5BB6FF31A1020DD005725C1 /* QCImage+FBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FF21A1020DD005725C1 /* QCImage+FBAdditions.m */; };
+		B5BB6FF61A102146005725C1 /* FBHashValue.m in Sources */ = {isa = PBXBuildFile; fileRef = B5BB6FF51A102146005725C1 /* FBHashValue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5D7643F1A30FD9A0054F72F /* FBOStructureCreatorPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D7643E1A30FD9A0054F72F /* FBOStructureCreatorPatch.m */; };
+		B5D764421A30FEBF0054F72F /* FBOStructureCreatorPatchUI.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D764411A30FEBF0054F72F /* FBOStructureCreatorPatchUI.m */; };
+		B5D88F9418E0A6F200CFBB7D /* FBOMultiSwitchPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5D88F9218E0A6F200CFBB7D /* FBOMultiSwitchPatch.xml */; };
+		B5EA169E18CE4E8200A561A4 /* FBOLayerGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA169D18CE4E8200A561A4 /* FBOLayerGroup.m */; };
+		B5EA16A118CE4F6800A561A4 /* FBOLayerGroup.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5EA169F18CE4F6800A561A4 /* FBOLayerGroup.xml */; };
+		B5EE0034198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EE0033198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.m */; };
+		B5F6D89819624A450057BA6E /* FBOMouseScrollPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F6D89719624A450057BA6E /* FBOMouseScrollPatch.m */; };
+		B5F6D89A19624C220057BA6E /* FBOMouseScrollPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = B5F6D89919624C220057BA6E /* FBOMouseScrollPatch.xml */; };
+		B5FB9D0719E3DB060059028E /* FBDeviceToolbarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FB9D0619E3DB060059028E /* FBDeviceToolbarButton.m */; };
+		D9DC9CEF19205EAE006B8241 /* FBOLiveFilePatchUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9DC9CEE19205EAE006B8241 /* FBOLiveFilePatchUI.xib */; };
+		D9DC9CF219205ED7006B8241 /* FBOLiveFilePatchUI.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DC9CF119205ED7006B8241 /* FBOLiveFilePatchUI.m */; };
+		D9DC9CF51920618B006B8241 /* FBOLiveFilePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DC9CF41920618B006B8241 /* FBOLiveFilePatch.m */; };
+		D9DC9CF8192070EB006B8241 /* FBOLiveFilePatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = D9DC9CF6192070EB006B8241 /* FBOLiveFilePatch.xml */; };
+		D9DC9D0119209DC0006B8241 /* CDEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DC9CFD19209DC0006B8241 /* CDEvents.m */; };
+		D9DC9D0219209DC0006B8241 /* CDEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D9DC9CFF19209DC0006B8241 /* CDEvent.m */; };
+		E7042735130D975800F2BCDE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1111F80089D19ED00C2708E /* Quartz.framework */; };
+		E7042736130D976000F2BCDE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+		EC61DA17191C85B800E5443A /* POPDecayPatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC61DA15191C85B800E5443A /* POPDecayPatch.mm */; };
+		EC61DA18191C85B800E5443A /* POPDecayPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = EC61DA16191C85B800E5443A /* POPDecayPatch.xml */; };
+		EC6FD117192588B10022BE35 /* pop.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC9AA2D8191B0B2E00F2209F /* pop.framework */; };
+		EC9AA2D9191B0B2E00F2209F /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9AA2D8191B0B2E00F2209F /* pop.framework */; };
+		EC9AA2E0191B0C2C00F2209F /* POPBouncyPatch.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC9AA2DE191B0C2C00F2209F /* POPBouncyPatch.mm */; };
+		EC9AA2E1191B0C2C00F2209F /* POPBouncyPatch.xml in Resources */ = {isa = PBXBuildFile; fileRef = EC9AA2DF191B0C2C00F2209F /* POPBouncyPatch.xml */; };
+		F1481793089E5FE3006FD276 /* FBOrigamiPrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = F1481792089E5FE3006FD276 /* FBOrigamiPrincipal.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A9D3DFC18C123890021812A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC6FD117192588B10022BE35 /* pop.framework in CopyFiles */,
+				3A9D3DFE18C129F70021812A /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1A7A711F18D7CBE80008D05A /* FBODynamicPortsPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBODynamicPortsPatch.h; sourceTree = "<group>"; };
+		1A7A712018D7CBE80008D05A /* FBODynamicPortsPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBODynamicPortsPatch.m; sourceTree = "<group>"; };
+		1A7A712118D7CBE80008D05A /* FBOMultiSwitchPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOMultiSwitchPatch.h; sourceTree = "<group>"; };
+		1A7A712218D7CBE80008D05A /* FBOMultiSwitchPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOMultiSwitchPatch.m; sourceTree = "<group>"; };
+		1A7A712318D7CBE80008D05A /* FBOMultiSwitchPatchUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOMultiSwitchPatchUI.h; sourceTree = "<group>"; };
+		1A7A712418D7CBE80008D05A /* FBOMultiSwitchPatchUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOMultiSwitchPatchUI.m; sourceTree = "<group>"; };
+		1A7A712518D7CBE80008D05A /* FBOMultiSwitchPatchUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBOMultiSwitchPatchUI.xib; sourceTree = "<group>"; };
+		3A41C9C91859100500141593 /* NSObject+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBAdditions.h"; sourceTree = "<group>"; };
+		3A41C9CA1859100500141593 /* NSObject+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBAdditions.m"; sourceTree = "<group>"; };
+		3A63EDCD1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+StructureIterator.h"; sourceTree = "<group>"; };
+		3A63EDCE1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+StructureIterator.m"; sourceTree = "<group>"; };
+		3A8E73A318C409DD00F57608 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		3A9D3DF618C1211C0021812A /* English */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = English; path = English.lproj/FBOInteractionPatch.xml; sourceTree = "<group>"; };
+		3A9D3DFA18C123470021812A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = SOURCE_ROOT; };
+		3A9D3DFF18C134E20021812A /* FBOrigamiAdditions+Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+Preferences.h"; sourceTree = "<group>"; };
+		3A9D3E0018C134E20021812A /* FBOrigamiAdditions+Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+Preferences.m"; sourceTree = "<group>"; };
+		3A9D3E0218C3FD8A0021812A /* Origami.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Origami.icns; sourceTree = "<group>"; };
+		3AACD302185933AE0040742B /* NSString+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FBAdditions.h"; sourceTree = "<group>"; };
+		3AACD303185933AE0040742B /* NSString+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FBAdditions.m"; sourceTree = "<group>"; };
+		3AAF9DB718BAEBF9002B591F /* NSMenu+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenu+FBAdditions.h"; sourceTree = "<group>"; };
+		3AAF9DB818BAEBF9002B591F /* NSMenu+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMenu+FBAdditions.m"; sourceTree = "<group>"; };
+		3ADF656F171CFB1800A6B59F /* FBOrigami_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOrigami_Prefix.pch; sourceTree = "<group>"; };
+		3AF2FE3018C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+LinearPortConnections.h"; sourceTree = "<group>"; };
+		3AF2FE3118C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+LinearPortConnections.m"; sourceTree = "<group>"; };
+		3AFA71021856768800A34E93 /* FBOrigamiAdditions+Mavericks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+Mavericks.h"; sourceTree = "<group>"; };
+		3AFA71031856768800A34E93 /* FBOrigamiAdditions+Mavericks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+Mavericks.m"; sourceTree = "<group>"; };
+		3AFA71051856771A00A34E93 /* FBOrigamiAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOrigamiAdditions.h; sourceTree = "<group>"; };
+		3AFA71061856771A00A34E93 /* FBOrigamiAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOrigamiAdditions.m; sourceTree = "<group>"; };
+		3AFA71081856776900A34E93 /* GRPHookMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRPHookMethod.h; sourceTree = "<group>"; };
+		8D5B49B6048680CD000E48DA /* Origami.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Origami.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B12469A01B0E84A30002AFEC /* coscript */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = coscript; sourceTree = "<group>"; };
+		B12469A21B0F92F50002AFEC /* Export for Origami.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "Export for Origami.js"; sourceTree = "<group>"; };
+		B12469A41B0F9C560002AFEC /* Export for Origami.sketchplugin */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Export for Origami.sketchplugin"; sourceTree = "<group>"; };
+		B160AAEA1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+FileCreation.h"; sourceTree = "<group>"; };
+		B160AAEB1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+FileCreation.m"; sourceTree = "<group>"; };
+		B50277511A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+KeyboardShortcuts.h"; sourceTree = "<group>"; };
+		B50277521A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+KeyboardShortcuts.m"; sourceTree = "<group>"; };
+		B50277541A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+PatchMenu.h"; sourceTree = "<group>"; };
+		B50277551A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+PatchMenu.m"; sourceTree = "<group>"; };
+		B50816AF198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+InlineValues.h"; sourceTree = "<group>"; };
+		B50816B0198060F1007AEDAF /* FBPatchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPatchView.h; sourceTree = "<group>"; };
+		B50816B1198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+InlineValues.m"; sourceTree = "<group>"; };
+		B50816B2198060F1007AEDAF /* FBPatchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPatchView.m; sourceTree = "<group>"; };
+		B50816B51980F043007AEDAF /* QCIndexPort+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCIndexPort+FBAdditions.h"; sourceTree = "<group>"; };
+		B50816B61980F043007AEDAF /* QCIndexPort+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCIndexPort+FBAdditions.m"; sourceTree = "<group>"; };
+		B50816BB1980F10E007AEDAF /* NSView+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+FBAdditions.h"; sourceTree = "<group>"; };
+		B50816BC1980F10E007AEDAF /* NSView+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+FBAdditions.m"; sourceTree = "<group>"; };
+		B50F45A718F9FB92005548DF /* FBCursorPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCursorPatch.h; sourceTree = "<group>"; };
+		B50F45A818F9FB92005548DF /* FBCursorPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCursorPatch.m; sourceTree = "<group>"; };
+		B50F45A918F9FB92005548DF /* FBCursorPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBCursorPatch.xml; sourceTree = "<group>"; };
+		B516A26E1A16A161009CD3E4 /* FBTextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTextObject.h; sourceTree = "<group>"; };
+		B516A26F1A16A161009CD3E4 /* FBTextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTextObject.m; sourceTree = "<group>"; };
+		B51CE8C91A9BC05D00E1C156 /* FBWirelessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBWirelessController.h; sourceTree = "<group>"; };
+		B51CE8CA1A9BC05D00E1C156 /* FBWirelessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBWirelessController.m; sourceTree = "<group>"; };
+		B51CE8CB1A9BC05D00E1C156 /* FBWirelessInPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBWirelessInPatch.h; sourceTree = "<group>"; };
+		B51CE8CC1A9BC05D00E1C156 /* FBWirelessInPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBWirelessInPatch.m; sourceTree = "<group>"; };
+		B51CE8CD1A9BC05D00E1C156 /* FBWirelessInPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBWirelessInPatch.xml; sourceTree = "<group>"; };
+		B51CE8CE1A9BC05D00E1C156 /* FBWirelessInPatchUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBWirelessInPatchUI.h; sourceTree = "<group>"; };
+		B51CE8CF1A9BC05D00E1C156 /* FBWirelessInPatchUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBWirelessInPatchUI.m; sourceTree = "<group>"; };
+		B51CE8D01A9BC05D00E1C156 /* FBWirelessInPatchUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBWirelessInPatchUI.xib; sourceTree = "<group>"; };
+		B51CE8D11A9BC05D00E1C156 /* FBWirelessOutPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBWirelessOutPatch.h; sourceTree = "<group>"; };
+		B51CE8D21A9BC05D00E1C156 /* FBWirelessOutPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBWirelessOutPatch.m; sourceTree = "<group>"; };
+		B51CE8D31A9BC05D00E1C156 /* FBWirelessOutPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBWirelessOutPatch.xml; sourceTree = "<group>"; };
+		B51CE8D41A9BC05D00E1C156 /* FBWirelessOutPatchUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBWirelessOutPatchUI.h; sourceTree = "<group>"; };
+		B51CE8D51A9BC05D00E1C156 /* FBWirelessOutPatchUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBWirelessOutPatchUI.m; sourceTree = "<group>"; };
+		B51CE8D61A9BC05D00E1C156 /* FBWirelessOutPatchUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBWirelessOutPatchUI.xib; sourceTree = "<group>"; };
+		B51CE8E01A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+Wireless.h"; sourceTree = "<group>"; };
+		B51CE8E11A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+Wireless.m"; sourceTree = "<group>"; };
+		B51CE8E31A9BC0ED00E1C156 /* Receive1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Receive1x.png; sourceTree = "<group>"; };
+		B51CE8E41A9BC0ED00E1C156 /* Receive4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Receive4x.png; sourceTree = "<group>"; };
+		B51CE8E71A9BC0F600E1C156 /* Broadcast1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Broadcast1x.png; sourceTree = "<group>"; };
+		B51CE8E81A9BC0F600E1C156 /* Broadcast4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Broadcast4x.png; sourceTree = "<group>"; };
+		B52C925A1975D7F100AB5A6D /* FBDragAndDropPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDragAndDropPatch.h; sourceTree = "<group>"; };
+		B52C925B1975D7F100AB5A6D /* FBDragAndDropPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDragAndDropPatch.m; sourceTree = "<group>"; };
+		B52C925C1975D7F100AB5A6D /* FBDragAndDropPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBDragAndDropPatch.xml; sourceTree = "<group>"; };
+		B52C925F1975D80000AB5A6D /* QCView+DragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCView+DragAndDrop.h"; sourceTree = "<group>"; };
+		B52C92601975D80000AB5A6D /* QCView+DragAndDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCView+DragAndDrop.m"; sourceTree = "<group>"; };
+		B52C92621975D93000AB5A6D /* QCView+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCView+FBAdditions.h"; sourceTree = "<group>"; };
+		B52C92631975D93000AB5A6D /* QCView+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCView+FBAdditions.m"; sourceTree = "<group>"; };
+		B53A9AB418F31B9A00B5E151 /* FBSafariSegmentedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSafariSegmentedCell.h; sourceTree = "<group>"; };
+		B53A9AB518F31B9A00B5E151 /* FBSafariSegmentedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSafariSegmentedCell.m; sourceTree = "<group>"; };
+		B53A9AB618F31B9A00B5E151 /* FBSafariTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSafariTheme.h; sourceTree = "<group>"; };
+		B53A9AB718F31B9A00B5E151 /* FBSafariTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSafariTheme.m; sourceTree = "<group>"; };
+		B53A9AB818F31B9A00B5E151 /* FBSafariTheme.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBSafariTheme.xml; sourceTree = "<group>"; };
+		B53A9AB918F31B9A00B5E151 /* FBSafariThemeButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSafariThemeButtons.h; sourceTree = "<group>"; };
+		B53A9ABA18F31B9A00B5E151 /* FBSafariThemeButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSafariThemeButtons.m; sourceTree = "<group>"; };
+		B53A9ABB18F31B9A00B5E151 /* FBSafariThemeButtons.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBSafariThemeButtons.xml; sourceTree = "<group>"; };
+		B53A9ABC18F31B9A00B5E151 /* FBSafariToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSafariToolbarController.h; sourceTree = "<group>"; };
+		B53A9ABD18F31B9A00B5E151 /* FBSafariToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSafariToolbarController.m; sourceTree = "<group>"; };
+		B53A9ABE18F31B9A00B5E151 /* FBSafariToolbarController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBSafariToolbarController.xib; sourceTree = "<group>"; };
+		B53A9AC818F31E8600B5E151 /* FaviconFacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaviconFacebook.png; sourceTree = "<group>"; };
+		B53A9AC918F31E8600B5E151 /* FaviconFacebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FaviconFacebook@2x.png"; sourceTree = "<group>"; };
+		B53A9ACA18F31E8600B5E151 /* FaviconGeneric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaviconGeneric.png; sourceTree = "<group>"; };
+		B53A9ACB18F31E8600B5E151 /* FaviconGeneric@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FaviconGeneric@2x.png"; sourceTree = "<group>"; };
+		B53A9ACC18F31E8600B5E151 /* RefreshIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RefreshIcon.png; sourceTree = "<group>"; };
+		B53A9ACD18F31E8600B5E151 /* RefreshIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshIcon@2x.png"; sourceTree = "<group>"; };
+		B53A9ACE18F31E8600B5E151 /* ToolbarDownloadsTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarDownloadsTemplate.pdf; sourceTree = "<group>"; };
+		B53A9AD718F32B6800B5E151 /* FBHexToRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHexToRGB.h; sourceTree = "<group>"; };
+		B53A9AD818F32B6800B5E151 /* FBHexToRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHexToRGB.m; sourceTree = "<group>"; };
+		B53A9AD918F32B6800B5E151 /* FBHexToRGB.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBHexToRGB.xml; sourceTree = "<group>"; };
+		B53A9ADA18F32B6800B5E151 /* FBRGBToHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRGBToHex.h; sourceTree = "<group>"; };
+		B53A9ADB18F32B6800B5E151 /* FBRGBToHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRGBToHex.m; sourceTree = "<group>"; };
+		B53A9ADC18F32B6800B5E151 /* FBRGBToHex.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBRGBToHex.xml; sourceTree = "<group>"; };
+		B53EA5D218DD7AC600AD24A6 /* Run.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Run.tiff; sourceTree = "<group>"; };
+		B53EA5D318DD7AC600AD24A6 /* Run@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Run@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5DA18DD7BC500AD24A6 /* InputParameters.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = InputParameters.tiff; sourceTree = "<group>"; };
+		B53EA5DB18DD7BC500AD24A6 /* InputParameters@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "InputParameters@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5E018DD7DFF00AD24A6 /* SaveImage.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = SaveImage.tiff; sourceTree = "<group>"; };
+		B53EA5E118DD7DFF00AD24A6 /* SaveImage@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "SaveImage@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5E418DD888C00AD24A6 /* Stop.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Stop.tiff; sourceTree = "<group>"; };
+		B53EA5E518DD888C00AD24A6 /* Stop@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Stop@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5EC18DD88F800AD24A6 /* Editor.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Editor.tiff; sourceTree = "<group>"; };
+		B53EA5ED18DD88F800AD24A6 /* Editor@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Editor@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5F018DD891000AD24A6 /* Present.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Present.tiff; sourceTree = "<group>"; };
+		B53EA5F118DD891000AD24A6 /* Present@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Present@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5F618DD8AE100AD24A6 /* Macro.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Macro.tiff; sourceTree = "<group>"; };
+		B53EA5F718DD8AE100AD24A6 /* Macro@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Macro@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5F818DD8AE100AD24A6 /* Parent.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Parent.tiff; sourceTree = "<group>"; };
+		B53EA5F918DD8AE100AD24A6 /* Parent@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Parent@2x.tiff"; sourceTree = "<group>"; };
+		B53EA5FA18DD8AE100AD24A6 /* Inspector.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Inspector.tiff; sourceTree = "<group>"; };
+		B53EA5FB18DD8AE100AD24A6 /* Inspector@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Inspector@2x.tiff"; sourceTree = "<group>"; };
+		B53EA60218DD8B6E00AD24A6 /* Parameters.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Parameters.tiff; sourceTree = "<group>"; };
+		B53EA60318DD8B6E00AD24A6 /* Parameters@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Parameters@2x.tiff"; sourceTree = "<group>"; };
+		B53EA60618DD8B8400AD24A6 /* Viewer.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Viewer.tiff; sourceTree = "<group>"; };
+		B53EA60718DD8B8400AD24A6 /* Viewer@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Viewer@2x.tiff"; sourceTree = "<group>"; };
+		B53EA60A18DD8B9500AD24A6 /* ShowSettings.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ShowSettings.tiff; sourceTree = "<group>"; };
+		B53EA60B18DD8B9500AD24A6 /* ShowSettings@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "ShowSettings@2x.tiff"; sourceTree = "<group>"; };
+		B53EA60E18DD8BF100AD24A6 /* CreateVirtualMacro.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = CreateVirtualMacro.tiff; sourceTree = "<group>"; };
+		B53EA60F18DD8BF100AD24A6 /* CreateVirtualMacro@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "CreateVirtualMacro@2x.tiff"; sourceTree = "<group>"; };
+		B53EA61218DD8D2E00AD24A6 /* Patcherator.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Patcherator.tiff; sourceTree = "<group>"; };
+		B53EA61318DD8D2E00AD24A6 /* Patcherator@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Patcherator@2x.tiff"; sourceTree = "<group>"; };
+		B53EA61718DD95CF00AD24A6 /* ZoomIn.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ZoomIn.tiff; sourceTree = "<group>"; };
+		B53EA61818DD95CF00AD24A6 /* ZoomIn@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "ZoomIn@2x.tiff"; sourceTree = "<group>"; };
+		B53EA61918DD95CF00AD24A6 /* ZoomOut.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ZoomOut.tiff; sourceTree = "<group>"; };
+		B53EA61A18DD95CF00AD24A6 /* ZoomOut@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "ZoomOut@2x.tiff"; sourceTree = "<group>"; };
+		B53EA61B18DD95CF00AD24A6 /* ZoomToDefault.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ZoomToDefault.tiff; sourceTree = "<group>"; };
+		B53EA61C18DD95CF00AD24A6 /* ZoomToDefault@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "ZoomToDefault@2x.tiff"; sourceTree = "<group>"; };
+		B53EA61D18DD95CF00AD24A6 /* ZoomToFit.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ZoomToFit.tiff; sourceTree = "<group>"; };
+		B53EA61E18DD95CF00AD24A6 /* ZoomToFit@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "ZoomToFit@2x.tiff"; sourceTree = "<group>"; };
+		B53EA62818DD9D3100AD24A6 /* DebugMode.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = DebugMode.tiff; sourceTree = "<group>"; };
+		B53EA62918DD9D3100AD24A6 /* DebugMode@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "DebugMode@2x.tiff"; sourceTree = "<group>"; };
+		B53EA62A18DD9D3100AD24A6 /* EditMode.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = EditMode.tiff; sourceTree = "<group>"; };
+		B53EA62B18DD9D3100AD24A6 /* EditMode@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "EditMode@2x.tiff"; sourceTree = "<group>"; };
+		B53EA62C18DD9D3100AD24A6 /* PerformanceMode.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = PerformanceMode.tiff; sourceTree = "<group>"; };
+		B53EA62D18DD9D3100AD24A6 /* PerformanceMode@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "PerformanceMode@2x.tiff"; sourceTree = "<group>"; };
+		B53EA62E18DD9D3100AD24A6 /* ProfileMode.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = ProfileMode.tiff; sourceTree = "<group>"; };
+		B53EA62F18DD9D3100AD24A6 /* ProfileMode@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "ProfileMode@2x.tiff"; sourceTree = "<group>"; };
+		B545A8141ABA429B00D475A5 /* FBStopWatchPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBStopWatchPatch.h; sourceTree = "<group>"; };
+		B545A8151ABA429B00D475A5 /* FBStopWatchPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBStopWatchPatch.m; sourceTree = "<group>"; };
+		B545A8161ABA429B00D475A5 /* FBStopWatchPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBStopWatchPatch.xml; sourceTree = "<group>"; };
+		B54831B918627462000D2B2A /* FBOrigamiAdditions+Retina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+Retina.h"; sourceTree = "<group>"; };
+		B54831BA18627462000D2B2A /* FBOrigamiAdditions+Retina.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+Retina.m"; sourceTree = "<group>"; };
+		B54831D7186384B5000D2B2A /* FBOInteractionPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOInteractionPatch.h; sourceTree = "<group>"; };
+		B54831D8186384B5000D2B2A /* FBOInteractionPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOInteractionPatch.m; sourceTree = "<group>"; };
+		B54831DC186385DD000D2B2A /* FBOInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOInteractionController.h; sourceTree = "<group>"; };
+		B54831DD186385DD000D2B2A /* FBOInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOInteractionController.m; sourceTree = "<group>"; };
+		B54831DF1863898E000D2B2A /* NSObject+FBNoArcAdditons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBNoArcAdditons.h"; sourceTree = "<group>"; };
+		B54831E01863898E000D2B2A /* NSObject+FBNoArcAdditons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBNoArcAdditons.m"; sourceTree = "<group>"; };
+		B54831E2186410B4000D2B2A /* OrigamiMenubar-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrigamiMenubar-normal.png"; sourceTree = "<group>"; };
+		B54831E3186410B4000D2B2A /* OrigamiMenubar-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OrigamiMenubar-normal@2x.png"; sourceTree = "<group>"; };
+		B548D758196C897900A7C0B9 /* FBODelayPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBODelayPatch.h; sourceTree = "<group>"; };
+		B548D759196C897900A7C0B9 /* FBODelayPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBODelayPatch.m; sourceTree = "<group>"; };
+		B548D75B196CB12600A7C0B9 /* FBODelayPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBODelayPatch.xml; sourceTree = "<group>"; };
+		B54A58131963923F004BB2D6 /* POPConverterPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPConverterPatch.h; sourceTree = "<group>"; };
+		B54A58141963923F004BB2D6 /* POPConverterPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPConverterPatch.m; sourceTree = "<group>"; };
+		B54A5816196393F6004BB2D6 /* POPConverterPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = POPConverterPatch.xml; sourceTree = "<group>"; };
+		B560B6BA1C7557110079B864 /* FBOrigamiAdditions+Stats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+Stats.h"; sourceTree = "<group>"; };
+		B560B6BB1C7557110079B864 /* FBOrigamiAdditions+Stats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+Stats.m"; sourceTree = "<group>"; };
+		B56DC46518C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+RenderInImage.h"; sourceTree = "<group>"; };
+		B56DC46618C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+RenderInImage.m"; sourceTree = "<group>"; };
+		B5741F251A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+Tooltips.h"; sourceTree = "<group>"; };
+		B5741F261A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+Tooltips.m"; sourceTree = "<group>"; };
+		B574FDA71861080400668D86 /* FBOrigamiAdditions+PluginLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+PluginLoading.h"; sourceTree = "<group>"; };
+		B574FDA81861080400668D86 /* FBOrigamiAdditions+PluginLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+PluginLoading.m"; sourceTree = "<group>"; };
+		B574FDAD1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+DragAndDrop.h"; sourceTree = "<group>"; };
+		B574FDAE1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+DragAndDrop.m"; sourceTree = "<group>"; };
+		B574FDB018610AD200668D86 /* QCPort+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCPort+FBAdditions.h"; sourceTree = "<group>"; };
+		B574FDB118610AD200668D86 /* QCPort+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCPort+FBAdditions.m"; sourceTree = "<group>"; };
+		B574FDB318610CEE00668D86 /* QCPatchView+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCPatchView+FBAdditions.h"; sourceTree = "<group>"; };
+		B574FDB418610CEE00668D86 /* QCPatchView+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCPatchView+FBAdditions.m"; sourceTree = "<group>"; };
+		B574FDB618610CFD00668D86 /* QCPatch+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCPatch+FBAdditions.h"; sourceTree = "<group>"; };
+		B574FDB718610CFD00668D86 /* QCPatch+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCPatch+FBAdditions.m"; sourceTree = "<group>"; };
+		B574FDB918610DBF00668D86 /* NSObject+AssociatedObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObjects.h"; sourceTree = "<group>"; };
+		B574FDBA18610DBF00668D86 /* NSObject+AssociatedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObjects.m"; sourceTree = "<group>"; };
+		B574FDBC18610E9B00668D86 /* NSDocument+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDocument+FBAdditions.h"; sourceTree = "<group>"; };
+		B574FDBD18610E9B00668D86 /* NSDocument+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDocument+FBAdditions.m"; sourceTree = "<group>"; };
+		B574FDBF1861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+DimDisabledConsumers.h"; sourceTree = "<group>"; };
+		B574FDC01861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+DimDisabledConsumers.m"; sourceTree = "<group>"; };
+		B574FDC21861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+TextFieldShortcuts.h"; sourceTree = "<group>"; };
+		B574FDC31861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+TextFieldShortcuts.m"; sourceTree = "<group>"; };
+		B574FDC81861289E00668D86 /* FBOrigamiAdditions+WindowMods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+WindowMods.h"; sourceTree = "<group>"; };
+		B574FDC91861289E00668D86 /* FBOrigamiAdditions+WindowMods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+WindowMods.m"; sourceTree = "<group>"; };
+		B57D530B1A2D301300B805D3 /* Code Export */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Code Export"; sourceTree = "<group>"; };
+		B593F0A41A2737DF003C664A /* FBOrigamiAdditions+CodeExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+CodeExport.h"; sourceTree = "<group>"; };
+		B593F0A51A2737DF003C664A /* FBOrigamiAdditions+CodeExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+CodeExport.m"; sourceTree = "<group>"; };
+		B59541B119E1F5F400B4FC3A /* FBDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDeviceViewController.h; sourceTree = "<group>"; };
+		B59541B219E1F5F400B4FC3A /* FBDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDeviceViewController.m; sourceTree = "<group>"; };
+		B59541B319E1F5F400B4FC3A /* FBDeviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBDeviceViewController.xib; sourceTree = "<group>"; };
+		B59687C11BADEC72007682C7 /* FBLastValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLastValue.h; sourceTree = "<group>"; };
+		B59687C21BADEC72007682C7 /* FBLastValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLastValue.m; sourceTree = "<group>"; };
+		B59687C31BADEC72007682C7 /* FBLastValue.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBLastValue.xml; sourceTree = "<group>"; };
+		B596924F1A315E5D00FD991A /* English */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = English; path = English.lproj/FBOStructureCreatorPatch.xml; sourceTree = "<group>"; };
+		B59692511A318F5400FD991A /* FBOStructureCreatorPatchUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBOStructureCreatorPatchUI.xib; sourceTree = "<group>"; };
+		B596FE001A86D49500C1D132 /* FBViewerDimensionsPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBViewerDimensionsPatch.h; sourceTree = "<group>"; };
+		B596FE011A86D49500C1D132 /* FBViewerDimensionsPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBViewerDimensionsPatch.m; sourceTree = "<group>"; };
+		B596FE021A86D49500C1D132 /* FBViewerDimensionsPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBViewerDimensionsPatch.xml; sourceTree = "<group>"; };
+		B5B1D6BD1A5C66A2006E7A6A /* RefreshIconYosemite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RefreshIconYosemite@2x.png"; sourceTree = "<group>"; };
+		B5B1D6BF1A5C693D006E7A6A /* TabsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabsIcon@2x.png"; sourceTree = "<group>"; };
+		B5B2E9F41A75AF9400F93A75 /* FBOStructureCombinePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOStructureCombinePatch.h; sourceTree = "<group>"; };
+		B5B2E9F51A75AF9400F93A75 /* FBOStructureCombinePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOStructureCombinePatch.m; sourceTree = "<group>"; };
+		B5B2E9F81A75B30300F93A75 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = English; path = English.lproj/FBOStructureCombinePatch.xml; sourceTree = "<group>"; };
+		B5B4A3F31919A91B0044C3ED /* FBOProgressPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOProgressPatch.h; sourceTree = "<group>"; };
+		B5B4A3F41919A91B0044C3ED /* FBOProgressPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOProgressPatch.m; sourceTree = "<group>"; };
+		B5B4A3F61919A96F0044C3ED /* FBOProgressPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBOProgressPatch.xml; sourceTree = "<group>"; };
+		B5BB6FCA1A101FB6005725C1 /* BWDeviceInfoReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWDeviceInfoReceiver.h; sourceTree = "<group>"; };
+		B5BB6FCB1A101FB6005725C1 /* BWDeviceInfoReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWDeviceInfoReceiver.m; sourceTree = "<group>"; };
+		B5BB6FCC1A101FB6005725C1 /* FB3DOrientationPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FB3DOrientationPatch.h; sourceTree = "<group>"; };
+		B5BB6FCD1A101FB6005725C1 /* FB3DOrientationPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FB3DOrientationPatch.m; sourceTree = "<group>"; };
+		B5BB6FCE1A101FB6005725C1 /* FB3DOrientationPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FB3DOrientationPatch.xml; sourceTree = "<group>"; };
+		B5BB6FCF1A101FB6005725C1 /* FBDeviceInfoPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDeviceInfoPatch.h; sourceTree = "<group>"; };
+		B5BB6FD01A101FB6005725C1 /* FBDeviceInfoPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDeviceInfoPatch.m; sourceTree = "<group>"; };
+		B5BB6FD11A101FB6005725C1 /* FBDeviceInfoPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBDeviceInfoPatch.xml; sourceTree = "<group>"; };
+		B5BB6FD21A101FB6005725C1 /* FBDeviceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDeviceProtocol.h; sourceTree = "<group>"; };
+		B5BB6FD31A101FB6005725C1 /* FBDeviceRendererPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDeviceRendererPatch.h; sourceTree = "<group>"; };
+		B5BB6FD41A101FB6005725C1 /* FBDeviceRendererPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDeviceRendererPatch.m; sourceTree = "<group>"; };
+		B5BB6FD51A101FB6005725C1 /* FBDeviceRendererPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBDeviceRendererPatch.xml; sourceTree = "<group>"; };
+		B5BB6FD61A101FB6005725C1 /* FBDeviceVibratePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDeviceVibratePatch.h; sourceTree = "<group>"; };
+		B5BB6FD71A101FB6005725C1 /* FBDeviceVibratePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDeviceVibratePatch.m; sourceTree = "<group>"; };
+		B5BB6FD81A101FB6005725C1 /* FBDeviceVibratePatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBDeviceVibratePatch.xml; sourceTree = "<group>"; };
+		B5BB6FE51A102083005725C1 /* PTChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTChannel.h; path = PeerTalk/PTChannel.h; sourceTree = "<group>"; };
+		B5BB6FE61A102083005725C1 /* PTChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTChannel.m; path = PeerTalk/PTChannel.m; sourceTree = "<group>"; };
+		B5BB6FE71A102083005725C1 /* PTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTProtocol.h; path = PeerTalk/PTProtocol.h; sourceTree = "<group>"; };
+		B5BB6FE81A102083005725C1 /* PTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTProtocol.m; path = PeerTalk/PTProtocol.m; sourceTree = "<group>"; };
+		B5BB6FE91A102083005725C1 /* PTUSBHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTUSBHub.h; path = PeerTalk/PTUSBHub.h; sourceTree = "<group>"; };
+		B5BB6FEA1A102083005725C1 /* PTUSBHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTUSBHub.m; path = PeerTalk/PTUSBHub.m; sourceTree = "<group>"; };
+		B5BB6FEE1A1020AB005725C1 /* FBMutableOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBMutableOrderedDictionary.h; sourceTree = "<group>"; };
+		B5BB6FEF1A1020AB005725C1 /* FBMutableOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMutableOrderedDictionary.m; sourceTree = "<group>"; };
+		B5BB6FF11A1020DD005725C1 /* QCImage+FBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QCImage+FBAdditions.h"; sourceTree = "<group>"; };
+		B5BB6FF21A1020DD005725C1 /* QCImage+FBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QCImage+FBAdditions.m"; sourceTree = "<group>"; };
+		B5BB6FF41A102146005725C1 /* FBHashValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHashValue.h; sourceTree = "<group>"; };
+		B5BB6FF51A102146005725C1 /* FBHashValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHashValue.m; sourceTree = "<group>"; };
+		B5D7643D1A30FD9A0054F72F /* FBOStructureCreatorPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOStructureCreatorPatch.h; sourceTree = "<group>"; };
+		B5D7643E1A30FD9A0054F72F /* FBOStructureCreatorPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOStructureCreatorPatch.m; sourceTree = "<group>"; };
+		B5D764401A30FEBF0054F72F /* FBOStructureCreatorPatchUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOStructureCreatorPatchUI.h; sourceTree = "<group>"; };
+		B5D764411A30FEBF0054F72F /* FBOStructureCreatorPatchUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOStructureCreatorPatchUI.m; sourceTree = "<group>"; };
+		B5D88F9318E0A6F200CFBB7D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = English; path = English.lproj/FBOMultiSwitchPatch.xml; sourceTree = "<group>"; };
+		B5EA169C18CE4E8200A561A4 /* FBOLayerGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOLayerGroup.h; sourceTree = "<group>"; };
+		B5EA169D18CE4E8200A561A4 /* FBOLayerGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOLayerGroup.m; sourceTree = "<group>"; };
+		B5EA16A018CE4F6800A561A4 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = English; path = English.lproj/FBOLayerGroup.xml; sourceTree = "<group>"; };
+		B5EE0032198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBOrigamiAdditions+WindowManagement.h"; sourceTree = "<group>"; };
+		B5EE0033198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FBOrigamiAdditions+WindowManagement.m"; sourceTree = "<group>"; };
+		B5F6D89619624A450057BA6E /* FBOMouseScrollPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOMouseScrollPatch.h; sourceTree = "<group>"; };
+		B5F6D89719624A450057BA6E /* FBOMouseScrollPatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOMouseScrollPatch.m; sourceTree = "<group>"; };
+		B5F6D89919624C220057BA6E /* FBOMouseScrollPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FBOMouseScrollPatch.xml; sourceTree = "<group>"; };
+		B5FB9D0519E3DB060059028E /* FBDeviceToolbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBDeviceToolbarButton.h; sourceTree = "<group>"; };
+		B5FB9D0619E3DB060059028E /* FBDeviceToolbarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBDeviceToolbarButton.m; sourceTree = "<group>"; };
+		D9DC9CEE19205EAE006B8241 /* FBOLiveFilePatchUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBOLiveFilePatchUI.xib; sourceTree = "<group>"; };
+		D9DC9CF019205ED7006B8241 /* FBOLiveFilePatchUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOLiveFilePatchUI.h; sourceTree = "<group>"; };
+		D9DC9CF119205ED7006B8241 /* FBOLiveFilePatchUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOLiveFilePatchUI.m; sourceTree = "<group>"; };
+		D9DC9CF31920618B006B8241 /* FBOLiveFilePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOLiveFilePatch.h; sourceTree = "<group>"; };
+		D9DC9CF41920618B006B8241 /* FBOLiveFilePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOLiveFilePatch.m; sourceTree = "<group>"; };
+		D9DC9CF7192070EB006B8241 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = English; path = English.lproj/FBOLiveFilePatch.xml; sourceTree = "<group>"; };
+		D9DC9CFB19209DC0006B8241 /* compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = compat.h; path = "../FB Tools/CDEvents/compat.h"; sourceTree = "<group>"; };
+		D9DC9CFC19209DC0006B8241 /* CDEventsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDEventsDelegate.h; path = "../FB Tools/CDEvents/CDEventsDelegate.h"; sourceTree = "<group>"; };
+		D9DC9CFD19209DC0006B8241 /* CDEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDEvents.m; path = "../FB Tools/CDEvents/CDEvents.m"; sourceTree = "<group>"; };
+		D9DC9CFE19209DC0006B8241 /* CDEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDEvents.h; path = "../FB Tools/CDEvents/CDEvents.h"; sourceTree = "<group>"; };
+		D9DC9CFF19209DC0006B8241 /* CDEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDEvent.m; path = "../FB Tools/CDEvents/CDEvent.m"; sourceTree = "<group>"; };
+		D9DC9D0019209DC0006B8241 /* CDEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDEvent.h; path = "../FB Tools/CDEvents/CDEvent.h"; sourceTree = "<group>"; };
+		EC61DA14191C85B800E5443A /* POPDecayPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPDecayPatch.h; sourceTree = "<group>"; };
+		EC61DA15191C85B800E5443A /* POPDecayPatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPDecayPatch.mm; sourceTree = "<group>"; };
+		EC61DA16191C85B800E5443A /* POPDecayPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = POPDecayPatch.xml; sourceTree = "<group>"; };
+		EC9AA2D8191B0B2E00F2209F /* pop.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = pop.framework; sourceTree = SOURCE_ROOT; };
+		EC9AA2DD191B0C2C00F2209F /* POPBouncyPatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPBouncyPatch.h; sourceTree = "<group>"; };
+		EC9AA2DE191B0C2C00F2209F /* POPBouncyPatch.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = POPBouncyPatch.mm; sourceTree = "<group>"; };
+		EC9AA2DF191B0C2C00F2209F /* POPBouncyPatch.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = POPBouncyPatch.xml; sourceTree = "<group>"; };
+		F1111F80089D19ED00C2708E /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
+		F1481791089E5FE3006FD276 /* FBOrigamiPrincipal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBOrigamiPrincipal.h; sourceTree = "<group>"; };
+		F1481792089E5FE3006FD276 /* FBOrigamiPrincipal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBOrigamiPrincipal.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9AA2D9191B0B2E00F2209F /* pop.framework in Frameworks */,
+				E7042735130D975800F2BCDE /* Quartz.framework in Frameworks */,
+				3A9D3DFB18C123470021812A /* Sparkle.framework in Frameworks */,
+				E7042736130D976000F2BCDE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* FreeboardPatch */ = {
+			isa = PBXGroup;
+			children = (
+				F1481791089E5FE3006FD276 /* FBOrigamiPrincipal.h */,
+				F1481792089E5FE3006FD276 /* FBOrigamiPrincipal.m */,
+				3ADF656F171CFB1800A6B59F /* FBOrigami_Prefix.pch */,
+				B5BB6FC91A101F72005725C1 /* Device */,
+				2AB830650CDDF334005AB050 /* Other Patches */,
+				3AFA71011856767A00A34E93 /* Other */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+				D9DC9CF919209DA8006B8241 /* Vendor */,
+			);
+			name = FreeboardPatch;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				EC9AA2D8191B0B2E00F2209F /* pop.framework */,
+				3A9D3DFA18C123470021812A /* Sparkle.framework */,
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B12469A41B0F9C560002AFEC /* Export for Origami.sketchplugin */,
+				B12469A21B0F92F50002AFEC /* Export for Origami.js */,
+				B12469A01B0E84A30002AFEC /* coscript */,
+				B53EA5CC18DD713500AD24A6 /* Toolbar Icons */,
+				3A9D3E0218C3FD8A0021812A /* Origami.icns */,
+				B54831E2186410B4000D2B2A /* OrigamiMenubar-normal.png */,
+				B54831E3186410B4000D2B2A /* OrigamiMenubar-normal@2x.png */,
+				B51CE8E31A9BC0ED00E1C156 /* Receive1x.png */,
+				B51CE8E41A9BC0ED00E1C156 /* Receive4x.png */,
+				B51CE8E71A9BC0F600E1C156 /* Broadcast1x.png */,
+				B51CE8E81A9BC0F600E1C156 /* Broadcast4x.png */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				3A8E73A318C409DD00F57608 /* dsa_pub.pem */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1111F80089D19ED00C2708E /* Quartz.framework */,
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* Origami.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2AB830650CDDF334005AB050 /* Other Patches */ = {
+			isa = PBXGroup;
+			children = (
+				B51CE8C81A9BC04000E1C156 /* Wireless */,
+				B52C92591975D7E600AB5A6D /* Drag and Drop */,
+				B53A9AC618F31C0000B5E151 /* Browser Chrome */,
+				B53A9AD618F32B5100B5E151 /* Hex Patches */,
+				B54A5812196390D4004BB2D6 /* Pop Animation */,
+				1A7A711F18D7CBE80008D05A /* FBODynamicPortsPatch.h */,
+				1A7A712018D7CBE80008D05A /* FBODynamicPortsPatch.m */,
+				1A7A712118D7CBE80008D05A /* FBOMultiSwitchPatch.h */,
+				1A7A712218D7CBE80008D05A /* FBOMultiSwitchPatch.m */,
+				B5D88F9218E0A6F200CFBB7D /* FBOMultiSwitchPatch.xml */,
+				1A7A712318D7CBE80008D05A /* FBOMultiSwitchPatchUI.h */,
+				1A7A712418D7CBE80008D05A /* FBOMultiSwitchPatchUI.m */,
+				1A7A712518D7CBE80008D05A /* FBOMultiSwitchPatchUI.xib */,
+				B5D7643D1A30FD9A0054F72F /* FBOStructureCreatorPatch.h */,
+				B5D7643E1A30FD9A0054F72F /* FBOStructureCreatorPatch.m */,
+				B596924E1A315E5D00FD991A /* FBOStructureCreatorPatch.xml */,
+				B5D764401A30FEBF0054F72F /* FBOStructureCreatorPatchUI.h */,
+				B5D764411A30FEBF0054F72F /* FBOStructureCreatorPatchUI.m */,
+				B59692511A318F5400FD991A /* FBOStructureCreatorPatchUI.xib */,
+				B5B2E9F41A75AF9400F93A75 /* FBOStructureCombinePatch.h */,
+				B5B2E9F51A75AF9400F93A75 /* FBOStructureCombinePatch.m */,
+				B5B2E9F71A75B30300F93A75 /* FBOStructureCombinePatch.xml */,
+				B545A8141ABA429B00D475A5 /* FBStopWatchPatch.h */,
+				B545A8151ABA429B00D475A5 /* FBStopWatchPatch.m */,
+				B545A8161ABA429B00D475A5 /* FBStopWatchPatch.xml */,
+				B54831D7186384B5000D2B2A /* FBOInteractionPatch.h */,
+				B54831D8186384B5000D2B2A /* FBOInteractionPatch.m */,
+				3A9D3DF518C1211C0021812A /* FBOInteractionPatch.xml */,
+				B54831DC186385DD000D2B2A /* FBOInteractionController.h */,
+				B54831DD186385DD000D2B2A /* FBOInteractionController.m */,
+				B5EA169C18CE4E8200A561A4 /* FBOLayerGroup.h */,
+				B5EA169D18CE4E8200A561A4 /* FBOLayerGroup.m */,
+				B5EA169F18CE4F6800A561A4 /* FBOLayerGroup.xml */,
+				B59687C11BADEC72007682C7 /* FBLastValue.h */,
+				B59687C21BADEC72007682C7 /* FBLastValue.m */,
+				B59687C31BADEC72007682C7 /* FBLastValue.xml */,
+				B50F45A718F9FB92005548DF /* FBCursorPatch.h */,
+				B50F45A818F9FB92005548DF /* FBCursorPatch.m */,
+				B50F45A918F9FB92005548DF /* FBCursorPatch.xml */,
+				B5B4A3F31919A91B0044C3ED /* FBOProgressPatch.h */,
+				B5B4A3F41919A91B0044C3ED /* FBOProgressPatch.m */,
+				B5B4A3F61919A96F0044C3ED /* FBOProgressPatch.xml */,
+				B5F6D89619624A450057BA6E /* FBOMouseScrollPatch.h */,
+				B5F6D89719624A450057BA6E /* FBOMouseScrollPatch.m */,
+				B5F6D89919624C220057BA6E /* FBOMouseScrollPatch.xml */,
+				D9DC9CF019205ED7006B8241 /* FBOLiveFilePatchUI.h */,
+				D9DC9CF119205ED7006B8241 /* FBOLiveFilePatchUI.m */,
+				D9DC9CEE19205EAE006B8241 /* FBOLiveFilePatchUI.xib */,
+				D9DC9CF6192070EB006B8241 /* FBOLiveFilePatch.xml */,
+				D9DC9CF31920618B006B8241 /* FBOLiveFilePatch.h */,
+				D9DC9CF41920618B006B8241 /* FBOLiveFilePatch.m */,
+				B548D758196C897900A7C0B9 /* FBODelayPatch.h */,
+				B548D759196C897900A7C0B9 /* FBODelayPatch.m */,
+				B548D75B196CB12600A7C0B9 /* FBODelayPatch.xml */,
+				B596FE001A86D49500C1D132 /* FBViewerDimensionsPatch.h */,
+				B596FE011A86D49500C1D132 /* FBViewerDimensionsPatch.m */,
+				B596FE021A86D49500C1D132 /* FBViewerDimensionsPatch.xml */,
+			);
+			name = "Other Patches";
+			sourceTree = "<group>";
+		};
+		3AFA71011856767A00A34E93 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B57D53081A2D280200B805D3 /* Code Export */,
+				B50816AE19805E7A007AEDAF /* Inline Values */,
+				3AFA71051856771A00A34E93 /* FBOrigamiAdditions.h */,
+				3AFA71061856771A00A34E93 /* FBOrigamiAdditions.m */,
+				B124699F1B0E848E0002AFEC /* File Creation */,
+				3AFA71021856768800A34E93 /* FBOrigamiAdditions+Mavericks.h */,
+				3AFA71031856768800A34E93 /* FBOrigamiAdditions+Mavericks.m */,
+				B560B6BA1C7557110079B864 /* FBOrigamiAdditions+Stats.h */,
+				B560B6BB1C7557110079B864 /* FBOrigamiAdditions+Stats.m */,
+				B574FDA71861080400668D86 /* FBOrigamiAdditions+PluginLoading.h */,
+				B574FDA81861080400668D86 /* FBOrigamiAdditions+PluginLoading.m */,
+				B574FDAD1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.h */,
+				B574FDAE1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.m */,
+				B574FDBF1861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.h */,
+				B574FDC01861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.m */,
+				B574FDC21861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.h */,
+				B574FDC31861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.m */,
+				B574FDC81861289E00668D86 /* FBOrigamiAdditions+WindowMods.h */,
+				B574FDC91861289E00668D86 /* FBOrigamiAdditions+WindowMods.m */,
+				B54831B918627462000D2B2A /* FBOrigamiAdditions+Retina.h */,
+				B54831BA18627462000D2B2A /* FBOrigamiAdditions+Retina.m */,
+				3AF2FE3018C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.h */,
+				3AF2FE3118C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.m */,
+				B56DC46518C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.h */,
+				B56DC46618C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.m */,
+				3A9D3DFF18C134E20021812A /* FBOrigamiAdditions+Preferences.h */,
+				3A9D3E0018C134E20021812A /* FBOrigamiAdditions+Preferences.m */,
+				B5EE0032198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.h */,
+				B5EE0033198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.m */,
+				3A63EDCD1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.h */,
+				3A63EDCE1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.m */,
+				B50277511A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.h */,
+				B50277521A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.m */,
+				B50277541A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.h */,
+				B50277551A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.m */,
+				B5741F251A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.h */,
+				B5741F261A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.m */,
+				3A41C9C91859100500141593 /* NSObject+FBAdditions.h */,
+				3A41C9CA1859100500141593 /* NSObject+FBAdditions.m */,
+				B54831DF1863898E000D2B2A /* NSObject+FBNoArcAdditons.h */,
+				B54831E01863898E000D2B2A /* NSObject+FBNoArcAdditons.m */,
+				3AACD302185933AE0040742B /* NSString+FBAdditions.h */,
+				3AACD303185933AE0040742B /* NSString+FBAdditions.m */,
+				B574FDB018610AD200668D86 /* QCPort+FBAdditions.h */,
+				B574FDB118610AD200668D86 /* QCPort+FBAdditions.m */,
+				B50816B51980F043007AEDAF /* QCIndexPort+FBAdditions.h */,
+				B50816B61980F043007AEDAF /* QCIndexPort+FBAdditions.m */,
+				B574FDB318610CEE00668D86 /* QCPatchView+FBAdditions.h */,
+				B574FDB418610CEE00668D86 /* QCPatchView+FBAdditions.m */,
+				B574FDB618610CFD00668D86 /* QCPatch+FBAdditions.h */,
+				B574FDB718610CFD00668D86 /* QCPatch+FBAdditions.m */,
+				B5BB6FF11A1020DD005725C1 /* QCImage+FBAdditions.h */,
+				B5BB6FF21A1020DD005725C1 /* QCImage+FBAdditions.m */,
+				B52C92621975D93000AB5A6D /* QCView+FBAdditions.h */,
+				B52C92631975D93000AB5A6D /* QCView+FBAdditions.m */,
+				B574FDB918610DBF00668D86 /* NSObject+AssociatedObjects.h */,
+				B574FDBA18610DBF00668D86 /* NSObject+AssociatedObjects.m */,
+				B574FDBC18610E9B00668D86 /* NSDocument+FBAdditions.h */,
+				B574FDBD18610E9B00668D86 /* NSDocument+FBAdditions.m */,
+				3AAF9DB718BAEBF9002B591F /* NSMenu+FBAdditions.h */,
+				3AAF9DB818BAEBF9002B591F /* NSMenu+FBAdditions.m */,
+				B50816BB1980F10E007AEDAF /* NSView+FBAdditions.h */,
+				B50816BC1980F10E007AEDAF /* NSView+FBAdditions.m */,
+				B5BB6FEE1A1020AB005725C1 /* FBMutableOrderedDictionary.h */,
+				B5BB6FEF1A1020AB005725C1 /* FBMutableOrderedDictionary.m */,
+				3AFA71081856776900A34E93 /* GRPHookMethod.h */,
+				B5BB6FF41A102146005725C1 /* FBHashValue.h */,
+				B5BB6FF51A102146005725C1 /* FBHashValue.m */,
+				B5FB9D0519E3DB060059028E /* FBDeviceToolbarButton.h */,
+				B5FB9D0619E3DB060059028E /* FBDeviceToolbarButton.m */,
+				B59541B119E1F5F400B4FC3A /* FBDeviceViewController.h */,
+				B59541B219E1F5F400B4FC3A /* FBDeviceViewController.m */,
+				B59541B319E1F5F400B4FC3A /* FBDeviceViewController.xib */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		B124699F1B0E848E0002AFEC /* File Creation */ = {
+			isa = PBXGroup;
+			children = (
+				B160AAEA1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.h */,
+				B160AAEB1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.m */,
+			);
+			name = "File Creation";
+			sourceTree = "<group>";
+		};
+		B50816AE19805E7A007AEDAF /* Inline Values */ = {
+			isa = PBXGroup;
+			children = (
+				B50816AF198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.h */,
+				B50816B1198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.m */,
+				B50816B0198060F1007AEDAF /* FBPatchView.h */,
+				B50816B2198060F1007AEDAF /* FBPatchView.m */,
+				B516A26E1A16A161009CD3E4 /* FBTextObject.h */,
+				B516A26F1A16A161009CD3E4 /* FBTextObject.m */,
+			);
+			name = "Inline Values";
+			sourceTree = "<group>";
+		};
+		B51CE8C81A9BC04000E1C156 /* Wireless */ = {
+			isa = PBXGroup;
+			children = (
+				B51CE8E01A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.h */,
+				B51CE8E11A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.m */,
+				B51CE8C91A9BC05D00E1C156 /* FBWirelessController.h */,
+				B51CE8CA1A9BC05D00E1C156 /* FBWirelessController.m */,
+				B51CE8CB1A9BC05D00E1C156 /* FBWirelessInPatch.h */,
+				B51CE8CC1A9BC05D00E1C156 /* FBWirelessInPatch.m */,
+				B51CE8CD1A9BC05D00E1C156 /* FBWirelessInPatch.xml */,
+				B51CE8CE1A9BC05D00E1C156 /* FBWirelessInPatchUI.h */,
+				B51CE8CF1A9BC05D00E1C156 /* FBWirelessInPatchUI.m */,
+				B51CE8D01A9BC05D00E1C156 /* FBWirelessInPatchUI.xib */,
+				B51CE8D11A9BC05D00E1C156 /* FBWirelessOutPatch.h */,
+				B51CE8D21A9BC05D00E1C156 /* FBWirelessOutPatch.m */,
+				B51CE8D31A9BC05D00E1C156 /* FBWirelessOutPatch.xml */,
+				B51CE8D41A9BC05D00E1C156 /* FBWirelessOutPatchUI.h */,
+				B51CE8D51A9BC05D00E1C156 /* FBWirelessOutPatchUI.m */,
+				B51CE8D61A9BC05D00E1C156 /* FBWirelessOutPatchUI.xib */,
+			);
+			name = Wireless;
+			sourceTree = "<group>";
+		};
+		B52C92591975D7E600AB5A6D /* Drag and Drop */ = {
+			isa = PBXGroup;
+			children = (
+				B52C925A1975D7F100AB5A6D /* FBDragAndDropPatch.h */,
+				B52C925B1975D7F100AB5A6D /* FBDragAndDropPatch.m */,
+				B52C925C1975D7F100AB5A6D /* FBDragAndDropPatch.xml */,
+				B52C925F1975D80000AB5A6D /* QCView+DragAndDrop.h */,
+				B52C92601975D80000AB5A6D /* QCView+DragAndDrop.m */,
+			);
+			name = "Drag and Drop";
+			sourceTree = "<group>";
+		};
+		B53A9AC618F31C0000B5E151 /* Browser Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				B53A9AC718F31E3900B5E151 /* Resources */,
+				B53A9AB618F31B9A00B5E151 /* FBSafariTheme.h */,
+				B53A9AB718F31B9A00B5E151 /* FBSafariTheme.m */,
+				B53A9AB818F31B9A00B5E151 /* FBSafariTheme.xml */,
+				B53A9AB918F31B9A00B5E151 /* FBSafariThemeButtons.h */,
+				B53A9ABA18F31B9A00B5E151 /* FBSafariThemeButtons.m */,
+				B53A9ABB18F31B9A00B5E151 /* FBSafariThemeButtons.xml */,
+				B53A9ABC18F31B9A00B5E151 /* FBSafariToolbarController.h */,
+				B53A9ABD18F31B9A00B5E151 /* FBSafariToolbarController.m */,
+				B53A9ABE18F31B9A00B5E151 /* FBSafariToolbarController.xib */,
+				B53A9AB418F31B9A00B5E151 /* FBSafariSegmentedCell.h */,
+				B53A9AB518F31B9A00B5E151 /* FBSafariSegmentedCell.m */,
+			);
+			name = "Browser Chrome";
+			sourceTree = "<group>";
+		};
+		B53A9AC718F31E3900B5E151 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B53A9AC818F31E8600B5E151 /* FaviconFacebook.png */,
+				B53A9AC918F31E8600B5E151 /* FaviconFacebook@2x.png */,
+				B53A9ACA18F31E8600B5E151 /* FaviconGeneric.png */,
+				B53A9ACB18F31E8600B5E151 /* FaviconGeneric@2x.png */,
+				B53A9ACC18F31E8600B5E151 /* RefreshIcon.png */,
+				B53A9ACD18F31E8600B5E151 /* RefreshIcon@2x.png */,
+				B5B1D6BD1A5C66A2006E7A6A /* RefreshIconYosemite@2x.png */,
+				B5B1D6BF1A5C693D006E7A6A /* TabsIcon@2x.png */,
+				B53A9ACE18F31E8600B5E151 /* ToolbarDownloadsTemplate.pdf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B53A9AD618F32B5100B5E151 /* Hex Patches */ = {
+			isa = PBXGroup;
+			children = (
+				B53A9AD718F32B6800B5E151 /* FBHexToRGB.h */,
+				B53A9AD818F32B6800B5E151 /* FBHexToRGB.m */,
+				B53A9AD918F32B6800B5E151 /* FBHexToRGB.xml */,
+				B53A9ADA18F32B6800B5E151 /* FBRGBToHex.h */,
+				B53A9ADB18F32B6800B5E151 /* FBRGBToHex.m */,
+				B53A9ADC18F32B6800B5E151 /* FBRGBToHex.xml */,
+			);
+			name = "Hex Patches";
+			sourceTree = "<group>";
+		};
+		B53EA5CC18DD713500AD24A6 /* Toolbar Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B53EA5F518DD8ABF00AD24A6 /* Editor Window */,
+				B53EA5F418DD8AB000AD24A6 /* Viewer Window */,
+			);
+			name = "Toolbar Icons";
+			sourceTree = "<group>";
+		};
+		B53EA5F418DD8AB000AD24A6 /* Viewer Window */ = {
+			isa = PBXGroup;
+			children = (
+				B53EA62718DD9D1E00AD24A6 /* Mode */,
+				B53EA5E418DD888C00AD24A6 /* Stop.tiff */,
+				B53EA5E518DD888C00AD24A6 /* Stop@2x.tiff */,
+				B53EA5D218DD7AC600AD24A6 /* Run.tiff */,
+				B53EA5D318DD7AC600AD24A6 /* Run@2x.tiff */,
+				B53EA60218DD8B6E00AD24A6 /* Parameters.tiff */,
+				B53EA60318DD8B6E00AD24A6 /* Parameters@2x.tiff */,
+				B53EA5E018DD7DFF00AD24A6 /* SaveImage.tiff */,
+				B53EA5E118DD7DFF00AD24A6 /* SaveImage@2x.tiff */,
+				B53EA5EC18DD88F800AD24A6 /* Editor.tiff */,
+				B53EA5ED18DD88F800AD24A6 /* Editor@2x.tiff */,
+				B53EA5F018DD891000AD24A6 /* Present.tiff */,
+				B53EA5F118DD891000AD24A6 /* Present@2x.tiff */,
+			);
+			name = "Viewer Window";
+			sourceTree = "<group>";
+		};
+		B53EA5F518DD8ABF00AD24A6 /* Editor Window */ = {
+			isa = PBXGroup;
+			children = (
+				B53EA61618DD95C600AD24A6 /* Zoom */,
+				B53EA5F618DD8AE100AD24A6 /* Macro.tiff */,
+				B53EA5F718DD8AE100AD24A6 /* Macro@2x.tiff */,
+				B53EA5F818DD8AE100AD24A6 /* Parent.tiff */,
+				B53EA5F918DD8AE100AD24A6 /* Parent@2x.tiff */,
+				B53EA5FA18DD8AE100AD24A6 /* Inspector.tiff */,
+				B53EA5FB18DD8AE100AD24A6 /* Inspector@2x.tiff */,
+				B53EA5DA18DD7BC500AD24A6 /* InputParameters.tiff */,
+				B53EA5DB18DD7BC500AD24A6 /* InputParameters@2x.tiff */,
+				B53EA60618DD8B8400AD24A6 /* Viewer.tiff */,
+				B53EA60718DD8B8400AD24A6 /* Viewer@2x.tiff */,
+				B53EA60A18DD8B9500AD24A6 /* ShowSettings.tiff */,
+				B53EA60B18DD8B9500AD24A6 /* ShowSettings@2x.tiff */,
+				B53EA60E18DD8BF100AD24A6 /* CreateVirtualMacro.tiff */,
+				B53EA60F18DD8BF100AD24A6 /* CreateVirtualMacro@2x.tiff */,
+				B53EA61218DD8D2E00AD24A6 /* Patcherator.tiff */,
+				B53EA61318DD8D2E00AD24A6 /* Patcherator@2x.tiff */,
+			);
+			name = "Editor Window";
+			sourceTree = "<group>";
+		};
+		B53EA61618DD95C600AD24A6 /* Zoom */ = {
+			isa = PBXGroup;
+			children = (
+				B53EA61718DD95CF00AD24A6 /* ZoomIn.tiff */,
+				B53EA61818DD95CF00AD24A6 /* ZoomIn@2x.tiff */,
+				B53EA61918DD95CF00AD24A6 /* ZoomOut.tiff */,
+				B53EA61A18DD95CF00AD24A6 /* ZoomOut@2x.tiff */,
+				B53EA61B18DD95CF00AD24A6 /* ZoomToDefault.tiff */,
+				B53EA61C18DD95CF00AD24A6 /* ZoomToDefault@2x.tiff */,
+				B53EA61D18DD95CF00AD24A6 /* ZoomToFit.tiff */,
+				B53EA61E18DD95CF00AD24A6 /* ZoomToFit@2x.tiff */,
+			);
+			name = Zoom;
+			sourceTree = "<group>";
+		};
+		B53EA62718DD9D1E00AD24A6 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				B53EA62818DD9D3100AD24A6 /* DebugMode.tiff */,
+				B53EA62918DD9D3100AD24A6 /* DebugMode@2x.tiff */,
+				B53EA62A18DD9D3100AD24A6 /* EditMode.tiff */,
+				B53EA62B18DD9D3100AD24A6 /* EditMode@2x.tiff */,
+				B53EA62C18DD9D3100AD24A6 /* PerformanceMode.tiff */,
+				B53EA62D18DD9D3100AD24A6 /* PerformanceMode@2x.tiff */,
+				B53EA62E18DD9D3100AD24A6 /* ProfileMode.tiff */,
+				B53EA62F18DD9D3100AD24A6 /* ProfileMode@2x.tiff */,
+			);
+			name = Mode;
+			sourceTree = "<group>";
+		};
+		B54A5812196390D4004BB2D6 /* Pop Animation */ = {
+			isa = PBXGroup;
+			children = (
+				EC9AA2DD191B0C2C00F2209F /* POPBouncyPatch.h */,
+				EC9AA2DE191B0C2C00F2209F /* POPBouncyPatch.mm */,
+				EC9AA2DF191B0C2C00F2209F /* POPBouncyPatch.xml */,
+				EC61DA14191C85B800E5443A /* POPDecayPatch.h */,
+				EC61DA15191C85B800E5443A /* POPDecayPatch.mm */,
+				EC61DA16191C85B800E5443A /* POPDecayPatch.xml */,
+				B54A58131963923F004BB2D6 /* POPConverterPatch.h */,
+				B54A58141963923F004BB2D6 /* POPConverterPatch.m */,
+				B54A5816196393F6004BB2D6 /* POPConverterPatch.xml */,
+			);
+			name = "Pop Animation";
+			sourceTree = "<group>";
+		};
+		B57D53081A2D280200B805D3 /* Code Export */ = {
+			isa = PBXGroup;
+			children = (
+				B593F0A41A2737DF003C664A /* FBOrigamiAdditions+CodeExport.h */,
+				B593F0A51A2737DF003C664A /* FBOrigamiAdditions+CodeExport.m */,
+				B57D530B1A2D301300B805D3 /* Code Export */,
+			);
+			name = "Code Export";
+			sourceTree = "<group>";
+		};
+		B5BB6FC91A101F72005725C1 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB6FE41A102078005725C1 /* PeerTalk */,
+				B5BB6FCA1A101FB6005725C1 /* BWDeviceInfoReceiver.h */,
+				B5BB6FCB1A101FB6005725C1 /* BWDeviceInfoReceiver.m */,
+				B5BB6FCC1A101FB6005725C1 /* FB3DOrientationPatch.h */,
+				B5BB6FCD1A101FB6005725C1 /* FB3DOrientationPatch.m */,
+				B5BB6FCE1A101FB6005725C1 /* FB3DOrientationPatch.xml */,
+				B5BB6FCF1A101FB6005725C1 /* FBDeviceInfoPatch.h */,
+				B5BB6FD01A101FB6005725C1 /* FBDeviceInfoPatch.m */,
+				B5BB6FD11A101FB6005725C1 /* FBDeviceInfoPatch.xml */,
+				B5BB6FD21A101FB6005725C1 /* FBDeviceProtocol.h */,
+				B5BB6FD31A101FB6005725C1 /* FBDeviceRendererPatch.h */,
+				B5BB6FD41A101FB6005725C1 /* FBDeviceRendererPatch.m */,
+				B5BB6FD51A101FB6005725C1 /* FBDeviceRendererPatch.xml */,
+				B5BB6FD61A101FB6005725C1 /* FBDeviceVibratePatch.h */,
+				B5BB6FD71A101FB6005725C1 /* FBDeviceVibratePatch.m */,
+				B5BB6FD81A101FB6005725C1 /* FBDeviceVibratePatch.xml */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		B5BB6FE41A102078005725C1 /* PeerTalk */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB6FE51A102083005725C1 /* PTChannel.h */,
+				B5BB6FE61A102083005725C1 /* PTChannel.m */,
+				B5BB6FE71A102083005725C1 /* PTProtocol.h */,
+				B5BB6FE81A102083005725C1 /* PTProtocol.m */,
+				B5BB6FE91A102083005725C1 /* PTUSBHub.h */,
+				B5BB6FEA1A102083005725C1 /* PTUSBHub.m */,
+			);
+			name = PeerTalk;
+			sourceTree = "<group>";
+		};
+		D9DC9CF919209DA8006B8241 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D9DC9CFA19209DAF006B8241 /* CDEvents */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		D9DC9CFA19209DAF006B8241 /* CDEvents */ = {
+			isa = PBXGroup;
+			children = (
+				D9DC9CFB19209DC0006B8241 /* compat.h */,
+				D9DC9CFC19209DC0006B8241 /* CDEventsDelegate.h */,
+				D9DC9CFD19209DC0006B8241 /* CDEvents.m */,
+				D9DC9CFE19209DC0006B8241 /* CDEvents.h */,
+				D9DC9CFF19209DC0006B8241 /* CDEvent.m */,
+				D9DC9D0019209DC0006B8241 /* CDEvent.h */,
+			);
+			name = CDEvents;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* FBOrigami */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BF69CC809F19DD300CAA391 /* Build configuration list for PBXNativeTarget "FBOrigami" */;
+			buildPhases = (
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				8D5B49AF048680CD000E48DA /* Resources */,
+				3A9D3DFC18C123890021812A /* CopyFiles */,
+				2AEEDFFE0FA9F1B900DC8A1E /* Strip and Brand */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBOrigami;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = FreeboardPatch;
+			productReference = 8D5B49B6048680CD000E48DA /* Origami.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2BF69CCC09F19DD300CAA391 /* Build configuration list for PBXProject "FBOrigami" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* FreeboardPatch */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* FBOrigami */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53EA62318DD95CF00AD24A6 /* ZoomToDefault.tiff in Resources */,
+				B53EA60818DD8B8400AD24A6 /* Viewer.tiff in Resources */,
+				B53EA60518DD8B6E00AD24A6 /* Parameters@2x.tiff in Resources */,
+				3A8E73A418C409DD00F57608 /* dsa_pub.pem in Resources */,
+				B53EA5F318DD891000AD24A6 /* Present@2x.tiff in Resources */,
+				B53EA60018DD8AE100AD24A6 /* Inspector.tiff in Resources */,
+				B5BB6FDB1A101FB6005725C1 /* FB3DOrientationPatch.xml in Resources */,
+				B53EA60C18DD8B9500AD24A6 /* ShowSettings.tiff in Resources */,
+				B53EA5E718DD888C00AD24A6 /* Stop@2x.tiff in Resources */,
+				B53EA5FF18DD8AE100AD24A6 /* Parent@2x.tiff in Resources */,
+				B53EA5E318DD7DFF00AD24A6 /* SaveImage@2x.tiff in Resources */,
+				B51CE8D91A9BC05D00E1C156 /* FBWirelessInPatch.xml in Resources */,
+				B53EA61518DD8D2E00AD24A6 /* Patcherator@2x.tiff in Resources */,
+				B5BB6FE11A101FB6005725C1 /* FBDeviceVibratePatch.xml in Resources */,
+				B53EA63118DD9D3100AD24A6 /* DebugMode@2x.tiff in Resources */,
+				B12469A11B0E84A30002AFEC /* coscript in Resources */,
+				B51CE8DF1A9BC05D00E1C156 /* FBWirelessOutPatchUI.xib in Resources */,
+				B53EA63218DD9D3100AD24A6 /* EditMode.tiff in Resources */,
+				B5BB6FDD1A101FB6005725C1 /* FBDeviceInfoPatch.xml in Resources */,
+				B53A9AC518F31B9A00B5E151 /* FBSafariToolbarController.xib in Resources */,
+				B53EA5E618DD888C00AD24A6 /* Stop.tiff in Resources */,
+				B53EA60D18DD8B9500AD24A6 /* ShowSettings@2x.tiff in Resources */,
+				B5B2E9F91A75B30300F93A75 /* FBOStructureCombinePatch.xml in Resources */,
+				B53A9AD118F31E8600B5E151 /* FaviconGeneric.png in Resources */,
+				EC61DA18191C85B800E5443A /* POPDecayPatch.xml in Resources */,
+				B53EA61018DD8BF100AD24A6 /* CreateVirtualMacro.tiff in Resources */,
+				B53EA62618DD95CF00AD24A6 /* ZoomToFit@2x.tiff in Resources */,
+				B53EA62018DD95CF00AD24A6 /* ZoomIn@2x.tiff in Resources */,
+				B57D530C1A2D301300B805D3 /* Code Export in Resources */,
+				B51CE8DD1A9BC05D00E1C156 /* FBWirelessOutPatch.xml in Resources */,
+				B53EA5E218DD7DFF00AD24A6 /* SaveImage.tiff in Resources */,
+				B53EA5D518DD7AC600AD24A6 /* Run@2x.tiff in Resources */,
+				B53EA60918DD8B8400AD24A6 /* Viewer@2x.tiff in Resources */,
+				B53A9ACF18F31E8600B5E151 /* FaviconFacebook.png in Resources */,
+				B52C925E1975D7F100AB5A6D /* FBDragAndDropPatch.xml in Resources */,
+				B53A9AE018F32B6800B5E151 /* FBRGBToHex.xml in Resources */,
+				B548D75C196CB12600A7C0B9 /* FBODelayPatch.xml in Resources */,
+				B59692501A315E5D00FD991A /* FBOStructureCreatorPatch.xml in Resources */,
+				B12469A31B0F92F50002AFEC /* Export for Origami.js in Resources */,
+				B51CE8DB1A9BC05D00E1C156 /* FBWirelessInPatchUI.xib in Resources */,
+				B53A9AD418F31E8600B5E151 /* RefreshIcon@2x.png in Resources */,
+				D9DC9CEF19205EAE006B8241 /* FBOLiveFilePatchUI.xib in Resources */,
+				B53EA62218DD95CF00AD24A6 /* ZoomOut@2x.tiff in Resources */,
+				B12469A51B0F9C560002AFEC /* Export for Origami.sketchplugin in Resources */,
+				B5D88F9418E0A6F200CFBB7D /* FBOMultiSwitchPatch.xml in Resources */,
+				B5EA16A118CE4F6800A561A4 /* FBOLayerGroup.xml in Resources */,
+				B5BB6FDF1A101FB6005725C1 /* FBDeviceRendererPatch.xml in Resources */,
+				B53EA63318DD9D3100AD24A6 /* EditMode@2x.tiff in Resources */,
+				B53EA5F218DD891000AD24A6 /* Present.tiff in Resources */,
+				B54831E6186410B4000D2B2A /* OrigamiMenubar-normal.png in Resources */,
+				B51CE8EA1A9BC0F600E1C156 /* Broadcast4x.png in Resources */,
+				B53A9ADE18F32B6800B5E151 /* FBHexToRGB.xml in Resources */,
+				B53A9AC118F31B9A00B5E151 /* FBSafariTheme.xml in Resources */,
+				B59541B519E1F5F400B4FC3A /* FBDeviceViewController.xib in Resources */,
+				B53EA63518DD9D3100AD24A6 /* PerformanceMode@2x.tiff in Resources */,
+				B53EA5DD18DD7BC500AD24A6 /* InputParameters@2x.tiff in Resources */,
+				B5B1D6BE1A5C66A2006E7A6A /* RefreshIconYosemite@2x.png in Resources */,
+				B53EA5EE18DD88F800AD24A6 /* Editor.tiff in Resources */,
+				B53EA62418DD95CF00AD24A6 /* ZoomToDefault@2x.tiff in Resources */,
+				B53A9AD518F31E8600B5E151 /* ToolbarDownloadsTemplate.pdf in Resources */,
+				B53EA60418DD8B6E00AD24A6 /* Parameters.tiff in Resources */,
+				B53EA62518DD95CF00AD24A6 /* ZoomToFit.tiff in Resources */,
+				B54A5817196393F6004BB2D6 /* POPConverterPatch.xml in Resources */,
+				B53EA5DC18DD7BC500AD24A6 /* InputParameters.tiff in Resources */,
+				B53A9AD318F31E8600B5E151 /* RefreshIcon.png in Resources */,
+				B53EA63718DD9D3100AD24A6 /* ProfileMode@2x.tiff in Resources */,
+				B54831E7186410B4000D2B2A /* OrigamiMenubar-normal@2x.png in Resources */,
+				D9DC9CF8192070EB006B8241 /* FBOLiveFilePatch.xml in Resources */,
+				B53EA63018DD9D3100AD24A6 /* DebugMode.tiff in Resources */,
+				B53EA5D418DD7AC600AD24A6 /* Run.tiff in Resources */,
+				B50F45AB18F9FB92005548DF /* FBCursorPatch.xml in Resources */,
+				B59687C51BADEC72007682C7 /* FBLastValue.xml in Resources */,
+				B545A8181ABA429B00D475A5 /* FBStopWatchPatch.xml in Resources */,
+				B59692521A318F5400FD991A /* FBOStructureCreatorPatchUI.xib in Resources */,
+				B53A9AC318F31B9A00B5E151 /* FBSafariThemeButtons.xml in Resources */,
+				B5F6D89A19624C220057BA6E /* FBOMouseScrollPatch.xml in Resources */,
+				B53A9AD018F31E8600B5E151 /* FaviconFacebook@2x.png in Resources */,
+				B51CE8E61A9BC0ED00E1C156 /* Receive4x.png in Resources */,
+				EC9AA2E1191B0C2C00F2209F /* POPBouncyPatch.xml in Resources */,
+				B51CE8E51A9BC0ED00E1C156 /* Receive1x.png in Resources */,
+				B53EA63618DD9D3100AD24A6 /* ProfileMode.tiff in Resources */,
+				B53EA63418DD9D3100AD24A6 /* PerformanceMode.tiff in Resources */,
+				B53EA5FE18DD8AE100AD24A6 /* Parent.tiff in Resources */,
+				3A9D3DF718C1211C0021812A /* FBOInteractionPatch.xml in Resources */,
+				B53EA61418DD8D2E00AD24A6 /* Patcherator.tiff in Resources */,
+				B5B1D6C01A5C693D006E7A6A /* TabsIcon@2x.png in Resources */,
+				B5B4A3F71919A96F0044C3ED /* FBOProgressPatch.xml in Resources */,
+				B53EA60118DD8AE100AD24A6 /* Inspector@2x.tiff in Resources */,
+				B53EA5EF18DD88F800AD24A6 /* Editor@2x.tiff in Resources */,
+				B53EA61118DD8BF100AD24A6 /* CreateVirtualMacro@2x.tiff in Resources */,
+				B51CE8E91A9BC0F600E1C156 /* Broadcast1x.png in Resources */,
+				1A7A712918D7CBE80008D05A /* FBOMultiSwitchPatchUI.xib in Resources */,
+				B596FE041A86D49500C1D132 /* FBViewerDimensionsPatch.xml in Resources */,
+				B53EA5FD18DD8AE100AD24A6 /* Macro@2x.tiff in Resources */,
+				B53EA5FC18DD8AE100AD24A6 /* Macro.tiff in Resources */,
+				3A9D3E0318C3FD8A0021812A /* Origami.icns in Resources */,
+				B53EA61F18DD95CF00AD24A6 /* ZoomIn.tiff in Resources */,
+				B53A9AD218F31E8600B5E151 /* FaviconGeneric@2x.png in Resources */,
+				B53EA62118DD95CF00AD24A6 /* ZoomOut.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AEEDFFE0FA9F1B900DC8A1E /* Strip and Brand */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip and Brand";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Finder doesn't seem to load .icns files within .plugin bundles.  So, we use SetFile and resources instead :(\nSetFile -a C \"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\"\n#SetFile -a V \"$TARGET_BUILD_DIR/$FULL_PRODUCT_NAME\"/Icon*";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A63EDCF1A13BF0300298D20 /* FBOrigamiAdditions+StructureIterator.m in Sources */,
+				B160AAEC1AAA0778004AB107 /* FBOrigamiAdditions+FileCreation.m in Sources */,
+				B574FDBE18610E9B00668D86 /* NSDocument+FBAdditions.m in Sources */,
+				B5741F271A8856CA00C621F7 /* FBOrigamiAdditions+Tooltips.m in Sources */,
+				B51CE8D71A9BC05D00E1C156 /* FBWirelessController.m in Sources */,
+				B5B4A3F51919A91B0044C3ED /* FBOProgressPatch.m in Sources */,
+				B5B2E9F61A75AF9400F93A75 /* FBOStructureCombinePatch.m in Sources */,
+				1A7A712618D7CBE80008D05A /* FBODynamicPortsPatch.m in Sources */,
+				B51CE8E21A9BC07200E1C156 /* FBOrigamiAdditions+Wireless.m in Sources */,
+				3AFA71041856768800A34E93 /* FBOrigamiAdditions+Mavericks.m in Sources */,
+				F1481793089E5FE3006FD276 /* FBOrigamiPrincipal.m in Sources */,
+				B5BB6FDE1A101FB6005725C1 /* FBDeviceRendererPatch.m in Sources */,
+				B53A9ABF18F31B9A00B5E151 /* FBSafariSegmentedCell.m in Sources */,
+				B5BB6FDC1A101FB6005725C1 /* FBDeviceInfoPatch.m in Sources */,
+				B50816B3198060F1007AEDAF /* FBOrigamiAdditions+InlineValues.m in Sources */,
+				B5EE0034198A2FAB003DDFE6 /* FBOrigamiAdditions+WindowManagement.m in Sources */,
+				B574FDC11861130100668D86 /* FBOrigamiAdditions+DimDisabledConsumers.m in Sources */,
+				B54831DE186385DD000D2B2A /* FBOInteractionController.m in Sources */,
+				B548D75A196C897900A7C0B9 /* FBODelayPatch.m in Sources */,
+				B52C92611975D80000AB5A6D /* QCView+DragAndDrop.m in Sources */,
+				1A7A712818D7CBE80008D05A /* FBOMultiSwitchPatchUI.m in Sources */,
+				B5FB9D0719E3DB060059028E /* FBDeviceToolbarButton.m in Sources */,
+				D9DC9D0219209DC0006B8241 /* CDEvent.m in Sources */,
+				B516A2701A16A161009CD3E4 /* FBTextObject.m in Sources */,
+				B53A9AC018F31B9A00B5E151 /* FBSafariTheme.m in Sources */,
+				B54A58151963923F004BB2D6 /* POPConverterPatch.m in Sources */,
+				B5F6D89819624A450057BA6E /* FBOMouseScrollPatch.m in Sources */,
+				B545A8171ABA429B00D475A5 /* FBStopWatchPatch.m in Sources */,
+				EC61DA17191C85B800E5443A /* POPDecayPatch.mm in Sources */,
+				3AF2FE3218C4210F00CF372C /* FBOrigamiAdditions+LinearPortConnections.m in Sources */,
+				D9DC9CF51920618B006B8241 /* FBOLiveFilePatch.m in Sources */,
+				B51CE8DC1A9BC05D00E1C156 /* FBWirelessOutPatch.m in Sources */,
+				B50816B71980F043007AEDAF /* QCIndexPort+FBAdditions.m in Sources */,
+				B51CE8DA1A9BC05D00E1C156 /* FBWirelessInPatchUI.m in Sources */,
+				B50277531A7C93240023F1A2 /* FBOrigamiAdditions+KeyboardShortcuts.m in Sources */,
+				B574FDB818610CFD00668D86 /* QCPatch+FBAdditions.m in Sources */,
+				B56DC46718C10E8700BE6BB6 /* FBOrigamiAdditions+RenderInImage.m in Sources */,
+				B5BB6FED1A102083005725C1 /* PTUSBHub.m in Sources */,
+				3A41C9CB1859100500141593 /* NSObject+FBAdditions.m in Sources */,
+				B574FDC41861159D00668D86 /* FBOrigamiAdditions+TextFieldShortcuts.m in Sources */,
+				3AACD304185933AE0040742B /* NSString+FBAdditions.m in Sources */,
+				B50816B4198060F1007AEDAF /* FBPatchView.m in Sources */,
+				B5BB6FDA1A101FB6005725C1 /* FB3DOrientationPatch.m in Sources */,
+				D9DC9D0119209DC0006B8241 /* CDEvents.m in Sources */,
+				B50816BD1980F10E007AEDAF /* NSView+FBAdditions.m in Sources */,
+				B5BB6FEC1A102083005725C1 /* PTProtocol.m in Sources */,
+				B560B6BC1C7557110079B864 /* FBOrigamiAdditions+Stats.m in Sources */,
+				B596FE031A86D49500C1D132 /* FBViewerDimensionsPatch.m in Sources */,
+				B52C925D1975D7F100AB5A6D /* FBDragAndDropPatch.m in Sources */,
+				B51CE8DE1A9BC05D00E1C156 /* FBWirelessOutPatchUI.m in Sources */,
+				3AFA71071856771A00A34E93 /* FBOrigamiAdditions.m in Sources */,
+				B574FDB518610CEE00668D86 /* QCPatchView+FBAdditions.m in Sources */,
+				B53A9AC418F31B9A00B5E151 /* FBSafariToolbarController.m in Sources */,
+				B53A9ADD18F32B6800B5E151 /* FBHexToRGB.m in Sources */,
+				B574FDBB18610DBF00668D86 /* NSObject+AssociatedObjects.m in Sources */,
+				3AAF9DB918BAEBF9002B591F /* NSMenu+FBAdditions.m in Sources */,
+				B54831E11863898E000D2B2A /* NSObject+FBNoArcAdditons.m in Sources */,
+				B593F0A61A2737DF003C664A /* FBOrigamiAdditions+CodeExport.m in Sources */,
+				B574FDAF1861099400668D86 /* FBOrigamiAdditions+DragAndDrop.m in Sources */,
+				B52C92641975D93000AB5A6D /* QCView+FBAdditions.m in Sources */,
+				B51CE8D81A9BC05D00E1C156 /* FBWirelessInPatch.m in Sources */,
+				B5BB6FEB1A102083005725C1 /* PTChannel.m in Sources */,
+				B5BB6FF61A102146005725C1 /* FBHashValue.m in Sources */,
+				B53A9ADF18F32B6800B5E151 /* FBRGBToHex.m in Sources */,
+				B5BB6FD91A101FB6005725C1 /* BWDeviceInfoReceiver.m in Sources */,
+				1A7A712718D7CBE80008D05A /* FBOMultiSwitchPatch.m in Sources */,
+				B54831BB18627462000D2B2A /* FBOrigamiAdditions+Retina.m in Sources */,
+				B5D764421A30FEBF0054F72F /* FBOStructureCreatorPatchUI.m in Sources */,
+				EC9AA2E0191B0C2C00F2209F /* POPBouncyPatch.mm in Sources */,
+				B5D7643F1A30FD9A0054F72F /* FBOStructureCreatorPatch.m in Sources */,
+				3A9D3E0118C134E20021812A /* FBOrigamiAdditions+Preferences.m in Sources */,
+				D9DC9CF219205ED7006B8241 /* FBOLiveFilePatchUI.m in Sources */,
+				B59541B419E1F5F400B4FC3A /* FBDeviceViewController.m in Sources */,
+				B5BB6FE01A101FB6005725C1 /* FBDeviceVibratePatch.m in Sources */,
+				B59687C41BADEC72007682C7 /* FBLastValue.m in Sources */,
+				B5EA169E18CE4E8200A561A4 /* FBOLayerGroup.m in Sources */,
+				B53A9AC218F31B9A00B5E151 /* FBSafariThemeButtons.m in Sources */,
+				B5BB6FF31A1020DD005725C1 /* QCImage+FBAdditions.m in Sources */,
+				B574FDA91861080400668D86 /* FBOrigamiAdditions+PluginLoading.m in Sources */,
+				B50F45AA18F9FB92005548DF /* FBCursorPatch.m in Sources */,
+				B5BB6FF01A1020AB005725C1 /* FBMutableOrderedDictionary.m in Sources */,
+				B50277561A7C9F6B0023F1A2 /* FBOrigamiAdditions+PatchMenu.m in Sources */,
+				B574FDB218610AD200668D86 /* QCPort+FBAdditions.m in Sources */,
+				B574FDCA1861289E00668D86 /* FBOrigamiAdditions+WindowMods.m in Sources */,
+				B54831D9186384B5000D2B2A /* FBOInteractionPatch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3A9D3DF518C1211C0021812A /* FBOInteractionPatch.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A9D3DF618C1211C0021812A /* English */,
+			);
+			name = FBOInteractionPatch.xml;
+			sourceTree = "<group>";
+		};
+		B596924E1A315E5D00FD991A /* FBOStructureCreatorPatch.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B596924F1A315E5D00FD991A /* English */,
+			);
+			name = FBOStructureCreatorPatch.xml;
+			sourceTree = "<group>";
+		};
+		B5B2E9F71A75B30300F93A75 /* FBOStructureCombinePatch.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5B2E9F81A75B30300F93A75 /* English */,
+			);
+			name = FBOStructureCombinePatch.xml;
+			sourceTree = "<group>";
+		};
+		B5D88F9218E0A6F200CFBB7D /* FBOMultiSwitchPatch.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5D88F9318E0A6F200CFBB7D /* English */,
+			);
+			name = FBOMultiSwitchPatch.xml;
+			sourceTree = "<group>";
+		};
+		B5EA169F18CE4F6800A561A4 /* FBOLayerGroup.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5EA16A018CE4F6800A561A4 /* English */,
+			);
+			name = FBOLayerGroup.xml;
+			sourceTree = "<group>";
+		};
+		D9DC9CF6192070EB006B8241 /* FBOLiveFilePatch.xml */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9DC9CF7192070EB006B8241 /* English */,
+			);
+			name = FBOLiveFilePatch.xml;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BF69CC909F19DD300CAA391 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "\"$(SRCROOT)/../FBQ.sdk\"";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/Archives/2014-05-07/pop-osx",
+					"5-7-14,",
+					5.19,
+					PM.xcarchive/Products/Library/Frameworks,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/pop-bykiborqdbvgimajaafvvwhiuuvn/Build/Products/Release",
+				);
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = FBOrigami_Prefix.pch;
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Patches";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "";
+				PRODUCT_NAME = Origami;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Development;
+		};
+		2BF69CCA09F19DD300CAA391 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "\"$(SRCROOT)/../FBQ.sdk\"";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/Archives/2014-05-07/pop-osx",
+					"5-7-14,",
+					5.19,
+					PM.xcarchive/Products/Library/Frameworks,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/pop-bykiborqdbvgimajaafvvwhiuuvn/Build/Products/Release",
+				);
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = FBOrigami_Prefix.pch;
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Patches";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "-fomit-frame-pointer";
+				OTHER_CPLUSPLUSFLAGS = "";
+				PRODUCT_NAME = Origami;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Deployment;
+		};
+		2BF69CCB09F19DD300CAA391 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ADDITIONAL_SDKS = "\"$(SRCROOT)/../FBQ.sdk\"";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/Archives/2014-05-07/pop-osx",
+					"5-7-14,",
+					5.19,
+					PM.xcarchive/Products/Library/Frameworks,
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/pop-bykiborqdbvgimajaafvvwhiuuvn/Build/Products/Release",
+				);
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = FBOrigami_Prefix.pch;
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Patches";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CFLAGS = "-fomit-frame-pointer";
+				OTHER_CPLUSPLUSFLAGS = "";
+				PRODUCT_NAME = Origami;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = YES;
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Default;
+		};
+		2BF69CCD09F19DD300CAA391 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = $TMPDIR/build;
+			};
+			name = Development;
+		};
+		2BF69CCE09F19DD300CAA391 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				SYMROOT = $TMPDIR/$FULL_PRODUCT_NAME/build;
+			};
+			name = Deployment;
+		};
+		2BF69CCF09F19DD300CAA391 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				SYMROOT = $TMPDIR/build;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BF69CC809F19DD300CAA391 /* Build configuration list for PBXNativeTarget "FBOrigami" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BF69CC909F19DD300CAA391 /* Development */,
+				2BF69CCA09F19DD300CAA391 /* Deployment */,
+				2BF69CCB09F19DD300CAA391 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		2BF69CCC09F19DD300CAA391 /* Build configuration list for PBXProject "FBOrigami" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BF69CCD09F19DD300CAA391 /* Development */,
+				2BF69CCE09F19DD300CAA391 /* Deployment */,
+				2BF69CCF09F19DD300CAA391 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

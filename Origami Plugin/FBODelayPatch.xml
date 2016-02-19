@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Lets you delay a change by some duration in seconds.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2014-2015, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin, Mike Matas</string>
+      <key>name</key>
+      <string>Delay</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputValue</key>
+      <dict>
+        <key>description</key>
+        <string>Value</string>
+        <key>name</key>
+        <string>Value</string>
+      </dict>
+      <key>inputDuration</key>
+      <dict>
+        <key>description</key>
+        <string>Duration</string>
+        <key>name</key>
+        <string>Duration</string>
+      </dict>
+      <key>inputStyle</key>
+      <dict>
+        <key>description</key>
+        <string>Style</string>
+        <key>name</key>
+        <string>Style</string>
+        <key>menu</key>
+        <array>
+          <string>Delay Always</string>
+          <string>Delay Increasing</string>
+          <string>Delay Decreasing</string>
+        </array>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputValue</key>
+      <dict>
+        <key>description</key>
+        <string>Value</string>
+        <key>name</key>
+        <string>Value</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>
