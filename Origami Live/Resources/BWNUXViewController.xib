@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWNUXViewController">
+            <connections>
+                <outlet property="view" destination="6" id="7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="y2z-hD-6FA">
+                    <rect key="frame" x="44" y="560" width="287.5" height="33.5"/>
+                    <string key="text">To interact with your Origami prototype, 
+open it on your Mac and plug in your device.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="700" verticalCompressionResistancePriority="700" image="Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZDn-KB-48s">
+                    <rect key="frame" x="82" y="196" width="206" height="228"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-LL-E50">
+                    <rect key="frame" x="102" y="614" width="170" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Learn More about Origami">
+                        <color key="titleColor" red="0.035294117647058823" green="0.56862745098039214" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="learnMore:" destination="-1" eventType="touchUpInside" id="twg-xn-g8l"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="y2z-hD-6FA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ZDn-KB-48s" secondAttribute="bottom" constant="30" id="2DD-sx-Bbe"/>
+                <constraint firstAttribute="centerX" secondItem="EeL-LL-E50" secondAttribute="centerX" id="2pz-UH-Y2C"/>
+                <constraint firstAttribute="bottom" secondItem="EeL-LL-E50" secondAttribute="bottom" constant="24" id="4Vb-4B-mcz"/>
+                <constraint firstItem="EeL-LL-E50" firstAttribute="top" secondItem="y2z-hD-6FA" secondAttribute="bottom" constant="20" id="79Z-jP-nKb"/>
+                <constraint firstAttribute="centerY" secondItem="ZDn-KB-48s" secondAttribute="centerY" priority="750" constant="23" id="9Pn-RH-YoJ"/>
+                <constraint firstAttribute="centerX" secondItem="ZDn-KB-48s" secondAttribute="centerX" constant="2" id="tOV-wu-hF0"/>
+                <constraint firstAttribute="centerX" secondItem="y2z-hD-6FA" secondAttribute="centerX" id="v6s-vv-XdQ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="253" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Logo.png" width="206" height="228"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
