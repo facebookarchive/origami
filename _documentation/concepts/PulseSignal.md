@@ -1,5 +1,5 @@
 ---
-title: Pulse & Signal
+title: States & Pulses
 layout: documentation
 css: /public/css/documentation.css
 weight: 3
@@ -12,87 +12,13 @@ nav:
     path: Iterators
 ---
 
-Pulses and signals are a core concept in Origami, especially for representing and toggling states. To understand them you must first understand how [States](../basics/States.html) are represented by On/Off (also known as a boolean, shown in the interface as a checkbox, with a &#10003; when it's on).
+States help remember information in your prototype. Pulses are used to tell patches to perform an action. Understanding how these work together will help you be more effective at building Origami prototypes.
 
-## Signals = On or Off
-A signal represents an on/off state. A good example of a signal is the [Switch](../patches/Switch.html) patch's On/Off output.
+## States
 
-Below, the Switch is off, and it passes that Off signal to the Layer's Enable port:
+A state is a value that persists over time. The simplest version of state is in the Switch patch. Switches are either on or off, and they remain that way until you tell them otherwise.
 
- <ul class="patch-chain">
-    <li>
-      <div class="patch-block">
-        <div class="patch processor">
-          <h3>Switch</h3>
-          <ul class="inputs">
-            <li>Flip</li>
-            <li>Turn On</li>
-            <li>Turn Off</li>
-          </ul>
-          <ul class="outputs">
-            <li>On / Off</li>
-            <div class="cable"></div>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="patch-block">
-        <div class="patch consumer">
-          <h3>Layer</h3>
-          <ul class="inputs">
-            <li>Enable</li>
-            <li>X Position</li>
-            <li>Y Position</li>
-            <li>Width</li>
-            <li>Height</li>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-  </ul>
-
-Then, if we turn the Switch on, it then passes that On &#10003; signal to the Layer's Enable port:
-
- <ul class="patch-chain">
-    <li>
-      <div class="patch-block">
-        <div class="patch processor">
-          <h3>Switch</h3>
-          <ul class="inputs">
-            <li>Flip</li>
-            <li>Turn On</li>
-            <li>Turn Off</li>
-          </ul>
-          <ul class="outputs">
-            <li>On / Off</li>
-            <div class="cable"></div>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="patch-block">
-        <div class="patch consumer">
-          <h3>Layer</h3>
-          <ul class="inputs">
-            <li>Enable <span class="patch-value">&#10003;</span></li>
-            <li>X Position</li>
-            <li>Y Position</li>
-            <li>Width</li>
-            <li>Height</li>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-  </ul>
-
-## Signals persist over time
-A key attribute of a signal is that it persists over time. If we look at a signal as it changes over time, it might look something like this:
+If we look at a state as it changes over time, it might look something like this:
 
 <div class="pulse-graph">
 <div class="pulse-graph-line" style="bottom: 10%; left: 40px; width: 130px;"></div>
@@ -107,7 +33,7 @@ A key attribute of a signal is that it persists over time. If we look at a signa
 </div>
 </div>
 
-It's off consistently until it's turned on. You can see a signal goes from off to on **immediately**. That split second is known as a **frame**.
+A switch is off until you turn it on. You can see the state goes from off to on immediately in a single frame. A frame is usually 1/60th of a second.
 
 <div class="frame-reel">
 <div class="frame off">Off</div>
@@ -117,12 +43,11 @@ It's off consistently until it's turned on. You can see a signal goes from off t
 <div class="frame">On</div>
 </div>
 
-A frame in computing is similar to a movie: multiple frames are strung together to show animations. Typically Quartz Composer will run at 30-60 frames per second (FPS), which means the signal change happens anywhere from 1/30 to 1/60 of a second, feeling instantaneous.
+## Pulses
 
-## Pulses are On &#10003; signals in a single frame
-While signals persist over time, Pulses are On &#10003; for a single frame.
+While state persists over time, pulses are On &#10003; only for a single frame. The value of the cable sending the pulse is otherwise off.
 
-If we look at a pulse over time, it looks like this:
+A pulse over time looks like this:
 
 <div class="pulse-graph">
 <div class="pulse-graph-line" style="bottom: 10%; left: 40px; width: 130px;"></div>
@@ -147,104 +72,33 @@ You can see that pulses are only On &#10003; for a single frame.
 <div class="frame off">Off</div>
 </div>
 
-They are useful when telling a patch to **do something once**, like telling a Switch to turn on or turn off.
+They're used to tell patches to **perform an action**, like telling a Switch to turn on or turn off. They're also useful for passing along user interactions like tapping on the screen or pressing a key on the keyboard.
 
-Why not use signals? Let's look at the Switch example again. If you pass an On signal continuously to a Switch's Turn On port, it will turn on, as expected:
+## Examples of State & Pulses
 
- <ul class="patch-chain">
-    <li>
-      <div class="patch-block">
-        <div class="patch processor">
-          <h3>Switch</h3>
-          <ul class="inputs">
-            <li>Flip</li>
-            <li>Turn On <span class="patch-value">&#10003;</span></li>
-            <li>Turn Off</li>
-          </ul>
-          <ul class="outputs">
-            <li>On / Off</li>
-            <div class="cable"></div>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="patch-block">
-        <div class="patch consumer">
-          <h3>Layer</h3>
-          <ul class="inputs">
-            <li>Enable <span class="patch-value">&#10003;</span></li>
-            <li>X Position</li>
-            <li>Y Position</li>
-            <li>Width</li>
-            <li>Height</li>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-  </ul>
+<ul class="bulleted-list">
+  <li>The <strong>Switch</strong> patch outputs the <strong>state</strong> of the switch (on / off) and accepts <strong>pulses</strong> to flip the switch, turn it on, or turn it off.</li>
+  <li>The <strong>Interaction 2</strong> patch has Down and Up outputs. Down represents the <strong>state</strong> of whether the finger is currently down on the screen. The Up port outputs a <strong>pulse</strong> when the finger is released from the screen.</li>
+  <li>The <strong>Counter 2</strong> patch outputs the <strong>state</strong> of the counter (the number value) and accepts <strong>pulses</strong> to increase it or decrease it.</li>
+  <li>The <strong>Scroll</strong> patch outputs the <strong>state</strong> of the scroller like its current position and page, and accepts <strong>pulses</strong> to have it jump to a specific position.</li>
+</ul>
 
-However, if you wanted to tell it to turn off at a later time (by passing an On signal to the Turn Off port), you'd be giving it conflicting instructions. If you try this in Quartz Composer, you'll see that the Enable port will flicker on and off continuously &mdash; because it's not sure what to do with the conflicting instructions.
+## Creating Pulses from State
+
+There are a couple ways to create a pulse from state. The more explicit way is to use the Pulse patch. The Pulse patch accepts a state called Input Signal. If the Detection Mode is set to Leading, it will output a pulse when the state changes from off to on. If the mode is set to Trailing, it will output a pulse when the state changes from on to off.
 
  <ul class="patch-chain">
     <li>
       <div class="patch-block">
-        <div class="patch processor">
-          <h3>Switch</h3>
+        <div class="patch producer">
+          <h3>Interaction</h3>
           <ul class="inputs">
-            <li>Flip</li>
-            <li>Turn On <span class="patch-value">&#10003;</span></li>
-            <li>Turn Off <span class="patch-value">&#10003;</span></li>
+            <li>Enable</li>
           </ul>
           <ul class="outputs">
-            <li>On / Off</li>
+            <li>Down</li>
             <div class="cable"></div>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="patch-block">
-        <div class="patch consumer">
-          <h3>Layer</h3>
-          <ul class="inputs">
-            <li>Enable <span class="patch-value flicker">&#10003;</span></li>
-            <li>X Position</li>
-            <li>Y Position</li>
-            <li>Width</li>
-            <li>Height</li>
-          </ul>
-          <hr>
-        </div>
-      </div>
-    </li>
-  </ul>
-
-To fix this, you could manually make sure to turn off the Turn On signal, but to simplify, you should **pulse** each port (pass On &#10003; for a single frame).
-
-
-## Creating pulses
-How do you create pulses? Most situations where you need a pulse are with [interactions](../basics/Interactions.html), e.g. a single tap, or a key press. The [Interaction 2](../patches/Interaction-2.html) patch, for example, will output a single pulse from the Tap port when you tap on the viewer (whereas the Down port will output a continous signal depending on how long your finger is down).
-
-Another common situation is when you want to know when a Signal changes, e.g. if you want to turn on a Switch after another Switch turns off. In this case, you'd use a [Pulse](../patches/Pulse.html) <span class="key letter inline">U</span> patch.
-
-In this example below, when Switch 1 turns off, Switch 2 will turn on:
-
- <ul class="patch-chain">
-    <li>
-      <div class="patch-block">
-        <div class="patch processor">
-          <h3>Switch 1</h3>
-          <ul class="inputs">
-            <li>Turn On</li>
-            <li>Turn Off</li>
-          </ul>
-          <ul class="outputs">
-            <li>On / Off</li>
-            <div class="cable"></div>
+            <li>Up</li>
           </ul>
           <hr>
         </div>
@@ -256,7 +110,7 @@ In this example below, when Switch 1 turns off, Switch 2 will turn on:
           <h3>Pulse</h3>
           <ul class="inputs">
             <li>Input Signal <span class="patch-value repeating-signal">&#10003;</span></li>
-            <li>Detection mode <span class="patch-value">Trailing</span></li>
+            <li>Detection Mode <span class="patch-value">Leading</span></li>
           </ul>
           <ul class="outputs">
             <li>Pulse</li>
@@ -281,6 +135,65 @@ In this example below, when Switch 1 turns off, Switch 2 will turn on:
         </div>
       </div>
     </li>
-  </ul>
+</ul>
+  
+Another way is to infer a state change is to connect a state directly to a port accepting a pulse. What'll happen is the port that accepts a pulse will look to when the state changes from off to on, and at that moment infer a pulse. So if you wanted a switch to flip the moment the users finger went down on the screen, you could connect the Down port directly to the Switch's Flip port, without needing to use a Pulse patch.
 
-You can even combine Pulse with [Delay](../patches/Delay.html) <span class="key letter inline">D</span> patches to create a Switch that turns itself off a few seconds after it's turned on.
+
+## Transient State with the Delay patch
+
+Sometimes you need a state to go from off to on for a few moments and then back to off. For example, say you were making a confirmation window appear for a couple seconds after the user pressed a button. You could do this using a Switch, but then you'd need to build logic that turns the switch off after some time. A simpler way to do this is to use the [Delay](../patches/Delay.html) <span class="key letter inline">D</span> patch.
+
+The Delay patch can take state that's changing and delay the change by an amount of time you specify. You can also tell it whether to only delay increasing (off to on) or decreasing (on to off) changes. If you give a Delay patch a pulse as input, you can delay the change from on to off, extending the pulse for any amount of time you'd like.
+
+<ul class="patch-chain">
+    <li>
+      <div class="patch-block">
+        <div class="patch producer">
+          <h3>Interaction</h3>
+          <ul class="inputs">
+            <li>Enable</li>
+          </ul>
+          <ul class="outputs">
+            <li>Down</li>
+            <div class="cable"></div>
+            <li>Up</li>
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="patch-block">
+        <div class="patch processor">
+          <h3>Delay</h3>
+          <ul class="inputs">
+            <li>Value <span class="patch-value repeating-pulse">&#10003;</span></li>
+            <li>Duration <span class="patch-value">2</span></li>
+            <li>Style <span class="patch-value">Delay Decreasing</span></li>
+          </ul>
+          <ul class="outputs">
+            <li>Value</li>
+            <div class="cable"></div>
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
+        <li>
+      <div class="patch-block">
+        <div class="patch producer">
+          <h3>Pop Animation</h3>
+          <ul class="inputs">
+            <li>Number</li>
+            <li>Bounciness <span class="patch-value">5</span></li>
+            <li>Speed <span class="patch-value">10</span></li>
+          </ul>
+          <ul class="outputs">
+            <li>Progress</li>
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </li>
+</ul>
