@@ -53,8 +53,6 @@ function main() {
     var group_name = "";
     if (is_group(layer)) { 
       group_name = [layer name];
-    }
-    if (![layer isMemberOfClass:[MSArtboardGroup class]]) {
       inside_top_level_group = true;
       top_level_group_pos = calculate_real_position_for(layer);
     }
@@ -211,27 +209,23 @@ function export_layer(layer, depth, artboard_name) {
 
 function metadata_for(layer, layer_copy) {
   loggle("Getting metadata for " + [layer name]);
-  var gkrect = [GKRect rectWithRect:[MSSliceTrimming trimmedRectForSlice:layer_copy]],
+  var cgrect = [MSSliceTrimming trimmedRectForSlice:layer_copy],
       position = calculate_real_position_for(layer),
       x,y,w,h,
       layer_hidden = [layer name].indexOf("@@hidden") > -1;
 
   x = position.x;
   y = position.y;
-  w = [gkrect width];
-  h = [gkrect height];
+  w = cgrect.size.width;
+  h = cgrect.size.height;
 
-  if ([layer isMemberOfClass:[MSArtboardGroup class]]) {
+  // If this is an artboard we should ignore its position (at least for now)
+  if (is_artboard(layer)) {
     loggle("Resetting x and y to 0 because artboard");
     x = 0;
     y = 0;
   }
-  if (inside_top_level_group) {
-    x-= top_level_group_pos.x;
-    y-= top_level_group_pos.y;
-    loggle("Shifting x by: " + top_level_group_pos.x);
-    loggle("Shifting y by: " + top_level_group_pos.y);
-  }
+
   loggle("Metadata for <" + [layer name] + ">: { x:"+x+", y:"+y+", width:"+w+", height:"+h+"}");
   return {
     x: x,
@@ -244,15 +238,15 @@ function metadata_for(layer, layer_copy) {
 }
 
 function calculate_real_position_for(layer) {
-  var gkrect = [GKRect rectWithRect:[MSSliceTrimming trimmedRectForSlice:layer]],
+  var cgrect = [MSSliceTrimming trimmedRectForSlice:layer],
       absrect = [layer absoluteRect];
   var rulerDeltaX = [absrect rulerX] - [absrect x],
       rulerDeltaY = [absrect rulerY] - [absrect y],
-      GKRectRulerX = [gkrect x] + rulerDeltaX,
-      GKRectRulerY = [gkrect y] + rulerDeltaY;
+      CGRectRulerX = cgrect.origin.x + rulerDeltaX,
+      CGRectRulerY = cgrect.origin.y + rulerDeltaY;
   return {
-    x: Math.round(GKRectRulerX),
-    y: Math.round(GKRectRulerY)
+    x: Math.round(CGRectRulerX),
+    y: Math.round(CGRectRulerY)
   }
 }
 
@@ -309,6 +303,10 @@ function should_export_layer(layer) {
 
 function is_group(layer) {
   return [layer isMemberOfClass:[MSLayerGroup class]] || [layer isMemberOfClass:[MSArtboardGroup class]]
+}
+
+function is_artboard(layer) {
+  return [layer isMemberOfClass:[MSArtboardGroup class]];
 }
 
 function is_symbol(layer) {

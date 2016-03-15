@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>nodeAttributes</key>
+        <dict>
+            <key>category</key>
+            <string>Origami</string>
+            <key>categories</key>
+            <array>
+                <string>Origami</string>
+            </array>
+            <key>description</key>
+            <string>Returns a structure containing the results from multiple search paths, separated by commas. Optionally specify labels for the new structure with equal signs and optionally cluster label sub-groups with a forward slash.
+
+For example, the path "id = story_id, user/name = actors.0.name.text, user/age = actors.0.age" would yield a structure with two top-level keys ("id" and "user") and two sub-level keys ("name" and "age" within "user"). All of the leaf-node children (in this example, "id", "name" and "age") will contain the values of their respective search path values.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Drew Hamlin</string>
+            <key>name</key>
+            <string>Structure Multiple Path Members</string>
+        </dict>
+        <key>inputAttributes</key>
+        <dict>
+            <key>inputStructure</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Structure</string>
+            </dict>
+            <key>inputPaths</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Paths</string>
+            </dict>
+        </dict>
+        <key>outputAttributes</key>
+        <dict>
+            <key>outputStructure</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Structure</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>

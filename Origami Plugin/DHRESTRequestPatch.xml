@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>nodeAttributes</key>
+        <dict>
+            <key>category</key>
+            <string>Origami</string>
+            <key>categories</key>
+            <array>
+                <string>Origami</string>
+            </array>
+            <key>description</key>
+            <string>Performs a REST request and returns the result. Supports "Create" (POST), "Read" (GET), "Update" (PUT) and "Destroy" (DELETE) request types. Allows attaching an object to a "Create" or "Update" request and specification of additional headers for any request.
+              
+              
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Drew Hamlin</string>
+            <key>name</key>
+            <string>REST Request</string>
+        </dict>
+        <key>inputAttributes</key>
+        <dict>
+            <key>inputEnable</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Enable</string>
+            </dict>
+            <key>inputRequestType</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Type</string>
+                <key>menu</key>
+                <array>
+                    <string>Create (POST)</string>
+                    <string>Read (GET)</string>
+                    <string>Update (PUT)</string>
+                    <string>Destroy (DELETE)</string>
+                </array>
+            </dict>
+            <key>inputURL</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>URL</string>
+            </dict>
+            <key>inputParameters</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Parameters</string>
+            </dict>
+            <key>inputHeaders</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Headers</string>
+            </dict>
+            <key>inputObject</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Object</string>
+            </dict>
+            <key>inputUpdateSignal</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Update Signal</string>
+            </dict>
+        </dict>
+        <key>outputAttributes</key>
+        <dict>
+            <key>outputResult</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Result</string>
+            </dict>
+            <key>outputDoneSignal</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Done Signal</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>

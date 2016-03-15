@@ -40,6 +40,7 @@ Created by: Brandon Walkin</string>
           <string>Open Hand</string>
           <string>Closed Hand</string>
           <string>I Beam</string>
+          <string>Pointing Hand</string>
         </array>
       </dict>
       <key>inputHide</key>

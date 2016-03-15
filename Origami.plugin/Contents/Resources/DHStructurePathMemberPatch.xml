@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>nodeAttributes</key>
+	<dict>
+		<key>category</key>
+		<string>Origami</string>
+		<key>categories</key>
+		<array>
+			<string>Origami</string>
+		</array>
+		<key>description</key>
+		<string>This patch returns a member or members in a structure resulting from a path search.
+
+For example, if you had an indexed structure with two members, a structure with key "name", value "Cat", and a structure with key "name", value "Dog", you could use a path of "0.name" to get the value "Cat". If you used a key of "*.name", you'd get a structure with "Cat" and "Dog".
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Drew Hamlin</string>
+		<key>name</key>
+		<string>Structure Path Member</string>
+	</dict>
+	<key>inputAttributes</key>
+	<dict>
+		<key>inputStructure</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>name</key>
+			<string>Structure</string>
+		</dict>
+		<key>inputPath</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>name</key>
+			<string>Path</string>
+		</dict>
+    </dict>
+    <key>outputAttributes</key>
+	<dict>
+		<key>outputMember</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>name</key>
+			<string>Member</string>
+		</dict>
+		<key>outputUntraversedPaths</key>
+		<dict>
+			<key>description</key>
+			<string></string>
+			<key>name</key>
+			<string>Untraversed Paths</string>
+		</dict>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>This patch takes an indexed structure and outputs a structure with each member in a random position.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Structure Shuffle</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputStructure</key>
+      <dict>
+        <key>description</key>
+        <string>Structure to be shuffled</string>
+        <key>name</key>
+        <string>Structure</string>
+      </dict>
+      <key>inputShuffleSignal</key>
+      <dict>
+        <key>description</key>
+        <string>Shuffles on the leading edge of the signal</string>
+        <key>name</key>
+        <string>Shuffle Signal</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputStructure</key>
+      <dict>
+        <key>description</key>
+        <string>Shuffled structure</string>
+        <key>name</key>
+        <string>Structure</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

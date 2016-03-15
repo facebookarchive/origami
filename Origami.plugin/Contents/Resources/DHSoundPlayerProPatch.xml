@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>nodeAttributes</key>
+        <dict>
+            <key>category</key>
+            <string>Origami</string>
+            <key>categories</key>
+            <array>
+                <string>Origami</string>
+            </array>
+            <key>description</key>
+            <string>Plays any QuickTime file as a sound. Supports pausing, reseting, looping, and adjusting the volume.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Drew Hamlin</string>
+            <key>name</key>
+            <string>Sound Player Pro</string>
+        </dict>
+        <key>inputAttributes</key>
+        <dict>
+            <key>inputSoundLocation</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Sound Location</string>
+            </dict>
+            <key>inputPlaySound</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Play Sound</string>
+            </dict>
+            <key>inputResetSignal</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Reset Signal</string>
+            </dict>
+            <key>inputLooping</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Looping</string>
+            </dict>
+            <key>inputVolume</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Volume</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>

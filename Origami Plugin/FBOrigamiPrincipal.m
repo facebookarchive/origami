@@ -38,6 +38,23 @@
 #import "FBWirelessOutPatch.h"
 #import "FBStopWatchPatch.h"
 #import "FBLastValue.h"
+#import "DHJSONImporterPatch.h"
+#import "DHAppleScriptPatch.h"
+#import "DHImageAtURLPatch.h"
+#import "DHRestRequestPatch.h"
+#import "FBFileUpdated.h"
+#import "FBDescriptionPatch.h"
+#import "FBStructureShuffle.h"
+#import "FBLogToConsole.h"
+#import "FBFPS.h"
+#import "DHImageWithFormattedStrings.h"
+#import "DHStringFormatterPatch.h"
+#import "DHStringAtURLPatch.h"
+#import "DHSoundPlayerProPatch.h"
+#import "DHStructureAllKeysPatch.h"
+#import "DHStructureAllValuesPatch.h"
+#import "DHStructureMultiplePathMembersPatch.h"
+#import "DHStructurePathMemberPatch.h"
 
 @implementation FBOrigamiPrincipal
 
@@ -69,7 +86,23 @@
   KIRegisterPatch(FBWirelessOutPatch);
   KIRegisterPatch(FBStopWatchPatch);
   KIRegisterPatch(FBLastValue);
-
+  KIRegisterPatch(DHJSONImporterPatch);
+  KIRegisterPatch(DHAppleScriptPatch);
+  KIRegisterPatch(DHImageAtURLPatch);
+  KIRegisterPatch(DHRESTRequestPatch);
+  KIRegisterPatch(FBFileUpdated);
+  KIRegisterPatch(FBDescriptionPatch);
+  KIRegisterPatch(FBStructureShuffle);
+  KIRegisterPatch(FBLogToConsole);
+  KIRegisterPatch(FBFPS);
+  KIRegisterPatch(DHImageWithFormattedStrings);
+  KIRegisterPatch(DHStringFormatterPatch);
+  KIRegisterPatch(DHStringAtURLPatch);
+  KIRegisterPatch(DHSoundPlayerProPatch);
+  KIRegisterPatch(DHStructureAllKeysPatch);
+  KIRegisterPatch(DHStructureAllValuesPatch);
+  KIRegisterPatch(DHStructureMultiplePathMembersPatch);
+  KIRegisterPatch(DHStructurePathMemberPatch);
 
   [[FBOrigamiAdditions sharedAdditions] initialSetup];
   [[BWDeviceInfoReceiver sharedReceiver] initialSetup];

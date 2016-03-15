@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>Asynchronously downloads the contents of a URL.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Drew Hamlin</string>
+      <key>name</key>
+      <string>String at URL</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputEnable</key>
+      <dict>
+        <key>description</key>
+        <string></string>
+        <key>name</key>
+        <string>Enable</string>
+      </dict>
+      <key>inputURL</key>
+      <dict>
+        <key>description</key>
+        <string></string>
+        <key>name</key>
+        <string>URL</string>
+      </dict>
+      <key>inputUpdateSignal</key>
+      <dict>
+        <key>description</key>
+        <string></string>
+        <key>name</key>
+        <string>Update Signal</string>
+      </dict>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputString</key>
+      <dict>
+        <key>description</key>
+        <string></string>
+        <key>name</key>
+        <string>String</string>
+      </dict>
+      <key>outputDoneSignal</key>
+      <dict>
+        <key>description</key>
+        <string></string>
+        <key>name</key>
+        <string>Done Signal</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

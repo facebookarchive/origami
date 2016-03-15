@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>Origami</string>
+      <key>categories</key>
+      <array>
+        <string>Origami</string>
+      </array>
+      <key>description</key>
+      <string>This patch logs the input string to the console when it's enabled. It logs during each frame the viewer is rendering. Open Console.app to view the messages.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Brandon Walkin</string>
+      <key>name</key>
+      <string>Log to Console</string>
+    </dict>
+    <key>inputAttributes</key>
+    <dict>
+      <key>inputMessage</key>
+      <dict>
+        <key>description</key>
+        <string>The string you want to log.</string>
+        <key>name</key>
+        <string>Message</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>

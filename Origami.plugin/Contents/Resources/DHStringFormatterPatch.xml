@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>nodeAttributes</key>
+        <dict>
+            <key>category</key>
+            <string>Origami</string>
+            <key>categories</key>
+            <array>
+                <string>Origami</string>
+            </array>
+            <key>description</key>
+            <string>Creates a formatted string for use by the Image With Formatted String patch.
+
+
+Origami
+http://origami.facebook.com/
+
+Use of this patch is subject to the license found at http://origami.facebook.com/license/
+
+Copyright: (c) 2016, Facebook, Inc. All rights reserved.
+
+Created by: Drew Hamlin</string>
+            <key>name</key>
+            <string>String Formatter</string>
+        </dict>
+        <key>inputAttributes</key>
+        <dict>
+            <key>inputString</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>String</string>
+            </dict>
+            <key>inputColor</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Color</string>
+            </dict>
+            <key>inputFontName</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Font Name</string>
+            </dict>
+            <key>inputFontSize</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Font Size</string>
+            </dict>
+            <key>inputBold</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Bold</string>
+            </dict>
+            <key>inputUnderline</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Underline</string>
+            </dict>
+            <key>inputStrikethrough</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Strikethrough</string>
+            </dict>
+            <key>inputMaxWidth</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Width</string>
+            </dict>
+            <key>inputMaxHeight</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Max Height</string>
+            </dict>
+        </dict>
+        <key>outputAttributes</key>
+        <dict>
+            <key>outputFormattedString</key>
+            <dict>
+                <key>description</key>
+                <string></string>
+                <key>name</key>
+                <string>Formatted String</string>
+            </dict>
+        </dict>
+    </dict>
+</plist>

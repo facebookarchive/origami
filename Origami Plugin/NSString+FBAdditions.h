@@ -14,5 +14,8 @@
 - (BOOL)fb_containsString:(NSString *)string;
 - (NSString *)fb_capitalizeFirstLetter;
 - (NSString *)relativePathFromBaseDirPath:(NSString *)baseDirPath;
+- (NSArray *)componentsSeparatedByUnescapedDelimeter:(NSString *)delimeter;
+- (NSArray *)componentsSeparatedByUnescapedDelimeters:(NSArray *)delimeters map:(NSArray **)delimeterMap;
+- (NSString *)humanReadableString;
 
 @end

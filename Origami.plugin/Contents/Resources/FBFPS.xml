@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>nodeAttributes</key>
+    <dict>
+      <key>category</key>
+      <string>FPS</string>
+      <key>categories</key>
+      <array>
+        <string>Environment</string>
+      </array>
+      <key>copyright</key>
+      <string>Brandon Walkin</string>
+      <key>description</key>
+      <string>This patch outputs the frames per second of the composition.</string>
+      <key>name</key>
+      <string>FPS</string>
+    </dict>
+    <key>outputAttributes</key>
+    <dict>
+      <key>outputFPS</key>
+      <dict>
+        <key>description</key>
+        <string>Frames per second</string>
+        <key>name</key>
+        <string>FPS</string>
+      </dict>
+      <key>outputFPSString</key>
+      <dict>
+        <key>description</key>
+        <string>Frames per second string</string>
+        <key>name</key>
+        <string>FPS String</string>
+      </dict>
+    </dict>
+  </dict>
+</plist>
