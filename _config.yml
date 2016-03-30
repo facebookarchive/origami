@@ -3,6 +3,8 @@ description: "Design prototyping with Quartz Composer"
 
 paginate: 10
 
+baseurl: /origami
+
 markdown: rdiscount
 highlighter: pygments
 collections:
