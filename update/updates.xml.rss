@@ -22,7 +22,7 @@
         sparkle:shortVersionString="2.2"
         sparkle:version="16"
         sparkle:dsaSignature="MCwCFBQ3MRjaB6wMNMHHQdgRF7wsbG4pAhQJtM8xkIFomJUTf15g8b+AJx7rMw=="
-        url="https://origami.facebook.com/update/installers/Origami.zip"
+        url="https://github.com/facebook/origami/releases/download/v2.2/Origami.zip"
         length="24589534"
         type="application/octet-stream" />
     </item>
