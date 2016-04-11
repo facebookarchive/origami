@@ -73,11 +73,12 @@
 	flex-grow: 1;
 }
 
-#section-f8 #download-buttons {
-	margin-top:0;
+#section-f8 .description p {
+	margin-bottom: 4px;
 }
 
-#section-f8 .logo {
+#section-f8 #download-buttons {
+	margin-top:0;
 }
 
 /* Hero Section */
@@ -1442,7 +1443,7 @@
 	}
 
 	#section-f8 #f8-buttons {
-		margin-top:33px;
+		margin-top:15px;
 	}
 
 	#section-f8 .description {
