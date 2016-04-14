@@ -341,7 +341,7 @@ static NSString *kMinimumSupportedQCVersion = @"4.6";
   
   const unichar copyrightSymbolCharacter = 0x00A9;
   NSString *copyrightSymbol = [NSString stringWithCharacters:&copyrightSymbolCharacter length:1];
-  NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"Application name and version number"), ORIGAMI_APP_NAME, version] defaultButton:NSLocalizedString(@"OK", @"OK") alternateButton:nil otherButton:NSLocalizedString(@"Visit Website", @"Button label to visit the Origami website") informativeTextWithFormat:NSLocalizedString(@"%@ 2013-2015 Facebook, Inc.", @"Summarized copyright information"), copyrightSymbol];
+  NSAlert *alert = [NSAlert alertWithMessageText:[NSString stringWithFormat:NSLocalizedString(@"%@ %@", @"Application name and version number"), ORIGAMI_APP_NAME, version] defaultButton:NSLocalizedString(@"OK", @"OK") alternateButton:nil otherButton:NSLocalizedString(@"Visit Website", @"Button label to visit the Origami website") informativeTextWithFormat:NSLocalizedString(@"%@ 2013-2016 Facebook, Inc.", @"Summarized copyright information"), copyrightSymbol];
   alert.icon = [origamiBundle imageForResource:ORIGAMI_ICON_FILE];
   [alert beginSheetModalForWindow:nil modalDelegate:self didEndSelector:@selector(aboutOrigamiAlertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 }
