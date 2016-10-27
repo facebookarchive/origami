@@ -205,13 +205,13 @@ html[xmlns] .cf {
 @media only screen and (max-width: 460px) {
 }
 
-/* Global F8 Header */
+/* Global Studio Header */
 
-#section-f8 {
-	background-image: linear-gradient(-135deg, #00E3AD 0%, #5252C9 59%, #002350 100%);
+#section-studio {
+	background:#282F36;
 	height:auto;
 	width:100%;
-	padding:30px 30px 30px 33px;
+	padding:48px 30px 0 33px;
 	vertical-align: middle;
 	color: white;
 	position: relative;
@@ -223,54 +223,75 @@ html[xmlns] .cf {
 	align-items: center;
 	-webkit-box-align: center;
 	box-align: center;
+    overflow: hidden;
+}
+#section-studio .description {
+	padding-bottom:30px;
+	flex-grow:1;
+}
+#section-studio h3 {
+	font-size:36px;
+	margin-bottom:12px;
+}
+#section-studio p {
+	color:#889198;
+	font-size:18px;
+	line-height:24px;
+	margin-bottom:0;
+}
+#section-studio button {
+	background: #0288F6;
+	height: 40px;
+    padding: 0 20px;
+    font-weight: 500;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+#section-studio button:hover {
+	opacity: 0.8;
+}
+#section-studio .screenshot {
+	min-width: 500px;
+	width: 500px;
+	margin-left: 100px;
+}
+#section-studio .screenshot img {
+	width: 100%;
+	margin-bottom: -20%;
+	cursor: pointer;
 }
 
-#section-f8 h3 {
-	line-height: 1em;
-	margin-bottom: .5em;
+/* Homepage Studio Header */
+#section-studio.homepage {
+	min-height: 80vh;
+	flex-direction: column;
 }
-
-#section-f8 .description {
-	flex-grow: 1;
-}
-
-#section-f8 .description p {
-	margin-bottom: 4px;
-	max-width: 420px;
-}
-
-#section-f8 #download-buttons {
-	margin-top:0;
-}
-
-#section-f8 #f8-video {
-	width: 360px;
-	height: 0;
-	background: rgba(0,0,0,.5);
-	max-width: 100%;
-	padding-bottom: 56%;
-}
-
-#section-f8 #f8-video-loading {
-	position: absolute;
-	left: 0;
-	right: 0;
-	text-align:center;
-	top: 50%;
-	margin-top: -1em;
-	opacity: .5;
-}
-
-#section-f8 #f8-video-container {
-	position: relative;
+#section-studio.homepage .description {
 	margin: 0 auto;
-	max-width: 100%;
-	min-width: 220px; /* fb video player min size */
-	min-height: 123px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 600px;
+}
+#section-studio.homepage .description * {
+	text-align:center;
+}
+#section-studio.homepage .screenshot{
+	margin: 0 auto;
+	width: 95%;
+	max-width: 1258px;
+}
+#section-studio.homepage .screenshot img {
+	margin-bottom:-13%;
 }
 
 @media only screen and (max-width: 860px) {
-	#section-f8 {
+	#section-studio, #section-studio.homepage {
 		-webkit-flex-direction: column;
 		flex-direction: column;
 		-webkit-align-items: flex-start;
@@ -278,16 +299,17 @@ html[xmlns] .cf {
 		-webkit-box-align: flex-start;
 		box-align: flex-start;
 		text-align: center;
+		min-height:inherit;
 	}
 
-	#section-f8 .description {
+	#section-studio .description {
 		margin: 0 auto 20px;
 		width: 100%;
-		float: none;
+		text-align: center;
 	}
-
-	#section-f8 .description p {
-		margin-left: auto;
-		margin-right: auto;
+	#section-studio .screenshot {
+		margin: 0 auto;
+		width: 95%;
+		min-width: inherit;
 	}
 }
