@@ -1,7 +1,8 @@
-Origami
-=======
+# Origami for Quartz Composer is deprecated. Check out [Origami Studio](http://origami.design) — a native Mac app built for modern interface design by Facebook.
 
-Origami is a free toolkit for Quartz Composer that makes interactive design prototyping easy and doesn’t require programming.
+===
+
+Origami for Quartz Composer is a free toolkit for Quartz Composer that makes interactive design prototyping easy and doesn’t require programming. It is deprecated and no longer supported.
 
 Most designers today create static mockups to communicate app ideas. But increasingly apps are anything but static, which means as designers we need a better tool for interaction design—this is where Origami comes in.
 
