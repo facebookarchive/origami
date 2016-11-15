@@ -208,44 +208,42 @@ html[xmlns] .cf {
 /* Global Studio Header */
 
 #section-studio {
-	background:#282F36;
-	height:auto;
+	background:#FF6461;
+	height:75vh;
 	width:100%;
 	padding:48px 30px 0 33px;
-	vertical-align: middle;
+	text-align:center;
 	color: white;
 	position: relative;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
+    -webkit-flex-direction: column;
+	flex-direction: column;
 	-webkit-align-items: center;
 	align-items: center;
 	-webkit-box-align: center;
 	box-align: center;
-    overflow: hidden;
-}
-#section-studio .description {
-	padding-bottom:30px;
-	flex-grow:1;
+	text-align: center;
+	justify-content: center;
 }
 #section-studio h3 {
 	font-size:36px;
 	margin-bottom:12px;
 }
 #section-studio p {
-	color:#889198;
+	color:rgba(255,255,255,0.6);
 	font-size:18px;
 	line-height:24px;
 	margin-bottom:0;
+	max-width:750px;
 }
 #section-studio button {
-	background: #0288F6;
+	background: white;
 	height: 40px;
     padding: 0 20px;
     font-weight: 500;
     border: none;
-    color: white;
+    color: #FF6461;
     font-size: 16px;
     border-radius: 6px;
     margin-top: 20px;
@@ -255,51 +253,10 @@ html[xmlns] .cf {
 #section-studio button:hover {
 	opacity: 0.8;
 }
-#section-studio .screenshot {
-	min-width: 500px;
-	width: 500px;
-	margin-left: 100px;
-}
-#section-studio .screenshot img {
-	width: 100%;
-	margin-bottom: -20%;
-	cursor: pointer;
-}
-
-/* Homepage Studio Header */
-#section-studio.homepage {
-	min-height: 80vh;
-	flex-direction: column;
-}
-#section-studio.homepage .description {
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	max-width: 600px;
-}
-#section-studio.homepage .description * {
-	text-align:center;
-}
-#section-studio.homepage .screenshot{
-	margin: 0 auto;
-	width: 95%;
-	max-width: 1258px;
-}
-#section-studio.homepage .screenshot img {
-	margin-bottom:-13%;
-}
 
 @media only screen and (max-width: 860px) {
 	#section-studio, #section-studio.homepage {
-		-webkit-flex-direction: column;
-		flex-direction: column;
-		-webkit-align-items: flex-start;
-		align-items: flex-start;
-		-webkit-box-align: flex-start;
-		box-align: flex-start;
-		text-align: center;
-		min-height:inherit;
+
 	}
 
 	#section-studio .description {
